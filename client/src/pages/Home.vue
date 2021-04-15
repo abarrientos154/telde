@@ -17,6 +17,7 @@
         </q-carousel-slide>
     </q-carousel>
 
+    <div class="text-h5 q-my-md text-center">LAS TIENDAS MEJOR CALIFICADAS</div>
     <q-scroll-area
         horizontal
         style="height: 320px;"

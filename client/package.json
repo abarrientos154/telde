@@ -1,8 +1,8 @@
 {
-  "name": "Flaag",
+  "name": "Telde",
   "version": "1.0.0",
-  "description": "La Feria de Flaag",
-  "productName": "Flaag",
+  "description": "Sitio de compra Telde",
+  "productName": "Telde",
   "author": "example <example@example.com>",
   "private": true,
   "scripts": {

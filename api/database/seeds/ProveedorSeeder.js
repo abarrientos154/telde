@@ -44,7 +44,7 @@ const userData = [
     delivery: false,
     regiones: false,
     perfil: false,
-    perfilEstatico: true,
+    perfilEstatico: false,
     status: 1,
     dias: [],
     roles: [3],
@@ -66,7 +66,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: [],
-    perfilEstatico: true
+    perfilEstatico: false
   },
   {
     id: 4,
@@ -102,7 +102,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: [],
-    perfilEstatico: true
+    perfilEstatico: false
   },
   {
     id: 6,
@@ -192,7 +192,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: [],
-    perfilEstatico: true
+    perfilEstatico: false
   },
   {
     id: 11,
@@ -246,7 +246,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: [],
-    perfilEstatico: true
+    perfilEstatico: false
   },
   {
     id: 14,
@@ -264,7 +264,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: [],
-    perfilEstatico: true
+    perfilEstatico: false
   },
   {
     id: 15,
@@ -282,7 +282,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: [],
-    perfilEstatico: true
+    perfilEstatico: false
   },
   {
     id: 16,
