@@ -2,8 +2,8 @@
   <q-layout view="hHh Lpr lff">
     <q-header elevated>
       <q-toolbar class="bg-white q-px-md q-py-xs row justify-end">
-        <div class="column justify-center">
-          <q-input bottom-slots v-model="text" label="Buscar" outlined>
+        <div class="q-mr-xs">
+          <q-input class="row items-center" bottom-slots v-model="text" label="Buscar" outlined color="black" style="width: 320px">
             <template v-slot:append>
               <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
             </template>
@@ -14,10 +14,10 @@
         </div>
         <q-separator vertical inset />
 
-        <q-btn no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
+        <q-btn class="q-mx-xs" no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
         <q-separator vertical inset />
 
-        <q-btn no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
+        <q-btn class="q-mx-xs" no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
       </q-toolbar>
     </q-header>
 
@@ -58,15 +58,11 @@
       <router-view />
     </q-page-container>
 
-      <q-footer>
+      <!-- <q-footer>
         <q-toolbar class="bg-black text-white q-py-xl column">
           <div class="row justify-between" style="width: 100%">
             <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 column justify-around">
               <q-img class="q-ml-md" src="flaagfooter.png" style="width:100px" />
-              <!-- <q-img class="q-ml-md q-mt-md" src="Logo-Sercotec.png" style="width:100px" />
-              <div class="q-mt-md">
-                Conoce <a target="_blank" class="text-white" href="https://www.lodelaferia.cl/#/inicio">www.lodelaferia.cl</a> un portal de emprendedores de la región de Aysén. Podrás encontrar en nuestra feria digital diferentes productos característicos de la región. Este es un proyecto patrocinado por Sercotec Chile.
-              </div> -->
             </div>
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 q-mt-md column justify-start">
               <div class="text-bold q-mb-sm">Conoce nuestras tiendas</div>
@@ -84,7 +80,7 @@
             </div>
           </div>
         </q-toolbar>
-      </q-footer>
+      </q-footer> -->
   </q-layout>
 </template>
 

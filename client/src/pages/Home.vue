@@ -1,64 +1,76 @@
 <template>
   <div>
-    <q-carousel
-        v-model="slide1"
-        class="bg-transparent"
-        :height="web ? '500px' : '150px'"
-        width="100%"
-        infinite
-        :autoplay="autoplay1"
+    <div class="bg-grey" style="height: 500px">
+      <div class="row justify-between q-pa-md">
+        <div class="row q-ml-lg">
+          <q-img class="q-ml-md" src="logo.png" style="width:30px" />
+          <div class="text-h5 q-ml-sm q-mt-xs">Telde</div>
+        </div>
+        <q-tabs
+          v-model="tab"
+          dense
+          class="bg-grey"
         >
-        <q-carousel-slide class="q-pa-none" :name="index + 1"  v-for="(img, index) in slPrincipal" :key="index">
-          <img
-              :src="!img.caso ? baseuPublicidad + img.fileName : img.fileName"
-              spinner-color="white"
-              style="height: 100%; width: 100%"
-              @click="!img.caso ? irRuta(img.ruta) : ''" />
-        </q-carousel-slide>
-    </q-carousel>
+            <q-tab class="text-white" name="Inicio" label="Mails" />
+            <q-separator vertical dark />
+            <q-tab class="text-white" name="Nosotros" label="Alarms" />
+            <q-separator vertical dark />
+            <q-tab class="text-white" name="Tienda" label="Movies" />
+            <q-separator vertical dark />
+            <q-tab class="text-white" name="Blog" label="Movies" />
+            <q-separator vertical dark />
+            <q-tab class="text-white" name="Contacto" label="Movies" />
+        </q-tabs>
+      </div>
+
+      <div class="q-ml-xl q-mt-xl">
+        <div class="row">
+          <div class="col-3 text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
+        </div>
+        <div class="row">
+          <div class="col-3 text-white q-mt-sm">Ahora puedes ser parte de la nueva plataforma en linea para vender tus productos de forma rápida y segura</div>
+        </div>
+        <div class="q-mt-lg">
+          <q-btn class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
+        </div>
+      </div>
+    </div>
 
     <div class="text-h5 q-my-md text-center">LAS TIENDAS MEJOR CALIFICADAS</div>
+
     <q-scroll-area
         horizontal
-        style="height: 320px;"
+        style="height: 480px;"
       >
         <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
           <div v-for="(card, index) in arrLogos" :key="index" >
-            <img
-              :src="card.perfil ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'noimg.png'"
-              spinner-color="white"
-              style="border-radius:100%; height: 200px; width: 200px"
-              @click="rol === 1 ? $router.push('/proveedor/' + card._id) : irTienda(card._id)" />
-            <div class="text-weight-bold q-mt-sm text-center">{{card.nombreEmpresa}}</div>
+            <q-card class="my-card">
+              <q-img
+                :src="card.perfil ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'noimg.png'"
+                spinner-color="white"
+                style="height: 200px; width: 200px"/>
+
+              <q-card-section>
+                <q-rating v-model="card.calification" :max="5" size="25px" />
+
+                <div class="row no-wrap items-center q-mt-xs">
+                  <div class="col text-subtitle2 ellipsis">{{card.nombreEmpresa}}</div>
+                  <div class="col-auto text-grey text-caption row no-wrap items-center">
+                    <q-icon name="favorite_border" size="1.8em" />
+                  </div>
+                </div>
+              </q-card-section>
+
+              <q-separator inset />
+
+              <q-card-section class="q-pt-sm">
+                <div class="text-caption text-black">Small plates, salads sandwiches in an intimate setting.</div>
+                <div class="text-h6 text-primary q-mt-sm">$ 000</div>
+              </q-card-section>
+            </q-card>
           </div>
         </div>
       </q-scroll-area>
-
-    <!-- <q-carousel
-      v-model="slide2"
-      :autoplay="autoplay2"
-      swipeable
-      animated
-      infinite
-      :height="web ? '300px' : '200px'"
-      class="bg-transparent q-my-md"
-    >
-      <q-carousel-slide :name="index + 1" v-for="(value, name, index) in slLogos" :key="index" class="column justify-center no-wrap">
-        <div class="row fit justify-around items-center no-wrap" style="width:100%">
-          <div :class="web ? 'col-2 column items-center' : 'col-4 column items-center'" v-for="(img, index2) in value" :key="index2" style="height: 100%">
-            <div :style="web ? 'width: 90%; height: 70%' : 'width: 90%; height: 70%'">
-                <img
-                  :src="img.perfil ? baseuLogos + img._id : img.perfilEstatico ? 'logos/' + img.id.toString() + '.jpeg' : 'noimg.png'"
-                  spinner-color="white"
-                  style="border-radius:100%; height: 100%; width: 100%"
-                  @click="rol === 1 ? $router.push('/proveedor/' + img._id) : irTienda(img._id)" >
-            </div>
-            <div v-if="web" class="text-center text-weight-bold q-mt-sm" style="width: 90%">{{img.nombreEmpresa}}</div>
-            <div v-else class="text-center text-subtitle2 text-weight-bold q-mt-sm ellipsis" style="width: 90%">{{img.nombreEmpresa}}</div>
-          </div>
-        </div>
-      </q-carousel-slide>
-    </q-carousel> -->
 
     <q-carousel
       v-if="web"
@@ -115,10 +127,6 @@
                   <div v-if="!card.oferta" class="col text-h6 ellipsis">${{formatPrice(card.valor)}}</div>
                   <div v-if="card.oferta" class="col text-h6 ellipsis">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                 </div>
-              </div>
-
-              <div v-if="rol === 2 || !login" class="row justify-center">
-                <q-btn glossy no-caps :icon="login ? 'add_shopping_cart' : 'store'" :label="login ? 'Comprar' : 'Ver Tienda'" color="primary" text-color="black" @click="login ? $router.push('/tienda/' + card.proveedor_id + '/' + card._id) : $router.push('/tienda/' + card.proveedor_id)" />
               </div>
           </div>
         </div>
@@ -181,10 +189,6 @@
                   <div v-if="card.oferta" class="col text-h6 ellipsis">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                 </div>
               </div>
-
-              <div v-if="rol === 2 || !login" class="row justify-center">
-                <q-btn glossy no-caps :icon="login ? 'add_shopping_cart' : 'store'" :label="login ? 'Comprar' : 'Ver Tienda'" color="primary" text-color="black" @click="login ? $router.push('/tienda/' + card.proveedor_id + '/' + card._id) : $router.push('/tienda/' + card.proveedor_id)" />
-              </div>
           </div>
         </div>
       </q-scroll-area>
@@ -216,6 +220,7 @@ export default {
       baseuPublicidad: '',
       baseuProducto: '',
       baseuLogos: '',
+      tap: 'Inicio',
       slide1: 1,
       slide2: 1,
       slide3: 1,
