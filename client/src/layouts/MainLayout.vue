@@ -1,12 +1,23 @@
 <template>
-  <q-layout view="hHh Lpr lff"><!-- lhh lpR fFf -->
+  <q-layout view="hHh Lpr lff">
     <q-header elevated>
-      <q-toolbar class="bg-white q-px-md q-py-md row justify-between">
-        <div>
-          <q-btn class="q-mr-md" round dense flat icon="menu" size="1em" color="black" @click="drawer = !drawer"/>
-          <q-img src="flaagweb.png" style="width:140px" @click="$router.push('/inicio')" />
+      <q-toolbar class="bg-white q-px-md q-py-xs row justify-end">
+        <div class="column justify-center">
+          <q-input bottom-slots v-model="text" label="Buscar" outlined>
+            <template v-slot:append>
+              <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
+            </template>
+            <template v-slot:after>
+              <q-btn round dense flat icon="search" />
+            </template>
+          </q-input>
         </div>
-        <q-btn v-if="!login" round flat color="black" icon="login" @click="$router.push('/login')" />
+        <q-separator vertical inset />
+
+        <q-btn no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
+        <q-separator vertical inset />
+
+        <q-btn no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
       </q-toolbar>
     </q-header>
 
@@ -67,9 +78,9 @@
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
               <div class="text-bold">Contacte con nosotros</div>
-              <a class="text-white">Correo de contacto: contacto@lodelaferia.cl</a>
-              <a class="text-white">Dirección: Teniente Merino #630</a>
-              <a class="text-white">Aysén, Chile</a>
+              <a class="text-white">Correo de contacto: contacto@telde.cl</a>
+              <a class="text-white">Dirección:</a>
+              <a class="text-white">Chile</a>
             </div>
           </div>
         </q-toolbar>
@@ -85,6 +96,7 @@ export default {
     return {
       // dialogo: true,
       rol: 0,
+      text: '',
       login: false,
       drawer: false,
       tiendas: [],

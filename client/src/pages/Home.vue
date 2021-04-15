@@ -91,7 +91,6 @@
     </q-scroll-area>
 
     <div class="q-my-md">
-      <div class="text-h5 text-bold q-ml-md">Lo nuevo en Flaag</div>
       <q-scroll-area
         horizontal
         style="height: 430px;"
@@ -157,7 +156,6 @@
     </q-scroll-area>
 
     <div class="q-my-md">
-      <div class="text-h5 text-bold q-ml-md text-center">Conoce nuestras tiendas</div>
       <q-scroll-area
         horizontal
         style="height: 430px;"
