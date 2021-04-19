@@ -6,7 +6,8 @@ const routes = [
     children: [
       // Generales
       { path: '/inicio', component: () => import('pages/Home.vue') },
-      { path: '/productos', component: () => import('pages/Productos.vue') }
+      { path: '/productos', component: () => import('pages/Productos.vue') },
+      { path: '/Detalleproducto', component: () => import('pages/ProductoDetalle.vue') }
 
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
