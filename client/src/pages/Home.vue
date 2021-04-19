@@ -1,41 +1,5 @@
 <template>
   <div>
-    <div class="bg-grey" style="height: 500px">
-      <div class="row justify-between q-pa-md">
-        <div class="row q-ml-lg">
-          <q-img class="q-ml-md" src="logo.png" style="width:30px" />
-          <div class="text-h5 q-ml-sm q-mt-xs">Telde</div>
-        </div>
-        <q-tabs
-          v-model="tab"
-          dense
-          class="bg-grey"
-        >
-            <q-tab class="text-white" name="Inicio" label="Mails" />
-            <q-separator vertical dark />
-            <q-tab class="text-white" name="Nosotros" label="Alarms" />
-            <q-separator vertical dark />
-            <q-tab class="text-white" name="Tienda" label="Movies" />
-            <q-separator vertical dark />
-            <q-tab class="text-white" name="Blog" label="Movies" />
-            <q-separator vertical dark />
-            <q-tab class="text-white" name="Contacto" label="Movies" />
-        </q-tabs>
-      </div>
-
-      <div class="q-ml-xl q-mt-xl">
-        <div class="row">
-          <div class="col-3 text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
-        </div>
-        <div class="row">
-          <div class="col-3 text-white q-mt-sm">Ahora puedes ser parte de la nueva plataforma en linea para vender tus productos de forma rápida y segura</div>
-        </div>
-        <div class="q-mt-lg">
-          <q-btn class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
-        </div>
-      </div>
-    </div>
-
     <div class="text-h5 q-my-md text-center">LAS TIENDAS MEJOR CALIFICADAS</div>
 
     <q-scroll-area
@@ -48,13 +12,13 @@
               <q-img
                 :src="card.perfil ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'noimg.png'"
                 spinner-color="white"
-                style="height: 200px; width: 200px"/>
+                style="height: 220px; width: 200px"/>
 
               <q-card-section>
-                <q-rating v-model="card.calification" :max="5" size="25px" />
+                <q-rating v-model="rating" :max="5" size="25px" />
 
                 <div class="row no-wrap items-center q-mt-xs">
-                  <div class="col text-subtitle2 ellipsis">{{card.nombreEmpresa}}</div>
+                  <div class="col text-subtitle2 ellipsis">Producto</div>
                   <div class="col-auto text-grey text-caption row no-wrap items-center">
                     <q-icon name="favorite_border" size="1.8em" />
                   </div>
@@ -72,126 +36,151 @@
         </div>
       </q-scroll-area>
 
-    <q-carousel
-      v-if="web"
-      v-model="slide3"
+      <div class="row justify-center q-gutter-sm q-my-md" style="height: 330px">
+        <q-card class="col-4 q-mx-sm" style="border-radius: 12px" clickable v-ripple v-for="(card, index) in slPublicidad1" :key="index">
+          <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName" style="height: 330px; width: 100%" >
+            <div class="absolute-bottom">
+              <div class="text-white text-h6">BANNER</div>
+              <div class="text-white text-h6">PUBLICIDAD {{index + 1}}</div>
+            </div>
+          </q-img>
+        </q-card>
+      </div>
+
+      <div class="row justify-center q-mt-xl q-pt-xl">
+        <div class="col-9">
+          <div class="row justify-between q-mb-md">
+            <div class="text-h5">CONOCE NUESTRAS TIENDAS</div>
+            <q-tabs
+              v-model="tabTiendas"
+              indicator-color="transparent"
+              active-color="primary"
+              class="text-black"
+              dense
+              no-caps
+            >
+                <q-tab name="resto" label="Resto" />
+                <q-tab name="tecnologia" label="Tecnología" />
+                <q-tab name="ferreteria" label="Ferreteria" />
+                <q-tab name="ofertas" label="Ofertas" />
+            </q-tabs>
+          </div>
+          <q-separator color="grey-7" />
+        </div>
+      </div>
+
+    <div class="q-my-md row justify-center">
+      <q-carousel
+      v-model="slide"
+      transition-prev="slide-right"
+      transition-next="slide-left"
       swipeable
       animated
-      infinite
-      height="330px"
-      class="bg-transparent q-my-md"
+      control-color="black"
+      arrows
+      height="350px"
+      class="col-xs-11 col-sm-11 col-md-9 col-lg-9 col-xl-9"
     >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-around items-center no-wrap" style="width: 100%">
-          <q-card class="col-6 q-mx-sm" clickable v-ripple v-for="(card, index) in slPublicidad1" :key="index" @click="!card.nuevo ? irRuta(card.ruta) : ''">
-              <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName" style="height: 290px; width: 100%" />
-          </q-card>
+      <q-carousel-slide :name="index + 1" class="column no-wrap" v-for="(value, name, index) in slLogos" :key="index">
+        <div class="row justify-center items-center q-gutter-md no-wrap">
+          <div v-for="(card, index2) in value" :key="index2">
+            <q-card class="my-card">
+              <q-img
+                :src="card.perfil ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'noimg.png'"
+                spinner-color="white"
+                style="height: 200px; width: 200px"/>
+
+              <q-card-section>
+                <q-rating v-model="rating" :max="5" size="25px" />
+
+                <div class="row no-wrap items-center q-mt-xs">
+                  <div class="col text-subtitle2 ellipsis">Producto</div>
+                  <div class="col-auto text-grey text-caption row no-wrap items-center">
+                    <q-icon name="favorite_border" size="1.8em" />
+                  </div>
+                </div>
+                <div class="text-h6 text-primary q-mt-sm">$ 000</div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
       </q-carousel-slide>
     </q-carousel>
-
-    <q-scroll-area
-        v-else
-        horizontal
-        style="height: 210px;"
-      >
-        <div class="row no-wrap items-center q-py-md q-px-md q-gutter-md">
-          <q-card clickable v-ripple style="width: 320px" v-for="(card, index) in slPublicidad1" :key="index" @click="!card.nuevo ? irRuta(card.ruta) : ''">
-              <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName" style="height: 160px; width: 100%" />
-          </q-card>
-        </div>
-    </q-scroll-area>
-
-    <div class="q-my-md">
-      <q-scroll-area
-        horizontal
-        style="height: 430px;"
-      >
-        <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
-          <div v-for="(card, index) in arrNuevo" :key="index" >
-            <q-img
-              :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
-              spinner-color="white"
-              style="border-radius:12px; height: 260px; width: 180px"
-              @click="producto = card, !card.caso ? verProducto = true : ''">
-            </q-img>
-            <div class="q-ma-sm" style="width: 180px" @click="producto = card, !card.caso ? verProducto = true : ''">
-                <div class="row no-wrap items-center">
-                  <q-icon class="col-1" name="store" size="xs"></q-icon>
-                  <div v-if="!card.caso" class="col q-ml-sm text-subtitle2 ellipsis">{{card.datos_proveedor.nombreEmpresa}}</div>
-                </div>
-                <div class="row no-wrap items-center">
-                  <div class="col text-subtitle2 text-bold ellipsis">{{card.nombre}}</div>
-                </div>
-                <div class="row no-wrap items-center">
-                  <div v-if="!card.oferta" class="col text-h6 ellipsis">${{formatPrice(card.valor)}}</div>
-                  <div v-if="card.oferta" class="col text-h6 ellipsis">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </q-scroll-area>
     </div>
 
-    <q-carousel
-      v-if="web"
-      v-model="slide5"
+    <div class="q-my-xl" style="height: 370px">
+      <q-img src="nopublicidad.jpg" style="height: 370px; width: 100%" >
+        <div class="row justify-end absolute-center bg-transparent" style="width: 100%">
+          <div class="col-4">
+            <div class="text-white text-h4 text-center">Banner</div>
+            <div class="text-white text-h4 text-center">Publicidad 03</div>
+            <div class="row justify-center q-mt-xl">
+              <a class="text-white text-subtitle1">Ir ahora</a>
+            </div>
+          </div>
+        </div>
+      </q-img>
+    </div>
+
+    <div class="row justify-center q-mt-xl q-pt-xl">
+        <div class="col-9">
+          <div class="row justify-between q-mb-md">
+            <div class="text-h5">OTRAS SECCIONES</div>
+            <q-tabs
+              v-model="tabOtras"
+              indicator-color="transparent"
+              active-color="primary"
+              class="text-black"
+              dense
+              no-caps
+            >
+                <q-tab name="seccion1" label="Seccion1" />
+                <q-tab name="seccion2" label="Seccion2" />
+                <q-tab name="seccion3" label="Seccion3" />
+                <q-tab name="seccion4" label="Seccion4" />
+            </q-tabs>
+          </div>
+          <q-separator color="grey-7" />
+        </div>
+      </div>
+
+    <div class="q-my-md row justify-center">
+      <q-carousel
+      v-model="slide"
+      transition-prev="slide-right"
+      transition-next="slide-left"
       swipeable
       animated
-      infinite
-      height="330px"
-      class="bg-transparent q-my-md"
+      control-color="black"
+      arrows
+      height="350px"
+      class="col-xs-11 col-sm-11 col-md-9 col-lg-9 col-xl-9"
     >
-      <q-carousel-slide :name="1" class="column no-wrap">
-        <div class="row fit justify-around items-center no-wrap" style="width: 100%">
-          <q-card class="col-6 q-mx-sm" clickable v-ripple v-for="(card, index) in slPublicidad2" :key="index" @click="!card.nuevo ? irRuta(card.ruta) : ''">
-              <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName" style="height: 290px; width: 100%" />
-          </q-card>
+      <q-carousel-slide :name="index + 1" class="column no-wrap" v-for="(value, name, index) in slLogos" :key="index">
+        <div class="row justify-center items-center q-gutter-md no-wrap">
+          <div v-for="(card, index2) in value" :key="index2">
+            <q-card class="my-card">
+              <q-img
+                :src="card.perfil ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'noimg.png'"
+                spinner-color="white"
+                style="height: 200px; width: 200px"/>
+
+              <q-card-section>
+                <q-rating v-model="rating" :max="5" size="25px" />
+
+                <div class="row no-wrap items-center q-mt-xs">
+                  <div class="col text-subtitle2 ellipsis">Producto</div>
+                  <div class="col-auto text-grey text-caption row no-wrap items-center">
+                    <q-icon name="favorite_border" size="1.8em" />
+                  </div>
+                </div>
+                <div class="text-h6 text-primary q-mt-sm">$ 000</div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
       </q-carousel-slide>
     </q-carousel>
-
-    <q-scroll-area
-        v-if="!web"
-        horizontal
-        style="height: 210px;"
-      >
-        <div class="row no-wrap items-center q-py-md q-px-md q-gutter-md">
-          <q-card clickable v-ripple style="width: 320px" v-for="(card, index) in slPublicidad2" :key="index" @click="!card.nuevo ? irRuta(card.ruta) : ''">
-              <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName" style="height: 160px; width: 100%" />
-          </q-card>
-        </div>
-    </q-scroll-area>
-
-    <div class="q-my-md">
-      <q-scroll-area
-        horizontal
-        style="height: 430px;"
-      >
-        <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
-          <div v-for="(card, index) in arrTienda" :key="index" >
-            <q-img
-              :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
-              spinner-color="white"
-              style="border-radius:12px; height: 260px; width: 180px"
-              @click="producto = card, !card.caso ? verProducto = true : ''">
-            </q-img>
-            <div class="q-ma-sm" style="width: 180px" @click="producto = card, !card.caso ? verProducto = true : ''">
-                <div class="row no-wrap items-center">
-                  <q-icon class="col-1" name="store" size="xs"></q-icon>
-                  <div v-if="!card.caso" class="col q-ml-sm text-subtitle2 ellipsis">{{card.datos_proveedor.nombreEmpresa}}</div>
-                </div>
-                <div class="row no-wrap items-center">
-                  <div class="col text-subtitle2 text-bold ellipsis">{{card.nombre}}</div>
-                </div>
-                <div class="row no-wrap items-center">
-                  <div v-if="!card.oferta" class="col text-h6 ellipsis">${{formatPrice(card.valor)}}</div>
-                  <div v-if="card.oferta" class="col text-h6 ellipsis">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
-                </div>
-              </div>
-          </div>
-        </div>
-      </q-scroll-area>
     </div>
 
     <q-dialog v-model="verProducto">
@@ -213,6 +202,8 @@ export default {
   data () {
     return {
       rol: 0,
+      slide: 1,
+      rating: 2,
       producto: {},
       tab: 'Inicio',
       verProducto: false,
@@ -229,6 +220,8 @@ export default {
       autoplay2: true,
       autoplay3: true,
       autoplay5: true,
+      tabTiendas: 'resto',
+      tabOtras: 'seccion1',
       slPrincipal: [],
       slPublicidad1: [],
       slPublicidad2: [],
@@ -317,16 +310,10 @@ export default {
       this.$api.get('proveedores').then(res => {
         if (res) {
           this.arrLogos = res.filter(v => v.status === 1)
-          this.arrLogos.sort(() => Math.random() - 0.5)
           // arreglar el slide
           var arr = []
           var cc = 1
-          var limit = 0
-          if (this.web) {
-            limit = 6
-          } else {
-            limit = 3
-          }
+          var limit = 3
           for (let i = 0; i < this.arrLogos.length; i++) {
             if (arr.length < limit) {
               arr.push(this.arrLogos[i])
@@ -343,6 +330,7 @@ export default {
               }
             }
           }
+          console.log('logos', this.slLogos)
         }
       })
     }
