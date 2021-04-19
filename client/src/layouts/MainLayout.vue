@@ -3,7 +3,7 @@
     <q-header elevated>
       <q-toolbar class="bg-white q-px-md q-py-xs row justify-end">
         <div class="q-mr-xs">
-          <q-input class="row items-center" bottom-slots v-model="text" label="Buscar" outlined color="black" style="width: 320px">
+          <q-input dense class="row items-center" bottom-slots v-model="text" label="Buscar" outlined color="black">
             <template v-slot:append>
               <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
             </template>
@@ -14,12 +14,102 @@
         </div>
         <q-separator vertical inset />
 
-        <q-btn class="q-mx-xs" no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
+        <q-btn dense class="q-mx-xs" no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
         <q-separator vertical inset />
 
-        <q-btn class="q-mx-xs" no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
+        <q-btn dense class="q-mx-xs" no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
       </q-toolbar>
     </q-header>
+
+    <div class="bg-secondary q-pt-xl" style="height: 600px">
+      <div class="row justify-between q-pa-md q-mt-lg">
+        <div class="row q-ml-lg">
+          <q-img class="q-ml-md" src="logo.png" style="width:30px" />
+          <div class="text-h5 q-ml-sm q-mt-xs">Telde</div>
+        </div>
+        <q-tabs
+          v-model="tabActions"
+          indicator-color="transparent"
+          active-color="primary"
+          class="text-white"
+          dense
+        >
+            <q-tab name="inicio" label="Inicio" @click="$router.push('/inicio')" />
+            <q-separator vertical dark />
+            <q-tab name="nosotros" label="Nosotros" />
+            <q-separator vertical dark />
+            <q-tab name="tienda" label="Tienda" />
+            <q-separator vertical dark />
+            <q-tab name="blog" label="Blog" />
+            <q-separator vertical dark />
+            <q-tab name="contacto" label="Contacto" />
+        </q-tabs>
+      </div>
+
+      <q-tab-panels class="bg-transparent" v-model="tabActions" animated>
+        <q-tab-panel name="inicio">
+          <div class="q-ml-xl q-mt-xl">
+            <div class="row">
+              <div class="col-4 text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
+            </div>
+            <div class="row">
+              <div class="col-3 text-white q-mt-sm">Ahora puedes ser parte de la nueva plataforma en linea para vender tus productos de forma rápida y segura</div>
+            </div>
+            <div class="q-mt-lg">
+              <q-btn class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
+            </div>
+          </div>
+        </q-tab-panel>
+
+        <q-tab-panel name="nosotros">
+          <div class="q-mt-xl q-pt-xl">
+            <div>
+              <div class="text-h2 text-white text-bold text-center">Somos Nova Telde</div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-4 text-white q-mt-md">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+          </div>
+        </q-tab-panel>
+
+        <q-tab-panel name="tienda">
+          <div class="q-ml-xl q-mt-xl">
+            <div class="row justify-end q-mb-xl">
+              <div class="col-6 text-h2 text-white text-center">Nuestros Nuevos Productos</div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="text-white text-center text-subtitle1">Ofertas De Hasta</div>
+                <div class="text-white text-center text-h1 text-bold">30%</div>
+                <div class="text-white text-center text-h5 text-bold">Descuento</div>
+              </div>
+            </div>
+          </div>
+        </q-tab-panel>
+
+        <q-tab-panel name="blog">
+          <div class="text-h6">Blog</div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </q-tab-panel>
+
+        <q-tab-panel name="contacto">
+          <div class="text-h6">Contacto</div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </q-tab-panel>
+      </q-tab-panels>
+
+      <!-- <div class="q-ml-xl q-mt-xl">
+        <div class="row">
+          <div class="col-3 text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
+        </div>
+        <div class="row">
+          <div class="col-3 text-white q-mt-sm">Ahora puedes ser parte de la nueva plataforma en linea para vender tus productos de forma rápida y segura</div>
+        </div>
+        <div class="q-mt-lg">
+          <q-btn class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
+        </div>
+      </div> -->
+    </div>
 
     <q-drawer
         v-model="drawer"
@@ -58,29 +148,56 @@
       <router-view />
     </q-page-container>
 
-      <!-- <q-footer>
-        <q-toolbar class="bg-black text-white q-py-xl column">
-          <div class="row justify-between" style="width: 100%">
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 column justify-around">
-              <q-img class="q-ml-md" src="flaagfooter.png" style="width:100px" />
-            </div>
-            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 q-mt-md column justify-start">
-              <div class="text-bold q-mb-sm">Conoce nuestras tiendas</div>
-              <div class="row justify-between" style="height: 85%; width: 100%">
-                <div class="col-6" v-for="(item, index) in tiendas" :key="index">
-                  <a class="text-white" :href="'#/tienda/'+item._id">{{item.nombreEmpresa}}</a>
-                </div>
+      <q-footer class="q-mt-md">
+        <q-toolbar class="bg-white text-black q-py-lg column q-px-none">
+          <div class="row justify-between q-mb-lg" style="width: 100%">
+            <div class="row justify-around col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
+                <div class="text-bold q-mb-md">Nova Telde</div>
+                <a class="text-black">Nosotros</a>
+                <a class="text-black">Inicia sesión</a>
+                <a class="text-black">Registrate</a>
+                <a class="text-black">Address</a>
+              </div>
+              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
+                <div class="text-bold q-mb-md">Nuestras redes</div>
+                <a class="text-black">Facebook</a>
+                <a class="text-black">Twitter</a>
+                <a class="text-black">Instagram</a>
+                <a class="text-black">Linkedin</a>
+              </div>
+              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
+                <div class="text-bold q-mb-md">Enlaces de interes</div>
+                <a class="text-black">FAQs</a>
+                <a class="text-black">Políticas</a>
+                <a class="text-black">Contáctanos</a>
+                <a class="text-black">Trabaja con nosotros</a>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
-              <div class="text-bold">Contacte con nosotros</div>
-              <a class="text-white">Correo de contacto: contacto@telde.cl</a>
-              <a class="text-white">Dirección:</a>
-              <a class="text-white">Chile</a>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 column justify-center">
+              <div class="row justify-center">
+                <q-img class="q-ml-md" src="flaagfooter.png" style="width:50px" />
+              </div>
+              <div class="text-center text-h6">NOVA TELDE</div>
+              <div class="text-center text-primary">A tu alcance</div>
+              <div class="row justify-center q-mt-lg">
+                <q-img class="q-ml-md" src="facebook.png" style="width:30px" />
+                <q-img class="q-ml-md" src="instagram.png" style="width:30px" />
+                <q-img class="q-ml-md" src="linkedin.png" style="width:30px" />
+                <q-img class="q-ml-md" src="twitter.png" style="width:30px" />
+              </div>
             </div>
           </div>
+          <q-separator color="black" size="3px" />
+          <div class="row justify-between items-center q-px-xl q-mt-md" style="width: 100%">
+            <div class="row">
+              <a class="text-black q-mr-md">¡Quiero ser proveedor!</a>
+              <a class="text-black">Contáctanos</a>
+            </div>
+            <div>Copyright 2021, Nova Telde</div>
+          </div>
         </q-toolbar>
-      </q-footer> -->
+      </q-footer>
   </q-layout>
 </template>
 
@@ -92,6 +209,7 @@ export default {
     return {
       // dialogo: true,
       rol: 0,
+      tabActions: 'inicio',
       text: '',
       login: false,
       drawer: false,
