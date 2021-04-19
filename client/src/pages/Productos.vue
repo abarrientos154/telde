@@ -1,6 +1,6 @@
 <template>
   <q-page>
-    <div class="bg-grey-8" style="height: 500px">
+    <!-- <div class="bg-grey-8" style="height: 500px">
       <div class="row justify-between q-pa-md">
         <div class="row q-ml-xl">
           <q-img class="q-ml-md" src="logo.png" style="width:50px" />
@@ -45,7 +45,7 @@
         </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="q-mt-md q-ml-md text-bold text-h5">Mi Tienda</div>
       <q-space />
@@ -66,7 +66,7 @@
             <div class="q-pl-md text-h6 text-black">Categorias</div>
             <q-item v-for="(item, index) in categorias" :key="index" class="text-black q-mt-xs text-bold">
               <div class="column justify-center items-center" >
-              <q-checkbox v-model="right" :label='item' />
+              <q-checkbox v-model="catego" :label='item' :val="index" />
               </div>
             </q-item>
           </q-list>
@@ -79,7 +79,7 @@
           <div class="q-pl-md text-h6 text-black">Tallas</div>
             <q-item v-for="(item, index) in tallas" :key="index" class="text-black q-mt-xs text-bold">
               <div class="column justify-center items-center" >
-              <q-checkbox v-model="right" :label='item' />
+              <q-checkbox v-model="talla" :label='item' :val="index" />
               </div>
             </q-item>
         </q-list>
@@ -100,7 +100,7 @@
             height="350px"
             class="text-white shadow-1"
           >
-            <q-carousel-slide class="column items-center justify-center" :name='index' v-for="(card, index) in ejemplos2" :key="index">
+            <q-carousel-slide class="column items-center justify-center" :name="index" v-for="(card, index) in ejemplos2" :key="index">
               <q-card style="height: 300px; width: 150px" >
               <div class="column items-center justify-center">
                 <q-img
@@ -135,7 +135,7 @@
             <div class="q-pl-md text-h6 text-black">Precio</div>
               <q-item v-for="(item, index) in precio" :key="index" class="text-black q-mt-xs text-bold">
                 <div class="column justify-center items-center" >
-                <q-checkbox v-model="right" :label='item' />
+                <q-checkbox v-model="preci" :label='item' :val="index" />
                 </div>
               </q-item>
             </q-list>
@@ -260,8 +260,10 @@ export default {
           value: 2
         }
       ],
-      slide: '1',
-      right: false
+      slide: 0,
+      catego: [],
+      talla: [],
+      preci: []
     }
   },
   mounted () {
