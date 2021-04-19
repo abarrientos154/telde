@@ -5,7 +5,9 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       // Generales
-      { path: '/inicio', component: () => import('pages/Home.vue') }
+      { path: '/inicio', component: () => import('pages/Home.vue') },
+      { path: '/productos', component: () => import('pages/Productos.vue') }
+
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
       { path: '/emprendedores', component: () => import('pages/Admin/Proveedores.vue') },
