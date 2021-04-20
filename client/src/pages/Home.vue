@@ -8,7 +8,7 @@
       >
         <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
           <div v-for="(card, index) in arrLogos" :key="index" >
-            <q-card class="my-card">
+            <q-card class="my-card" @click="$router.push('/Detalleproducto')">
               <q-img
                 :src="card.perfil ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'noimg.png'"
                 spinner-color="white"

@@ -38,7 +38,7 @@
             <q-separator vertical dark />
             <q-tab name="nosotros" label="Nosotros" />
             <q-separator vertical dark />
-            <q-tab name="tienda" label="Tienda" />
+            <q-tab name="tienda" label="Tienda" @click="$router.push('/tienda')" />
             <q-separator vertical dark />
             <q-tab name="blog" label="Blog" />
             <q-separator vertical dark />
