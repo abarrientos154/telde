@@ -225,7 +225,6 @@ export default {
     }
   },
   mounted () {
-    this.getLogos()
     console.log(this.$q.screen.lt, 'lt', this.$q.screen, 'xs')
     const value = localStorage.getItem('FLAAG_SESSION_INFO')
     if (value) {
