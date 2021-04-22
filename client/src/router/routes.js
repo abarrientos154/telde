@@ -7,7 +7,9 @@ const routes = [
       // Generales
       { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tienda', component: () => import('pages/Tienda.vue') },
-      { path: '/Detalleproducto', component: () => import('pages/ProductoDetalle.vue') }
+      { path: '/Detalleproducto', component: () => import('pages/ProductoDetalle.vue') },
+      { path: '/contacto', component: () => import('pages/Contacto.vue') },
+      { path: '/Blog', component: () => import('pages/Blog.vue') }
 
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
