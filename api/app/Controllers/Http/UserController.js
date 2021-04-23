@@ -218,7 +218,7 @@ class UserController {
     token.email = user.email
     token.verify = user.verify
     let data = {}
-    data.FLAAG_SESSION_INFO = token
+    data.TELDE_SESSION_INFO = token
     return data
   }
 

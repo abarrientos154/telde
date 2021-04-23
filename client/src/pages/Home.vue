@@ -239,7 +239,7 @@ export default {
     this.getLogos()
     this.getPublicidad()
     this.getTienda()
-    const value = localStorage.getItem('FLAAG_SESSION_INFO')
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
     } else {
