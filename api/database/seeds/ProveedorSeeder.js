@@ -16,8 +16,8 @@ const User = use("App/Models/User")
 const userData = [
   {
     id: 1,
-    email: 'novedadesantho@lodelaferia.cl',
-    password: 'novedadesantho.2021',
+    email: 'tienda@telde.com',
+    password: 'telde.2021',
     nombreEmpresa: 'Novedades Antho',
     rut: '',
     direccionFisica: '',
@@ -31,7 +31,7 @@ const userData = [
     dias: [],
     roles: [3],
     images: []
-  },
+  }/* ,
   {
     id: 2,
     email: 'maosaysen@lodelaferia.cl',
@@ -301,7 +301,7 @@ const userData = [
     roles: [3],
     images: [],
     perfilEstatico: false
-  }
+  } */
 ]
 
 
