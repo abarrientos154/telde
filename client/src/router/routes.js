@@ -11,7 +11,9 @@ const routes = [
       { path: '/tienda', component: () => import('pages/Tienda.vue') },
       { path: '/Detalleproducto', component: () => import('pages/ProductoDetalle.vue') },
       { path: '/contacto', component: () => import('pages/Contacto.vue') },
-      { path: '/Blog', component: () => import('pages/Blog.vue') }
+      { path: '/Blog', component: () => import('pages/Blog.vue') },
+      { path: '/somos', component: () => import('pages/SomosNova.vue') },
+      { path: '/Blog2', component: () => import('pages/Blog2.vue') }
 
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
