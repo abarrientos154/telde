@@ -482,7 +482,7 @@ export default {
     if (this.$route.params.producto_id) {
       this.getProducto(this.$route.params.producto_id)
     }
-    const value = localStorage.getItem('FLAAG_SESSION_INFO')
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (!value) {
       this.login = false
     } else {

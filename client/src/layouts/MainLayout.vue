@@ -1,23 +1,31 @@
 <template>
   <q-layout view="hHh Lpr lff">
     <q-header elevated>
-      <q-toolbar class="bg-white q-px-md q-py-xs row justify-end">
-        <div class="q-mr-xs">
-          <q-input dense class="row items-center" bottom-slots v-model="text" label="Buscar" outlined color="black">
-            <template v-slot:append>
-              <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
-            </template>
-            <template v-slot:after>
-              <q-btn round dense flat icon="search" />
-            </template>
-          </q-input>
+      <q-toolbar class="bg-white q-px-md q-py-xs row justify-between">
+        <div>
+          <q-btn v-if="login" class="q-mr-md" round dense flat icon="menu" size="1em" color="black" @click="drawer = !drawer"/>
         </div>
-        <q-separator vertical inset />
+        <div class="row">
+          <div class="q-mr-xs">
+            <q-input dense class="row items-center" bottom-slots v-model="text" label="Buscar" outlined color="black">
+              <template v-slot:append>
+                <q-icon v-if="text !== ''" name="close" @click="text = ''" class="cursor-pointer" />
+              </template>
+              <template v-slot:after>
+                <q-btn round dense flat icon="search" />
+              </template>
+            </q-input>
+          </div>
+          <q-separator vertical inset />
 
-        <q-btn dense class="q-mx-xs" no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
-        <q-separator vertical inset />
+          <q-btn dense class="q-mx-xs" no-caps flat color="grey-8" icon="favorite" label="Mi Lista" />
+          <q-separator vertical inset />
 
-        <q-btn dense class="q-mx-xs" no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
+          <q-btn dense class="q-mx-xs" no-caps flat color="grey-8" icon="shopping_cart" label="Mi Carro" />
+          <q-separator v-if="!login" vertical inset />
+
+          <q-btn v-if="!login" dense class="q-mx-xs" no-caps flat color="primary" label="Iniciar Sesión" @click="$router.push('/login')" />
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -56,7 +64,7 @@
               <div class="col-3 text-white q-mt-sm">Ahora puedes ser parte de la nueva plataforma en linea para vender tus productos de forma rápida y segura</div>
             </div>
             <div class="q-mt-lg">
-              <q-btn class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
+              <q-btn v-if="!login" class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
             </div>
           </div>
         </q-tab-panel>
@@ -88,27 +96,27 @@
         </q-tab-panel>
 
         <q-tab-panel name="blog">
-          <div class="text-h6">Blog</div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <div class="q-mt-xl q-pt-xl">
+            <div>
+              <div class="text-h2 text-white text-bold text-center">Blog</div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-4 text-white q-mt-md">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+          </div>
         </q-tab-panel>
 
         <q-tab-panel name="contacto">
-          <div class="text-h6">Contacto</div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <div class="q-mt-xl q-pt-xl">
+            <div>
+              <div class="text-h2 text-white text-bold text-center">Contactanos</div>
+            </div>
+            <div class="row justify-center">
+              <div class="col-4 text-white q-mt-md">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+          </div>
         </q-tab-panel>
       </q-tab-panels>
-
-      <!-- <div class="q-ml-xl q-mt-xl">
-        <div class="row">
-          <div class="col-3 text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
-        </div>
-        <div class="row">
-          <div class="col-3 text-white q-mt-sm">Ahora puedes ser parte de la nueva plataforma en linea para vender tus productos de forma rápida y segura</div>
-        </div>
-        <div class="q-mt-lg">
-          <q-btn class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!" />
-        </div>
-      </div> -->
     </div>
 
     <q-drawer
@@ -148,25 +156,25 @@
       <router-view />
     </q-page-container>
 
-      <q-footer class="q-mt-md">
+      <q-footer class="q-mt-xl">
         <q-toolbar class="bg-white text-black q-py-lg column q-px-none">
           <div class="row justify-between q-mb-lg" style="width: 100%">
             <div class="row justify-around col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
                 <div class="text-bold q-mb-md">Nova Telde</div>
                 <a class="text-black">Nosotros</a>
                 <a class="text-black">Inicia sesión</a>
                 <a class="text-black">Registrate</a>
                 <a class="text-black">Address</a>
               </div>
-              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
                 <div class="text-bold q-mb-md">Nuestras redes</div>
                 <a class="text-black">Facebook</a>
                 <a class="text-black">Twitter</a>
                 <a class="text-black">Instagram</a>
                 <a class="text-black">Linkedin</a>
               </div>
-              <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
                 <div class="text-bold q-mb-md">Enlaces de interes</div>
                 <a class="text-black">FAQs</a>
                 <a class="text-black">Políticas</a>
@@ -207,7 +215,6 @@ export default {
   name: 'MainLayout',
   data () {
     return {
-      // dialogo: true,
       rol: 0,
       tabActions: 'inicio',
       text: '',
@@ -235,7 +242,7 @@ export default {
         },
         {
           icon: 'person',
-          label: 'Perfil',
+          label: 'Mi Perfil',
           ruta: '/perfil_proveedor',
           permission: 3
         },
@@ -253,13 +260,13 @@ export default {
         },
         {
           icon: 'fact_check',
-          label: 'Reporte',
+          label: 'Reportes',
           ruta: '/reporte_cliente',
           permission: 6
         },
         {
           icon: 'fact_check',
-          label: 'Reporte',
+          label: 'Reportes',
           ruta: '/reporte_tienda',
           permission: 7
         },
@@ -276,8 +283,11 @@ export default {
     ...mapGetters('generals', ['can'])
   },
   mounted () {
+    if (this.$route.path === '/tienda') {
+      this.tabActions = 'tienda'
+    }
     this.getTiendas()
-    const value = localStorage.getItem('FLAAG_SESSION_INFO')
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.login = true
     }

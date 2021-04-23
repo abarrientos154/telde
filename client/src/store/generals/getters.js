@@ -3,7 +3,7 @@
 */
 export function can (state) {
   return permission => {
-    const userInfo = JSON.parse(localStorage.getItem('FLAAG_SESSION_INFO'))
+    const userInfo = JSON.parse(localStorage.getItem('TELDE_SESSION_INFO'))
     const per = (userInfo !== null) ? userInfo.permissions.filter(item => {
       return item === permission
     }).length : 0
@@ -16,5 +16,5 @@ export function can (state) {
 }
 
 export function UserInfo (state) {
-  return JSON.parse(localStorage.getItem('FLAAG_SESSION_INFO'))
+  return JSON.parse(localStorage.getItem('TELDE_SESSION_INFO'))
 }

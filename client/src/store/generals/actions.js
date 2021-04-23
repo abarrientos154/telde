@@ -1,8 +1,8 @@
 export function fetchAccessToken ({ commit }) {
-  commit('updateAccessToken', JSON.parse(localStorage.getItem('FLAAG_SESSION_INFO')))
+  commit('updateAccessToken', JSON.parse(localStorage.getItem('TELDE_SESSION_INFO')))
 }
 export function logout ({ commit }) {
-  localStorage.removeItem('FLAAG_SESSION_INFO')
+  localStorage.removeItem('TELDE_SESSION_INFO')
   commit('logout')
 }
 export async function saveUser ({ commit }) {

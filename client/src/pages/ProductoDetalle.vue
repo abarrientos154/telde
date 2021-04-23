@@ -226,7 +226,7 @@ export default {
   },
   mounted () {
     console.log(this.$q.screen.lt, 'lt', this.$q.screen, 'xs')
-    const value = localStorage.getItem('FLAAG_SESSION_INFO')
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
     } else {
