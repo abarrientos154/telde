@@ -1,10 +1,7 @@
 <template>
-  <q-layout view="hHh Lpr lff">
-    <q-header elevated>
-      <q-toolbar class="bg-white q-px-md q-py-xs row justify-between">
-        <div>
-          <q-btn v-if="login" class="q-mr-md" round dense flat icon="menu" size="1em" color="black" @click="drawer = !drawer"/>
-        </div>
+  <q-layout view="hHh Lpr lFf">
+    <!-- <q-header elevated>
+      <q-toolbar class="bg-white q-px-md q-py-xs row justify-end">
         <div class="row">
           <div class="q-mr-xs">
             <q-input dense class="row items-center" bottom-slots v-model="text" label="Buscar" outlined color="black">
@@ -27,9 +24,9 @@
           <q-btn v-if="!login" dense class="q-mx-xs" no-caps flat color="primary" label="Iniciar Sesión" @click="$router.push('/login')" />
         </div>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
 
-    <div class="bg-secondary q-pt-xl" style="height: 600px">
+    <!-- <div class="bg-secondary q-pt-xl" style="height: 600px">
       <div class="row justify-between q-pa-md q-mt-lg">
         <div class="row q-ml-lg">
           <q-img class="q-ml-md" src="logo.png" style="width:30px" />
@@ -117,9 +114,9 @@
           </div>
         </q-tab-panel>
       </q-tab-panels>
-    </div>
+    </div> -->
 
-    <q-drawer
+    <!-- <q-drawer
         v-model="drawer"
         :width="350"
         :breakpoint="500"
@@ -150,14 +147,14 @@
             <q-btn no-caps class="text-white text-subtitle1 q-px-xl q-py-sm" color="black" label="Inicia Sesión" @click="$router.push('/login')" />
           </div>
         </div>
-      </q-drawer>
+      </q-drawer> -->
 
-    <q-page-container @click="drawer = false">
+    <q-page-container class="q-mb-md">
       <router-view />
     </q-page-container>
 
-      <q-footer class="q-mt-xl">
-        <q-toolbar class="bg-white text-black q-py-lg column q-px-none">
+    <!-- <div class="q-pb-md">
+      <q-toolbar class="bg-white text-black q-pt-lg q-pb-xl column q-px-none">
           <div class="row justify-between q-mb-lg" style="width: 100%">
             <div class="row justify-around col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
               <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 col-xl-3 q-mt-md column justify-start q-gutter-sm">
@@ -205,6 +202,16 @@
             <div>Copyright 2021, Nova Telde</div>
           </div>
         </q-toolbar>
+    </div> -->
+
+      <q-footer elevated>
+        <div class="bg-blue-14 shadow-2 full-width row justify-around" >
+          <div class="row items-center"><q-btn icon="store" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn icon="view_list" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn icon="person" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn icon="description" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn :icon="login ? 'logout' : 'login'" color="white" flat round size="lg" @click="login ? cerrarSesion() : $router.push('/login')" /></div>
+      </div>
       </q-footer>
   </q-layout>
 </template>

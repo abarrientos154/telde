@@ -1,60 +1,78 @@
 <template>
-  <div class="q-px-xl q-pb-xl">
-      <div class="text-h6 text-grey-7 text-center"> Agregar Producto </div>
+  <q-page>
+    <q-img :src="images.length > 0 ? imagesSubir[0] : 'nopublicidad.jpg'" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+      <div class="bg-transparent">
+        <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
+      </div>
+      <div class="row justify-center bg-transparent absolute-center" style="width:100%">
+        <q-avatar v-if="images.length < 3" size="90px">
+          <div style="z-index:1">
+            <q-file borderless v-model="img" class="button-camera" @input="insertarImagen()" accept=".jpg, image/*">
+              <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
+            </q-file>
+          </div>
+        </q-avatar>
+      </div>
+    </q-img>
+    <div :class="$v.images.$error ? 'text-red text-center' : 'text-grey-7 text-center'">Imagenes del producto (hasta 3 imagenes)</div>
+    <q-scroll-area v-if="images.length > 0" horizontal style="height:120px; width: 100%;"
+      :thumb-style="thumbStyle" :bar-style="barStyle"
+    >
+      <div class="no-wrap q-px-md q-gutter-md row">
+        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:100px;border-radius:12px;width:140px" >
+          <q-btn @click="images.splice(index, 1), imagesSubir.splice(index, 1)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
+        </q-img>
+      </div>
+    </q-scroll-area>
 
       <div class="row q-pa-sm justify-around">
-        <div class="full-width q-pa-sm">
-          <q-input v-model="form.nombre" label="Nombre" outlined
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+          <div class="text-subtitle1">Nombre del producto</div>
+          <q-input v-model="form.nombre" label="Nombre del producto" outlined
           error-message="Requerido" :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
           />
         </div>
-        <div class="full-width q-pa-sm">
-          <q-input v-model="form.descripcion" label="Descripcion" outlined type="textarea"
-          error-message="Requerido" :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-pa-sm">
-          <q-input v-model.number="form.cantidad" label="Cantidad" outlined type="number"
-          error-message="Requerido" :error="$v.form.cantidad.$error" @blur="$v.form.cantidad.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-pa-sm">
-          <q-input v-model.number="form.valor" label="Valor" outlined type="number"
-          error-message="Requerido" :error="$v.form.valor.$error" @blur="$v.form.valor.$touch()"
-          />
-        </div>
-      </div>
-
-      <div class="column q-mb-md">
-        <div :class="$v.images.$error ? 'text-red q-ma-md' : 'text-grey-7 q-ma-md'">Imagenes del producto (hasta 3 imagenes)</div>
-        <div class="row full-width q-pa-md items-center">
-          <q-scroll-area horizontal style="height:120px; width: 100%;"
-            :thumb-style="thumbStyle" :bar-style="barStyle"
+        <div class="col-12 row justify-center">
+          <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 text-subtitle1 q-mt-md">Selecciona tus categorias</div>
+          <q-scroll-area
+            class="col-12"
+            horizontal
+            style="height: 80px;"
           >
-            <div class="no-wrap q-gutter-xs row">
-              <div class="column shadow-3 justify-center items-center q-ma-sm q-ml-sm bg-grey-2" style="height:100px;border-radius:12px;width:140px">
-                <q-avatar size="90px">
-                  <div style="z-index:1">
-                    <q-file borderless v-model="img" class="button-camera" :disable="images.length > 2" @input="insertarImagen()" accept=".jpg, image/*">
-                      <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
-                    </q-file>
-                  </div>
-                </q-avatar>
-              </div>
-              <div class="q-gutter-xs row" v-if="images.length > 0">
-                <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:100px;border-radius:12px;width:140px" >
-                  <q-btn @click="images.splice(index, 1), imagesSubir.splice(index, 1)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
-                </q-img>
+            <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+              <div v-for="(btn, index) in 10" :key="index" >
+                <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
               </div>
             </div>
           </q-scroll-area>
         </div>
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+          <div class="text-subtitle1">Precio</div>
+          <q-input v-model.number="form.valor" label="Precio del producto" outlined type="number"
+          error-message="Requerido" :error="$v.form.valor.$error" @blur="$v.form.valor.$touch()"
+          />
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+          <div class="text-subtitle1">Reseña del articulo</div>
+          <q-input v-model="form.descripcion" label="Descripcion" outlined type="textarea"
+          error-message="Requerido" :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
+          />
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+          <div class="row justify-between items-center">
+            <div>Control stock</div>
+            <q-input class="col-6" v-model.number="form.cantidad" label="Cantidad disponible" outlined type="number"
+            error-message="Requerido" :error="$v.form.cantidad.$error" @blur="$v.form.cantidad.$touch()"
+            />
+          </div>
+        </div>
       </div>
 
-      <div class="row justify-center" style="width:100%">
-        <q-btn label="guardar" @click="guardar()" color="primary" push style="width:50%" />
+      <div class="row items-center justify-center" style="width:100%">
+        <q-btn no-caps rounded label="Guardar" color="primary" size="lg" style="width: 50%"
+        @click="guardar()" />
       </div>
-  </div>
+  </q-page>
 </template>
 
 <script>

@@ -1,6 +1,131 @@
 <template>
   <q-page>
-    <div class="row">
+    <div class="column justify-between bg-secondary" style="height: 500px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
+      <div class="q-pa-md row justify-between">
+        <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
+        <q-btn v-if="miTienda" label="Editar perfil" flat no-caps color="grey-4" text-color="white" />
+      </div>
+      <div class="row justify-end items-center q-mb-xl">
+        <div class="col-xs-7 col-sm-5 col-md-4 col-lg-4 col-xl-4">
+          <div class="text-h6">Horario de atención</div>
+          <div class="text-subtitle1">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
+          <div class="text-h6 q-mt-lg">Días de atención</div>
+          <div class="text-subtitle1">{{user.dias.length ? dias() : 'Libre'}}</div>
+        </div>
+      </div>
+    </div>
+
+    <q-scroll-area
+        v-if="user.images.length"
+        horizontal
+        style="height: 410px;"
+      >
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+          <q-card style="border-radius: 24px; width:450px" clickable v-ripple v-for="(img, index) in user.images" :key="index">
+            <q-img :src="'nopublicidad.jpg'"
+            style="height: 380px; width: 100%" >
+            </q-img>
+          </q-card>
+        </div>
+    </q-scroll-area>
+
+    <q-scroll-area
+      horizontal
+      style="height: 80px;"
+    >
+      <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+        <div v-for="(btn, index) in 10" :key="index" >
+          <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
+        </div>
+      </div>
+    </q-scroll-area>
+
+    <div class="text-h5 q-my-md text-center">Últimos productos agregados</div>
+    <q-scroll-area
+        horizontal
+        style="height: 500px;"
+      >
+        <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
+          <div v-for="(card, index) in ultimosProductos" :key="index" >
+            <q-card flat class="my-card" style="height: 460px">
+              <q-img
+                :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                spinner-color="white"
+                style="height: 230px; width: 210px"/>
+
+              <q-card-section>
+                <q-rating readonly v-model="card.rating" :max="5" size="25px" />
+
+                <div class="row no-wrap items-center q-mt-xs">
+                  <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
+                  <div class="col-auto text-grey text-caption row no-wrap items-center">
+                    <q-icon name="favorite_border" size="1.8em" />
+                  </div>
+                </div>
+                <div class="text-caption text-black"> {{card.descripcion}} </div>
+              </q-card-section>
+
+              <q-card-section class="absolute-bottom">
+                <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
+                <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                <div v-if="!miTienda" class="row items-center">
+                  <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </q-scroll-area>
+
+      <div class="text-h5 q-my-md text-center">Mejores categorizados</div>
+      <q-scroll-area
+          horizontal
+          style="height: 500px;"
+        >
+          <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
+            <div v-for="(card, index) in productos" :key="index" >
+              <q-card flat class="my-card" style="height: 460px">
+                <q-img
+                  :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                  spinner-color="white"
+                  style="height: 230px; width: 210px"/>
+
+                <q-card-section>
+                  <q-rating readonly v-model="card.rating" :max="5" size="25px" />
+
+                  <div class="row no-wrap items-center q-mt-xs">
+                    <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
+                    <div class="col-auto text-grey text-caption row no-wrap items-center">
+                      <q-icon name="favorite_border" size="1.8em" />
+                    </div>
+                  </div>
+                  <div class="text-caption text-black"> {{card.descripcion}} </div>
+                </q-card-section>
+
+                <q-card-section class="absolute-bottom">
+                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
+                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                  <div v-if="!miTienda" class="row items-center">
+                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
+                  </div>
+                </q-card-section>
+              </q-card>
+            </div>
+          </div>
+        </q-scroll-area>
+        <div class="row items-center justify-center q-mt-lg">
+          <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%" />
+        </div>
+
+        <q-page-sticky v-if="miTienda" position="bottom-right" :offset="[18, 18]">
+          <q-btn fab icon="dashboard_customize" color="primary" @click="$router.push('/producto')">
+            <q-tooltip>
+              Nuevo producto
+            </q-tooltip>
+          </q-btn>
+        </q-page-sticky>
+
+    <!-- <div class="row">
       <div class="q-mt-md q-ml-md text-bold text-h5">MI TIENDA</div>
       <q-space />
       <q-breadcrumbs class="q-pt-md q-pl-xl text-h6 q-mr-sm">
@@ -64,7 +189,7 @@
                     style="height: 150px; width: 150px"/>
                 </div>
                 <q-card-section>
-                  <q-rating v-model="card.calification" :max="5" size="20px" />
+                  <q-rating readonly v-model="card.calification" :max="5" size="20px" />
                   <div class="row no-wrap items-center q-mt-xs">
                     <div class="col text-subtitle2 text-black ellipsis">{{card.nombre}}</div>
                     <div class="col-auto text-grey text-caption row no-wrap items-center">
@@ -120,7 +245,7 @@
           </div>
 
           <q-card-section>
-            <q-rating :disable="rol === 3" v-model="card.calification" :max="5" size="25px" />
+            <q-rating readonly v-model="card.calification" :max="5" size="25px" />
 
             <div class="row no-wrap items-center q-mt-xs">
               <div class="col text-subtitle2 ellipsis">{{card.nombre}}</div>
@@ -143,7 +268,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
   </q-page>
 </template>
 
@@ -152,15 +277,19 @@ import env from '../env'
 export default {
   data () {
     return {
+      miTienda: false,
       rol: 0,
+      slide: 0,
       id_tienda: '',
-      baseu: '',
+      baseuProducto: '',
       tab: 'Inicio',
+      user: {},
+      userLog: {},
       categorias: ['categorias', 'categorias', 'categorias', 'categorias', 'categorias', 'converse'],
       tallas: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       precio: ['€0-€100', '€110-€300', '€300-€500', '€500-€1000'],
       productos: [],
-      slide: 0,
+      ultimosProductos: [],
       catego: [],
       talla: [],
       preci: [],
@@ -179,11 +308,14 @@ export default {
     }
   },
   mounted () {
-    this.baseu = env.apiUrl + '/producto_files/'
+    this.baseuProducto = env.apiUrl + '/producto_files/'
     if (this.$route.params.proveedor_id) {
       this.id_tienda = this.$route.params.proveedor_id
       this.getProductosByProveedor(this.id_tienda)
-    } else {
+      this.getInfoById(this.id_tienda)
+    }
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
+    if (value) {
       this.getInfo()
     }
   },
@@ -191,19 +323,57 @@ export default {
     getInfo () {
       this.$api.get('user_info').then(res => {
         if (res) {
-          this.id_tienda = res._id
-          this.rol = res.roles[0]
-          this.getProductosByProveedor(this.id_tienda)
+          if (res._id === this.id_tienda) {
+            this.miTienda = true
+          }
         }
+      })
+    },
+    getInfoById (id) {
+      this.$api.post('user_by_id/' + id).then(res => {
+        this.user = res
+        console.log('user', this.user)
       })
     },
     getProductosByProveedor (id) {
       this.$api.get('productos/' + id).then(res => {
         if (res) {
           this.productos = res
+          var largo = res.length - 1
+          for (let i = 0; i < 10; i++) {
+            if (largo >= 0) {
+              this.ultimosProductos.push(res[largo])
+              largo = largo - 1
+            }
+          }
           console.log('prod', this.productos)
         }
       })
+    },
+    formatPrice (value) {
+      const val = (value / 1).toFixed(0).replace('.', ',')
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    },
+    dias () {
+      var dias = ''
+      for (let i = 0; i < this.user.dias.length; i++) {
+        if (this.user.dias[i] === 0) {
+          dias = dias + 'Lunes, '
+        } else if (this.user.dias[i] === 1) {
+          dias = dias + 'Martes, '
+        } else if (this.user.dias[i] === 2) {
+          dias = dias + 'Miercoles, '
+        } else if (this.user.dias[i] === 3) {
+          dias = dias + 'Jueves, '
+        } else if (this.user.dias[i] === 4) {
+          dias = dias + 'Viernes, '
+        } else if (this.user.dias[i] === 5) {
+          dias = dias + 'Sabado, '
+        } else if (this.user.dias[i] === 6) {
+          dias = dias + 'Domingo, '
+        }
+      }
+      return dias
     }
   }
 }
