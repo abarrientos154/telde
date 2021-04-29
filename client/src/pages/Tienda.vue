@@ -1,19 +1,19 @@
 <template>
   <q-page>
-    <div class="column justify-between bg-secondary" style="height: 500px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
-      <div class="q-pa-md row justify-between">
+    <q-img :src="user.perfil ? baseuPerfil + user._id : 'nopublicidad.jpg'" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+      <div class="q-pa-md bg-transparent row justify-between" style="width:100%">
         <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
         <q-btn v-if="miTienda" label="Editar perfil" flat no-caps color="grey-4" text-color="white" />
       </div>
-      <div class="row justify-end items-center q-mb-xl">
+      <div class="row absolute-center justify-end items-center bg-transparent" style="width:100%">
         <div class="col-xs-7 col-sm-5 col-md-4 col-lg-4 col-xl-4">
-          <div class="text-h6">Horario de atención</div>
-          <div class="text-subtitle1">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
-          <div class="text-h6 q-mt-lg">Días de atención</div>
-          <div class="text-subtitle1">{{user.dias.length ? dias() : 'Libre'}}</div>
+          <div class="text-h6 text-black">Horario de atención</div>
+          <div class="text-subtitle1 text-black">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
+          <div class="text-h6 q-mt-lg text-black">Días de atención</div>
+          <div class="text-subtitle1 text-black">{{user.dias.length ? dias() : 'Libre'}}</div>
         </div>
       </div>
-    </div>
+    </q-img>
 
     <q-scroll-area
         v-if="user.images.length"
@@ -42,16 +42,18 @@
 
     <div class="text-h5 q-my-md text-center">Últimos productos agregados</div>
     <q-scroll-area
+        v-if="ultimosProductos.length"
         horizontal
         style="height: 500px;"
       >
         <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
           <div v-for="(card, index) in ultimosProductos" :key="index" >
-            <q-card flat class="my-card" style="height: 460px">
+            <q-card flat class="my-card" style="height: 460px; width: 210px">
               <q-img
                 :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
                 spinner-color="white"
-                style="height: 230px; width: 210px"/>
+                style="height: 230px; width: 210px"
+                @click="producto = card, verProducto = true"/>
 
               <q-card-section>
                 <q-rating readonly v-model="card.rating" :max="5" size="25px" />
@@ -71,24 +73,31 @@
                 <div v-if="!miTienda" class="row items-center">
                   <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
                 </div>
+                <div v-if="miTienda" class="row justify-end">
+                  <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                  <q-btn flat round icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                </div>
               </q-card-section>
             </q-card>
           </div>
         </div>
       </q-scroll-area>
+      <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
 
       <div class="text-h5 q-my-md text-center">Mejores categorizados</div>
       <q-scroll-area
+          v-if="productos.length"
           horizontal
           style="height: 500px;"
         >
           <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
             <div v-for="(card, index) in productos" :key="index" >
-              <q-card flat class="my-card" style="height: 460px">
+              <q-card flat class="my-card" style="height: 460px; width: 210px">
                 <q-img
                   :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
                   spinner-color="white"
-                  style="height: 230px; width: 210px"/>
+                  style="height: 230px; width: 210px"
+                  @click="producto = card, verProducto = true"/>
 
                 <q-card-section>
                   <q-rating readonly v-model="card.rating" :max="5" size="25px" />
@@ -108,12 +117,55 @@
                   <div v-if="!miTienda" class="row items-center">
                     <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
                   </div>
+                  <div v-if="miTienda" class="row justify-end">
+                    <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                    <q-btn flat round icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                  </div>
                 </q-card-section>
               </q-card>
             </div>
           </div>
         </q-scroll-area>
-        <div class="row items-center justify-center q-mt-lg">
+        <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
+
+        <div class="text-h5 q-my-md text-center">Más productos</div>
+        <div v-if="productos.length" class="row justify-around">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 row justify-center q-mt-md" v-for="(card, index) in productos" :key="index">
+            <q-card flat class="my-card" style="height: 460px; width: 210px">
+                <q-img
+                  :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                  spinner-color="white"
+                  style="height: 230px; width: 210px"
+                  @click="producto = card, verProducto = true"/>
+
+                <q-card-section>
+                  <q-rating readonly v-model="card.rating" :max="5" size="25px" />
+
+                  <div class="row no-wrap items-center q-mt-xs">
+                    <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
+                    <div class="col-auto text-grey text-caption row no-wrap items-center">
+                      <q-icon name="favorite_border" size="1.8em" />
+                    </div>
+                  </div>
+                  <div class="text-caption text-black"> {{card.descripcion}} </div>
+                </q-card-section>
+
+                <q-card-section class="absolute-bottom">
+                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
+                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                  <div v-if="!miTienda" class="row items-center">
+                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
+                  </div>
+                  <div v-if="miTienda" class="row justify-end">
+                    <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                    <q-btn flat round icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                  </div>
+                </q-card-section>
+            </q-card>
+          </div>
+        </div>
+        <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
+        <div v-if="productos.length" class="row items-center justify-center q-mt-lg">
           <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%" />
         </div>
 
@@ -124,6 +176,14 @@
             </q-tooltip>
           </q-btn>
         </q-page-sticky>
+
+        <q-dialog v-model="verProducto">
+          <q-card style="width: 400px">
+            <q-card-section class="q-pa-none" style="width: 100%">
+              <DetalleProducto :data="producto" lugar="tienda" />
+            </q-card-section>
+          </q-card>
+        </q-dialog>
 
     <!-- <div class="row">
       <div class="q-mt-md q-ml-md text-bold text-h5">MI TIENDA</div>
@@ -273,18 +333,20 @@
 </template>
 
 <script>
+import DetalleProducto from '../pages/DetalleProducto'
 import env from '../env'
 export default {
+  components: { DetalleProducto },
   data () {
     return {
       miTienda: false,
-      rol: 0,
+      verProducto: false,
       slide: 0,
       id_tienda: '',
       baseuProducto: '',
-      tab: 'Inicio',
+      baseuPerfil: '',
+      producto: {},
       user: {},
-      userLog: {},
       categorias: ['categorias', 'categorias', 'categorias', 'categorias', 'categorias', 'converse'],
       tallas: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       precio: ['€0-€100', '€110-€300', '€300-€500', '€500-€1000'],
@@ -292,25 +354,14 @@ export default {
       ultimosProductos: [],
       catego: [],
       talla: [],
-      preci: [],
-      ejemplos2: [
-        {
-          nombre: 'Producto',
-          calification: 5,
-          value: 1
-        },
-        {
-          nombre: 'Producto2',
-          calification: 5,
-          value: 2
-        }
-      ]
+      preci: []
     }
   },
   mounted () {
     this.baseuProducto = env.apiUrl + '/producto_files/'
     if (this.$route.params.proveedor_id) {
       this.id_tienda = this.$route.params.proveedor_id
+      this.baseuPerfil = env.apiUrl + '/perfil_img/' + this.id_tienda
       this.getProductosByProveedor(this.id_tienda)
       this.getInfoById(this.id_tienda)
     }
@@ -338,6 +389,7 @@ export default {
     getProductosByProveedor (id) {
       this.$api.get('productos/' + id).then(res => {
         if (res) {
+          this.ultimosProductos = []
           this.productos = res
           var largo = res.length - 1
           for (let i = 0; i < 10; i++) {
@@ -346,8 +398,30 @@ export default {
               largo = largo - 1
             }
           }
-          console.log('prod', this.productos)
+          console.log('productos', this.productos)
         }
+      })
+    },
+    eliminarProducto (id) {
+      this.$q.dialog({
+        title: '¡Atención!',
+        message: '¿Seguro desea eliminar este producto?',
+        cancel: true,
+        persistent: true
+      }).onOk(() => {
+        this.$q.loading.show()
+        this.$api.delete('producto/' + id).then(res => {
+          if (res) {
+            this.$q.loading.hide()
+            this.$q.notify({
+              message: 'Eliminado Correctamente',
+              color: 'positive'
+            })
+            this.getProductosByProveedor(this.id_tienda)
+          }
+        })
+      }).onCancel(() => {
+        // console.log('>>>> Cancel')
       })
     },
     formatPrice (value) {

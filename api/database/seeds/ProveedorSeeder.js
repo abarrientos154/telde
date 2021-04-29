@@ -18,7 +18,7 @@ const userData = [
     id: 1,
     email: 'tienda@telde.com',
     password: 'telde.2021',
-    nombreEmpresa: 'Novedades Antho',
+    nombreEmpresa: 'Tienda Nova Telde',
     rut: '',
     direccionFisica: '',
     metodoPago: [],

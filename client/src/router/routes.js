@@ -6,6 +6,7 @@ const routes = [
     children: [
       // Tienda
       { path: '/producto', component: () => import('pages/Proveedor/Producto.vue') },
+      { path: '/editar_producto/:producto_id', component: () => import('pages/Proveedor/Producto.vue') },
       // Generales
       { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tienda/:proveedor_id', component: () => import('pages/Tienda.vue') },
@@ -38,8 +39,8 @@ const routes = [
     ]
   },
   { path: '/login', component: () => import('pages/Login.vue') },
-  /* { path: '/registro', component: () => import('pages/Registro.vue') },
-  { path: '/splash', component: () => import('pages/Splash.vue') }, */
+  { path: '/registro', component: () => import('pages/Registro/Parte1.vue') },
+  /* { path: '/splash', component: () => import('pages/Splash.vue') }, */
   {
     path: '/',
     redirect: '/inicio'
