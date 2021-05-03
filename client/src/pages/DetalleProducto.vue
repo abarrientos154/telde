@@ -1,7 +1,6 @@
 <template>
   <div style="height:100%;">
-      <q-img :src="baseu + perfile" spinner-color="white" style="height: 400px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
-      </q-img>
+      <img :src="baseu + perfile" spinner-color="white" style="height: 400px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px"/>
 
         <div class="q-pa-sm">
             <q-scroll-area

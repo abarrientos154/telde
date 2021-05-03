@@ -14,24 +14,23 @@
 const Factory = use('Factory')
 const User = use("App/Models/User")
 const userData = [
-  {
+  /* {
     id: 1,
     email: 'tienda@telde.com',
     password: 'telde.2021',
-    nombreEmpresa: 'Tienda Nova Telde',
-    rut: '',
-    direccionFisica: '',
-    metodoPago: [],
-    telefono: '',
+    nombre: 'Tienda Nova Telde',
+    descripcion: '',
+    cif: '',
+    ciudad: '',
+    direccion: '',
+    codigo_postal: '',
     delivery: false,
-    perfilEstatico: false,
-    regiones: false,
-    perfil: false,
     status: 1,
+    metodo_pago: [],
     dias: [],
     roles: [3],
     images: []
-  }/* ,
+  } *//* ,
   {
     id: 2,
     email: 'maosaysen@lodelaferia.cl',

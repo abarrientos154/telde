@@ -40,6 +40,7 @@ addPrefixToGroup(
     // Insertar rutas sin protección de autenticación aquí
     Route.post("login", "UserController.login");
     Route.post("registrar_cliente", "UserController.register")
+    Route.post("registrar_tienda", "UserController.registerTienda")
     Route.get("validate_email/:email", "UserController.validateEmail")
     Route.get("perfil_img/:file", "UploadController.perfilImg")
     Route.get("tienda_files/:file", "UploadController.tiendaFiles")

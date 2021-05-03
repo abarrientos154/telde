@@ -26,7 +26,7 @@ class UserController {
     let body = request.only(User.fillableProveedor)
     let id = request.only('_id')
     if (userL.roles[0] !== 1) {
-      body.status = 2
+      /* body.status = 2 */
       let user = await User.query().where('_id', userL._id.toString()).update(body)
       response.send(user)
     } else {
@@ -36,7 +36,7 @@ class UserController {
     }
   }
 
-  async register({ request, response }) {
+  async register ({ request, response }) {
     let dat = request.only(['dat'])
     dat = JSON.parse(dat.dat)
     const validation = await validate(dat, User.fieldValidationRules())
@@ -63,6 +63,77 @@ class UserController {
       }
       if (!profilePic.moved()) {
         return profilePic.error()
+      }
+
+      response.send(user)
+    }
+  }
+
+  async registerTienda ({ request, response }) {
+    let dat = request.only(['dat'])
+    dat = JSON.parse(dat.dat)
+    if (((await User.where({email: dat.email}).fetch()).toJSON()).length) {
+      response.unprocessableEntity([{
+        message: 'Correo ya registrado en el sistema!'
+      }])
+    } else {
+      let images = []
+      if (dat.cantidadFiles > 0) {
+        for (let i = 0; i < dat.cantidadFiles; i++) {
+          let codeFile = randomize('Aa0', 30)
+          const profilePic1 = request.file('files' + i, {
+            types: ['image']
+          })
+          if (Helpers.appRoot('storage/uploads/proveedor_images')) {
+            await profilePic1.move(Helpers.appRoot('storage/uploads/proveedor_images'), {
+              name: codeFile,
+              overwrite: true
+            })
+          } else {
+            mkdirp.sync(`${__dirname}/storage/Excel`)
+          }
+          if (!profilePic1.moved()) {
+            return profilePic1.error()
+          } else {
+            images.push(codeFile)
+          }
+        }
+      }
+      delete dat.cantidadFiles
+      dat.images = images
+      let body = dat
+      body.roles = [3]
+      body.status = 1
+      body.delivery = false
+      const user = await User.create(body)
+
+      const profilePic = request.file('perfil', {
+      })
+      if (Helpers.appRoot('storage/uploads/perfil')) {
+        await profilePic.move(Helpers.appRoot('storage/uploads/perfil'), {
+          name: user._id.toString(),
+          overwrite: true
+        })
+      } else {
+        mkdirp.sync(`${__dirname}/storage/Excel`)
+      }
+      if (!profilePic.moved()) {
+        return profilePic.error()
+      }
+
+      const profilePic2 = request.file('portada', {
+      })
+      if (Helpers.appRoot('storage/uploads/perfil')) {
+        await profilePic2.move(Helpers.appRoot('storage/uploads/perfil'), {
+          name: 'portada' + user._id.toString(),
+          overwrite: true
+        })
+      } else {
+        mkdirp.sync(`${__dirname}/storage/Excel`)
+      }
+  
+      if (!profilePic2.moved()) {
+        return profilePic2.error()
       }
 
       response.send(user)

@@ -1,0 +1,188 @@
+<template>
+  <div>
+    <q-carousel
+      class="window-height"
+      animated
+      v-model="slide"
+      infinite
+    >
+      <q-carousel-slide :name="1" >
+        <div class="q-pa-md">
+          <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
+        </div>
+        <div class="column items-center justify-center q-mx-md">
+          <div class="column items-center justify-center">
+            <div class="q-mb-md row justify-center">
+              <q-img :src="perfil ? perfilImg : 'noimg.png'" style="width:150px;height:150px;border-radius:25px" >
+                <div class="absolute-center bg-transparent text-center" style="width: 100%">
+                  <div class="absolute-center" style="z-index:1">
+                    <q-file borderless v-model="perfil" class="button-subir" @input="changePerfil()" accept=".jpg, image/*"
+                      @blur="$v.perfil.$touch()"
+                    >
+                      <q-avatar class="absolute-center cursor-pointer">
+                        <q-icon name="cloud_upload" color="white" class="absolute-center" />
+                      </q-avatar>
+                    </q-file>
+                  </div>
+                </div>
+              </q-img>
+            </div>
+            <div :class="!$v.perfil.$error ? 'text-grey-7' : 'text-negative'" class="text-bold"> SUBE UNA FOTO </div>
+          </div>
+          <div class="row justify-center q-gutter-xs q-mt-md">
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input v-model="form.name" label="Nombres" outlined
+                error-message="Requerido" :error="$v.form.name.$error" @blur="$v.form.name.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input v-model="form.lastName" label="Apellidos" outlined
+                error-message="Requerido" :error="$v.form.lastName.$error" @blur="$v.form.lastName.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input v-model="form.telefono" label="Número de contacto" outlined
+                error-message="Requerido" :error="$v.form.telefono.$error" @blur="$v.form.telefono.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
+              <q-input v-model="form.email" label="Correo de contacto" outlined type="email"
+                error-message="Requerido" :error="$v.form.email.$error" @blur="$v.form.email.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input :type="isPwd ? 'password' : 'text'" v-model="password" label="Contraseña" outlined
+                error-message="ingrese una contraseña valida, minimo de caracteres es de 6" :error="$v.password.$error" @blur="$v.password.$touch()">
+                <template v-slot:append>
+                  <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer q-pa-sm" color="primary" @click="isPwd = !isPwd" />
+                </template>
+              </q-input>
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input :type="isPwd ? 'password' : 'text'" v-model="repeatPassword" label="Confirmar Contraseña" outlined
+                error-message="ingrese una contraseña valida, minimo de caracteres es de 6" :error="$v.repeatPassword.$error" @blur="$v.repeatPassword.$touch()">
+                <template v-slot:append>
+                  <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer q-pa-sm" color="primary" @click="isPwd = !isPwd" />
+                </template>
+              </q-input>
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-checkbox v-model="terminos_condiciones" :class="textColor" @input="terminos_condiciones ? textColor = 'text-black' : ''" label="Acepto término y condiciones de uso*" />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+              <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+              @click="registrar()" />
+            </div>
+          </div>
+        </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="2" >
+        <div class="absolute-center" style="width:100%">
+          <div class="q-mb-md row justify-center">
+            <q-img src="fondo1.jpg" style="width:150px;height:150px;border-radius:25px" >
+            </q-img>
+          </div>
+          <div class="text-center text-h4 text-bold">¡Registro Exitoso!</div>
+          <div class="row items-center justify-center q-mt-lg" style="width:100%">
+            <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+            @click="onSubmit()" />
+          </div>
+        </div>
+      </q-carousel-slide>
+    </q-carousel>
+  </div>
+</template>
+
+<script>
+import { required, email, sameAs, maxLength, minLength } from 'vuelidate/lib/validators'
+import { mapMutations } from 'vuex'
+export default {
+  data () {
+    return {
+      form: {},
+      perfil: null,
+      perfilImg: null,
+      isPwd: true,
+      terminos_condiciones: false,
+      password: '',
+      repeatPassword: '',
+      textColor: 'text-black',
+      slide: 1
+    }
+  },
+  validations: {
+    form: {
+      name: { required },
+      lastName: { required },
+      telefono: { required },
+      email: { email, required }
+    },
+    terminos_condiciones: { required },
+    repeatPassword: { sameAsPassword: sameAs('password') },
+    password: { required, maxLength: maxLength(256), minLength: minLength(6) },
+    perfil: { required }
+  },
+  methods: {
+    ...mapMutations('generals', ['login']),
+    onSubmit () {
+      this.$q.loading.show()
+      this.$api.post('login', this.form).then(res => {
+        if (res) {
+          this.$router.push('/inicio')
+          this.login(res)
+        } else {
+          console.log('hubo un error')
+        }
+      })
+      this.$q.loading.hide()
+    },
+    async registrar () {
+      this.$v.$touch()
+      if (!this.terminos_condiciones) {
+        this.textColor = 'text-red'
+      }
+      if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && !this.$v.perfil.$error && this.terminos_condiciones) {
+        this.form.password = this.password
+        var formData = new FormData()
+        formData.append('perfil', this.perfil)
+        formData.append('dat', JSON.stringify(this.form))
+        this.$q.loading.show()
+        await this.$api.post('registrar_cliente', formData, {
+          headers: {
+            'Content-Type': undefined
+          }
+        }).then(res => {
+          if (res) {
+            this.$q.notify({
+              message: 'Ya formas parte de Nova Telde, Bienvenido',
+              color: 'positive'
+            })
+            this.slide = 2
+            this.$q.loading.hide()
+          }
+          this.$q.loading.hide()
+        })
+      }
+    },
+    changePerfil () {
+      if (this.perfil) { this.perfilImg = URL.createObjectURL(this.perfil) }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.button-subir {
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 540;
+  font-size: 0px;
+  color: #0016b0;
+  background-color: $primary;
+  border-radius: 30px;
+  border: 1px solid #7e7e7e;
+  height:40px;
+  width: 40px;
+}
+</style>

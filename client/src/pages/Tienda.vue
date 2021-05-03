@@ -1,16 +1,17 @@
 <template>
   <q-page>
-    <q-img :src="user.perfil ? baseuPerfil + user._id : 'nopublicidad.jpg'" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+    <q-img :src="baseuPortada" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
       <div class="q-pa-md bg-transparent row justify-between" style="width:100%">
         <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
-        <q-btn v-if="miTienda" label="Editar perfil" flat no-caps color="grey-4" text-color="white" />
+        <q-btn v-if="miTienda" label="Editar perfil" flat no-caps color="grey-4" text-color="white"
+        @click="$router.push('/editar-perfil')" />
       </div>
       <div class="row absolute-center justify-end items-center bg-transparent" style="width:100%">
         <div class="col-xs-7 col-sm-5 col-md-4 col-lg-4 col-xl-4">
           <div class="text-h6 text-black">Horario de atención</div>
           <div class="text-subtitle1 text-black">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
           <div class="text-h6 q-mt-lg text-black">Días de atención</div>
-          <div class="text-subtitle1 text-black">{{user.dias.length ? dias() : 'Libre'}}</div>
+          <div class="text-subtitle1 text-black">{{dias()}}</div>
         </div>
       </div>
     </q-img>
@@ -18,16 +19,23 @@
     <q-scroll-area
         v-if="user.images.length"
         horizontal
-        style="height: 410px;"
+        style="height: 220px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-          <q-card style="border-radius: 24px; width:450px" clickable v-ripple v-for="(img, index) in user.images" :key="index">
-            <q-img :src="'nopublicidad.jpg'"
-            style="height: 380px; width: 100%" >
+          <q-card @click="imgSelec = img, verImg = true" style="border-radius: 24px; width:180px" clickable v-ripple v-for="(img, index) in user.images" :key="index">
+            <q-img :src="baseuImgsTienda + img"
+            style="height: 180px; width: 100%; border-radius: 24px" >
             </q-img>
           </q-card>
         </div>
     </q-scroll-area>
+
+    <q-dialog v-model="verImg">
+      <q-card>
+        <q-img :src="baseuImgsTienda + imgSelec" style="width: 500px;" >
+        </q-img>
+      </q-card>
+    </q-dialog>
 
     <q-scroll-area
       horizontal
@@ -341,12 +349,18 @@ export default {
     return {
       miTienda: false,
       verProducto: false,
+      verImg: false,
       slide: 0,
       id_tienda: '',
       baseuProducto: '',
       baseuPerfil: '',
+      baseuPortada: '',
+      baseuImgsTienda: '',
+      imgSelec: '',
       producto: {},
-      user: {},
+      user: {
+        images: []
+      },
       categorias: ['categorias', 'categorias', 'categorias', 'categorias', 'categorias', 'converse'],
       tallas: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       precio: ['€0-€100', '€110-€300', '€300-€500', '€500-€1000'],
@@ -359,9 +373,11 @@ export default {
   },
   mounted () {
     this.baseuProducto = env.apiUrl + '/producto_files/'
+    this.baseuImgsTienda = env.apiUrl + '/tienda_files/'
     if (this.$route.params.proveedor_id) {
       this.id_tienda = this.$route.params.proveedor_id
       this.baseuPerfil = env.apiUrl + '/perfil_img/' + this.id_tienda
+      this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.id_tienda
       this.getProductosByProveedor(this.id_tienda)
       this.getInfoById(this.id_tienda)
     }
@@ -430,21 +446,23 @@ export default {
     },
     dias () {
       var dias = ''
-      for (let i = 0; i < this.user.dias.length; i++) {
-        if (this.user.dias[i] === 0) {
-          dias = dias + 'Lunes, '
-        } else if (this.user.dias[i] === 1) {
-          dias = dias + 'Martes, '
-        } else if (this.user.dias[i] === 2) {
-          dias = dias + 'Miercoles, '
-        } else if (this.user.dias[i] === 3) {
-          dias = dias + 'Jueves, '
-        } else if (this.user.dias[i] === 4) {
-          dias = dias + 'Viernes, '
-        } else if (this.user.dias[i] === 5) {
-          dias = dias + 'Sabado, '
-        } else if (this.user.dias[i] === 6) {
-          dias = dias + 'Domingo, '
+      if (this.user.dias) {
+        for (let i = 0; i < this.user.dias.length; i++) {
+          if (this.user.dias[i] === 0) {
+            dias = dias + 'Lunes, '
+          } else if (this.user.dias[i] === 1) {
+            dias = dias + 'Martes, '
+          } else if (this.user.dias[i] === 2) {
+            dias = dias + 'Miercoles, '
+          } else if (this.user.dias[i] === 3) {
+            dias = dias + 'Jueves, '
+          } else if (this.user.dias[i] === 4) {
+            dias = dias + 'Viernes, '
+          } else if (this.user.dias[i] === 5) {
+            dias = dias + 'Sabado, '
+          } else if (this.user.dias[i] === 6) {
+            dias = dias + 'Domingo, '
+          }
         }
       }
       return dias

@@ -137,6 +137,7 @@ class ProductoController {
       delete dat.cantidadFiles
       dat.images = images
       dat.proveedor_id = user._id.toString()
+      dat.rating = 0
       let guardar = await Producto.create(dat)
       response.send(guardar)
     }

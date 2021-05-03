@@ -1,122 +1,159 @@
 <template>
   <q-page>
-    <q-card class="shadow-3 q-ma-sm" style="border-radius:12px">
-      <div class="q-pt-md q-pl-md">
-        <q-btn round dense flat icon="keyboard_backspace" color="black" @click="$router.go(-1)"/>
+    <q-img :src="baseuPortada" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+      <div class="bg-transparent">
+        <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
       </div>
-      <div class="column items-center justify-center q-mt-lg">
-        <div class="q-mb-md row justify-center">
-          <q-img :src="form.portada ? baseuPortada : 'noimg.png'" style="width:250px;height:150px" >
-            <div class="absolute-center bg-transparent text-center" style="width: 100%">
-              <div class="absolute-center" style="z-index:1">
-                <q-file borderless v-model="portada" class="button-subir" @input="changePortada()" accept=".jpg, image/*"
-                >
-                  <q-avatar class="absolute-center cursor-pointer" square>
-                    <q-icon name="cloud_upload" color="white" class="absolute-center" />
-                  </q-avatar>
-                </q-file>
-              </div>
-            </div>
-          </q-img>
-        </div>
-        <div class="text-bold text-grey-7"> SUBE UNA FOTO DE PORTADA </div>
-      </div>
-      <div class="column items-center justify-center q-mt-lg">
-        <div class="q-mb-md row justify-center">
-          <q-img :src="form.perfil ? baseu : form.perfilEstatico ? 'logos/' + form.id.toString() + '.jpeg' : 'noimg.png'" style="width:150px;height:150px;border-radius:100%" >
-            <div class="absolute-center bg-transparent text-center" style="width: 100%">
-              <div class="absolute-center" style="z-index:1">
-                <q-file borderless v-model="perfil" class="button-subir" @input="changePerfil()" accept=".jpg, image/*"
-                >
-                  <q-avatar class="absolute-center cursor-pointer">
-                    <q-icon name="cloud_upload" color="white" class="absolute-center" />
-                  </q-avatar>
-                </q-file>
-              </div>
-            </div>
-          </q-img>
-        </div>
-        <div class="text-bold text-grey-7"> SUBE UNA FOTO DE PERFIL </div>
-      </div>
-      <div class="row q-pa-xs q-gutter-xs justify-center">
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <q-input v-model="form.nombreEmpresa" label="Nombre Empresa" outlined
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <q-input disable readonly v-model="form.email" label="Email" outlined
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <q-select outlined v-model="form.dias" :options="optionsDias" label="Dias" multiple emit-value map-options >
-            <template v-slot:option="{ itemProps, itemEvents, opt, selected, toggleOption }">
-              <q-item
-                v-bind="itemProps"
-                v-on="itemEvents"
+      <div class="column justify-center items-center bg-transparent absolute-center" style="width:100%">
+        <q-avatar size="90px">
+          <div style="z-index:1">
+            <q-file borderless v-model="portada" class="button-camera" @input="changePortada()" accept=".jpg, image/*"
               >
-                <q-item-section>
-                  <q-item-label v-html="opt.label" ></q-item-label>
-                </q-item-section>
-                <q-item-section side>
-                  <q-checkbox :value="selected" @input="toggleOption(opt)" />
-                </q-item-section>
-              </q-item>
-            </template>
-          </q-select>
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <div class="row justify-center">
-            <q-input outlined v-model="form.hapertura" mask="time" :rules="['time']" style="width:45%" label="hora apertura">
-              <template v-slot:append>
-                <q-icon name="access_time" class="cursor-pointer">
-                  <q-popup-proxy transition-show="scale" transition-hide="scale">
-                    <q-time v-model="form.hapertura">
-                      <div class="row items-center justify-end">
-                        <q-btn v-close-popup label="Close" color="primary" flat />
-                      </div>
-                    </q-time>
-                  </q-popup-proxy>
-                </q-icon>
-              </template>
-            </q-input>
-            <q-input outlined v-model="form.hcierre" mask="time" :rules="['time']" style="width:45%" class="q-ml-sm" label="hora cierre">
-              <template v-slot:append>
-                <q-icon name="access_time" class="cursor-pointer">
-                  <q-popup-proxy transition-show="scale" transition-hide="scale">
-                    <q-time v-model="form.hcierre">
-                      <div class="row items-center justify-end">
-                        <q-btn v-close-popup label="Close" color="primary" flat />
-                      </div>
-                    </q-time>
-                  </q-popup-proxy>
-                </q-icon>
-              </template>
-            </q-input>
+                <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
+            </q-file>
+          </div>
+        </q-avatar>
+      </div>
+    </q-img>
+
+    <div class="column items-center justify-center q-ma-md">
+      <div class="row justify-center" style="width: 100%">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row justify-between">
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 column items-center justify-center">
+            <div class="q-mb-md row justify-center">
+              <q-img :src="baseu" style="width:150px;height:150px;border-radius:25px" >
+                <div class="absolute-center bg-transparent text-center" style="width: 100%">
+                  <div class="absolute-center" style="z-index:1">
+                    <q-file borderless v-model="perfil" class="button-subir" @input="changePerfil()" accept=".jpg, image/*"
+                      @blur="$v.perfil.$touch()"
+                      >
+                        <q-avatar class="absolute-center cursor-pointer">
+                          <q-icon name="cloud_upload" color="white" class="absolute-center" />
+                        </q-avatar>
+                    </q-file>
+                  </div>
+                </div>
+              </q-img>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+            <div style="width:100%">
+              <div class="text-subtitle1">Días de atencion</div>
+              <q-select outlined v-model="form.dias" :options="optionsDias" label="Selecciona los días de atención" multiple emit-value map-options
+                error-message="Requerido" :error="$v.form.dias.$error" @blur="$v.form.dias.$touch()" >
+                  <template v-slot:option="{ itemProps, itemEvents, opt, selected, toggleOption }">
+                    <q-item
+                      v-bind="itemProps"
+                      v-on="itemEvents"
+                    >
+                      <q-item-section>
+                        <q-item-label v-html="opt.label" ></q-item-label>
+                      </q-item-section>
+                      <q-item-section side>
+                        <q-checkbox :value="selected" @input="toggleOption(opt)" />
+                      </q-item-section>
+                    </q-item>
+                  </template>
+              </q-select>
+            </div>
+            <div class="q-mt-md" style="width:100%">
+              <div class="text-subtitle1">Horario de atención</div>
+              <div class="row justify-between">
+                <q-input outlined v-model="form.hapertura" mask="time" :rules="['time']" style="width:45%" label="Apertura"
+                  error-message="Requerido" :error="$v.form.hapertura.$error" @blur="$v.form.hapertura.$touch()">
+                    <template v-slot:append>
+                      <q-icon name="access_time" class="cursor-pointer">
+                        <q-popup-proxy transition-show="scale" transition-hide="scale">
+                          <q-time v-model="form.hapertura">
+                            <div class="row items-center justify-end">
+                              <q-btn v-close-popup label="Close" color="primary" flat />
+                            </div>
+                          </q-time>
+                        </q-popup-proxy>
+                      </q-icon>
+                    </template>
+                </q-input>
+                <q-input outlined v-model="form.hcierre" mask="time" :rules="['time']" style="width:45%" class="q-ml-sm" label="Cierre"
+                  error-message="Requerido" :error="$v.form.hcierre.$error" @blur="$v.form.hcierre.$touch()">
+                    <template v-slot:append>
+                      <q-icon name="access_time" class="cursor-pointer">
+                        <q-popup-proxy transition-show="scale" transition-hide="scale">
+                          <q-time v-model="form.hcierre">
+                            <div class="row items-center justify-end">
+                              <q-btn v-close-popup label="Close" color="primary" flat />
+                            </div>
+                          </q-time>
+                        </q-popup-proxy>
+                      </q-icon>
+                    </template>
+                </q-input>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-          <q-input v-model="form.rut" label="RUT" outlined
+      </div>
+      <div class="row justify-center q-gutter-xs q-mt-md" style="width: 100%">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.nombre" label="Nombre de la tienda" outlined
+            error-message="Requerido" :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
           />
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <q-input v-model="form.direccionFisica" label="Direccion Fisica" outlined
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.descripcion" label="Reseña de la tienda" outlined type="textarea"
+            error-message="Requerido" :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
           />
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <q-input v-model="form.telefono" label="Telefono" outlined
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tus categorias</div>
+        <q-scroll-area
+          class="col-12"
+          horizontal
+          style="height: 80px"
+        >
+          <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+            <div v-for="(btn, index) in 10" :key="index" >
+              <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
+            </div>
+          </div>
+        </q-scroll-area>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <q-input v-model="form.ciudad" label="Ciudad" outlined
+            error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
           />
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-          <div class="row full-width justify-around">
-            <q-checkbox v-model="form.delivery" label="Delivery" />
-            <q-checkbox v-model="form.regiones" label="Despacho a Regiones" />
-            <div class="q-ml-lg full-width" v-if="form.delivery">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <q-input v-model="form.codigo_postal" label="Código postal" outlined
+            error-message="Requerido" :error="$v.form.codigo_postal.$error" @blur="$v.form.codigo_postal.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <q-input v-model="form.direccion" label="Dirección" outlined
+            error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <q-input v-model="form.cif" label="CIF" outlined
+            error-message="Requerido" :error="$v.form.cif.$error" @blur="$v.form.cif.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <q-input v-model="form.telefono" label="Teléfono" outlined
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <q-input disable readonly v-model="form.email" label="Correo de contacto" outlined type="email"
+            error-message="Requerido" :error="$v.form.email.$error" @blur="$v.form.email.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <div class="row full-width">
+            <q-checkbox class="col-5" v-model="form.delivery" label="Delivery" />
+            <div class="col-7" v-if="form.delivery">
               <q-input v-model.number="form.deliveryPrice" label="Valor Delivery" outlined style="width:100%" type="number"
               />
             </div>
           </div>
         </div>
-        <q-card class="row col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md q-pa-md shadow-5">
+        <!-- <q-card class="row col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md q-pa-md shadow-5">
           <div class="text-subtitle2 text-weight-bolder q-mr-md q-mb-md">Método de pago</div>
           <div class="column justify-around q-gutter-sm">
             <q-checkbox @input="selecMetodo()" v-model="form.metodoPago" val="1" label="Efectivo" color="primary" />
@@ -153,32 +190,30 @@
           <q-input class="q-mt-md" v-model="form.rutTitular" label="RUT del titular" outlined :error="$v.form.rutTitular.$error" error-message="Este campo es requerido" @blur="$v.form.rutTitular.$touch()"/>
           <q-input class="q-mt-md" v-model="form.titular" label="Nombre del titular" outlined :error="$v.form.titular.$error" error-message="Este campo es requerido" @blur="$v.form.titular.$touch()"/>
           <q-input class="q-mt-md" v-model="form.correoDestino" type="email" label="Correo destino del comprobante" outlined :error="$v.form.correoDestino.$error" error-message="Este campo es requerido" @blur="$v.form.correoDestino.$touch()"/>
-        </div>
-      </div>
-      <div class="column shadow-3 q-mt-md">
-        <div class="text-center text-grey-6 q-mt-lg">Imagenes de la Tienda</div>
-        <div class="row full-width q-pa-md items-center">
-          <div class="q-gutter-xs row" v-if="form.images && form.images.length > 0">
-            <q-img v-for="(item, index) in form.images" :key="index" :src="rutaCargarImgs + item" style="height:100px;border-radius:12px;width:140px" >
-              <q-btn @click="confirmEliminar(item)" flat class="absolute all-pointer-events" size="15px" dense icon="delete" color="negative" style="top: 0px; left: 0px" rounded />
+        </div> -->
+
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mb-md">Imagenes de la Tienda (hasta 5 imagenes)</div>
+        <q-scroll-area horizontal style="height:150px; width: 100%;"
+          :thumb-style="thumbStyle" :bar-style="barStyle"
+        >
+          <div class="no-wrap q-px-md q-gutter-md row items-center">
+            <q-card class="bg-grey column justify-center items-center" style="height:140px;border-radius:12px;width:140px">
+              <q-file borderless :disable="form.images && form.images.length < 5 ? false : true" v-model="img" class="button-camera" @input="addImg()" accept=".jpg, image/*">
+                <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
+              </q-file>
+            </q-card>
+            <q-img v-for="(item, index) in form.images" :key="index" :src="rutaCargarImgs + item" style="height:140px;border-radius:12px;width:140px" >
+              <q-btn @click="confirmEliminar(item)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
             </q-img>
           </div>
-          <div v-if="form.images && form.images.length < 5"  class="column shadow-3 justify-center items-center q-ma-sm q-ml-sm bg-grey-2" style="height:100px;border-radius:12px;width:140px">
-            <div class="text-center text-primary q-mb-sm" style="text-decoration: underline">Agregar Imagen</div>
-            <q-avatar size="50px">
-              <div style="z-index:1">
-                <q-file borderless v-model="img" class="button-camera" @input="addImg()" accept=".jpg, image/*">
-                  <q-icon name="add" class="absolute-center" size="20px" color="white" />
-                </q-file>
-              </div>
-            </q-avatar>
-          </div>
+        </q-scroll-area>
+
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+          <q-btn no-caps label="Guardar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+          @click="guardar()" />
         </div>
       </div>
-      <q-card-actions align="center">
-        <q-btn style="width:200px;height:50px" color="primary" label="Guardar" push @click="guardar()" />
-      </q-card-actions>
-    </q-card>
+    </div>
 
     <q-dialog v-model="dialogFlow">
       <q-card style="width:100%">
@@ -215,7 +250,7 @@
 </template>
 
 <script>
-import { required, requiredIf } from 'vuelidate/lib/validators'
+import { required, requiredIf, email } from 'vuelidate/lib/validators'
 import env from '../../env'
 export default {
   data () {
@@ -251,11 +286,35 @@ export default {
         dias: [],
         delivery: false,
         regiones: false
+      },
+      thumbStyle: {
+        right: '4px',
+        borderRadius: '5px',
+        backgroundColor: '#027be3',
+        width: '5px',
+        opacity: 0
+      },
+      barStyle: {
+        right: '2px',
+        borderRadius: '9px',
+        backgroundColor: '#027be3',
+        width: '9px',
+        opacity: 0
       }
     }
   },
   validations: {
     form: {
+      nombre: { required },
+      descripcion: { required },
+      dias: { required },
+      hapertura: { required },
+      hcierre: { required },
+      ciudad: { required },
+      direccion: { required },
+      codigo_postal: { required },
+      cif: { required },
+      email: { email, required },
       banco: {
         required: requiredIf(function (nestedModel) {
           return this.metodo2
@@ -343,9 +402,9 @@ export default {
       }
     },
     guardar () {
-      var paso = false
+      var paso = true
       this.$v.form.$touch()
-      if (this.form.metodoPago.find(v => v === '3')) {
+      /* if (this.form.metodoPago.find(v => v === '3')) {
         if (this.confiFlowData) {
           paso = true
         } else {
@@ -353,7 +412,7 @@ export default {
         }
       } else {
         paso = true
-      }
+      } */
       if (!this.$v.form.$error && paso) {
         this.$q.loading.show()
         this.$api.put('editar_proveedor', this.form).then(res => {
@@ -417,19 +476,7 @@ export default {
       await this.$api.get('user_info').then(res => {
         if (res) {
           this.form = res
-          if (this.form.metodoPago.length) {
-            if (this.form.metodoPago.find(v => v === '3')) {
-              this.metodo3 = true
-              this.getDataFlow(this.form._id)
-            } else {
-              this.metodo3 = false
-            }
-            if (this.form.metodoPago.find(v => v === '2')) {
-              this.metodo2 = true
-            } else {
-              this.metodo2 = false
-            }
-          }
+          console.log(this.form)
           this.baseu = env.apiUrl + '/perfil_img/' + this.form._id
           this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.form._id
           this.$q.loading.hide()
@@ -441,7 +488,7 @@ export default {
       await this.$api.post('user_by_id/' + id).then(res => {
         if (res) {
           this.form = res
-          if (this.form.metodoPago.length) {
+          /* if (this.form.metodoPago.length) {
             if (this.form.metodoPago.find(v => v === '3')) {
               this.metodo3 = true
               this.getDataFlow(this.form._id)
@@ -453,7 +500,7 @@ export default {
             } else {
               this.metodo2 = false
             }
-          }
+          } */
           this.baseu = env.apiUrl + '/perfil_img/' + this.form._id
           this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.form._id
           this.$q.loading.hide()
@@ -524,10 +571,9 @@ export default {
   font-size: 0px;
   color: white;
   background-color: $primary;
-  border-radius: 30px;
-  border: 1px solid #6a6a6a;
-  height:40px;
-  width:40px;
+  border-radius: 100%;
+  height:80px;
+  width:80px;
   cursor: pointer;
 }
 </style>

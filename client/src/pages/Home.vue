@@ -30,7 +30,7 @@
           <div v-for="(card, index) in tiendas" :key="index" >
             <q-card style="width:400px">
               <q-img
-                :src="card.perfil ? baseuTiendas + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'nopublicidad.jpg'"
+                :src="baseuTiendas + card._id"
                 spinner-color="white"
                 style="height: 220px; width: 100%">
                   <div class="bg-transparent" style="width:100%">
@@ -41,11 +41,11 @@
               <q-card-section class="row justify-between">
                 <div class="col-8">
                   <div class="row items-center" style="width: 100%">
-                    <div class="col text-subtitle1 ellipsis"> {{card.nombreEmpresa}} </div>
+                    <div class="col text-subtitle1 ellipsis"> {{card.nombre}} </div>
                   </div>
                   <div class="row items-center" style="width: 100%">
                     <q-icon class="col-1" name="room" size="xs" />
-                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.direccionFisica}} </div>
+                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
                   </div>
                 </div>
 
@@ -134,10 +134,10 @@
 
       <div class="text-h5 q-my-md text-center">Más tiendas</div>
       <div class="row justify-around">
-        <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in 4" :key="index">
+        <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">
               <q-img
-                :src="card.perfil ? baseuTiendas + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'nopublicidad.jpg'"
+                :src="baseuTiendas + card._id"
                 spinner-color="white"
                 style="height: 350px; width: 100%">
                   <div class="bg-transparent" style="width:100%">
@@ -145,15 +145,16 @@
                   </div>
                   <div class="absolute-bottom bg-transparent">
                     <div class="row items-center" style="width: 100%">
-                      <div class="col text-subtitle1 ellipsis"> Nombre de tienda </div>
+                      <div class="col text-subtitle1 ellipsis"> {{card.nombre}} </div>
                     </div>
                     <div class="row items-center" style="width: 100%">
                       <q-icon class="col-1" name="room" size="xs" />
-                      <div class="col text-subtitle1 q-ml-xs ellipsis"> Dirección </div>
+                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
                     </div>
 
                     <div class="row items-center q-mt-md">
-                      <q-btn no-caps icon="store" label="Ir tienda" color="primary" style="border-radius: 9px" />
+                      <q-btn no-caps icon="store" label="Ir tienda" color="primary" style="border-radius: 9px"
+                      @click="irTienda(card._id)" />
                     </div>
                   </div>
                 </q-img>
@@ -193,7 +194,8 @@ export default {
       publicidad1: [],
       publicidad2: [],
       productos: [],
-      tiendas: []
+      tiendas: [],
+      masTiendas: []
     }
   },
   mounted () {
@@ -222,8 +224,18 @@ export default {
     getTiendas () {
       this.$api.get('proveedores').then(res => {
         if (res) {
-          this.tiendas = res.filter(v => v.status === 1)
-          console.log('tiendas', this.tiendas)
+          var all = res.filter(v => v.status === 1)
+          this.tiendas = all
+          this.tiendas.sort(() => Math.random() - 0.5)
+          this.masTiendas = []
+          var largo = all.length - 1
+          for (let i = 0; i < 4; i++) {
+            if (largo >= 0) {
+              this.masTiendas.push(all[i])
+              largo = largo - 1
+            }
+          }
+          console.log('tiendas', this.masTiendas)
         }
       })
     },
@@ -231,9 +243,6 @@ export default {
       this.$api.get('all_productos').then(res => {
         if (res) {
           this.productos = []
-          if (!res.length) {
-            this.productos = [{ nombre: 'Nombre Producto', descripcion: 'Descripcion', images: ['nopublicidad.jpg'], valor: 0, caso: true }]
-          }
           var largo = res.length - 1
           for (let i = 0; i < 20; i++) {
             if (largo >= 0) {
@@ -254,8 +263,10 @@ export default {
       })
     },
     formatPrice (value) {
-      const val = (value / 1).toFixed(0).replace('.', ',')
-      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+      if (this.productos.length) {
+        const val = (value / 1).toFixed(0).replace('.', ',')
+        return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+      }
     },
     irRuta (ruta) {
       openURL(ruta)

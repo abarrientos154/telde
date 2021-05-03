@@ -7,6 +7,7 @@ const routes = [
       // Tienda
       { path: '/producto', component: () => import('pages/Proveedor/Producto.vue') },
       { path: '/editar_producto/:producto_id', component: () => import('pages/Proveedor/Producto.vue') },
+      { path: '/editar-perfil', component: () => import('pages/Proveedor/Perfil.vue') },
       // Generales
       { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tienda/:proveedor_id', component: () => import('pages/Tienda.vue') },
@@ -40,6 +41,8 @@ const routes = [
   },
   { path: '/login', component: () => import('pages/Login.vue') },
   { path: '/registro', component: () => import('pages/Registro/Parte1.vue') },
+  { path: '/registro-cliente', component: () => import('pages/Registro/RegistroCliente.vue') },
+  { path: '/registro-tienda', component: () => import('pages/Registro/RegistroTienda.vue') },
   /* { path: '/splash', component: () => import('pages/Splash.vue') }, */
   {
     path: '/',
