@@ -207,7 +207,7 @@
       <q-footer elevated v-if="login">
         <div class="bg-blue-14 shadow-2 full-width row justify-around" >
           <div class="row items-center"><q-btn icon="store" color="white" flat round size="lg" @click="$router.push('/inicio')" /></div>
-          <div class="row items-center"><q-btn icon="view_list" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn :icon="rol === 3 ? 'view_list' : 'favorite'" color="white" flat round size="lg" @click="rol === 2 ? $router.push('/tiendas_favoritas') : ''" /></div>
           <div class="row items-center"><q-btn icon="person" color="white" flat round size="lg" @click="rol === 3 ? $router.push('/tienda/'+user_id) : ''" /></div>
           <div class="row items-center"><q-btn icon="description" color="white" flat round size="lg" /></div>
           <div class="row items-center"><q-btn :icon="login ? 'logout' : 'login'" color="white" flat round size="lg" @click="login ? cerrarSesion() : $router.push('/login')" /></div>

@@ -38,7 +38,7 @@
                 spinner-color="white"
                 style="height: 220px; width: 100%">
                   <div class="bg-transparent" style="width:100%">
-                    <q-btn icon="favorite" round color="primary" text-color="white" />
+                    <q-btn icon="favorite" round color="primary" :text-color="findFavorite(card._id) ? 'red' : 'white'" @click="addFavorito(card._id)" />
                   </div>
                 </q-img>
 
@@ -145,7 +145,7 @@
                 spinner-color="white"
                 style="height: 350px; width: 100%">
                   <div class="bg-transparent" style="width:100%">
-                    <q-btn icon="favorite" round color="primary" text-color="white" />
+                    <q-btn icon="favorite" round color="primary" :text-color="findFavorite(card._id) ? 'red' : 'white'" @click="addFavorito(card._id)" />
                   </div>
                   <div class="absolute-bottom bg-transparent">
                     <div class="row items-center" style="width: 100%">
@@ -199,7 +199,8 @@ export default {
       publicidad2: [],
       productos: [],
       tiendas: [],
-      masTiendas: []
+      masTiendas: [],
+      favoritoData: []
     }
   },
   mounted () {
@@ -222,6 +223,9 @@ export default {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.rol = res.roles[0]
+          if (this.rol === 2) {
+            this.getFavoritos()
+          }
         }
       })
     },
@@ -265,6 +269,32 @@ export default {
           this.publicidad2 = res.filter(v => v.tipo === 'publicidad2' && v.enable)
         }
       })
+    },
+    getFavoritos () {
+      this.$api.get('favoritos').then(res => {
+        this.favoritoData = res
+        console.log('favoritos', this.favoritoData)
+      })
+    },
+    findFavorite (id) {
+      if (this.favoritoData.find(v => v.proveedor_id === id)) {
+        return true
+      } else {
+        return false
+      }
+    },
+    addFavorito (id) {
+      if (this.login) {
+        if (this.favoritoData.find(v => v.proveedor_id === id)) {
+          this.$api.delete('favorito/' + id).then(res => {
+            this.getFavoritos()
+          })
+        } else {
+          this.$api.post('favorito/' + id).then(res => {
+            this.getFavoritos()
+          })
+        }
+      }
     },
     formatPrice (value) {
       if (this.productos.length) {
