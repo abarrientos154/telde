@@ -173,7 +173,8 @@
         </div>
         <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
         <div v-if="productos.length" class="row items-center justify-center q-mt-lg">
-          <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%" />
+          <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%"
+          @click="masData()" />
         </div>
 
         <q-page-sticky v-if="miTienda" position="bottom-right" :offset="[18, 18]">
@@ -363,6 +364,7 @@ export default {
       categorias: ['categorias', 'categorias', 'categorias', 'categorias', 'categorias', 'converse'],
       tallas: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       precio: ['€0-€100', '€110-€300', '€300-€500', '€500-€1000'],
+      allProductos: [],
       productos: [],
       ultimosProductos: [],
       catego: [],
@@ -398,22 +400,28 @@ export default {
     getInfoById (id) {
       this.$api.post('user_by_id/' + id).then(res => {
         this.user = res
-        console.log('user', this.user)
       })
     },
     getProductosByProveedor (id) {
       this.$api.get('productos/' + id).then(res => {
         if (res) {
+          this.allProductos = res
           this.ultimosProductos = []
-          this.productos = res
-          var largo = res.length - 1
+          var largo = this.allProductos.length - 1
           for (let i = 0; i < 10; i++) {
             if (largo >= 0) {
-              this.ultimosProductos.push(res[largo])
+              this.ultimosProductos.push(this.allProductos[largo])
               largo = largo - 1
             }
           }
-          console.log('productos', this.productos)
+          this.productos = []
+          var largo2 = this.allProductos.length - 1
+          for (let i = 0; i < 4; i++) {
+            if (largo2 >= 0) {
+              this.productos.push(this.allProductos[i])
+              largo2 = largo2 - 1
+            }
+          }
         }
       })
     },
@@ -438,6 +446,9 @@ export default {
       }).onCancel(() => {
         // console.log('>>>> Cancel')
       })
+    },
+    masData () {
+      this.productos = this.allProductos
     },
     formatPrice (value) {
       const val = (value / 1).toFixed(0).replace('.', ',')

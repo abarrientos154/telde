@@ -166,7 +166,8 @@
         </div>
       </div>
       <div class="row items-center justify-center q-mt-lg">
-        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%" />
+        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%"
+        @click="masData()" />
       </div>
 
     <q-dialog v-model="verProducto">
@@ -198,6 +199,7 @@ export default {
       publicidad1: [],
       publicidad2: [],
       productos: [],
+      allTiendas: [],
       tiendas: [],
       masTiendas: [],
       favoritoData: []
@@ -232,18 +234,17 @@ export default {
     getTiendas () {
       this.$api.get('proveedores').then(res => {
         if (res) {
-          var all = res.filter(v => v.status === 1)
-          this.tiendas = all
+          this.allTiendas = res.filter(v => v.status === 1)
+          this.tiendas = this.allTiendas
           this.tiendas.sort(() => Math.random() - 0.5)
           this.masTiendas = []
-          var largo = all.length - 1
+          var largo = this.allTiendas.length - 1
           for (let i = 0; i < 4; i++) {
             if (largo >= 0) {
-              this.masTiendas.push(all[i])
+              this.masTiendas.push(this.allTiendas[i])
               largo = largo - 1
             }
           }
-          console.log('tiendas', this.masTiendas)
         }
       })
     },
@@ -258,7 +259,6 @@ export default {
               largo = largo - 1
             }
           }
-          console.log('productos', this.productos)
         }
       })
     },
@@ -273,7 +273,6 @@ export default {
     getFavoritos () {
       this.$api.get('favoritos').then(res => {
         this.favoritoData = res
-        console.log('favoritos', this.favoritoData)
       })
     },
     findFavorite (id) {
@@ -301,6 +300,9 @@ export default {
         const val = (value / 1).toFixed(0).replace('.', ',')
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
       }
+    },
+    masData () {
+      this.masTiendas = this.allTiendas
     },
     irRuta (ruta) {
       openURL(ruta)

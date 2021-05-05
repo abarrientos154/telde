@@ -87,7 +87,8 @@
       </div>
       <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
       <div class="row items-center justify-center q-mt-lg">
-        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%" />
+        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%"
+        @click="masData()" />
       </div>
   </q-page>
 </template>
@@ -132,8 +133,10 @@ export default {
             largo = largo - 1
           }
         }
-        console.log(this.data)
       })
+    },
+    masData () {
+      this.masTiendas = this.data
     },
     irTienda (id) {
       this.$router.push('/tienda/' + id)
