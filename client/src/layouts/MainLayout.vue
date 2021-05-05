@@ -204,11 +204,11 @@
         </q-toolbar>
     </div> -->
 
-      <q-footer elevated>
+      <q-footer elevated v-if="login">
         <div class="bg-blue-14 shadow-2 full-width row justify-around" >
-          <div class="row items-center"><q-btn icon="store" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn icon="store" color="white" flat round size="lg" @click="$router.push('/inicio')" /></div>
           <div class="row items-center"><q-btn icon="view_list" color="white" flat round size="lg" /></div>
-          <div class="row items-center"><q-btn icon="person" color="white" flat round size="lg" /></div>
+          <div class="row items-center"><q-btn icon="person" color="white" flat round size="lg" @click="rol === 3 ? $router.push('/tienda/'+user_id) : ''" /></div>
           <div class="row items-center"><q-btn icon="description" color="white" flat round size="lg" /></div>
           <div class="row items-center"><q-btn :icon="login ? 'logout' : 'login'" color="white" flat round size="lg" @click="login ? cerrarSesion() : $router.push('/login')" /></div>
       </div>
@@ -225,6 +225,7 @@ export default {
       rol: 0,
       tabActions: 'inicio',
       text: '',
+      user_id: '',
       login: false,
       drawer: false,
       tiendas: [],
@@ -297,6 +298,7 @@ export default {
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.login = true
+      this.getInfo()
     }
   },
   methods: {
@@ -305,6 +307,14 @@ export default {
       this.logout()
       this.$router.push('/inicio')
       location.reload()
+    },
+    getInfo () {
+      this.$api.get('user_info').then(res => {
+        if (res) {
+          this.rol = res.roles[0]
+          this.user_id = res._id
+        }
+      })
     },
     getTiendas () {
       this.$api.get('proveedores').then(res => {

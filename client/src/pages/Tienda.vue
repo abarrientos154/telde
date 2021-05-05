@@ -32,8 +32,7 @@
 
     <q-dialog v-model="verImg">
       <q-card>
-        <q-img :src="baseuImgsTienda + imgSelec" style="width: 500px;" >
-        </q-img>
+        <img :src="baseuImgsTienda + imgSelec" style="width: 500px;" />
       </q-card>
     </q-dialog>
 

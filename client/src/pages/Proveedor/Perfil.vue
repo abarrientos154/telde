@@ -270,8 +270,8 @@ export default {
       portada: null,
       portadaImg: null,
       model: [],
-      optionsBancos: ['Banco Santander', 'Banco Consorcio', 'Banco Corpbanca', 'Banco Credito e inversiones', 'Banco Estado', 'Banco Falabella', 'Banco Internacional', 'Banco Paris', 'Banco Ripley', 'Banco Security', 'Banco de Chile / Edwards-Citi'],
-      optionsCuentas: ['Cuenta corriente', 'Cuenta vista', 'Cuenta de ahorro'],
+      optionsBancos: ['Banco'],
+      optionsCuentas: ['Cuenta corriente', 'Cuenta de ahorro'],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -284,8 +284,7 @@ export default {
       flow: {},
       form: {
         dias: [],
-        delivery: false,
-        regiones: false
+        delivery: false
       },
       thumbStyle: {
         right: '4px',

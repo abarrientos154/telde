@@ -1,6 +1,10 @@
 <template>
   <div>
     <div class="bg-secondary column justify-center" style="height: 500px;">
+      <div class="absolute-top-right q-pa-md">
+        <q-btn v-if="!login" flat no-caps color="white" label="Iniciar Sesión"
+        @click="$router.push('/login')" />
+      </div>
       <div class="text-center text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
       <div class="text-center text-h5 text-white q-mt-sm">Se parte de Nova Telde</div>
       <div class="q-mt-lg row justify-center">
