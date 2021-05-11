@@ -77,8 +77,9 @@
               <q-card-section class="absolute-bottom">
                 <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                 <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
-                <div v-if="!miTienda" class="row items-center">
-                  <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
+                <div v-if="rol === 2 || rol === 0" class="row items-center">
+                  <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                  @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                 </div>
                 <div v-if="miTienda" class="row justify-end">
                   <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
@@ -121,8 +122,9 @@
                 <q-card-section class="absolute-bottom">
                   <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                   <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
-                  <div v-if="!miTienda" class="row items-center">
-                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
+                  <div v-if="rol === 2 || rol === 0" class="row items-center">
+                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                    @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                   </div>
                   <div v-if="miTienda" class="row justify-end">
                     <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
@@ -160,8 +162,9 @@
                 <q-card-section class="absolute-bottom">
                   <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                   <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
-                  <div v-if="!miTienda" class="row items-center">
-                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px" />
+                  <div v-if="rol === 2 || rol === 0" class="row items-center">
+                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                    @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                   </div>
                   <div v-if="miTienda" class="row justify-end">
                     <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
@@ -185,162 +188,170 @@
           </q-btn>
         </q-page-sticky>
 
+        <q-page-sticky v-if="rol === 2" position="bottom-right" :offset="[18, 18]">
+          <q-btn fab icon="shopping_cart" color="primary" @click="verCarrito = true">
+            <q-tooltip>
+              Carrito
+            </q-tooltip>
+          </q-btn>
+        </q-page-sticky>
+
         <q-dialog v-model="verProducto">
           <q-card style="width: 400px">
             <q-card-section class="q-pa-none" style="width: 100%">
-              <DetalleProducto :data="producto" lugar="tienda" />
+              <DetalleProducto :data="producto" lugar="tienda" @compra="addCarrito" />
             </q-card-section>
           </q-card>
         </q-dialog>
 
-    <!-- <div class="row">
-      <div class="q-mt-md q-ml-md text-bold text-h5">MI TIENDA</div>
-      <q-space />
-      <q-breadcrumbs class="q-pt-md q-pl-xl text-h6 q-mr-sm">
-        <q-breadcrumbs-el label="Home" />
-        <q-breadcrumbs-el label="Tienda" />
-        <q-breadcrumbs-el label="Pagina 1 de 1" />
-      </q-breadcrumbs>
-    </div>
+        <q-dialog v-model="verCarrito" full-height>
+          <q-card style="width: 100%">
+            <q-card-section style="height:100%">
+              <div class="row items-between" style="height:100%;">
+                <div class="col-12">
+                  <div class="row items-center q-mb-lg">
+                    <div class="text-h6 text-grey-9">Carro de compra</div>
+                    <q-space />
+                    <q-btn icon="close" flat round dense v-close-popup />
+                  </div>
+                  <q-list class="q-gutter-md">
+                    <div v-for="(producto, index) in carrito" :key="index">
+                      <div class="row items-start justify-start q-ma-xs">
+                        <div class="col-3 q-mr-sm column justify-start items-start bg-red">
+                          <img
+                            :src="baseuProducto + producto.image"
+                            spinner-color="white"
+                            style="height: 100px; width: 100%; border-radius: 10px"/>
+                        </div>
 
-    <div class="row" style="width:100%">
-      <div>
-        <q-card flat bordered class="column q-mt-md q-ml-md" :style="$q.screen.width > 474 ? 'width: 250px': 'width:90%'" >
-          <q-card-section class="bg-blue">
-            <div class="column items-center justify-center text-h6 text-white">FILTRO DE TIENDA</div>
-          </q-card-section>
-
-          <q-card-section>
-            <q-list class="q-mt-sm">
-              <div class="q-pl-md text-h6 text-black">CATEGORIAS</div>
-              <q-item v-for="(item, index) in categorias" :key="index" class="text-black q-mt-xs text-bold">
-                <div class="column justify-center items-center" >
-                <q-checkbox v-model="catego" :label='item' :val="index" />
-                </div>
-              </q-item>
-            </q-list>
-          </q-card-section>
-
-        <q-separator />
-
-        <q-card-section>
-          <q-list class="q-mt-sm">
-            <div class="q-pl-md text-h6 text-black">TALLAS</div>
-              <q-item v-for="(item, index) in tallas" :key="index" class="text-black q-mt-xs text-bold">
-                <div class="column justify-center items-center" >
-                <q-checkbox v-model="talla" :label='item' :val="index" />
-                </div>
-              </q-item>
-          </q-list>
-        </q-card-section>
-          <q-separator />
-        <q-card-section>
-              <div class="q-pl-md text-h6 text-black">PRODUCTOS RECOMENDADOS</div>
-              <div>
-              <q-carousel
-              v-model="slide"
-              transition-prev="scale"
-              transition-next="scale"
-              swipeable
-              animated
-              control-color="grey"
-              arrows
-              height="380px"
-              class="text-white bg-transparent"
-            >
-              <q-carousel-slide class="column items-center justify-center" :name="index" v-for="(card, index) in ejemplos2" :key="index">
-                <q-card style="height: 320px; width: 150px" >
-                <div class="column items-center justify-center">
-                  <q-img
-                    :src="card.images ? baseuLogos + card._id : card.perfilEstatico ? 'logos/' + card.id.toString() + '.jpeg' : 'nopublicidad.jpg'"
-                    spinner-color="white"
-                    style="height: 150px; width: 150px"/>
-                </div>
-                <q-card-section>
-                  <q-rating readonly v-model="card.calification" :max="5" size="20px" />
-                  <div class="row no-wrap items-center q-mt-xs">
-                    <div class="col text-subtitle2 text-black ellipsis">{{card.nombre}}</div>
-                    <div class="col-auto text-grey text-caption row no-wrap items-center">
-                      <q-icon name="favorite_border" size="1.8em" />
+                        <div class="col-8">
+                          <div class="row no-wrap items-center q-ml-sm">
+                            <div class="text-subtitle1 ellipsis">{{producto.nombre}}</div>
+                          </div>
+                          <div class="row no-wrap items-center q-ml-sm">
+                            <div class="text-subtitle1 text-grey-8 ellipsis">{{producto.proveedor_name}}</div>
+                          </div>
+                          <div class="q-mt-xs q-ml-sm">
+                            <div class="text-h6 text-positive"> {{!producto.oferta ? '$' + formatPrice(producto.valor) : '$' + formatPrice(producto.ofertaVal)}} </div>
+                          </div>
+                          <div class="row">
+                            <q-btn flat no-caps dense class="q-mr-sm" color="grey-6" icon="delete" label="Eliminar" @click="deleteProdCarrito(index)" />
+                            <q-btn size="12px" dense color="grey" icon="remove" @click="editCantidad(index, false)" />
+                            <div class="text-weight-bold text-h6 q-mx-sm">{{producto.cantidad_compra}}</div>
+                            <q-btn size="12px" dense color="primary" icon="add" @click="editCantidad(index, true)" />
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </q-list>
+                </div>
+                <div class="col-12 q-py-lg column justify-end items-end">
+                  <div class="row justify-between" style="width:100%">
+                    <div class="text-h6 text-grey">Cantidad de productos</div>
+                    <div class="text-h6 text-bold text-black">{{totalProductos}}</div>
                   </div>
-                </q-card-section>
-                <q-separator inset />
-                <q-card-section>
-                  <div class="text-caption text-black">Small plates, salads.</div>
-                </q-card-section>
-                <q-card-section class="absolute-bottom">
-                  <div class="text-h7 text-primary q-mt-sm">$ 000</div>
-                </q-card-section>
-              </q-card>
-              </q-carousel-slide>
-            </q-carousel>
-            </div>
-        </q-card-section>
-
-        <q-separator />
-
-        <q-card-section>
-          <q-list class="q-mt-sm">
-              <div class="q-pl-md text-h6 text-black">PRECIO</div>
-                <q-item v-for="(item, index) in precio" :key="index" class="text-black q-mt-xs text-bold">
-                  <div class="column justify-center items-center" >
-                  <q-checkbox v-model="preci" :label='item' :val="index" />
+                  <div class="row justify-between q-my-lg" style="width:100%">
+                    <div class="text-h6 text-grey">Total a pagar</div>
+                    <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
                   </div>
-                </q-item>
-              </q-list>
-          </q-card-section>
-        </q-card>
-      </div>
-
-      <div class="q-pt-md column" :style="$q.screen.width > 474 ? 'width: calc(100% - 270px)': 'width:100%'">
-        <div class="q-mb-sm bg-grey" style="height:65px; width:100%; border-top-right-radius:10px">
-          <div class="row items-center q-pr-md justify-end q-pt-md">
-            <q-icon name="view_list" size="lg">
-            </q-icon>
-            <q-btn dense class="q-mx-xs" no-caps color="primary" icon="add_shopping_cart" label="Nuevo Producto"
-              @click="$router.push('/producto')" />
-          </div>
-        </div>
-
-        <div class="row justify-around" style="width: 100%">
-          <q-card class="q-ma-sm shadow-4" style="height: 400px; width: 250px" v-for="(card, index) in productos" :key="index">
-          <div class="column items-center justify-center">
-            <q-img
-              :src="card.images.length > 0 ? baseu + card.images[0] : 'noimgproducto.png'"
-              spinner-color="white"
-              style="height: 200px; width: 250px"/>
-          </div>
-
-          <q-card-section>
-            <q-rating readonly v-model="card.calification" :max="5" size="25px" />
-
-            <div class="row no-wrap items-center q-mt-xs">
-              <div class="col text-subtitle2 ellipsis">{{card.nombre}}</div>
-              <div class="col-auto text-grey text-caption row no-wrap items-center">
-                <q-icon name="favorite_border" size="1.8em" />
+                  <div class="row justify-center" style="width:100%">
+                    <q-btn :disable="carrito.length ? false : true" @click="$v.form.$reset(), comprarCarrito = true, verCarrito = false" no-caps label="Checkout" color="primary" size="xl" style="width: 90%; border-radius:15px" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </q-card-section>
+            </q-card-section>
+          </q-card>
+        </q-dialog>
 
-          <q-separator inset />
+        <q-dialog persistent v-model="comprarCarrito" full-height>
+          <q-card style="width: 100%">
+            <q-card-section style="height:100%">
+              <div class="row items-between" style="height:100%;">
+                <div class="col-12">
+                  <div class="row items-center q-mb-xl">
+                    <div class="col-1">
+                      <q-btn icon="keyboard_backspace" round dense color="grey" @click="verCarrito = true, comprarCarrito = false" />
+                    </div>
+                    <div class="col-11 q-pl-md text-h6 text-grey-9">Carro de compra/Ckeckout</div>
+                  </div>
+                  <div class="q-px-sm">
+                    <div class="row items-center">
+                      <div class="text-h6 text-bold">Dirección de envío</div>
+                      <q-space />
+                      <q-btn icon="edit" round dense color="grey" />
+                    </div>
+                    <q-input v-model="form.user" label-slot borderless dense
+                      :error="$v.form.user.$error" @blur="$v.form.user.$touch()"
+                    >
+                      <template v-slot:label>
+                        <div class="text-h6">Nombre de usuario</div>
+                      </template>
+                    </q-input>
+                    <q-input v-model="form.direccion" label-slot borderless dense
+                      :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+                    >
+                      <template v-slot:label>
+                        <div class="text-h6">Dirección</div>
+                      </template>
+                    </q-input>
+                    <q-input v-model="form.codigo_postal" label-slot borderless dense
+                      :error="$v.form.codigo_postal.$error" @blur="$v.form.codigo_postal.$touch()"
+                    >
+                      <template v-slot:label>
+                        <div class="text-h6">Código postal</div>
+                      </template>
+                    </q-input>
+                    <q-separator />
+                    <div class="text-h6 text-bold q-my-md">Pedido</div>
+                    <div class="row justify-between" style="width:100%">
+                      <div class="text-h6 text-grey">Cantidad de productos</div>
+                      <div class="text-h6 text-bold text-black">{{totalProductos}}</div>
+                    </div>
+                    <div class="row justify-between q-my-sm" style="width:100%">
+                      <div class="text-h6 text-grey">Total a pagar</div>
+                      <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
+                    </div>
+                    <q-separator />
+                    <div class="row items-center q-my-md">
+                      <div class="text-h6 text-bold">Método de pago</div>
+                      <q-space />
+                      <q-btn icon="edit" round dense color="grey" />
+                    </div>
+                    <div class="text-h6 text-grey">Número de cuenta</div>
+                  </div>
+                </div>
+                <div class="col-12 q-py-lg column justify-end items-end">
+                  <div class="row justify-between q-my-lg" style="width:100%">
+                    <div class="text-h6 text-grey">Precio total</div>
+                    <div class="text-h4 text-bold text-blue">${{formatPrice(totalCarrito)}}</div>
+                  </div>
+                  <div class="row justify-center" style="width:100%">
+                    <q-btn :disable="carrito.length ? false : true" @click="iniciarCompra()" no-caps label="Pagar ahora" color="primary" size="xl" style="width: 90%; border-radius:15px" />
+                  </div>
+                </div>
+              </div>
+            </q-card-section>
+          </q-card>
+        </q-dialog>
 
-          <q-card-section>
-            <div class="text-caption text-black">{{card.descripcion}}</div>
-          </q-card-section>
+        <q-dialog v-model="noLogin">
+          <q-card class="q-pa-md">
+            <q-card-section>
+              <div class="q-ml-sm text-center text-subtitle2">Para poder comprar debes tener una cuenta.</div>
+              <div class="q-ml-sm text-center text-h6 text-bold">¿Deseas registrarte o iniciar sesión?</div>
+            </q-card-section>
 
-          <q-card-section class="absolute-bottom">
-            <div class="text-h6 text-primary q-mt-sm">$ {{card.valor}}</div>
-          </q-card-section>
-        </q-card>
-        </div>
-      </div>
-
-    </div> -->
+            <q-card-section class="column items-center">
+              <q-btn style="border-radius: 14px" label="Iniciar Sesión" color="primary" @click="$router.push('/login')" />
+              <q-btn flat label="Registrarme" color="primary" @click="$router.push('/registro')" />
+            </q-card-section>
+          </q-card>
+        </q-dialog>
   </q-page>
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators'
 import DetalleProducto from '../pages/DetalleProducto'
 import env from '../env'
 export default {
@@ -350,7 +361,11 @@ export default {
       miTienda: false,
       verProducto: false,
       verImg: false,
+      verCarrito: false,
+      comprarCarrito: false,
+      noLogin: false,
       slide: 0,
+      rol: 0,
       id_tienda: '',
       baseuProducto: '',
       baseuPerfil: '',
@@ -358,9 +373,12 @@ export default {
       baseuImgsTienda: '',
       imgSelec: '',
       producto: {},
+      form: {},
+      cliente: {},
       user: {
         images: []
       },
+      carrito: [],
       categorias: ['categorias', 'categorias', 'categorias', 'categorias', 'categorias', 'converse'],
       tallas: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
       precio: ['€0-€100', '€110-€300', '€300-€500', '€500-€1000'],
@@ -370,6 +388,37 @@ export default {
       catego: [],
       talla: [],
       preci: []
+    }
+  },
+  validations: {
+    form: {
+      user: { required },
+      direccion: { required },
+      codigo_postal: { required }
+    }
+  },
+  computed: {
+    totalCarrito () {
+      let total = 0
+      if (this.carrito.length > 0) {
+        for (const i of this.carrito) {
+          if (!i.oferta) {
+            total = total + (i.valor * i.cantidad_compra)
+          } else {
+            total = total + (i.ofertaVal * i.cantidad_compra)
+          }
+        }
+      }
+      return total
+    },
+    totalProductos () {
+      let total = 0
+      if (this.carrito.length > 0) {
+        for (const i of this.carrito) {
+          total = total + i.cantidad_compra
+        }
+      }
+      return total
     }
   },
   mounted () {
@@ -388,9 +437,20 @@ export default {
     }
   },
   methods: {
+    iniciarCompra () {
+      this.$v.$touch()
+      if (!this.$v.form.$error) {
+        this.comprarCarrito = false
+        this.form = {}
+        this.$v.form.$reset()
+        console.log('iniciando compra')
+      }
+    },
     getInfo () {
       this.$api.get('user_info').then(res => {
         if (res) {
+          this.cliente = res
+          this.rol = res.roles[0]
           if (res._id === this.id_tienda) {
             this.miTienda = true
           }
@@ -406,6 +466,7 @@ export default {
       this.$api.get('productos/' + id).then(res => {
         if (res) {
           this.allProductos = res
+          console.log(res)
           this.ultimosProductos = []
           var largo = this.allProductos.length - 1
           for (let i = 0; i < 10; i++) {
@@ -453,6 +514,62 @@ export default {
     formatPrice (value) {
       const val = (value / 1).toFixed(0).replace('.', ',')
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
+    },
+    addCarrito (val) {
+      if (!this.carrito.find(v => v._id === val._id)) {
+        var prod = {
+          _id: val._id,
+          nombre: val.nombre,
+          proveedor_id: val.proveedor_id,
+          proveedor_name: val.datos_proveedor.nombre,
+          valor: val.valor,
+          oferta: val.oferta,
+          cantidad: val.cantidad - 1,
+          cantidad_compra: 1,
+          image: val.images[0]
+        }
+        if (val.oferta) {
+          prod.ofertaVal = val.ofertaVal
+        }
+        this.carrito.push(prod)
+        console.log(this.carrito)
+        prod = {}
+        this.$q.notify({
+          message: 'Añadido al carro de compra',
+          color: 'positive',
+          positive: 'positive'
+        })
+      } else {
+        this.$q.dialog({
+          title: '¡Atención!',
+          message: 'Ya añadiste este producto al carro de compra.'
+        }).onOk(() => {
+
+        })
+      }
+    },
+    editCantidad (index, val) {
+      if (val) {
+        if (this.carrito[index].cantidad > 0) {
+          this.carrito[index].cantidad_compra = this.carrito[index].cantidad_compra + 1
+          this.carrito[index].cantidad = this.carrito[index].cantidad - 1
+        } else {
+          this.$q.dialog({
+            title: '¡Atención!',
+            message: 'Este producto se agotó de la tienda.'
+          }).onOk(() => {
+
+          })
+        }
+      } else {
+        if (this.carrito[index].cantidad_compra > 1) {
+          this.carrito[index].cantidad_compra = this.carrito[index].cantidad_compra - 1
+          this.carrito[index].cantidad = this.carrito[index].cantidad + 1
+        }
+      }
+    },
+    deleteProdCarrito (index) {
+      this.carrito.splice(index, 1)
     },
     dias () {
       var dias = ''

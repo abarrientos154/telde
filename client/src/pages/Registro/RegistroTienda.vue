@@ -304,6 +304,7 @@ export default {
       }
       if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && this.terminos_condiciones) {
         this.form.password = this.password
+        this.form.metodoPago = []
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('portada', this.portada)

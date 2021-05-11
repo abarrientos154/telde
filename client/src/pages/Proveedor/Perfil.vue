@@ -153,7 +153,7 @@
             </div>
           </div>
         </div>
-        <!-- <q-card class="row col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md q-pa-md shadow-5">
+        <q-card class="row col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md q-pa-md shadow-5">
           <div class="text-subtitle2 text-weight-bolder q-mr-md q-mb-md">Método de pago</div>
           <div class="column justify-around q-gutter-sm">
             <q-checkbox @input="selecMetodo()" v-model="form.metodoPago" val="1" label="Efectivo" color="primary" />
@@ -167,30 +167,9 @@
           <q-btn style="width:200px" color="positive" label="Configurar Flow" push no-caps @click="flow = {}, $v.flow.$reset(), dialogFlow = true" />
         </div>
         <div v-if="metodo2" class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-          <div class="text-weight-bolder q-mt-md text-subtitle1">Datos para transferencia bancaria</div>
-          <q-select class="q-mt-md" outlined v-model="form.banco" :options="optionsBancos" label="Banco" :error="$v.form.banco.$error" error-message="Este campo es requerido" @blur="$v.form.banco.$touch()">
-            <template v-slot:no-option>
-              <q-item>
-                <q-item-section class="text-italic text-grey">
-                  No existen bancos registrados
-                </q-item-section>
-              </q-item>
-            </template>
-          </q-select>
-          <q-select class="q-mt-md" outlined v-model="form.tipoCuenta" :options="optionsCuentas" label="Tipo de cuenta" :error="$v.form.tipoCuenta.$error" error-message="Este campo es requerido" @blur="$v.form.tipoCuenta.$touch()">
-            <template v-slot:no-option>
-              <q-item>
-                <q-item-section class="text-italic text-grey">
-                  No existen tipos de cuentas registrados
-                </q-item-section>
-              </q-item>
-            </template>
-          </q-select>
-          <q-input class="q-mt-md" v-model.number="form.cuenta" type="number" label="Número de cuenta" outlined :error="$v.form.cuenta.$error" error-message="Este campo es requerido" @blur="$v.form.cuenta.$touch()"/>
-          <q-input class="q-mt-md" v-model="form.rutTitular" label="RUT del titular" outlined :error="$v.form.rutTitular.$error" error-message="Este campo es requerido" @blur="$v.form.rutTitular.$touch()"/>
-          <q-input class="q-mt-md" v-model="form.titular" label="Nombre del titular" outlined :error="$v.form.titular.$error" error-message="Este campo es requerido" @blur="$v.form.titular.$touch()"/>
-          <q-input class="q-mt-md" v-model="form.correoDestino" type="email" label="Correo destino del comprobante" outlined :error="$v.form.correoDestino.$error" error-message="Este campo es requerido" @blur="$v.form.correoDestino.$touch()"/>
-        </div> -->
+          <q-btn style="width:200px" color="positive" label="Añadir cuenta bancaria" push no-caps
+          @click="banco = {}, $v.banco.$reset(), newBanck = true" />
+        </div>
 
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mb-md">Imagenes de la Tienda (hasta 5 imagenes)</div>
         <q-scroll-area horizontal style="height:150px; width: 100%;"
@@ -246,11 +225,40 @@
         </q-card-section>
       </q-card>
     </q-dialog>
+
+    <q-dialog v-model="newBanck">
+      <q-card style="width:100%">
+        <q-card-section class="row items-center q-pb-none">
+          <div class="text-h6"></div>
+          <q-space />
+          <q-btn icon="close" flat round dense v-close-popup />
+        </q-card-section>
+
+        <q-card-section>
+          <q-input v-model="banco.titular" label="Titular del banco" outlined
+            error-message="Requerido" :error="$v.banco.titular.$error" @blur="$v.banco.titular.$touch()"
+          />
+          <q-input v-model="banco.codigo_iban" label="Código IBAN" outlined
+            error-message="Requerido" :error="$v.banco.codigo_iban.$error" @blur="$v.banco.codigo_iban.$touch()"
+          />
+          <q-input v-model="banco.banco" label="Banco" outlined
+            error-message="Requerido" :error="$v.banco.banco.$error" @blur="$v.banco.banco.$touch()"
+          />
+          <div>
+            <q-checkbox v-model="verifyDatos" :class="textColor" @input="verifyDatos ? textColor = 'text-black' : ''" label="Confirmo que estos datos son reales" />
+          </div>
+          <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+            <q-btn no-caps label="Finalizar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+            />
+          </div>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
 <script>
-import { required, requiredIf, email } from 'vuelidate/lib/validators'
+import { required, email } from 'vuelidate/lib/validators'
 import env from '../../env'
 export default {
   data () {
@@ -260,8 +268,10 @@ export default {
       secretKey: '',
       baseuPortada: '',
       baseu: '',
+      textColor: 'text-black',
       dialogFlow: false,
       confiFlowData: false,
+      newBanck: false,
       metodo2: false,
       metodo3: false,
       img: null,
@@ -269,6 +279,7 @@ export default {
       perfilImg: null,
       portada: null,
       portadaImg: null,
+      verifyDatos: false,
       model: [],
       optionsBancos: ['Banco'],
       optionsCuentas: ['Cuenta corriente', 'Cuenta de ahorro'],
@@ -286,6 +297,7 @@ export default {
         dias: [],
         delivery: false
       },
+      banco: {},
       thumbStyle: {
         right: '4px',
         borderRadius: '5px',
@@ -313,37 +325,12 @@ export default {
       direccion: { required },
       codigo_postal: { required },
       cif: { required },
-      email: { email, required },
-      banco: {
-        required: requiredIf(function (nestedModel) {
-          return this.metodo2
-        })
-      },
-      tipoCuenta: {
-        required: requiredIf(function (nestedModel) {
-          return this.metodo2
-        })
-      },
-      cuenta: {
-        required: requiredIf(function (nestedModel) {
-          return this.metodo2
-        })
-      },
-      rutTitular: {
-        required: requiredIf(function (nestedModel) {
-          return this.metodo2
-        })
-      },
-      titular: {
-        required: requiredIf(function (nestedModel) {
-          return this.metodo2
-        })
-      },
-      correoDestino: {
-        required: requiredIf(function (nestedModel) {
-          return this.metodo2
-        })
-      }
+      email: { email, required }
+    },
+    banco: {
+      titular: { required },
+      codigo_iban: { required },
+      banco: { required }
     },
     flow: {
       apiKey: { required },

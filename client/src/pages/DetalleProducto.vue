@@ -31,6 +31,8 @@
         <div class="row justify-center q-py-lg">
           <q-btn v-if="lugar !== 'tienda'" no-caps label="Ver tienda" color="primary" size="md" style="border-radius: 15px; width: 90%"
           @click="irTienda()" />
+          <q-btn v-if="lugar === 'tienda'" no-caps label="Agregar al carro" color="primary" size="md" style="border-radius: 15px; width: 90%"
+          @click="login ? addCarrito() : noLogin = true" />
         </div>
 
         <q-dialog v-model="noLogin">
