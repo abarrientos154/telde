@@ -17,7 +17,8 @@ const routes = [
       { path: '/contacto', component: () => import('pages/Contacto.vue') },
       { path: '/Blog', component: () => import('pages/Blog.vue') },
       { path: '/somos', component: () => import('pages/SomosNova.vue') },
-      { path: '/Blog2', component: () => import('pages/Blog2.vue') }
+      { path: '/Blog2', component: () => import('pages/Blog2.vue') },
+      { path: '/pedidos', component: () => import('pages/Proveedor/Pedidos.vue') }
 
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
