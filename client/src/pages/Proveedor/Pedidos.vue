@@ -17,16 +17,16 @@
     <div class="q-pa-md text-h5 text-grey text-bold">Pedidos pendientes</div>
     <q-scroll-area
       horizontal
-      style="height: 210px; width: 100%;"
+      style="height: 200px; width: 100%;"
       class="bg-grey-1 rounded-borders"
     >
-    <div class="row no-wrap q-gutter-xl">
-      <q-card v-for="(item, index) in data"   bordered style="width: 380px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px" :key="index">
+    <div class="row no-wrap q-gutter-xl q-pl-md">
+      <q-card v-for="(item, index) in data"   bordered style="width: 330px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px" :key="index">
         <q-card-section horizontal>
             <q-card-section>
               <div class="column items-center justify-center">
                 <q-img
-                  style="height: 120px;width: 120px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
+                  style="height: 110px;width: 100px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
                   class="rounded-borders"
                   :src="'nopublicidad.jpg'"
                 />
@@ -35,13 +35,13 @@
 
             <q-card-section class="q-pt-xs">
             <div class="row">
-              <div class="q-mt-md text-h6 text-bold">Estado:</div>
-              <div class="text-h5 q-mt-md q-ml-sm text-bold text-blue">{{item.name}}</div>
+              <div class="q-mt-md text-h7 text-bold">Estado:</div>
+              <div class="text-h6 q-mt-sm q-ml-sm text-bold text-blue">{{item.name}}</div>
             </div>
             <div class="column">
-              <div class="text-h6 text-bold">Fecha de solicitud:</div>
-              <div class="text-h7 q-ml-sm text-grey">{{item.name2}}</div>
-              <q-btn rounded color="light-green-13" text-color="white" label="Cambiar estado" />
+              <div class="text-h7 text-bold">Fecha de solicitud:</div>
+              <div class="text-h8 q-ml-sm text-grey">{{item.name2}}</div>
+              <q-btn rounded color="light-green-13" text-color="white" label="Cambiar estado" @click="card3=true"/>
             </div>
             </q-card-section>
 
@@ -51,12 +51,12 @@
     </q-scroll-area>
     <div class="q-pa-md text-h5 text-grey text-bold">Pedidos Enviados</div>
     <div class="column items-center justify-center no-wrap q-gutter-xl">
-    <q-card v-for="(item, index) in data2"   bordered style="width: 380px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px" :key="index">
+    <q-card v-for="(item, index) in data2"   bordered style="width: 330px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px" :key="index">
         <q-card-section horizontal>
             <q-card-section>
               <div class="column items-center justify-center">
                 <q-img
-                  style="height: 120px;width: 120px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
+                  style="height: 120px;width: 110px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
                   class="rounded-borders"
                   :src="'nopublicidad.jpg'"
                 />
@@ -65,12 +65,12 @@
 
             <q-card-section class="q-pt-xs">
             <div class="row">
-              <div class="q-mt-md text-h6 text-bold">Estado:</div>
-              <div class="text-h5 q-mt-md q-ml-sm text-bold text-blue">{{item.name}}</div>
+              <div class="q-mt-md text-h7 text-bold">Estado:</div>
+              <div class="text-h6 q-mt-sm q-ml-sm text-bold text-blue">{{item.name}}</div>
             </div>
             <div class="column">
-              <div class="text-h6 text-bold">Fecha de solicitud:</div>
-              <div class="text-h7 q-ml-sm text-grey">{{item.name2}}</div>
+              <div class="text-h7 text-bold">Fecha de solicitud:</div>
+              <div class="text-h8 q-ml-sm text-grey">{{item.name2}}</div>
               <q-btn rounded  color="light-green-13" text-color="white" label="Ver pedido" @click="card=true" />
             </div>
             </q-card-section>
@@ -80,12 +80,12 @@
       </div>
       <div class="q-pa-md q-mt-xl text-h5 text-grey text-bold">Pedidos Finalizados</div>
     <div class="column items-center justify-center no-wrap q-gutter-xl">
-    <q-card v-for="(item, index) in data3"   bordered style="width: 380px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px" :key="index">
+    <q-card v-for="(item, index) in data3"   bordered style="width: 330px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px" :key="index">
         <q-card-section horizontal>
             <q-card-section>
               <div class="column items-center justify-center">
                 <q-img
-                  style="height: 120px;width: 120px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
+                  style="height: 120px;width: 110px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
                   class="rounded-borders"
                   :src="'nopublicidad.jpg'"
                 />
@@ -94,12 +94,12 @@
 
             <q-card-section class="q-pt-xs">
             <div class="row">
-              <div class="q-mt-md text-h6 text-bold">Estado:</div>
-              <div class="text-h5 q-mt-md q-ml-sm text-bold text-blue">{{item.name}}</div>
+              <div class="q-mt-md text-h7 text-bold">Estado:</div>
+              <div class="text-h6 q-mt-sm q-ml-sm text-bold text-blue">{{item.name}}</div>
             </div>
             <div class="column">
-              <div class="text-h6 text-bold">Fecha de solicitud:</div>
-              <div class="text-h7 q-ml-sm text-grey">{{item.name2}}</div>
+              <div class="text-h7 text-bold">Fecha de solicitud:</div>
+              <div class="text-h8 q-ml-sm text-grey">{{item.name2}}</div>
               <q-btn rounded  color="light-green-13" text-color="white" label="Ver pedido" @click="card2=true" />
             </div>
             </q-card-section>
@@ -128,7 +128,7 @@
             <div class="text-h6 text-bold">Estado de pedido</div>
             <div class="text-h8 text-bold text-grey">tienda donde compramos</div>
           </q-card-section>
-        <q-card flat style="width: 400px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px">
+        <q-card flat style="width: 300px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px">
           <q-card-section horizontal>
               <q-card-section>
                 <div class="column items-center justify-center">
@@ -196,7 +196,7 @@
           <q-card-section class="q-pt-none">
             <div class="text-h6 text-bold">Productos adquiridos</div>
           </q-card-section>
-        <q-card flat style="width: 400px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px">
+        <q-card flat style="width: 300px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px">
           <q-card-section horizontal>
               <q-card-section>
                 <div class="column items-center justify-center">
@@ -255,7 +255,104 @@
 
         <q-card-actions class="q-py-md" align="center">
           <div class="q-pb-md">
-            <q-btn rounded color="light-green-13" text-color="white" label="Cerrar" style="width:200px;height:40px" />
+            <q-btn v-close-popup rounded color="light-green-13" text-color="white" label="Cerrar" style="width:200px;height:40px" />
+          </div>
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
+
+    <q-dialog v-model="card3">
+      <q-card flat class="my-card" style="width: 400px">
+
+        <q-card-section class="q-pt-none">
+          <div class="row">
+            <div class="text-h6 text-bold">Pedido</div>
+            <div class="q-ml-sm text-h6 text-bold text-blue">#112</div>
+            <div class="row q-pr-md absolute-right">
+            <div class="q-ml-xl q-mt-sm text-h7 text-bold">Estado:</div>
+            <div class="q-ml-sm q-mt-sm text-h7 text-bold">En local</div>
+            </div>
+          </div>
+        </q-card-section>
+
+          <q-separator />
+          <q-card-section class="q-pt-none">
+            <div class="text-h6 text-bold">Productos adquiridos</div>
+          </q-card-section>
+        <q-card flat style="width: 300px;border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px">
+          <q-card-section horizontal>
+              <q-card-section>
+                <div class="column items-center justify-center">
+                  <q-img
+                    style="height: 80px;width: 80px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
+                    class="rounded-borders"
+                    :src="'nopublicidad.jpg'"
+                  />
+                  </div>
+              </q-card-section>
+
+              <q-card-section class="q-pt-xs">
+                <div class="row">
+                  <div class="q-mt-md text-h7 text-bold">Nombre del producto</div>
+                </div>
+                <div class="column">
+                  <div class="text-h8 text-bold text-grey">tienda donde compramos</div>
+                  <div class="row">
+                    <div class="text-h6 q-mt-xs text-bold text-light-green-13">959€</div>
+                    <div class="q-pl-md q-mt-xs text-h6 text-bold">|</div>
+                    <div class="q-pl-md q-mt-sm">
+                     <div style="width:20px;height:20px" class="bg-black"></div>
+                    </div>
+                    <div class="q-mt-sm q-pl-sm text-h7 text-bold">Black</div>
+                  </div>
+                </div>
+              </q-card-section>
+          </q-card-section>
+          <q-card-section horizontal>
+            <q-card-section>
+              <div class="column items-center justify-center">
+                <q-img
+                  style="height: 80px;width: 80px; border-bottom-right-radius:25px;border-bottom-left-radius:25px;border-top-right-radius:25px;border-top-left-radius:25px"
+                  class="rounded-borders"
+                  :src="'nopublicidad.jpg'"
+                />
+                </div>
+              </q-card-section>
+
+            <q-card-section class="q-pt-xs">
+                <div class="row">
+                  <div class="q-mt-md text-h7 text-bold">Nombre del producto</div>
+                </div>
+                <div class="column">
+                  <div class="text-h8 text-bold text-grey">tienda donde compramos</div>
+                  <div class="row">
+                    <div class="text-h6 q-mt-xs text-bold text-light-green-13">959€</div>
+                    <div class="q-pl-md q-mt-xs text-h6 text-bold">|</div>
+                    <div class="q-pl-md q-mt-sm">
+                     <div style="width:20px;height:20px" class="bg-black"></div>
+                    </div>
+                    <div class="q-mt-sm q-pl-sm text-h7 text-bold">Black</div>
+                  </div>
+                </div>
+              </q-card-section>
+          </q-card-section>
+          <q-card-section style="width:100%" class="q-pt-xs">
+            <div class="row">
+              <div class="q-mt-md text-h6 text-grey text-bold">cantidad de productos:</div>
+              <q-space />
+              <div class="q-mt-md text-h6 text-grey text-bold">3</div>
+            </div>
+            <div class="row">
+              <div class="q-mt-md text-h6 text-grey text-bold">total a pagar:</div>
+              <q-space />
+              <div class="q-mt-md text-h6 text-light-green-13 text-bold">€2.689</div>
+            </div>
+          </q-card-section>
+        </q-card>
+
+        <q-card-actions class="q-py-md" align="center">
+          <div class="q-pb-md">
+            <q-btn v-close-popup rounded color="light-green-13" text-color="white" label="Cerrar" style="width:200px;height:40px" />
           </div>
         </q-card-actions>
       </q-card>
@@ -305,7 +402,9 @@ export default {
         }
       ],
       card: false,
-      card2: false
+      card2: false,
+      card3: false,
+      val: true
     }
   },
   methods: {
