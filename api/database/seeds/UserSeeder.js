@@ -18,8 +18,8 @@ const Factory = use('Factory')
 
 const userData = [
   {
-    email: 'root@flaag.cl',
-    password: 'flaag2020',
+    email: 'root@novatelde.com',
+    password: 'novatelde2021',
     full_name: 'Administrador del Sistema',
     roles: [1]
   }

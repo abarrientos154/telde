@@ -111,15 +111,22 @@
                 error-message="Requerido" :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tus categorias</div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <q-select @input="form.categoria === 'Pub y Restaurante' ? optionsSubCategorias = subCategoria1 : optionsSubCategorias = subCategoria2, form.subCategoria = []" outlined v-model="form.categoria" :options="optionsCategoria" label="Selecciona tu categoria" emit-value map-options
+                error-message="Requerido" :error="$v.form.categoria.$error" @blur="$v.form.categoria.$touch()" >
+              </q-select>
+            </div>
+            <div v-if="form.categoria" :class="!$v.form.subCategoria.$error ? 'text-black' : 'text-negative'" class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tu subcategoria</div>
             <q-scroll-area
+              v-if="form.categoria"
               class="col-12"
               horizontal
               style="height: 80px"
             >
               <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-                <div v-for="(btn, index) in 10" :key="index" >
-                  <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
+                <div v-for="(btn, index) in optionsSubCategorias" :key="index" >
+                  <q-btn no-caps class="q-px-md" :label="btn" :color="form.subCategoria.find(v => v === btn) ? 'primary' : 'blue-grey-11'" text-color="blue-grey-9"
+                  @click="addSubCategoria(btn)" />
                 </div>
               </div>
             </q-scroll-area>
@@ -177,10 +184,7 @@
                         </template>
                     </q-input>
                 </div>
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                    <q-checkbox v-model="terminos_condiciones" :class="textColor" @input="terminos_condiciones ? textColor = 'text-black' : ''" label="Acepto término y condiciones de uso*" />
-                </div>
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mb-md">Imagenes de la Tienda (hasta 5 imagenes)</div>
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mb-md">Agrega fotos de tu local comercial (hasta 5 imagenes)</div>
                 <q-scroll-area horizontal style="height:150px; width: 100%;"
                 :thumb-style="thumbStyle" :bar-style="barStyle"
                 >
@@ -195,11 +199,58 @@
                         </q-img>
                     </div>
                 </q-scroll-area>
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <q-checkbox v-model="terminos_condiciones" :class="textColor" @input="terminos_condiciones ? textColor = 'text-black' : ''" label="Acepto término y condiciones de uso*" />
+                </div>
                 <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
                     <q-btn no-caps label="Finalizar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-                    @click="registrar()" />
+                    @click="siguiente2()" />
                 </div>
           </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="3" >
+          <div class="q-pa-md">
+            <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 2" />
+          </div>
+          <div class="row justify-center q-gutter-xs q-mt-md">
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+              <q-input v-model="form.titular" label="Titular del banco" outlined
+                error-message="Requerido" :error="$v.form.titular.$error" @blur="$v.form.titular.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+              <q-input v-model="form.codigo_iban" label="Código IBAN" outlined
+                error-message="Requerido" :error="$v.form.codigo_iban.$error" @blur="$v.form.codigo_iban.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+              <q-input v-model="form.banco" label="Banco" outlined
+                error-message="Requerido" :error="$v.form.banco.$error" @blur="$v.form.banco.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <q-checkbox v-model="confirma_datos" :class="textColorBanco" @input="confirma_datos ? textColorBanco = 'text-black' : ''" label="Confirmo que estos datos son reales*" />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+              <q-btn no-caps label="Finalizar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+                @click="registrar()" />
+            </div>
+          </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="4" >
+        <div class="absolute-center" style="width:100%">
+          <div class="q-mb-md row justify-center">
+            <q-img src="fondo1.jpg" style="width:150px;height:150px;border-radius:25px" >
+            </q-img>
+          </div>
+          <div class="text-center text-h4 text-bold">¡Registro Exitoso!</div>
+          <div class="row items-center justify-center q-mt-lg" style="width:100%">
+            <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+            @click="onSubmit()" />
+          </div>
+        </div>
       </q-carousel-slide>
     </q-carousel>
   </div>
@@ -212,9 +263,11 @@ export default {
   data () {
     return {
       slide: 1,
+      id: '',
       password: '',
       repeatPassword: '',
       textColor: 'text-black',
+      textColorBanco: 'text-black',
       img: null,
       perfil: null,
       perfilImg: null,
@@ -222,8 +275,10 @@ export default {
       portadaImg: null,
       isPwd: true,
       terminos_condiciones: false,
+      confirma_datos: false,
       form: {
-        dias: []
+        dias: [],
+        subCategoria: []
       },
       thumbStyle: {
         right: '4px',
@@ -241,6 +296,10 @@ export default {
       },
       images: [],
       imagesSubir: [],
+      optionsCategoria: ['Pub y Restaurante', 'Tienda'],
+      optionsSubCategorias: [],
+      subCategoria1: ['Comida rapida', 'Comida china', 'Comida Japonesa', 'Comida criolla', 'Comida mexicana', 'Hamburguesas', 'Pizza'],
+      subCategoria2: ['Ropa', 'Electrodomésticos', 'Estética y maquillaje'],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -259,13 +318,19 @@ export default {
       dias: { required },
       hapertura: { required },
       hcierre: { required },
+      categoria: { required },
+      subCategoria: { required },
       ciudad: { required },
       direccion: { required },
       codigo_postal: { required },
       cif: { required },
-      email: { email, required }
+      email: { email, required },
+      titular: { required },
+      codigo_iban: { required },
+      banco: { required }
     },
     terminos_condiciones: { required },
+    confirma_datos: { required },
     repeatPassword: { sameAsPassword: sameAs('password') },
     password: { required, maxLength: maxLength(256), minLength: minLength(6) },
     portada: { required },
@@ -277,7 +342,7 @@ export default {
       this.$q.loading.show()
       this.$api.post('login', this.form).then(res => {
         if (res) {
-          this.$router.push('/inicio')
+          this.$router.push('/tienda/' + this.id)
           this.login(res)
         } else {
           console.log('hubo un error')
@@ -293,17 +358,42 @@ export default {
       this.$v.form.hcierre.$touch()
       this.$v.form.nombre.$touch()
       this.$v.form.descripcion.$touch()
-      if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error) {
+      this.$v.form.categoria.$touch()
+      this.$v.form.subCategoria.$touch()
+      if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
         this.slide = 2
+      }
+    },
+    siguiente2 () {
+      this.$v.form.ciudad.$touch()
+      this.$v.form.codigo_postal.$touch()
+      this.$v.form.direccion.$touch()
+      this.$v.form.cif.$touch()
+      this.$v.form.email.$touch()
+      this.$v.password.$touch()
+      this.$v.repeatPassword.$touch()
+      this.$v.terminos_condiciones.$touch()
+      if (!this.terminos_condiciones) {
+        this.textColor = 'text-red'
+      }
+      if (!this.$v.form.ciudad.$error && !this.$v.form.codigo_postal.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && this.terminos_condiciones) {
+        this.form.password = this.password
+        this.slide = 3
+      }
+    },
+    addSubCategoria (btn) {
+      if (!this.form.subCategoria.find(v => v === btn)) {
+        this.form.subCategoria.push(btn)
+      } else {
+        this.form.subCategoria = this.form.subCategoria.filter(v => v !== btn)
       }
     },
     async registrar () {
       this.$v.$touch()
-      if (!this.terminos_condiciones) {
-        this.textColor = 'text-red'
+      if (!this.confirma_datos) {
+        this.textColorBanco = 'text-red'
       }
-      if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && this.terminos_condiciones) {
-        this.form.password = this.password
+      if (!this.$v.form.$error && this.confirma_datos) {
         this.form.metodoPago = []
         var formData = new FormData()
         formData.append('perfil', this.perfil)
@@ -326,7 +416,8 @@ export default {
               message: 'Ya formas parte de Nova Telde, Bienvenido',
               color: 'positive'
             })
-            this.onSubmit()
+            this.id = res._id
+            this.slide = 4
             this.$q.loading.hide()
           }
           this.$q.loading.hide()

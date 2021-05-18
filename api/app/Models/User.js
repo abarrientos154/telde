@@ -8,7 +8,7 @@ const Hash = use('Hash')
 
 class User extends Model {
   static get fillableProveedor() {
-    return ['nombre', 'descripcion', 'cif', 'ciudad', 'direccion', 'codigo_postal', 'email', 'password', 'cantidadFiles', 'delivery', 'dias', 'hapertura', 'hcierre', 'deliveryPrice', 'status', 'metodoPago', 'banco', 'titular', 'codigo_iban', 'apiKey', 'secretKey']
+    return ['nombre', 'descripcion', 'cif', 'ciudad', 'direccion', 'codigo_postal', 'email', 'password', 'cantidadFiles', 'delivery', 'dias', 'hapertura', 'hcierre', 'deliveryPrice', 'status', 'metodoPago', 'banco', 'titular', 'codigo_iban', 'apiKey', 'secretKey', 'categoria', 'subCategoria']
   }
   static fieldValidationRules() {
     const rulesUser = {
