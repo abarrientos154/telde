@@ -67,7 +67,11 @@ export default {
       })
       this.$api.post('login', this.form).then(res => {
         if (res) {
-          this.$router.push('/inicio')
+          if (res.TELDE_SESSION_INFO.roles[0] === 3) {
+            this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+          } else {
+            this.$router.push('/inicio')
+          }
           this.login(res)
         } else {
           console.log('hubo un error')

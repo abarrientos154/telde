@@ -28,27 +28,11 @@
 
       <div class="row q-pa-sm justify-around">
         <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
-          <div class="text-subtitle1">Nombre del producto</div>
           <q-input v-model="form.nombre" label="Nombre del producto" outlined
           error-message="Requerido" :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
           />
         </div>
-        <div class="col-12 row justify-center">
-          <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 text-subtitle1 q-mt-md">Selecciona tus categorias</div>
-          <q-scroll-area
-            class="col-12"
-            horizontal
-            style="height: 80px;"
-          >
-            <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-              <div v-for="(btn, index) in 10" :key="index" >
-                <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
-              </div>
-            </div>
-          </q-scroll-area>
-        </div>
         <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
-          <div class="text-subtitle1">Precio</div>
           <q-input v-model.number="form.valor" label="Precio del producto" outlined type="number"
           error-message="Requerido" :error="$v.form.valor.$error" @blur="$v.form.valor.$touch()"
           />
@@ -71,14 +55,45 @@
           </div>
         </div>
         <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
-          <q-checkbox v-if="edit" v-model="oferta" label="¿Oferta?" @input="form.oferta = oferta" />
+          <q-checkbox v-model="oferta" label="¿Oferta?" @input="form.oferta = oferta" />
           <div v-if="form.oferta" class="row justify-between items-center">
-            <div class="col-6 row items-center">
+            <div class="col-6 row items-start">
               <q-icon class="col-1" name="add_box" size="sm" />
               <div class="col text-subtitle1 q-ml-xs ellipsis"> Precio Oferta </div>
             </div>
-            <q-input class="col-6" v-model.number="form.ofertaVal" label="Precio de oferta" outlined type="number"
-            />
+            <div class="col-6">
+              <q-input v-model.number="form.ofertaVal" label="Precio de oferta" outlined type="number"
+              />
+            </div>
+          </div>
+          <div v-if="form.oferta" class="row justify-end items-center">
+            <div class="col-6">
+              <q-input class="q-mt-md" outlined v-model="form.ofertaDate" label="Fecha y hora de término" readonly>
+                <template v-slot:prepend>
+                  <q-icon name="event" class="cursor-pointer" color="primary">
+                    <q-popup-proxy transition-show="scale" transition-hide="scale">
+                      <q-date v-model="form.ofertaDate" mask="YYYY-MM-DD HH:mm">
+                        <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                        </div>
+                      </q-date>
+                    </q-popup-proxy>
+                  </q-icon>
+                </template>
+
+                <template v-slot:append>
+                  <q-icon name="access_time" class="cursor-pointer" color="primary">
+                    <q-popup-proxy transition-show="scale" transition-hide="scale">
+                      <q-time v-model="form.ofertaDate" mask="YYYY-MM-DD HH:mm" format24h>
+                        <div class="row items-center justify-end">
+                          <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                        </div>
+                      </q-time>
+                    </q-popup-proxy>
+                  </q-icon>
+                </template>
+              </q-input>
+            </div>
           </div>
         </div>
       </div>

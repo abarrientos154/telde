@@ -112,13 +112,13 @@
               />
             </div>
             <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-              <q-select @input="form.categoria === 'Pub y Restaurante' ? optionsSubCategorias = subCategoria1 : optionsSubCategorias = subCategoria2, form.subCategoria = []" outlined v-model="form.categoria" :options="optionsCategoria" label="Selecciona tu categoria" emit-value map-options
+              <q-select @input="form.categoria === 'Comida' ? optionsSubCategorias = subCategoria1 : '', form.subCategoria = []" outlined v-model="form.categoria" :options="optionsCategoria" label="Selecciona tu categoria" emit-value map-options
                 error-message="Requerido" :error="$v.form.categoria.$error" @blur="$v.form.categoria.$touch()" >
               </q-select>
             </div>
-            <div v-if="form.categoria" :class="!$v.form.subCategoria.$error ? 'text-black' : 'text-negative'" class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tu subcategoria</div>
+            <div v-if="form.categoria === 'Comida'" :class="!$v.form.subCategoria.$error ? 'text-black' : 'text-negative'" class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tu subcategoria</div>
             <q-scroll-area
-              v-if="form.categoria"
+              v-if="form.categoria === 'Comida'"
               class="col-12"
               horizontal
               style="height: 80px"
@@ -257,7 +257,7 @@
 </template>
 
 <script>
-import { required, email, sameAs, maxLength, minLength } from 'vuelidate/lib/validators'
+import { required, requiredIf, email, sameAs, maxLength, minLength } from 'vuelidate/lib/validators'
 import { mapMutations } from 'vuex'
 export default {
   data () {
@@ -296,10 +296,9 @@ export default {
       },
       images: [],
       imagesSubir: [],
-      optionsCategoria: ['Pub y Restaurante', 'Tienda'],
+      optionsCategoria: ['Comida', 'Tienda'],
       optionsSubCategorias: [],
-      subCategoria1: ['Comida rapida', 'Comida china', 'Comida Japonesa', 'Comida criolla', 'Comida mexicana', 'Hamburguesas', 'Pizza'],
-      subCategoria2: ['Ropa', 'Electrodomésticos', 'Estética y maquillaje'],
+      subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -319,7 +318,11 @@ export default {
       hapertura: { required },
       hcierre: { required },
       categoria: { required },
-      subCategoria: { required },
+      subCategoria: {
+        required: requiredIf(function (nestedModel) {
+          return this.form.categoria === 'Comida'
+        })
+      },
       ciudad: { required },
       direccion: { required },
       codigo_postal: { required },

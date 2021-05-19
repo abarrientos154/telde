@@ -49,11 +49,11 @@ const routes = [
   /* { path: '/splash', component: () => import('pages/Splash.vue') }, */
   {
     path: '/',
-    redirect: '/inicio'
+    redirect: '/login'
   },
   {
     path: '*',
-    redirect: '/inicio'
+    redirect: '/login'
   },
 
   // Always leave this as last one,

@@ -1,10 +1,6 @@
 <template>
   <div>
     <div class="bg-secondary column justify-center" style="height: 500px;">
-      <div class="absolute-top-right q-pa-md">
-        <q-btn v-if="!login" flat no-caps color="white" label="Iniciar Sesión"
-        @click="$router.push('/login')" />
-      </div>
       <div class="text-center text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
       <div class="text-center text-h5 text-white q-mt-sm">Se parte de Nova Telde</div>
       <div class="q-mt-lg row justify-center">
@@ -13,19 +9,38 @@
       </div>
     </div>
 
-    <div class="text-h5 q-mt-md text-center">Categorias</div>
+    <div class="text-h5 q-mt-md text-center">¡Busca lo que necesites!</div>
+    <div class="text-h6 q-mt-md q-ml-sm">Categorias</div>
     <q-scroll-area
       horizontal
       style="height: 80px;"
     >
       <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-        <div v-for="(btn, index) in 20" :key="index" >
-          <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
+        <div v-for="(btn, index) in categorias" :key="index" >
+          <q-btn no-caps class="q-px-md" :label="btn" :color="selecCategoria === btn ? 'primary' : 'blue-grey-11'" text-color="blue-grey-9"
+          @click="filterCategoria(btn, 'cat')" />
         </div>
       </div>
     </q-scroll-area>
+    <div v-if="subCategorias.length" class="text-h6 q-mt-md q-ml-sm">Subcategorias</div>
+    <q-scroll-area
+      v-if="subCategorias.length"
+      horizontal
+      style="height: 80px;"
+    >
+      <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+        <div v-for="(btn, index) in subCategorias" :key="index" >
+          <q-btn no-caps class="q-px-md" :label="btn" :color="selecSubCategoria === btn ? 'primary' : 'blue-grey-11'" text-color="blue-grey-9"
+          @click="filterCategoria(btn, 'sub')" />
+        </div>
+      </div>
+    </q-scroll-area>
+    <div class="q-mt-md row justify-center">
+      <q-btn style="width:50%" rounded no-caps color="primary" label="Buscar"
+      />
+    </div>
 
-    <div class="text-h5 q-mt-md text-center">Algunas de nuestras tiendas</div>
+    <div class="text-h6 q-mt-md q-ml-sm">Algunas de nuestras tiendas</div>
     <q-scroll-area
         horizontal
         style="height: 350px;"
@@ -80,12 +95,12 @@
         </div>
       </q-scroll-area>
 
-    <div class="text-h5 q-my-md text-center">Nuestros nuevos productos</div>
+    <div class="text-h6 q-my-md text-center">Nuestros nuevos productos</div>
     <q-scroll-area
         horizontal
         style="height: 500px;"
       >
-        <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in productos" :key="index" >
             <q-card flat class="my-card" style="height: 460px; width: 210px">
               <q-img
@@ -136,7 +151,7 @@
         </div>
       </q-scroll-area>
 
-      <div class="text-h5 q-my-md text-center">Más tiendas</div>
+      <div class="text-h6 q-my-md text-center">Más tiendas</div>
       <div class="row justify-around">
         <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">
@@ -167,7 +182,7 @@
       </div>
       <div class="row items-center justify-center q-mt-lg">
         <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-        @click="masData()" />
+        />
       </div>
 
     <q-dialog v-model="verProducto">
@@ -195,6 +210,8 @@ export default {
       baseuPublicidad: '',
       baseuProducto: '',
       baseuTiendas: '',
+      selecCategoria: '',
+      selecSubCategoria: '',
       producto: {},
       publicidad1: [],
       publicidad2: [],
@@ -202,7 +219,10 @@ export default {
       allTiendas: [],
       tiendas: [],
       masTiendas: [],
-      favoritoData: []
+      favoritoData: [],
+      categorias: ['Comida', 'Tienda'],
+      subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
+      subCategorias: []
     }
   },
   mounted () {
@@ -301,8 +321,18 @@ export default {
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
       }
     },
-    masData () {
-      this.masTiendas = this.allTiendas
+    filterCategoria (btn, text) {
+      if (text === 'cat') {
+        this.selecCategoria = btn
+        this.selecSubCategoria = ''
+        if (btn === 'Comida') {
+          this.subCategorias = this.subCategoria1
+        } else {
+          this.subCategorias = []
+        }
+      } else {
+        this.selecSubCategoria = btn
+      }
     },
     irRuta (ruta) {
       openURL(ruta)

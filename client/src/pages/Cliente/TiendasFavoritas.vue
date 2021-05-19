@@ -1,22 +1,10 @@
 <template>
   <q-page>
-    <div class="bg-secondary column justify-center" style="height: 500px;">
-      <div class="text-center text-h2 text-white text-bold">Tiendas favoritas</div>
+    <div class="bg-secondary column justify-center" style="height: 200px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
+      <div class="text-center text-h5 text-white text-bold">Mis tiendas favoritas</div>
     </div>
 
-    <div class="text-h5 q-mt-md text-center">Categorias</div>
-    <q-scroll-area
-      horizontal
-      style="height: 80px;"
-    >
-      <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-        <div v-for="(btn, index) in 20" :key="index" >
-          <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
-        </div>
-      </div>
-    </q-scroll-area>
-
-    <div class="text-h5 q-mt-md text-center">Últimas tiendas agregadas</div>
+    <div class="text-h6 q-mt-md q-ml-md">Últimas tiendas agregadas</div>
     <q-scroll-area
         v-if="data.length > 0"
         horizontal
@@ -56,7 +44,7 @@
     </q-scroll-area>
     <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
 
-    <div class="text-h5 q-my-md text-center">Más tiendas</div>
+    <div class="text-h6 q-my-md text-center">Más tiendas</div>
       <div v-if="data.length > 0" class="row justify-around">
         <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">
