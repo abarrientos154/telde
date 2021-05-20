@@ -209,7 +209,8 @@
           <div class="row items-center"><q-btn icon="store" color="white" flat round size="lg" @click="$router.push('/inicio')" /></div>
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'view_list' : 'favorite'" color="white" flat round size="lg" @click="rol === 2 ? $router.push('/tiendas_favoritas') : ''" /></div>
           <div class="row items-center"><q-btn icon="person" color="white" flat round size="lg" @click="rol === 3 ? $router.push('/tienda/'+user_id) : ''" /></div>
-          <div class="row items-center"><q-btn icon="description" color="white" flat round size="lg" @click="$router.push('/pedidos')" /></div>
+          <div class="row items-center"><q-btn icon="description" color="white" flat round size="lg" @click="$router.push('/estadisticas')" /></div>
+          <div class="row items-center"><q-btn icon="shopping_bag" color="white" flat round size="lg" @click="$router.push('/pedidos')" /></div>
           <div class="row items-center"><q-btn :icon="login ? 'logout' : 'login'" color="white" flat round size="lg" @click="login ? cerrarSesion() : $router.push('/login')" /></div>
       </div>
       </q-footer>
