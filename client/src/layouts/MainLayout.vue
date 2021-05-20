@@ -8,7 +8,7 @@
       <q-footer elevated v-if="login">
         <div class="bg-blue-14 shadow-2 full-width row justify-around" >
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'store' : 'home'" :label="rol === 3 ? 'Tienda' : 'Home'" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/tienda/'+user_id) : $router.push('/inicio')" /></div>
-          <div class="row items-center"><q-btn :icon="rol === 3 ? 'monetization_on' : 'store'" :label="rol === 3 ? 'Monedero' : 'Tiendas'" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/monedero/') : $router.push('//')" /></div>
+          <div class="row items-center"><q-btn :icon="rol === 3 ? 'monetization_on' : 'store'" :label="rol === 3 ? 'Monedero' : 'Tiendas'" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/monedero/') : $router.push('/tiendas')" /></div>
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'description' : 'favorite'" :label="rol === 3 ? 'Estadísticas' : 'Favoritos'" color="white" flat stack dense no-caps size="md" @click="rol === 2 ? $router.push('/tiendas_favoritas') : $router.push('/estadisticas')" /></div>
           <div class="row items-center"><q-btn icon="shopping_basket" label="Pedidos" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/pedidos') : ''" /></div>
           <div class="row items-center"><q-btn icon="logout" label="Salir" color="white" flat stack dense no-caps size="md" @click="cerrarSesion()" /></div>

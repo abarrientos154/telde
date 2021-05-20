@@ -20,7 +20,8 @@ const routes = [
       { path: '/Blog', component: () => import('pages/Blog.vue') },
       { path: '/somos', component: () => import('pages/SomosNova.vue') },
       { path: '/Blog2', component: () => import('pages/Blog2.vue') },
-      { path: '/pedidos', component: () => import('pages/Proveedor/Pedidos.vue') }
+      { path: '/pedidos', component: () => import('pages/Proveedor/Pedidos.vue') },
+      { path: '/tiendas', component: () => import('pages/Cliente/Tiendas.vue') }
 
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
