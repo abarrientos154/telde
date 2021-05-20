@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="row justify-center q-mb-md">
-        <q-btn rounded class="q-pa-xs" color="light-green-13" text-color="white" @click="ver()" label="Ver más productos" style="width: 90%;" no-caps/>
+        <q-btn rounded class="q-pa-xs" color="light-green-13" text-color="white" @click="ver()" :label="verProd ? 'Ver menos productos' : 'Ver más productos'" style="width: 90%;" no-caps/>
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@ export default {
       typeReport: ['Reporte semanal', 'Reporte mensual', 'Reporte anual'],
       meces: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
       años: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021'],
-      fechaReport: { from: '2020/07/08', to: '2020/07/17' },
+      fechaReport: { from: '2021/07/08', to: '2021/07/17' },
       fch: false,
       report: '',
       fecha: '',
