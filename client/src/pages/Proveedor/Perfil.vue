@@ -92,7 +92,23 @@
           </div>
         </div>
       </div>
+
       <div class="row justify-center q-gutter-xs q-mt-md" style="width: 100%">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mb-md">Imagenes de la Tienda (hasta 5 imagenes)</div>
+        <q-scroll-area class="col-12" horizontal style="height:150px;"
+            :thumb-style="thumbStyle" :bar-style="barStyle"
+          >
+            <div class="no-wrap q-px-md q-gutter-md row items-center">
+              <q-card class="bg-grey column justify-center items-center" style="height:140px;border-radius:12px;width:140px">
+                <q-file borderless :disable="form.images && form.images.length < 5 ? false : true" v-model="img" class="button-camera" @input="addImg()" accept=".jpg, image/*">
+                  <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
+                </q-file>
+              </q-card>
+              <q-img v-for="(item, index) in form.images" :key="index" :src="rutaCargarImgs + item" style="height:140px;border-radius:12px;width:140px" >
+                <q-btn @click="confirmEliminar(item)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
+              </q-img>
+            </div>
+        </q-scroll-area>
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <q-input v-model="form.nombre" label="Nombre de la tienda" outlined
             error-message="Requerido" :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
@@ -103,89 +119,57 @@
             error-message="Requerido" :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
           />
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tus categorias</div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.ciudad" label="Ciudad" outlined
+            error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.direccion" label="Dirección" outlined
+            error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-select @input="form.categoria === 'Comida' ? optionsSubCategorias = subCategoria1 : optionsSubCategorias = []" outlined v-model="form.categoria" :options="optionsCategoria" label="Selecciona tu categoria" emit-value map-options
+            error-message="Requerido" :error="$v.form.categoria.$error" @blur="$v.form.categoria.$touch()" >
+          </q-select>
+        </div>
+        <div v-if="form.categoria === 'Comida'" :class="!$v.form.subCategoria.$error ? 'text-black' : 'text-negative'" class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1">Selecciona tu subcategoria</div>
         <q-scroll-area
+          v-if="form.categoria === 'Comida'"
           class="col-12"
           horizontal
           style="height: 80px"
         >
           <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-            <div v-for="(btn, index) in 10" :key="index" >
-              <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
+            <div v-for="(btn, index) in optionsSubCategorias" :key="index" >
+              <q-btn no-caps class="q-px-md" :label="btn" :color="form.subCategoria.find(v => v === btn) ? 'primary' : 'blue-grey-11'" text-color="blue-grey-9"
+                @click="addSubCategoria(btn)" />
             </div>
           </div>
         </q-scroll-area>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.ciudad" label="Ciudad" outlined
-            error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.codigo_postal" label="Código postal" outlined
-            error-message="Requerido" :error="$v.form.codigo_postal.$error" @blur="$v.form.codigo_postal.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.direccion" label="Dirección" outlined
-            error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.cif" label="CIF" outlined
-            error-message="Requerido" :error="$v.form.cif.$error" @blur="$v.form.cif.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.telefono" label="Teléfono" outlined
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input disable readonly v-model="form.email" label="Correo de contacto" outlined type="email"
-            error-message="Requerido" :error="$v.form.email.$error" @blur="$v.form.email.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <div class="row full-width">
-            <q-checkbox class="col-5" v-model="form.delivery" label="Delivery" />
-            <div class="col-7" v-if="form.delivery">
-              <q-input v-model.number="form.deliveryPrice" label="Valor Delivery" outlined style="width:100%" type="number"
-              />
-            </div>
-          </div>
-        </div>
-        <q-card class="row col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md q-pa-md shadow-5">
-          <div class="text-subtitle2 text-weight-bolder q-mr-md q-mb-md">Método de pago</div>
-          <div class="column justify-around q-gutter-sm">
-            <q-checkbox @input="selecMetodo()" v-model="form.metodoPago" val="1" label="Efectivo" color="primary" />
-            <q-checkbox @input="selecMetodo()" v-model="form.metodoPago" val="2" label="Transferencia Bancaria" color="primary" />
-            <q-checkbox @input="selecMetodo(), getDataFlow(form._id)" v-model="form.metodoPago" val="3" label="Transferencia Electrónica" color="primary" />
-          </div>
-        </q-card>
-        <div v-if="metodo3" class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-          <div v-if="confiFlowData" class="text-positive text-bold">Flow ya se encuentra configurado</div>
-          <div v-else class="text-red text-bold">Debes configurar Flow</div>
-          <q-btn style="width:200px" color="positive" label="Configurar Flow" push no-caps @click="flow = {}, $v.flow.$reset(), dialogFlow = true" />
-        </div>
-        <div v-if="metodo2" class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-          <q-btn style="width:200px" color="positive" label="Añadir cuenta bancaria" push no-caps
-          @click="banco = {}, $v.banco.$reset(), newBanck = true" />
+
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-separator />
         </div>
 
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mb-md">Imagenes de la Tienda (hasta 5 imagenes)</div>
-        <q-scroll-area horizontal style="height:150px; width: 100%;"
-          :thumb-style="thumbStyle" :bar-style="barStyle"
-        >
-          <div class="no-wrap q-px-md q-gutter-md row items-center">
-            <q-card class="bg-grey column justify-center items-center" style="height:140px;border-radius:12px;width:140px">
-              <q-file borderless :disable="form.images && form.images.length < 5 ? false : true" v-model="img" class="button-camera" @input="addImg()" accept=".jpg, image/*">
-                <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
-              </q-file>
-            </q-card>
-            <q-img v-for="(item, index) in form.images" :key="index" :src="rutaCargarImgs + item" style="height:140px;border-radius:12px;width:140px" >
-              <q-btn @click="confirmEliminar(item)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
-            </q-img>
-          </div>
-        </q-scroll-area>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-h6 q-mt-md">Datos bancarios</div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-xs text-grey">Puedes actualizar tu cuenta en donde recibes Tus pagos.</div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.titular" label="Titular del banco" outlined
+            error-message="Requerido" :error="$v.form.titular.$error" @blur="$v.form.titular.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.codigo_iban" label="Código IBAN" outlined
+            error-message="Requerido" :error="$v.form.codigo_iban.$error" @blur="$v.form.codigo_iban.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.banco" label="Banco" outlined
+            error-message="Requerido" :error="$v.form.banco.$error" @blur="$v.form.banco.$touch()"
+          />
+        </div>
 
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
           <q-btn no-caps label="Guardar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
@@ -193,96 +177,28 @@
         </div>
       </div>
     </div>
-
-    <q-dialog v-model="dialogFlow">
-      <q-card style="width:100%">
-        <q-card-section class="row items-center q-pb-none">
-          <div class="text-h6">Configuración de Flow</div>
-          <q-space />
-          <q-btn icon="close" flat round dense v-close-popup />
-        </q-card-section>
-
-        <q-card-section>
-          <div class="row items-center" style="width: 100%">
-            <q-icon class="col-1" name="warning" size="sm" />
-            <div class="col q-ml-xs text-caption">Estos datos están protegidos</div>
-          </div>
-
-          <q-input class="q-mt-md" v-model="flow.apiKey" label="ApiKey" outlined :error="$v.flow.apiKey.$error" error-message="Este campo es requerido" @blur="$v.flow.apiKey.$touch()">
-            <template v-if="confiFlowData" v-slot:append>
-              <q-icon name="check" color="positive" />
-            </template>
-          </q-input>
-          <q-input class="q-mt-md" v-model="flow.secretKey" label="SecretKey" outlined :error="$v.flow.secretKey.$error" error-message="Este campo es requerido" @blur="$v.flow.secretKey.$touch()">
-            <template v-if="confiFlowData" v-slot:append>
-              <q-icon name="check" color="positive" />
-            </template>
-          </q-input>
-
-          <div class="row justify-center q-mt-md">
-            <q-btn style="width:200px" color="positive" label="Guardar" push no-caps @click="dataFlow()" />
-          </div>
-        </q-card-section>
-      </q-card>
-    </q-dialog>
-
-    <q-dialog v-model="newBanck">
-      <q-card style="width:100%">
-        <q-card-section class="row items-center q-pb-none">
-          <div class="text-h6"></div>
-          <q-space />
-          <q-btn icon="close" flat round dense v-close-popup />
-        </q-card-section>
-
-        <q-card-section>
-          <q-input v-model="banco.titular" label="Titular del banco" outlined
-            error-message="Requerido" :error="$v.banco.titular.$error" @blur="$v.banco.titular.$touch()"
-          />
-          <q-input v-model="banco.codigo_iban" label="Código IBAN" outlined
-            error-message="Requerido" :error="$v.banco.codigo_iban.$error" @blur="$v.banco.codigo_iban.$touch()"
-          />
-          <q-input v-model="banco.banco" label="Banco" outlined
-            error-message="Requerido" :error="$v.banco.banco.$error" @blur="$v.banco.banco.$touch()"
-          />
-          <div>
-            <q-checkbox v-model="verifyDatos" :class="textColor" @input="verifyDatos ? textColor = 'text-black' : ''" label="Confirmo que estos datos son reales" />
-          </div>
-          <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
-            <q-btn no-caps label="Finalizar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-            />
-          </div>
-        </q-card-section>
-      </q-card>
-    </q-dialog>
   </q-page>
 </template>
 
 <script>
-import { required, email } from 'vuelidate/lib/validators'
+import { required, requiredIf } from 'vuelidate/lib/validators'
 import env from '../../env'
 export default {
   data () {
     return {
       rutaCargarImgs: '',
-      apiKey: '',
-      secretKey: '',
       baseuPortada: '',
       baseu: '',
       textColor: 'text-black',
-      dialogFlow: false,
-      confiFlowData: false,
-      newBanck: false,
-      metodo2: false,
-      metodo3: false,
       img: null,
       perfil: null,
       perfilImg: null,
       portada: null,
       portadaImg: null,
-      verifyDatos: false,
-      model: [],
-      optionsBancos: ['Banco'],
       optionsCuentas: ['Cuenta corriente', 'Cuenta de ahorro'],
+      optionsCategoria: ['Comida', 'Tienda'],
+      optionsSubCategorias: [],
+      subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -292,12 +208,9 @@ export default {
         { label: 'Sabado', value: 5 },
         { label: 'Domingo', value: 6 }
       ],
-      flow: {},
       form: {
-        dias: [],
-        delivery: false
+        dias: []
       },
-      banco: {},
       thumbStyle: {
         right: '4px',
         borderRadius: '5px',
@@ -321,20 +234,17 @@ export default {
       dias: { required },
       hapertura: { required },
       hcierre: { required },
+      categoria: { required },
+      subCategoria: {
+        required: requiredIf(function (nestedModel) {
+          return this.form.categoria === 'Comida'
+        })
+      },
       ciudad: { required },
       direccion: { required },
-      codigo_postal: { required },
-      cif: { required },
-      email: { email, required }
-    },
-    banco: {
       titular: { required },
       codigo_iban: { required },
       banco: { required }
-    },
-    flow: {
-      apiKey: { required },
-      secretKey: { required }
     }
   },
   async mounted () {
@@ -346,64 +256,24 @@ export default {
     }
   },
   methods: {
-    selecMetodo () {
-      if (this.form.metodoPago) {
-        if (this.form.metodoPago.find(v => v === '3')) {
-          this.metodo3 = true
-        } else {
-          this.metodo3 = false
-        }
-        if (this.form.metodoPago.find(v => v === '2')) {
-          this.metodo2 = true
-        } else {
-          this.metodo2 = false
-        }
-      }
-    },
-    getDataFlow (id) {
-      this.$api.post('flow_by_id/' + id).then(res => {
-        if (res) {
-          this.confiFlowData = true
-        }
-      })
-    },
-    dataFlow () {
-      this.$v.flow.$touch()
-      if (!this.$v.flow.$error) {
-        this.$q.loading.show()
-        this.flow.tienda_id = this.form._id
-        this.$api.put('configuracion_flow', this.flow).then(res => {
-          if (res) {
-            this.flow = {}
-            this.dialogFlow = false
-            this.$v.flow.$reset()
-            this.getDataFlow(this.form._id)
-            this.$q.loading.hide()
-            this.$q.notify({
-              message: 'Guardado Correctamente',
-              positive: 'positive'
-            })
-          }
-        })
+    addSubCategoria (btn) {
+      if (!this.form.subCategoria.find(v => v === btn)) {
+        this.form.subCategoria.push(btn)
+      } else {
+        this.form.subCategoria = this.form.subCategoria.filter(v => v !== btn)
       }
     },
     guardar () {
       var paso = true
       this.$v.form.$touch()
-      /* if (this.form.metodoPago.find(v => v === '3')) {
-        if (this.confiFlowData) {
-          paso = true
-        } else {
-          paso = false
-        }
-      } else {
-        paso = true
-      } */
       if (!this.$v.form.$error && paso) {
+        if (this.form.categoria !== 'Comida') {
+          this.form.subCategoria = []
+        }
         this.$q.loading.show()
         this.$api.put('editar_proveedor', this.form).then(res => {
           if (res) {
-            this.getProvEdit(this.form._id)
+            this.$router.push('/tienda/' + this.form._id)
             this.$q.notify({
               message: 'Guardado Correctamente',
               positive: 'positive'
@@ -462,7 +332,9 @@ export default {
       await this.$api.get('user_info').then(res => {
         if (res) {
           this.form = res
-          console.log(this.form)
+          if (this.form.categoria === 'Comida') {
+            this.optionsSubCategorias = this.subCategoria1
+          }
           this.baseu = env.apiUrl + '/perfil_img/' + this.form._id
           this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.form._id
           this.$q.loading.hide()
@@ -474,19 +346,9 @@ export default {
       await this.$api.post('user_by_id/' + id).then(res => {
         if (res) {
           this.form = res
-          /* if (this.form.metodoPago.length) {
-            if (this.form.metodoPago.find(v => v === '3')) {
-              this.metodo3 = true
-              this.getDataFlow(this.form._id)
-            } else {
-              this.metodo3 = false
-            }
-            if (this.form.metodoPago.find(v => v === '2')) {
-              this.metodo2 = true
-            } else {
-              this.metodo2 = false
-            }
-          } */
+          if (this.form.categoria === 'Comida') {
+            this.optionsSubCategorias = this.subCategoria1
+          }
           this.baseu = env.apiUrl + '/perfil_img/' + this.form._id
           this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.form._id
           this.$q.loading.hide()

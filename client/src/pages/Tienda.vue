@@ -1,20 +1,29 @@
 <template>
   <q-page>
-    <q-img :src="baseuPortada" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
-      <div class="q-pa-md bg-transparent row justify-between" style="width:100%">
-        <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
-        <q-btn v-if="miTienda" label="Editar perfil" flat no-caps color="grey-4" text-color="white"
+    <q-img :src="baseuPortada" style="height: 300px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+      <div class="absolute-bottom-right q-mb-md bg-transparent">
+        <q-btn v-if="miTienda" class="q-px-md" size="lg" label="Editar perfil" no-caps color="primary" style="border-radius: 25px"
         @click="$router.push('/editar-perfil')" />
       </div>
-      <div class="row absolute-center justify-end items-center bg-transparent" style="width:100%">
-        <div class="col-xs-7 col-sm-5 col-md-4 col-lg-4 col-xl-4">
-          <div class="text-h6 text-black">Horario de atención</div>
-          <div class="text-subtitle1 text-black">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
-          <div class="text-h6 q-mt-lg text-black">Días de atención</div>
-          <div class="text-subtitle1 text-black">{{dias()}}</div>
-        </div>
-      </div>
     </q-img>
+
+    <div class="row justify-between items-start q-pa-sm" style="width:100%">
+      <div class="col-12">
+        <q-rating readonly v-model="user.calificacion" :max="5" size="30px" />
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="text-subtitle1 q-mt-md">Comunidad autónoma</div>
+        <div class="text-subtitle2 text-grey">{{user.ciudad}}</div>
+        <div class="text-subtitle1 q-mt-md">Dirección del local</div>
+        <div class="text-subtitle2 text-grey">{{user.direccion}}</div>
+      </div>
+      <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4">
+        <div class="text-subtitle1 q-mt-md">Horario de atención</div>
+        <div class="text-subtitle2 text-grey">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
+        <div class="text-subtitle1 q-mt-md">Días de atención</div>
+        <div class="text-subtitle2 text-grey">{{dias()}}</div>
+      </div>
+    </div>
 
     <q-scroll-area
         v-if="user.images.length"
@@ -36,31 +45,60 @@
       </q-card>
     </q-dialog>
 
+    <div class="text-h6 q-ma-md">Comentarios</div>
     <q-scroll-area
-      horizontal
-      style="height: 80px;"
-    >
-      <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-        <div v-for="(btn, index) in 10" :key="index" >
-          <q-btn no-caps class="q-px-md" label="Categoria" color="blue-grey-11" text-color="blue-grey-9" />
-        </div>
-      </div>
-    </q-scroll-area>
+        v-if="comentarios.length"
+        horizontal
+        style="height: 200px;"
+      >
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+          <div v-for="(card, index) in comentarios" :key="index" >
+            <q-card class="my-card" style="height: 150px; width: 400px; border-radius: 25px">
+              <q-card-section>
+                <div class="row justify-between">
+                  <q-rating readonly v-model="card.rating" :max="5" size="25px" />
+                  <div class="column items-end">
+                    <div class="text-subtitle2">Fecha de solicitud</div>
+                    <div>Fecha</div>
+                  </div>
+                </div>
 
-    <div class="text-h5 q-my-md text-center">Últimos productos agregados</div>
+                <div class="col text-subtitle2 ellipsis"> {{card.nombreClient}} </div>
+                <div class="text-caption text-grey"> {{card.descripcion}} </div>
+              </q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </q-scroll-area>
+      <q-scroll-area
+        v-else
+        horizontal
+        style="height: 200px;"
+      >
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+          <q-card class="column items-center justify-center q-ma-md text-h6" style="height: 150px; width: 400px; border-radius: 25px">*Nada por aquí*</q-card>
+        </div>
+      </q-scroll-area>
+
+    <div class="text-h6 q-ma-md">Últimos productos agregados</div>
     <q-scroll-area
         v-if="ultimosProductos.length"
         horizontal
         style="height: 500px;"
       >
-        <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in ultimosProductos" :key="index" >
             <q-card flat class="my-card" style="height: 460px; width: 210px">
               <q-img
                 :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
                 spinner-color="white"
                 style="height: 230px; width: 210px"
-                @click="producto = card, verProducto = true"/>
+                @click="producto = card, verProducto = true">
+                  <div v-if="miTienda" class="row justify-end bg-transparent" style="width: 100%">
+                    <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                    <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                  </div>
+              </q-img>
 
               <q-card-section>
                 <q-rating readonly v-model="card.rating" :max="5" size="25px" />
@@ -81,10 +119,6 @@
                   <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
                   @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                 </div>
-                <div v-if="miTienda" class="row justify-end">
-                  <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
-                  <q-btn flat round icon="delete" color="negative" @click="eliminarProducto(card._id)" />
-                </div>
               </q-card-section>
             </q-card>
           </div>
@@ -92,20 +126,25 @@
       </q-scroll-area>
       <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
 
-      <div class="text-h5 q-my-md text-center">Mejores categorizados</div>
+      <div class="text-h6 q-ma-md">Mejores categorizados</div>
       <q-scroll-area
           v-if="productos.length"
           horizontal
           style="height: 500px;"
         >
-          <div class="row no-wrap q-py-md q-px-xl q-gutter-xl">
+          <div class="row no-wrap q-py-md q-px-md q-gutter-md">
             <div v-for="(card, index) in productos" :key="index" >
               <q-card flat class="my-card" style="height: 460px; width: 210px">
                 <q-img
                   :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
                   spinner-color="white"
                   style="height: 230px; width: 210px"
-                  @click="producto = card, verProducto = true"/>
+                  @click="producto = card, verProducto = true">
+                    <div v-if="miTienda" class="row justify-end bg-transparent" style="width: 100%">
+                      <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                      <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                    </div>
+                </q-img>
 
                 <q-card-section>
                   <q-rating readonly v-model="card.rating" :max="5" size="25px" />
@@ -125,10 +164,6 @@
                   <div v-if="rol === 2 || rol === 0" class="row items-center">
                     <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
-                  </div>
-                  <div v-if="miTienda" class="row justify-end">
-                    <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
-                    <q-btn flat round icon="delete" color="negative" @click="eliminarProducto(card._id)" />
                   </div>
                 </q-card-section>
               </q-card>
@@ -137,7 +172,7 @@
         </q-scroll-area>
         <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
 
-        <div class="text-h5 q-my-md text-center">Más productos</div>
+        <div class="text-h6 q-ma-md">Conoce todos nuestros productos</div>
         <div v-if="productos.length" class="row justify-around">
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 row justify-center q-mt-md" v-for="(card, index) in productos" :key="index">
             <q-card flat class="my-card" style="height: 460px; width: 210px">
@@ -145,7 +180,12 @@
                   :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
                   spinner-color="white"
                   style="height: 230px; width: 210px"
-                  @click="producto = card, verProducto = true"/>
+                  @click="producto = card, verProducto = true">
+                    <div v-if="miTienda" class="row justify-end bg-transparent" style="width: 100%">
+                      <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                      <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                    </div>
+                </q-img>
 
                 <q-card-section>
                   <q-rating readonly v-model="card.rating" :max="5" size="25px" />
@@ -166,10 +206,6 @@
                     <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                   </div>
-                  <div v-if="miTienda" class="row justify-end">
-                    <q-btn flat round icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
-                    <q-btn flat round icon="delete" color="negative" @click="eliminarProducto(card._id)" />
-                  </div>
                 </q-card-section>
             </q-card>
           </div>
@@ -177,19 +213,19 @@
         <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
         <div v-if="productos.length" class="row items-center justify-center q-mt-lg">
           <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-          @click="masData()" />
+          />
         </div>
 
-        <q-page-sticky v-if="miTienda" position="bottom-right" :offset="[18, 18]">
-          <q-btn fab icon="dashboard_customize" color="primary" @click="$router.push('/producto')">
+        <q-page-sticky v-if="miTienda" class="q-pb-lg" position="bottom-right" :offset="[18, 18]">
+          <q-btn fab icon="add" color="blue" style="border-radius:15px" @click="$router.push('/producto')">
             <q-tooltip>
               Nuevo producto
             </q-tooltip>
           </q-btn>
         </q-page-sticky>
 
-        <q-page-sticky v-if="rol === 2" position="bottom-right" :offset="[18, 18]">
-          <q-btn fab icon="shopping_cart" color="primary" @click="verCarrito = true">
+        <q-page-sticky v-if="rol === 2" class="q-pb-lg" position="bottom-right" :offset="[18, 18]">
+          <q-btn fab icon="shopping_basket" color="blue" style="border-radius:15px" @click="verCarrito = true">
             <q-tooltip>
               Carrito
             </q-tooltip>
@@ -255,7 +291,7 @@
                     <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
                   </div>
                   <div class="row justify-center" style="width:100%">
-                    <q-btn :disable="carrito.length ? false : true" @click="$v.form.$reset(), comprarCarrito = true, verCarrito = false" no-caps label="Checkout" color="primary" size="xl" style="width: 90%; border-radius:15px" />
+                    <q-btn :disable="carrito.length ? false : true" @click="$v.form.$reset(), comprarCarrito = true, verCarrito = false" no-caps label="Checkout" color="primary" size="lg" style="width: 90%; border-radius:15px" />
                   </div>
                 </div>
               </div>
@@ -280,27 +316,23 @@
                       <q-space />
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
-                    <q-input v-model="form.user" label-slot borderless dense
-                      :error="$v.form.user.$error" @blur="$v.form.user.$touch()"
-                    >
-                      <template v-slot:label>
-                        <div class="text-h6">Nombre de usuario</div>
+                    <div class="text-subtitle1 text-grey-7">{{cliente.name + ' ' + cliente.lastName}}</div>
+                    <q-select borderless dense color="black" v-model="form" :options="cliente.direccion" label="Seleccione dirección" map-options
+                      error-message="requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+                      option-label="direccion" >
+                        <template v-slot:no-option>
+                        <q-item>
+                          <q-item-section class="text-grey text-italic">
+                            No hay Resultados
+                          </q-item-section>
+                        </q-item>
                       </template>
-                    </q-input>
-                    <q-input v-model="form.direccion" label-slot borderless dense
-                      :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
-                    >
-                      <template v-slot:label>
-                        <div class="text-h6">Dirección</div>
+                    </q-select>
+                    <q-field v-if="form" borderless label="Codigo postal" stack-label>
+                      <template v-slot:control>
+                        <div class="self-center full-width no-outline" tabindex="0">{{form.codigo_postal}}</div>
                       </template>
-                    </q-input>
-                    <q-input v-model="form.codigo_postal" label-slot borderless dense
-                      :error="$v.form.codigo_postal.$error" @blur="$v.form.codigo_postal.$touch()"
-                    >
-                      <template v-slot:label>
-                        <div class="text-h6">Código postal</div>
-                      </template>
-                    </q-input>
+                    </q-field>
                     <q-separator />
                     <div class="text-h6 text-bold q-my-md">Pedido</div>
                     <div class="row justify-between" style="width:100%">
@@ -317,7 +349,7 @@
                       <q-space />
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
-                    <div class="text-h6 text-grey">Número de cuenta</div>
+                    <div class="text-h6 text-grey">{{user.banco}}</div>
                   </div>
                 </div>
                 <div class="col-12 q-py-lg column justify-end items-end">
@@ -326,7 +358,7 @@
                     <div class="text-h4 text-bold text-blue">${{formatPrice(totalCarrito)}}</div>
                   </div>
                   <div class="row justify-center" style="width:100%">
-                    <q-btn :disable="carrito.length ? false : true" @click="iniciarCompra()" no-caps label="Pagar ahora" color="primary" size="xl" style="width: 90%; border-radius:15px" />
+                    <q-btn :disable="carrito.length ? false : true" @click="iniciarCompra()" no-caps label="Pagar ahora" color="primary" size="lg" style="width: 90%; border-radius:15px" />
                   </div>
                 </div>
               </div>
@@ -364,7 +396,6 @@ export default {
       verCarrito: false,
       comprarCarrito: false,
       noLogin: false,
-      slide: 0,
       rol: 0,
       id_tienda: '',
       baseuProducto: '',
@@ -373,26 +404,20 @@ export default {
       baseuImgsTienda: '',
       imgSelec: '',
       producto: {},
-      form: {},
+      form: null,
       cliente: {},
       user: {
         images: []
       },
       carrito: [],
-      categorias: ['categorias', 'categorias', 'categorias', 'categorias', 'categorias', 'converse'],
-      tallas: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-      precio: ['€0-€100', '€110-€300', '€300-€500', '€500-€1000'],
+      comentarios: [],
       allProductos: [],
       productos: [],
-      ultimosProductos: [],
-      catego: [],
-      talla: [],
-      preci: []
+      ultimosProductos: []
     }
   },
   validations: {
     form: {
-      user: { required },
       direccion: { required },
       codigo_postal: { required }
     }
@@ -440,6 +465,8 @@ export default {
     iniciarCompra () {
       this.$v.$touch()
       if (!this.$v.form.$error) {
+        this.form.cliente_id = this.cliente._id
+        this.form.tienda_id = this.user._id
         this.comprarCarrito = false
         this.form = {}
         this.$v.form.$reset()
@@ -450,6 +477,7 @@ export default {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.cliente = res
+          console.log('user', this.cliente)
           this.rol = res.roles[0]
           if (res._id === this.id_tienda) {
             this.miTienda = true
@@ -507,9 +535,6 @@ export default {
       }).onCancel(() => {
         // console.log('>>>> Cancel')
       })
-    },
-    masData () {
-      this.productos = this.allProductos
     },
     formatPrice (value) {
       const val = (value / 1).toFixed(0).replace('.', ',')

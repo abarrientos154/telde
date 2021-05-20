@@ -34,6 +34,12 @@
                   </template>
                 </q-btn>
               </div>
+
+              <div class="row justify-center">
+                <div class="col-12 text-center text-body2 q-mt-md">¿Aún no tienes una cuenta?</div>
+                <q-btn no-caps flat color="black" label="¡Regístrate ahora!" @click="$router.push('/registro')">
+                </q-btn>
+              </div>
               <!-- <q-separator inset class="q-mt-lg q-mb-lg" />
 
               <div class="text-center text-primary text-bold cursor-pointer" @click="$router.push('registro')"> ¿Eres Nuevo? Registrate </div> -->
@@ -61,7 +67,11 @@ export default {
       })
       this.$api.post('login', this.form).then(res => {
         if (res) {
-          this.$router.push('/inicio')
+          if (res.TELDE_SESSION_INFO.roles[0] === 3) {
+            this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+          } else {
+            this.$router.push('/inicio')
+          }
           this.login(res)
         } else {
           console.log('hubo un error')

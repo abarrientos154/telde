@@ -285,6 +285,7 @@ class UserController {
 
     token.full_name = user.full_name
     token.last_name = user.last_name
+    token._id = user._id
     token.enable = user.enable
     token.email = user.email
     token.verify = user.verify
