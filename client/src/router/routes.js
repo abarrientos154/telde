@@ -8,6 +8,7 @@ const routes = [
       { path: '/producto', component: () => import('pages/Proveedor/Producto.vue') },
       { path: '/editar_producto/:producto_id', component: () => import('pages/Proveedor/Producto.vue') },
       { path: '/estadisticas', component: () => import('pages/Proveedor/Estadisticas.vue') },
+      { path: '/monedero', component: () => import('pages/Proveedor/Monedero.vue') },
       { path: '/editar-perfil', component: () => import('pages/Proveedor/Perfil.vue') },
       // Cliente
       { path: '/tiendas_favoritas', component: () => import('pages/Cliente/TiendasFavoritas.vue') },
