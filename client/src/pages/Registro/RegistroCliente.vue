@@ -71,13 +71,47 @@
             </div>
             <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-              @click="registrar()" />
+              @click="siguiente()" />
             </div>
           </div>
         </div>
       </q-carousel-slide>
 
       <q-carousel-slide :name="2" >
+        <div class="q-pa-md">
+          <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 1" />
+        </div>
+        <div class="column items-center justify-center q-mx-md">
+          <div class="row justify-center q-gutter-xs" style="width:100%">
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row justify-center">
+              <q-img src="fondo1.jpg" style="width:100%;height:210px;border-radius:25px" >
+              </q-img>
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-xl">
+              <div class="text-h6">Nueva dirección</div>
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mb-md">
+              <q-separator />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input v-model="direccion.direccion" label="Dirección" outlined
+                error-message="Requerido" :error="$v.direccion.direccion.$error" @blur="$v.direccion.direccion.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+              <q-input v-model="direccion.codigo_postal" label="Código postal" outlined
+                error-message="Requerido" :error="$v.direccion.codigo_postal.$error" @blur="$v.direccion.codigo_postal.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+              <q-btn no-caps label="Finalizar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+              @click="registrar()" />
+            </div>
+          </div>
+        </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="3" >
         <div class="absolute-center" style="width:100%">
           <div class="q-mb-md row justify-center">
             <q-img src="fondo1.jpg" style="width:150px;height:150px;border-radius:25px" >
@@ -100,7 +134,10 @@ import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
-      form: {},
+      form: {
+        direccion: []
+      },
+      direccion: {},
       perfil: null,
       perfilImg: null,
       isPwd: true,
@@ -117,6 +154,10 @@ export default {
       lastName: { required },
       telefono: { required },
       email: { email, required }
+    },
+    direccion: {
+      direccion: { required },
+      codigo_postal: { required }
     },
     terminos_condiciones: { required },
     repeatPassword: { sameAsPassword: sameAs('password') },
@@ -137,13 +178,24 @@ export default {
       })
       this.$q.loading.hide()
     },
-    async registrar () {
-      this.$v.$touch()
+    siguiente () {
+      this.$v.form.$touch()
+      this.$v.terminos_condiciones.$touch()
+      this.$v.repeatPassword.$touch()
+      this.$v.password.$touch()
+      this.$v.perfil.$touch()
       if (!this.terminos_condiciones) {
         this.textColor = 'text-red'
       }
       if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && !this.$v.perfil.$error && this.terminos_condiciones) {
         this.form.password = this.password
+        this.slide = 2
+      }
+    },
+    async registrar () {
+      this.$v.direccion.$touch()
+      if (!this.$v.direccion.$error) {
+        this.form.direccion.push(this.direccion)
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('dat', JSON.stringify(this.form))
@@ -158,7 +210,7 @@ export default {
               message: 'Ya formas parte de Nova Telde, Bienvenido',
               color: 'positive'
             })
-            this.slide = 2
+            this.slide = 3
             this.$q.loading.hide()
           }
           this.$q.loading.hide()

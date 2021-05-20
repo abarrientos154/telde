@@ -27,23 +27,23 @@
     </q-scroll-area>
 
       <div class="row q-pa-sm justify-around">
-        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9">
           <q-input v-model="form.nombre" label="Nombre del producto" outlined
           error-message="Requerido" :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
           />
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9">
           <q-input v-model.number="form.valor" label="Precio del producto" outlined type="number"
           error-message="Requerido" :error="$v.form.valor.$error" @blur="$v.form.valor.$touch()"
           />
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9">
           <div class="text-subtitle1">Reseña del articulo</div>
           <q-input v-model="form.descripcion" outlined type="textarea"
           error-message="Requerido" :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
           />
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9">
           <div class="row justify-between items-center">
             <div class="col-6 row items-center">
               <q-icon class="col-1" name="add_box" size="sm" />
@@ -54,7 +54,7 @@
             />
           </div>
         </div>
-        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9 q-pa-sm">
+        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9 col-xl-9">
           <q-checkbox v-model="oferta" label="¿Oferta?" @input="form.oferta = oferta" />
           <div v-if="form.oferta" class="row justify-between items-center">
             <div class="col-6 row items-start">
@@ -98,7 +98,7 @@
         </div>
       </div>
 
-      <div class="row items-center justify-center" style="width:100%">
+      <div class="row items-center justify-center q-mt-md" style="width:100%">
         <q-btn no-caps rounded label="Guardar" color="primary" size="lg" style="width: 50%"
         @click="edit ? actualizar() : guardar()" />
       </div>

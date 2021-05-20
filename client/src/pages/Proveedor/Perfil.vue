@@ -120,11 +120,21 @@
           />
         </div>
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-          <q-select @input="form.categoria === 'Comida' ? optionsSubCategorias = subCategoria1 : '', form.subCategoria = []" outlined v-model="form.categoria" :options="optionsCategoria" label="Selecciona tu categoria" emit-value map-options
+          <q-input v-model="form.ciudad" label="Ciudad" outlined
+            error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-input v-model="form.direccion" label="Dirección" outlined
+            error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+          />
+        </div>
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+          <q-select @input="form.categoria === 'Comida' ? optionsSubCategorias = subCategoria1 : optionsSubCategorias = []" outlined v-model="form.categoria" :options="optionsCategoria" label="Selecciona tu categoria" emit-value map-options
             error-message="Requerido" :error="$v.form.categoria.$error" @blur="$v.form.categoria.$touch()" >
           </q-select>
         </div>
-        <div v-if="form.categoria === 'Comida'" :class="!$v.form.subCategoria.$error ? 'text-black' : 'text-negative'" class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-md">Selecciona tu subcategoria</div>
+        <div v-if="form.categoria === 'Comida'" :class="!$v.form.subCategoria.$error ? 'text-black' : 'text-negative'" class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1">Selecciona tu subcategoria</div>
         <q-scroll-area
           v-if="form.categoria === 'Comida'"
           class="col-12"
@@ -138,16 +148,6 @@
             </div>
           </div>
         </q-scroll-area>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.ciudad" label="Ciudad" outlined
-            error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
-          />
-        </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
-          <q-input v-model="form.direccion" label="Dirección" outlined
-            error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
-          />
-        </div>
 
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <q-separator />
@@ -155,17 +155,17 @@
 
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-h6 q-mt-md">Datos bancarios</div>
         <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-subtitle1 q-mt-xs text-grey">Puedes actualizar tu cuenta en donde recibes Tus pagos.</div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <q-input v-model="form.titular" label="Titular del banco" outlined
             error-message="Requerido" :error="$v.form.titular.$error" @blur="$v.form.titular.$touch()"
           />
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <q-input v-model="form.codigo_iban" label="Código IBAN" outlined
             error-message="Requerido" :error="$v.form.codigo_iban.$error" @blur="$v.form.codigo_iban.$touch()"
           />
         </div>
-        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+        <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
           <q-input v-model="form.banco" label="Banco" outlined
             error-message="Requerido" :error="$v.form.banco.$error" @blur="$v.form.banco.$touch()"
           />
@@ -267,6 +267,9 @@ export default {
       var paso = true
       this.$v.form.$touch()
       if (!this.$v.form.$error && paso) {
+        if (this.form.categoria !== 'Comida') {
+          this.form.subCategoria = []
+        }
         this.$q.loading.show()
         this.$api.put('editar_proveedor', this.form).then(res => {
           if (res) {
@@ -329,6 +332,9 @@ export default {
       await this.$api.get('user_info').then(res => {
         if (res) {
           this.form = res
+          if (this.form.categoria === 'Comida') {
+            this.optionsSubCategorias = this.subCategoria1
+          }
           this.baseu = env.apiUrl + '/perfil_img/' + this.form._id
           this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.form._id
           this.$q.loading.hide()
@@ -340,6 +346,9 @@ export default {
       await this.$api.post('user_by_id/' + id).then(res => {
         if (res) {
           this.form = res
+          if (this.form.categoria === 'Comida') {
+            this.optionsSubCategorias = this.subCategoria1
+          }
           this.baseu = env.apiUrl + '/perfil_img/' + this.form._id
           this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.form._id
           this.$q.loading.hide()

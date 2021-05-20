@@ -1,7 +1,7 @@
 <template>
   <q-page>
-    <q-img :src="baseuPortada" style="height: 400px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
-      <div class="absolute-bottom-right q-mb-xl bg-transparent">
+    <q-img :src="baseuPortada" style="height: 300px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+      <div class="absolute-bottom-right q-mb-md bg-transparent">
         <q-btn v-if="miTienda" class="q-px-md" size="lg" label="Editar perfil" no-caps color="primary" style="border-radius: 25px"
         @click="$router.push('/editar-perfil')" />
       </div>
@@ -316,27 +316,23 @@
                       <q-space />
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
-                    <q-input v-model="form.user" label-slot borderless dense
-                      :error="$v.form.user.$error" @blur="$v.form.user.$touch()"
-                    >
-                      <template v-slot:label>
-                        <div class="text-h6">Nombre de usuario</div>
+                    <div class="text-subtitle1 text-grey-7">{{cliente.name + ' ' + cliente.lastName}}</div>
+                    <q-select borderless dense color="black" v-model="form" :options="cliente.direccion" label="Seleccione dirección" map-options
+                      error-message="requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+                      option-label="direccion" >
+                        <template v-slot:no-option>
+                        <q-item>
+                          <q-item-section class="text-grey text-italic">
+                            No hay Resultados
+                          </q-item-section>
+                        </q-item>
                       </template>
-                    </q-input>
-                    <q-input v-model="form.direccion" label-slot borderless dense
-                      :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
-                    >
-                      <template v-slot:label>
-                        <div class="text-h6">Dirección</div>
+                    </q-select>
+                    <q-field v-if="form" borderless label="Codigo postal" stack-label>
+                      <template v-slot:control>
+                        <div class="self-center full-width no-outline" tabindex="0">{{form.codigo_postal}}</div>
                       </template>
-                    </q-input>
-                    <q-input v-model="form.codigo_postal" label-slot borderless dense
-                      :error="$v.form.codigo_postal.$error" @blur="$v.form.codigo_postal.$touch()"
-                    >
-                      <template v-slot:label>
-                        <div class="text-h6">Código postal</div>
-                      </template>
-                    </q-input>
+                    </q-field>
                     <q-separator />
                     <div class="text-h6 text-bold q-my-md">Pedido</div>
                     <div class="row justify-between" style="width:100%">
@@ -353,7 +349,7 @@
                       <q-space />
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
-                    <div class="text-h6 text-grey">Número de cuenta</div>
+                    <div class="text-h6 text-grey">{{user.banco}}</div>
                   </div>
                 </div>
                 <div class="col-12 q-py-lg column justify-end items-end">
@@ -408,7 +404,7 @@ export default {
       baseuImgsTienda: '',
       imgSelec: '',
       producto: {},
-      form: {},
+      form: null,
       cliente: {},
       user: {
         images: []
@@ -422,7 +418,6 @@ export default {
   },
   validations: {
     form: {
-      user: { required },
       direccion: { required },
       codigo_postal: { required }
     }
@@ -470,6 +465,8 @@ export default {
     iniciarCompra () {
       this.$v.$touch()
       if (!this.$v.form.$error) {
+        this.form.cliente_id = this.cliente._id
+        this.form.tienda_id = this.user._id
         this.comprarCarrito = false
         this.form = {}
         this.$v.form.$reset()
@@ -480,6 +477,7 @@ export default {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.cliente = res
+          console.log('user', this.cliente)
           this.rol = res.roles[0]
           if (res._id === this.id_tienda) {
             this.miTienda = true

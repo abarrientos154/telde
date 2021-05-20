@@ -7,7 +7,7 @@
       infinite
     >
       <q-carousel-slide :name="1" class="q-pa-none">
-        <q-img :src="portada ? portadaImg : 'nopublicidad.jpg'" style="height: 500px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+        <q-img :src="portada ? portadaImg : 'nopublicidad.jpg'" style="height: 300px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
             <div class="bg-transparent">
                 <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
             </div>
@@ -142,28 +142,28 @@
           <div class="q-pa-md">
             <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 1" />
           </div>
-          <div class="row justify-center q-gutter-xs q-mt-md">
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+          <div class="row justify-center">
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <q-input v-model="form.ciudad" label="Ciudad" outlined
                         error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
                     />
                 </div>
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <q-input v-model="form.codigo_postal" label="Código postal" outlined
                         error-message="Requerido" :error="$v.form.codigo_postal.$error" @blur="$v.form.codigo_postal.$touch()"
                     />
                 </div>
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <q-input v-model="form.direccion" label="Dirección" outlined
                         error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
                     />
                 </div>
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <q-input v-model="form.cif" label="CIF" outlined
                         error-message="Requerido" :error="$v.form.cif.$error" @blur="$v.form.cif.$touch()"
                     />
                 </div>
-                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+                <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <q-input v-model="form.email" label="Correo de contacto" outlined type="email"
                         error-message="Requerido" :error="$v.form.email.$error" @blur="$v.form.email.$touch()"
                     />
@@ -214,17 +214,21 @@
             <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 2" />
           </div>
           <div class="row justify-center q-gutter-xs q-mt-md">
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row justify-center q-mb-md">
+              <q-img src="fondo1.jpg" style="width:100%;height:280px;border-radius:25px" >
+              </q-img>
+            </div>
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <q-input v-model="form.titular" label="Titular del banco" outlined
                 error-message="Requerido" :error="$v.form.titular.$error" @blur="$v.form.titular.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <q-input v-model="form.codigo_iban" label="Código IBAN" outlined
                 error-message="Requerido" :error="$v.form.codigo_iban.$error" @blur="$v.form.codigo_iban.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mt-md">
+            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <q-input v-model="form.banco" label="Banco" outlined
                 error-message="Requerido" :error="$v.form.banco.$error" @blur="$v.form.banco.$touch()"
               />
