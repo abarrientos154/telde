@@ -139,6 +139,18 @@ class ProductoController {
       dat.proveedor_id = user._id.toString()
       dat.rating = 0
       let guardar = await Producto.create(dat)
+      const profilePic2 = request.file('perfil', {})
+      if (Helpers.appRoot('storage/uploads/productos')) {
+        await profilePic2.move(Helpers.appRoot('storage/uploads/productos'), {
+          name: guardar._id.toString(),
+          overwrite: true
+        })
+      } else {
+        mkdirp.sync(`${__dirname}/storage/Excel`)
+      }
+      if (!profilePic2.moved()) {
+        return profilePic2.error()
+      }
       response.send(guardar)
     }
   }

@@ -2,18 +2,25 @@
   <q-layout>
     <q-page-container>
       <q-page>
-        <q-img class="window-height" src="fondo1.jpg" style="width: 100%" >
-          <div class="absolute-bottom q-mb-lg bg-transparent" style="width:100%">
-            <div class="row items-center justify-center q-mt-xl">
-              <q-btn label="CLIENTE" color="primary" text-color="blue-grey-10" size="xl" style="border-radius: 28px; width: 230px"
+        <div>
+          <div class="q-pa-md">
+            <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
+          </div>
+          <div class="row justify-center absolute-center" style="width:100%">
+            <q-img src="fondo1.jpg" style="width:200px;height:200px;border-radius:25px" >
+            </q-img>
+          </div>
+          <div class="absolute-bottom q-mb-xl" style="width:100%">
+            <div class="row items-center justify-center">
+              <q-btn label="CLIENTE" color="primary" size="lg" style="border-radius: 28px; width: 230px"
               @click="$router.push('/registro-cliente')" />
             </div>
-            <div class="row items-center justify-center q-mt-xl">
-              <q-btn label="TIENDA" color="primary" text-color="blue-grey-10" size="xl" style="border-radius: 28px; width: 230px"
+            <div class="row items-center justify-center q-mt-md">
+              <q-btn label="TIENDA" color="primary" size="lg" style="border-radius: 28px; width: 230px"
               @click="$router.push('/registro-tienda')" />
             </div>
           </div>
-        </q-img>
+        </div>
       </q-page>
     </q-page-container>
   </q-layout>

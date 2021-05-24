@@ -98,25 +98,20 @@
     <div class="text-h6 q-my-md text-center">Nuestros nuevos productos</div>
     <q-scroll-area
         horizontal
-        style="height: 500px;"
+        style="height: 410px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in productos" :key="index" >
-            <q-card flat class="my-card" style="height: 460px; width: 210px">
+            <q-card flat class="my-card" style="height: 370px; width: 180px">
               <q-img
-                :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                :src="!card.caso ? baseuProducto + card._id : card.images[0]"
                 spinner-color="white"
-                style="height: 230px; width: 210px"
+                style="height: 180px; width: 100%"
                 @click="producto = card, verProducto = true"/>
 
               <q-card-section>
-                <q-rating readonly v-model="card.rating" :max="5" size="25px" />
-
                 <div class="row no-wrap items-center q-mt-xs">
-                  <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
-                  <div class="col-auto text-grey text-caption row no-wrap items-center">
-                    <q-icon name="favorite_border" size="1.8em" />
-                  </div>
+                  <div class="col-12 text-subtitle2 ellipsis"> {{card.nombre}} </div>
                 </div>
                 <div class="text-caption text-black"> {{card.descripcion}} </div>
               </q-card-section>

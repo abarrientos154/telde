@@ -67,7 +67,7 @@ export default {
   },
   mounted () {
     this.baseu = env.apiUrl + '/producto_files/'
-    this.perfile = this.data.images[0]
+    this.perfile = this.data._id
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (!value) {
       this.login = false

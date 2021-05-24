@@ -5,17 +5,12 @@ const Model = use('Model')
 
 class Producto extends Model {
   static fillable () {
-    return ['nombre', 'descripcion', 'categoria_id', 'subniveluno_id',
-    'subniveldos_id', 'subniveltres_id', 'cantidad', 'valor', 'oferta', 'ofertaVal', 'ofertaDate']
+    return ['nombre', 'descripcion', 'cantidad', 'valor', 'oferta', 'ofertaVal', 'ofertaDate', 'ofertaTime']
   }
   static fieldValidationRules() {
     const rulesUser = {
       nombre: 'string',
       descripcion: 'string',
-      categoria_id: 'number',
-      subniveluno_id: 'number',
-      subniveldos_id: 'number',
-      subniveltres_id: 'number',
       cantidad: 'number',
       valor: 'number',
       cantidadFiles: 'number'

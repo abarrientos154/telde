@@ -13,18 +13,18 @@
 
             <q-form @submit="onSubmit" class="q-gutter-sm q-ma-sm q-mt-sm">
               <div>
-                <q-input class="text-bold" type="email" v-model="form.email" label="Correo electrónico" outlined>
+                <q-input class="text-bold" type="email" v-model="form.email" label="Correo electrónico" filled>
                 </q-input>
               </div>
 
               <div>
-                <q-input class="text-bold q-mt-lg" :type="isPwd ? 'password' : 'text'" v-model="form.password" label="Contraseña" outlined>
+                <q-input class="text-bold q-mt-lg" :type="isPwd ? 'password' : 'text'" v-model="form.password" label="Contraseña" filled>
                   <template v-slot:append>
                     <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer" color="primary" @click="isPwd = !isPwd"/>
                   </template>
                 </q-input>
               </div>
-              <div class="text-center text-body2">¿Olvidaste tu contraseña?</div>
+              <div class="text-center text-body2 text-grey-7">¿Olvidaste tu contraseña?</div>
 
               <div class="row justify-center q-mt-lg">
                 <q-btn rounded no-caps color="primary" style="width:200px" label="Iniciar sesión" :loading="loading" type="submit">
@@ -36,8 +36,8 @@
               </div>
 
               <div class="row justify-center">
-                <div class="col-12 text-center text-body2 q-mt-md">¿Aún no tienes una cuenta?</div>
-                <q-btn no-caps flat color="black" label="¡Regístrate ahora!" @click="$router.push('/registro')">
+                <div class="col-12 text-center text-body2 text-grey-7 q-mt-md">¿Aún no tienes una cuenta?</div>
+                <q-btn no-caps flat color="black" label="¡Regístrate ahora!" size="lg" @click="$router.push('/registro')">
                 </q-btn>
               </div>
               <!-- <q-separator inset class="q-mt-lg q-mb-lg" />
