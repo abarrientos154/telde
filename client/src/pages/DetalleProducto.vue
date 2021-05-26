@@ -1,6 +1,6 @@
 <template>
   <div style="height:100%;">
-      <img :src="baseu + perfile" spinner-color="white" style="height: 400px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px"/>
+      <img :src="baseu + perfile" spinner-color="white" style="height: 330px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px"/>
 
         <div class="q-pa-sm">
             <q-scroll-area
@@ -17,9 +17,8 @@
 
         <div class="q-pa-md" style="width: 100%">
           <div class="text-h5">{{data.nombre}}</div>
-          <div class="text-subtitle1 text-grey">Cantidad Disponible {{data.cantidad}}</div>
-          <q-rating readonly v-model="data.rating" :max="5" size="25px" />
-          <div class="text-subtitle1 text-grey">Descripción</div>
+          <div class="text-subtitle1 text-grey-8">CANTIDAD DISPONIBLE {{data.cantidad}}</div>
+          <div class="text-subtitle1 text-grey-8">DESCRIPCIÓN</div>
           <div class="text-subtitle1">{{data.descripcion}}</div>
         </div>
         <q-separator inset />

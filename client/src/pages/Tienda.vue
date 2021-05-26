@@ -87,18 +87,18 @@
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in comentarios" :key="index" >
-            <q-card class="my-card" style="height: 150px; width: 400px; border-radius: 25px">
+            <q-card class="my-card" style="height: 150px; width: 330px; border-radius: 25px">
               <q-card-section>
                 <div class="row justify-between">
                   <q-rating readonly v-model="card.rating" icon-selected="star" icon="star_border" color="orange" :max="5" size="25px" />
                   <div class="column items-end">
-                    <div class="text-subtitle2">Fecha de solicitud</div>
-                    <div>Fecha</div>
+                    <div class="text-subtitle2">Fecha de pedido</div>
+                    <div>{{card.fecha_pedido}}</div>
                   </div>
                 </div>
 
-                <div class="col text-subtitle2 ellipsis"> {{card.nombreClient}} </div>
-                <div class="text-caption text-grey"> {{card.descripcion}} </div>
+                <div class="col text-h6 ellipsis"> {{card.cliente.name + ' ' + card.cliente.lastName}} </div>
+                <div class="text-caption text-grey-8"> {{card.comentario}} </div>
               </q-card-section>
             </q-card>
           </div>
@@ -137,7 +137,7 @@
                   <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                   <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                   <div v-if="rol === 2 || rol === 0" class="row items-center">
-                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                    <q-btn no-caps label="Agregar producto" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                   </div>
                 </q-card-section>
@@ -181,7 +181,7 @@
                 <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                 <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                 <div v-if="rol === 2 || rol === 0" class="row items-center">
-                  <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                  <q-btn no-caps label="Agregar producto" color="primary" style="border-radius: 9px"
                   @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                 </div>
               </q-card-section>
@@ -220,7 +220,7 @@
                   <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                   <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                   <div v-if="rol === 2 || rol === 0" class="row items-center">
-                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                    <q-btn no-caps label="Agregar producto" size="sm" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                   </div>
                 </q-card-section>
@@ -273,7 +273,7 @@
                   <q-list class="q-gutter-md">
                     <div v-for="(producto, index) in carrito" :key="index">
                       <div class="row items-start justify-start q-ma-xs">
-                        <div class="col-3 q-mr-sm column justify-start items-start bg-red">
+                        <div class="col-3 q-mr-sm column justify-start items-start">
                           <img
                             :src="baseuProducto + producto.image"
                             spinner-color="white"
@@ -337,9 +337,9 @@
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
                     <div class="text-subtitle1 text-grey-7">{{cliente.name + ' ' + cliente.lastName}}</div>
-                    <q-select borderless dense color="black" v-model="form" :options="cliente.direccion" label="Seleccione dirección" map-options
-                      error-message="requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
-                      option-label="direccion" >
+                    <q-select borderless dense color="black" v-model="form" :options="cliente.direcciones" label="Seleccione dirección" map-options
+                      error-message="requerido" :error="$v.form.$error" @blur="$v.form.$touch()"
+                      option-label="ciudad" >
                         <template v-slot:no-option>
                         <q-item>
                           <q-item-section class="text-grey text-italic">
@@ -347,12 +347,18 @@
                           </q-item-section>
                         </q-item>
                       </template>
-                    </q-select>
-                    <q-field v-if="form" borderless label="Codigo postal" stack-label>
-                      <template v-slot:control>
-                        <div class="self-center full-width no-outline" tabindex="0">{{form.codigo_postal}}</div>
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.ciudad" />
+                            <q-item-label caption>{{ scope.opt.direccion }}</q-item-label>
+                          </q-item-section>
+                        </q-item>
                       </template>
-                    </q-field>
+                    </q-select>
                     <q-separator />
                     <div class="text-h6 text-bold q-my-md">Pedido</div>
                     <div class="row justify-between" style="width:100%">
@@ -363,13 +369,6 @@
                       <div class="text-h6 text-grey">Total a pagar</div>
                       <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
                     </div>
-                    <q-separator />
-                    <div class="row items-center q-my-md">
-                      <div class="text-h6 text-bold">Método de pago</div>
-                      <q-space />
-                      <q-btn icon="edit" round dense color="grey" />
-                    </div>
-                    <div class="text-h6 text-grey">{{user.banco}}</div>
                   </div>
                 </div>
                 <div class="col-12 q-py-lg column justify-end items-end">
@@ -383,6 +382,23 @@
                 </div>
               </div>
             </q-card-section>
+          </q-card>
+        </q-dialog>
+
+        <q-dialog persistent v-model="compraExitosa">
+          <q-card class="q-py-xl" style="width: 100%">
+              <div style="width:100%">
+                <div class="q-mb-md row justify-center">
+                  <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
+                  </q-img>
+                </div>
+                <div class="text-center text-h6 text-bold">Compra exitosa</div>
+                <div class="text-center text-subtitle1 q-mx-md text-grey-8">Tu compra fue exitosa, recibirás un correo electrónico con los detalles de tu compra</div>
+                <div class="row items-center justify-center q-mt-lg" style="width:100%">
+                  <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+                  @click="compraExitosa = false" />
+                </div>
+              </div>
           </q-card>
         </q-dialog>
 
@@ -411,10 +427,13 @@ export default {
   data () {
     return {
       miTienda: false,
+      calificacion: 0,
       verProducto: false,
       verImg: false,
       verCarrito: false,
       comprarCarrito: false,
+      compraExitosa: false,
+      compraFallo: false,
       noLogin: false,
       rol: 0,
       id_tienda: '',
@@ -427,7 +446,8 @@ export default {
       form: null,
       cliente: {},
       user: {
-        images: []
+        images: [],
+        calificacion: 0
       },
       carrito: [],
       comentarios: [],
@@ -437,10 +457,7 @@ export default {
     }
   },
   validations: {
-    form: {
-      direccion: { required },
-      codigo_postal: { required }
-    }
+    form: { required }
   },
   computed: {
     totalCarrito () {
@@ -475,6 +492,7 @@ export default {
       this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.id_tienda
       this.getProductosByProveedor(this.id_tienda)
       this.getInfoById(this.id_tienda)
+      this.getComentarios()
     }
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
@@ -487,17 +505,27 @@ export default {
       if (!this.$v.form.$error) {
         this.form.cliente_id = this.cliente._id
         this.form.tienda_id = this.user._id
-        this.comprarCarrito = false
-        this.form = {}
-        this.$v.form.$reset()
-        console.log('iniciando compra')
+        this.tienda_name = this.user.nombre
+        this.form.totalValor = this.totalCarrito
+        this.form.totalProductos = this.totalProductos
+        this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(res => {
+          if (res) {
+            this.comprarCarrito = false
+            this.compraExitosa = true
+            this.form = null
+            this.carrito = []
+            this.$v.form.$reset()
+            this.getProductosByProveedor(this.id_tienda)
+          } else {
+            this.compraFallo = true
+          }
+        })
       }
     },
     getInfo () {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.cliente = res
-          console.log('user', this.cliente)
           this.rol = res.roles[0]
           if (res._id === this.id_tienda) {
             this.miTienda = true
@@ -508,6 +536,7 @@ export default {
     getInfoById (id) {
       this.$api.post('user_by_id/' + id).then(res => {
         this.user = res
+        console.log('user', this.user)
       })
     },
     getProductosByProveedor (id) {
@@ -531,6 +560,14 @@ export default {
               largo2 = largo2 - 1
             }
           }
+        }
+      })
+    },
+    getComentarios () {
+      this.$api.get('comentarios').then(res => {
+        if (res) {
+          this.comentarios = res
+          console.log('comentarios', this.comentarios)
         }
       })
     },

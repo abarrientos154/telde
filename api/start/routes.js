@@ -112,9 +112,9 @@ addPrefixToGroup(
 
    ///////////////////////Reportes///////////////////////////////////////// 
     Route.get("reportes/:type", "ProductoController.reportes")
-    /* Route.get("favorito/:proveedor_id", "ProductoController.reporte")
-    Route.post("favorito/:proveedor_id", "FavoriteController.store")
-    Route.delete("favorito/:proveedor_id", "FavoriteController.destroy") */
+    Route.put("compra_status/:id_pedido", "ProductoController.updateCompra")
+    Route.post("calificar_tienda", "ProductoController.calificarTienda")
+    Route.get("comentarios", "ProductoController.comentariosTienda")
     ///////////////////////Reportes/////////////////////////////////////////
 
 

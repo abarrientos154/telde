@@ -7,7 +7,9 @@ const Helpers = use('Helpers')
 const mkdirp = use('mkdirp')
 const Producto = use('App/Models/Producto')
 const Flow = use('App/Models/Flow')
-const Compras = use('App/Models/Compra')
+const Compras = use('App/Models/ComprasProducto')
+const Pedido = use('App/Models/Compra')
+const Comentario = use('App/Models/Comentario')
 const fs = require('fs')
 const { validate } = use("Validator")
 var randomize = require('randomatic')
@@ -197,43 +199,63 @@ class ProductoController {
     response.send(true)
   }
 
-  async comprarProductos ({ request, response, auth }) {
-    const user = (await auth.getUser()).toJSON()
-    var carrito = request.all().carrito
-    var metodoPago = request.all().pago
-    for (let i = 0; i < carrito.length; i++) {
-      var dat = {
-        producto: carrito[i]._id,
-        comprador: user._id,
-        tienda: carrito[i].proveedor_id,
-        metodo_pago: metodoPago,
-        cantidad: carrito[i].cantidad_compra
+  async comprarProductos ({ request, response }) {
+    var data = request.all().dat
+    var productos = request.all().carrito
+    data.productos_total = productos.length
+    data.status = 'En Local'
+    var compra = await Pedido.create(data)
+    for (let i = 0; i < productos.length; i++) {
+      var dat = productos[i]
+      dat.pedido_id = compra._id
+      dat.producto_id = dat._id
+      delete dat._id
+      delete dat.cantidad
+      var producto = await Compras.create(dat)
+      var cantidad = await Producto.query().where({_id: productos[i]._id}).update({cantidad: productos[i].cantidad})
+      if (productos[i].cantidad === 0) {
+        var disable = await Producto.query().where({_id: productos[i]._id}).update({disable: true})
       }
-      var compra = await Compras.create(dat)
-      var cantidad = await Producto.query().where({_id: carrito[i]._id}).update({cantidad: carrito[i].cantidad})
-      if (carrito[i].cantidad === 0) {
-        var disable = await Producto.query().where({_id: carrito[i]._id}).update({disable: true})
-      }
-    }
-    if (!request.all().token === true) {
-      await Flow.query().where({token: request.all().token}).update({status: 1})
     }
     response.send(true)
   }
   async reportes ({ params, response, auth }) {
     const user = (await auth.getUser()).toJSON()
-    var type = params.type
     var data
-    if (type == 1){
-      data = (await Compras.query().where({comprador: user._id}).with('productos').fetch()).toJSON()
+    if (params.type == 1){
+      data = (await Pedido.query().where({cliente_id: user._id}).with('productos').fetch()).toJSON()
     } else {
-      data = (await Compras.query().where({tienda: user._id}).with('productos').fetch()).toJSON()
+      data = (await Pedido.query().where({tienda_id: user._id}).with('productos').fetch()).toJSON()
     }
     response.send(data.map(v => {
       return {
-        ...v.productos,
-        cantidad: v.cantidad,
-        created_at: v.created_at
+        ...v,
+        created_at: moment(v.created_at).format('DD-MM-YYYY')
+      }
+    }))
+  }
+
+  async updateCompra ({ params, request, response }) {
+    var stu = request.all().status
+    const pedido =  await Pedido.query().where('_id', params.id_pedido).first()
+    pedido.status = stu
+    pedido.save()
+    response.send(pedido)
+  }
+
+  async calificarTienda ({ request, response }) {
+    var data = request.all()
+    var comentario = await Comentario.create(data)
+    response.send(comentario)
+  }
+
+  async comentariosTienda ({ response, auth }) {
+    const user = (await auth.getUser()).toJSON()
+    var data = (await Comentario.query().where({tienda_id: user._id}).with(['cliente', 'pedido']).fetch()).toJSON()
+    response.send(data.map(v => {
+      return {
+        ...v,
+        fecha_pedido: moment(v.pedido.created_at).format('DD-MM-YYYY')
       }
     }))
   }

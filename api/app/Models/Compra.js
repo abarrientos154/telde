@@ -4,8 +4,8 @@
 const Model = use('Model')
 
 class Compra extends Model {
- productos () {
-    return this.hasOne('App/Models/Producto', 'producto', '_id')
+  productos () {
+    return this.hasMany('App/Models/ComprasProducto', '_id', 'pedido_id')
   }
 }
 

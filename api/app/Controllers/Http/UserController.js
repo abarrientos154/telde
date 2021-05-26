@@ -10,6 +10,7 @@ const flowData = use("App/Models/FlowDatum")
 const Role = use("App/Models/Role")
 const Floww = use("App/Models/Flow")
 const Data = use("App/Models/FlowDatum")
+const Comentario = use('App/Models/Comentario')
 const { validate } = use("Validator")
 const Env = use('Env')
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
@@ -158,6 +159,12 @@ class UserController {
 
   async userById({ params, response, auth }) {
     const user = await User.query().where({_id: params.id}).first()
+    var cal = (await Comentario.query().where({tienda_id: params.id}).fetch()).toJSON()
+    var total = 0
+    cal.forEach(v => {
+      total += v.rating
+    })
+    user.calificacion = (total / cal.length)
     response.send(user)
   }
 
