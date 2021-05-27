@@ -2,38 +2,72 @@
   <q-page>
     <q-img :src="baseuPortada" style="height: 300px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
       <div class="absolute-bottom-right q-mb-md bg-transparent">
-        <q-btn v-if="miTienda" class="q-px-md" size="lg" label="Editar perfil" no-caps color="primary" style="border-radius: 25px"
+        <q-btn v-if="miTienda" class="q-px-md" size="md" label="Editar perfil" no-caps color="primary" style="border-radius: 25px"
         @click="$router.push('/editar-perfil')" />
       </div>
     </q-img>
 
     <div class="row justify-between items-start q-pa-sm" style="width:100%">
-      <div class="col-12">
-        <q-rating readonly v-model="user.calificacion" :max="5" size="30px" />
+      <div class="col-5 column items-center justify-center">
+        <div>
+          <q-img :src="baseuPerfil"
+            style="height: 110px; width: 110px; border-radius: 24px" >
+            </q-img>
+        </div>
+        <q-rating readonly v-model="user.calificacion" icon-selected="star" icon="star_border" color="orange" :max="5" size="23px" />
       </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <div class="text-subtitle1 q-mt-md">Comunidad autónoma</div>
-        <div class="text-subtitle2 text-grey">{{user.ciudad}}</div>
-        <div class="text-subtitle1 q-mt-md">Dirección del local</div>
-        <div class="text-subtitle2 text-grey">{{user.direccion}}</div>
+      <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+        <div class="row items-end" style="width: 100%">
+          <q-icon class="col-1" name="location_city" size="sm" />
+          <div class="col q-ml-sm">
+            <div class="ellipsis text-subtitle2">Comunidad autónoma</div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.ciudad}} </div>
+          </div>
+        </div>
+        <div class="row items-center" style="width: 100%">
+          <q-icon class="col-1" name="room" size="sm" />
+          <div class="col q-ml-sm">
+            <div class="ellipsis text-subtitle2">Dirección del local</div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.direccion}} </div>
+          </div>
+        </div>
+        <div class="row items-center" style="width: 100%">
+          <q-icon class="col-1" name="phone" size="sm" />
+          <div class="col q-ml-sm">
+            <div class="ellipsis text-subtitle2">Teléfono de contacto</div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.telefono}} </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4 col-xl-4">
-        <div class="text-subtitle1 q-mt-md">Horario de atención</div>
-        <div class="text-subtitle2 text-grey">{{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}}</div>
-        <div class="text-subtitle1 q-mt-md">Días de atención</div>
-        <div class="text-subtitle2 text-grey">{{dias()}}</div>
+      <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="row items-start" style="width: 100%">
+          <q-icon class="col-1" name="schedule" size="sm" />
+          <div class="col q-ml-sm">
+            <div class="ellipsis text-subtitle2">Horario de atención</div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}} </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-7 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="row items-start" style="width: 100%">
+          <q-icon class="col-1" name="date_range" size="sm" />
+          <div class="col q-ml-sm">
+            <div class="ellipsis text-subtitle2">Días de atención</div>
+            <div class="text-subtitle2 text-grey"> {{dias()}} </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <q-scroll-area
         v-if="user.images.length"
         horizontal
-        style="height: 220px;"
+        style="height: 130px;"
       >
-        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-          <q-card @click="imgSelec = img, verImg = true" style="border-radius: 24px; width:180px" clickable v-ripple v-for="(img, index) in user.images" :key="index">
+        <div class="row no-wrap q-py-sm q-px-md q-gutter-md">
+          <q-card @click="imgSelec = img, verImg = true" style="border-radius: 24px; width:110px" clickable v-ripple v-for="(img, index) in user.images" :key="index">
             <q-img :src="baseuImgsTienda + img"
-            style="height: 180px; width: 100%; border-radius: 24px" >
+            style="height: 110px; width: 100%; border-radius: 24px" >
             </q-img>
           </q-card>
         </div>
@@ -45,7 +79,7 @@
       </q-card>
     </q-dialog>
 
-    <div class="text-h6 q-ma-md">Comentarios</div>
+    <div class="text-h6 q-ma-md text-grey-8">Comentarios</div>
     <q-scroll-area
         v-if="comentarios.length"
         horizontal
@@ -53,61 +87,92 @@
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in comentarios" :key="index" >
-            <q-card class="my-card" style="height: 150px; width: 400px; border-radius: 25px">
+            <q-card class="my-card" style="height: 150px; width: 330px; border-radius: 25px">
               <q-card-section>
                 <div class="row justify-between">
-                  <q-rating readonly v-model="card.rating" :max="5" size="25px" />
+                  <q-rating readonly v-model="card.rating" icon-selected="star" icon="star_border" color="orange" :max="5" size="25px" />
                   <div class="column items-end">
-                    <div class="text-subtitle2">Fecha de solicitud</div>
-                    <div>Fecha</div>
+                    <div class="text-subtitle2">Fecha de pedido</div>
+                    <div>{{card.fecha_pedido}}</div>
                   </div>
                 </div>
 
-                <div class="col text-subtitle2 ellipsis"> {{card.nombreClient}} </div>
-                <div class="text-caption text-grey"> {{card.descripcion}} </div>
+                <div class="col text-h6 ellipsis"> {{card.cliente.name + ' ' + card.cliente.lastName}} </div>
+                <div class="text-caption text-grey-8"> {{card.comentario}} </div>
               </q-card-section>
             </q-card>
           </div>
         </div>
       </q-scroll-area>
-      <q-scroll-area
-        v-else
-        horizontal
-        style="height: 200px;"
-      >
-        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-          <q-card class="column items-center justify-center q-ma-md text-h6" style="height: 150px; width: 400px; border-radius: 25px">*Nada por aquí*</q-card>
-        </div>
-      </q-scroll-area>
+      <div v-else class="text-center text-h6 q-my-lg">No tienes comentarios</div>
 
-    <div class="text-h6 q-ma-md">Últimos productos agregados</div>
+      <div class="text-h6 q-ma-md text-grey-8">Mejores categorizados</div>
+      <q-scroll-area
+          v-if="productos.length"
+          horizontal
+          style="height: 410px;"
+        >
+          <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+            <div v-for="(card, index) in productos" :key="index" >
+              <q-card flat class="my-card" style="height: 370px; width: 180px">
+                <q-img
+                  :src="baseuProducto + card._id"
+                  spinner-color="white"
+                  style="height: 180px; width: 100%">
+                  <div class="full-width full-height absolute bg-transparent" @click="producto = card, verProducto = true"></div>
+                    <div v-if="miTienda" class="row absolute-top-right bg-transparent">
+                      <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
+                      <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
+                    </div>
+                </q-img>
+
+                <q-card-section>
+                  <div class="row no-wrap items-center q-mt-xs">
+                    <div class="col-12 text-subtitle2 ellipsis"> {{card.nombre}} </div>
+                  </div>
+                  <div class="text-caption text-black"> {{card.descripcion}} </div>
+                </q-card-section>
+
+                <q-card-section class="absolute-bottom">
+                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
+                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                  <div v-if="rol === 2 || rol === 0" class="row items-center">
+                    <q-btn no-caps label="Agregar producto" color="primary" style="border-radius: 9px"
+                    @click="rol === 2 ? addCarrito(card) : noLogin = true" />
+                  </div>
+                </q-card-section>
+              </q-card>
+            </div>
+          </div>
+        </q-scroll-area>
+        <div v-else class="q-my-lg">
+          <div class="text-center text-h6">Aún no tienes productos</div>
+          <div class="text-center text-caption">Preciona en el botón azul para agregar un nuevo producto</div>
+        </div>
+
+    <div class="text-h6 q-ma-md text-grey-8">Últimos productos agregados</div>
     <q-scroll-area
         v-if="ultimosProductos.length"
         horizontal
-        style="height: 500px;"
+        style="height: 410px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in ultimosProductos" :key="index" >
-            <q-card flat class="my-card" style="height: 460px; width: 210px">
+            <q-card flat class="my-card" style="height: 370px; width: 180px">
               <q-img
-                :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                :src="baseuProducto + card._id"
                 spinner-color="white"
-                style="height: 230px; width: 210px"
-                @click="producto = card, verProducto = true">
-                  <div v-if="miTienda" class="row justify-end bg-transparent" style="width: 100%">
+                style="height: 180px; width: 100%">
+                <div class="full-width full-height absolute bg-transparent" @click="producto = card, verProducto = true"></div>
+                  <div v-if="miTienda" class="row absolute-top-right bg-transparent">
                     <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
                     <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
                   </div>
               </q-img>
 
               <q-card-section>
-                <q-rating readonly v-model="card.rating" :max="5" size="25px" />
-
                 <div class="row no-wrap items-center q-mt-xs">
-                  <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
-                  <div class="col-auto text-grey text-caption row no-wrap items-center">
-                    <q-icon name="favorite_border" size="1.8em" />
-                  </div>
+                  <div class="col-12 text-subtitle2 ellipsis"> {{card.nombre}} </div>
                 </div>
                 <div class="text-caption text-black"> {{card.descripcion}} </div>
               </q-card-section>
@@ -116,7 +181,7 @@
                 <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                 <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                 <div v-if="rol === 2 || rol === 0" class="row items-center">
-                  <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                  <q-btn no-caps label="Agregar producto" color="primary" style="border-radius: 9px"
                   @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                 </div>
               </q-card-section>
@@ -124,77 +189,29 @@
           </div>
         </div>
       </q-scroll-area>
-      <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
+        <div v-else class="q-my-lg">
+          <div class="text-center text-h6">Aún no tienes productos</div>
+          <div class="text-center text-caption">Preciona en el botón azul para agregar un nuevo producto</div>
+        </div>
 
-      <div class="text-h6 q-ma-md">Mejores categorizados</div>
-      <q-scroll-area
-          v-if="productos.length"
-          horizontal
-          style="height: 500px;"
-        >
-          <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-            <div v-for="(card, index) in productos" :key="index" >
-              <q-card flat class="my-card" style="height: 460px; width: 210px">
-                <q-img
-                  :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
-                  spinner-color="white"
-                  style="height: 230px; width: 210px"
-                  @click="producto = card, verProducto = true">
-                    <div v-if="miTienda" class="row justify-end bg-transparent" style="width: 100%">
-                      <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
-                      <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
-                    </div>
-                </q-img>
-
-                <q-card-section>
-                  <q-rating readonly v-model="card.rating" :max="5" size="25px" />
-
-                  <div class="row no-wrap items-center q-mt-xs">
-                    <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
-                    <div class="col-auto text-grey text-caption row no-wrap items-center">
-                      <q-icon name="favorite_border" size="1.8em" />
-                    </div>
-                  </div>
-                  <div class="text-caption text-black"> {{card.descripcion}} </div>
-                </q-card-section>
-
-                <q-card-section class="absolute-bottom">
-                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
-                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
-                  <div v-if="rol === 2 || rol === 0" class="row items-center">
-                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
-                    @click="rol === 2 ? addCarrito(card) : noLogin = true" />
-                  </div>
-                </q-card-section>
-              </q-card>
-            </div>
-          </div>
-        </q-scroll-area>
-        <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
-
-        <div class="text-h6 q-ma-md">Conoce todos nuestros productos</div>
+        <div class="text-h6 q-ma-md text-grey-8">Conoce todos nuestros productos</div>
         <div v-if="productos.length" class="row justify-around">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 row justify-center q-mt-md" v-for="(card, index) in productos" :key="index">
-            <q-card flat class="my-card" style="height: 460px; width: 210px">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 row justify-center q-mt-md" v-for="(card, index) in productos" :key="index">
+            <q-card flat class="my-card" style="height: 350px; width: 160px">
                 <q-img
-                  :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                  :src="baseuProducto + card._id"
                   spinner-color="white"
-                  style="height: 230px; width: 210px"
-                  @click="producto = card, verProducto = true">
-                    <div v-if="miTienda" class="row justify-end bg-transparent" style="width: 100%">
+                  style="height: 160px; width: 100%">
+                  <div class="full-width full-height absolute bg-transparent" @click="producto = card, verProducto = true"></div>
+                    <div v-if="miTienda" class="row absolute-top-right bg-transparent">
                       <q-btn flat round dende icon="delete" color="negative" @click="eliminarProducto(card._id)" />
                       <q-btn flat round dense icon="edit" color="primary" @click="$router.push('/editar_producto/' + card._id)" />
                     </div>
                 </q-img>
 
                 <q-card-section>
-                  <q-rating readonly v-model="card.rating" :max="5" size="25px" />
-
                   <div class="row no-wrap items-center q-mt-xs">
-                    <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
-                    <div class="col-auto text-grey text-caption row no-wrap items-center">
-                      <q-icon name="favorite_border" size="1.8em" />
-                    </div>
+                    <div class="col-12 text-subtitle2 ellipsis"> {{card.nombre}} </div>
                   </div>
                   <div class="text-caption text-black"> {{card.descripcion}} </div>
                 </q-card-section>
@@ -203,14 +220,17 @@
                   <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
                   <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                   <div v-if="rol === 2 || rol === 0" class="row items-center">
-                    <q-btn no-caps icon-right="add_shopping_cart" label="Agregar al carro" color="primary" style="border-radius: 9px"
+                    <q-btn no-caps label="Agregar producto" size="sm" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
                   </div>
                 </q-card-section>
             </q-card>
           </div>
         </div>
-        <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
+        <div v-else class="q-my-lg">
+          <div class="text-center text-h6">Aún no tienes productos</div>
+          <div class="text-center text-caption">Preciona en el botón azul para agregar un nuevo producto</div>
+        </div>
         <div v-if="productos.length" class="row items-center justify-center q-mt-lg">
           <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%"
           />
@@ -253,7 +273,7 @@
                   <q-list class="q-gutter-md">
                     <div v-for="(producto, index) in carrito" :key="index">
                       <div class="row items-start justify-start q-ma-xs">
-                        <div class="col-3 q-mr-sm column justify-start items-start bg-red">
+                        <div class="col-3 q-mr-sm column justify-start items-start">
                           <img
                             :src="baseuProducto + producto.image"
                             spinner-color="white"
@@ -317,9 +337,9 @@
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
                     <div class="text-subtitle1 text-grey-7">{{cliente.name + ' ' + cliente.lastName}}</div>
-                    <q-select borderless dense color="black" v-model="form" :options="cliente.direccion" label="Seleccione dirección" map-options
-                      error-message="requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
-                      option-label="direccion" >
+                    <q-select borderless dense color="black" v-model="form" :options="cliente.direcciones" label="Seleccione dirección" map-options
+                      error-message="requerido" :error="$v.form.$error" @blur="$v.form.$touch()"
+                      option-label="ciudad" >
                         <template v-slot:no-option>
                         <q-item>
                           <q-item-section class="text-grey text-italic">
@@ -327,12 +347,18 @@
                           </q-item-section>
                         </q-item>
                       </template>
-                    </q-select>
-                    <q-field v-if="form" borderless label="Codigo postal" stack-label>
-                      <template v-slot:control>
-                        <div class="self-center full-width no-outline" tabindex="0">{{form.codigo_postal}}</div>
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.ciudad" />
+                            <q-item-label caption>{{ scope.opt.direccion }}</q-item-label>
+                          </q-item-section>
+                        </q-item>
                       </template>
-                    </q-field>
+                    </q-select>
                     <q-separator />
                     <div class="text-h6 text-bold q-my-md">Pedido</div>
                     <div class="row justify-between" style="width:100%">
@@ -343,13 +369,6 @@
                       <div class="text-h6 text-grey">Total a pagar</div>
                       <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
                     </div>
-                    <q-separator />
-                    <div class="row items-center q-my-md">
-                      <div class="text-h6 text-bold">Método de pago</div>
-                      <q-space />
-                      <q-btn icon="edit" round dense color="grey" />
-                    </div>
-                    <div class="text-h6 text-grey">{{user.banco}}</div>
                   </div>
                 </div>
                 <div class="col-12 q-py-lg column justify-end items-end">
@@ -363,6 +382,23 @@
                 </div>
               </div>
             </q-card-section>
+          </q-card>
+        </q-dialog>
+
+        <q-dialog persistent v-model="compraExitosa">
+          <q-card class="q-py-xl" style="width: 100%">
+              <div style="width:100%">
+                <div class="q-mb-md row justify-center">
+                  <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
+                  </q-img>
+                </div>
+                <div class="text-center text-h6 text-bold">Compra exitosa</div>
+                <div class="text-center text-subtitle1 q-mx-md text-grey-8">Tu compra fue exitosa, recibirás un correo electrónico con los detalles de tu compra</div>
+                <div class="row items-center justify-center q-mt-lg" style="width:100%">
+                  <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+                  @click="compraExitosa = false" />
+                </div>
+              </div>
           </q-card>
         </q-dialog>
 
@@ -391,10 +427,13 @@ export default {
   data () {
     return {
       miTienda: false,
+      calificacion: 0,
       verProducto: false,
       verImg: false,
       verCarrito: false,
       comprarCarrito: false,
+      compraExitosa: false,
+      compraFallo: false,
       noLogin: false,
       rol: 0,
       id_tienda: '',
@@ -407,7 +446,8 @@ export default {
       form: null,
       cliente: {},
       user: {
-        images: []
+        images: [],
+        calificacion: 0
       },
       carrito: [],
       comentarios: [],
@@ -417,10 +457,7 @@ export default {
     }
   },
   validations: {
-    form: {
-      direccion: { required },
-      codigo_postal: { required }
-    }
+    form: { required }
   },
   computed: {
     totalCarrito () {
@@ -455,6 +492,7 @@ export default {
       this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.id_tienda
       this.getProductosByProveedor(this.id_tienda)
       this.getInfoById(this.id_tienda)
+      this.getComentarios()
     }
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
@@ -467,17 +505,27 @@ export default {
       if (!this.$v.form.$error) {
         this.form.cliente_id = this.cliente._id
         this.form.tienda_id = this.user._id
-        this.comprarCarrito = false
-        this.form = {}
-        this.$v.form.$reset()
-        console.log('iniciando compra')
+        this.tienda_name = this.user.nombre
+        this.form.totalValor = this.totalCarrito
+        this.form.totalProductos = this.totalProductos
+        this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(res => {
+          if (res) {
+            this.comprarCarrito = false
+            this.compraExitosa = true
+            this.form = null
+            this.carrito = []
+            this.$v.form.$reset()
+            this.getProductosByProveedor(this.id_tienda)
+          } else {
+            this.compraFallo = true
+          }
+        })
       }
     },
     getInfo () {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.cliente = res
-          console.log('user', this.cliente)
           this.rol = res.roles[0]
           if (res._id === this.id_tienda) {
             this.miTienda = true
@@ -488,6 +536,7 @@ export default {
     getInfoById (id) {
       this.$api.post('user_by_id/' + id).then(res => {
         this.user = res
+        console.log('user', this.user)
       })
     },
     getProductosByProveedor (id) {
@@ -511,6 +560,14 @@ export default {
               largo2 = largo2 - 1
             }
           }
+        }
+      })
+    },
+    getComentarios () {
+      this.$api.get('comentarios').then(res => {
+        if (res) {
+          this.comentarios = res
+          console.log('comentarios', this.comentarios)
         }
       })
     },

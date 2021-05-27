@@ -98,6 +98,7 @@ addPrefixToGroup(
     Route.put("producto/:id", "ProductoController.update")
     Route.get("productos", "ProductoController.index")
     Route.post("subir_archivo_producto/:producto_id", "UploadController.subirImgProducto")
+    Route.post("subir_perfil_producto/:producto_id", "UploadController.subirPerfilProducto")
     Route.delete("eliminar_archivo_producto/:file/:producto_id", "UploadController.eliminarImgProducto")
 
     Route.post("comprar_productos", "ProductoController.comprarProductos")
@@ -113,9 +114,9 @@ addPrefixToGroup(
 
    ///////////////////////Reportes///////////////////////////////////////// 
     Route.get("reportes/:type", "ProductoController.reportes")
-    /* Route.get("favorito/:proveedor_id", "ProductoController.reporte")
-    Route.post("favorito/:proveedor_id", "FavoriteController.store")
-    Route.delete("favorito/:proveedor_id", "FavoriteController.destroy") */
+    Route.put("compra_status/:id_pedido", "ProductoController.updateCompra")
+    Route.post("calificar_tienda", "ProductoController.calificarTienda")
+    Route.get("comentarios", "ProductoController.comentariosTienda")
     ///////////////////////Reportes/////////////////////////////////////////
 
 

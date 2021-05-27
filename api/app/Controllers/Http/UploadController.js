@@ -58,6 +58,27 @@ class UploadController {
     }
   }
 
+  async subirPerfilProducto ({ response, params, request }) {
+    let id = params.producto_id
+    var profilePic = request.file('perfil', {})
+    if (profilePic) {
+      if (Helpers.appRoot('storage/uploads/productos')) {
+        await profilePic.move(Helpers.appRoot('storage/uploads/productos'), {
+          name: id,
+          overwrite: true
+        })
+      } else {
+        mkdirp.sync(`${__dirname}/storage/Excel`)
+      }
+
+      if (!profilePic.moved()) {
+        return profilePic.error()
+      } else {
+        response.send(true)
+      }
+    }
+  }
+
   async eliminarImgProducto ({ params, response }) {
     const dir = params.file
     await fs.unlinkSync(Helpers.appRoot(`storage/uploads/productos/${dir}`))
@@ -102,7 +123,7 @@ class UploadController {
       if (!profilePic.moved()) {
         return profilePic.error()
       } else {
-        user = await User.query().where({_id: id}).update({perfil: true, perfilEstatico: false})
+        user = await User.query().where({_id: id}).update({perfil: true})
         response.send(user)
       }
     }

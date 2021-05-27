@@ -1,16 +1,10 @@
 <template>
   <div>
-    <div class="bg-secondary column justify-center" style="height: 500px;">
-      <div class="text-center text-h2 text-white text-bold">AHORA ES MAS FACIL</div>
-      <div class="text-center text-h5 text-white q-mt-sm">Se parte de Nova Telde</div>
-      <div class="q-mt-lg row justify-center">
-        <q-btn v-if="!login" class="q-px-md" rounded no-caps color="primary" label="¡Regístrate Ahora!"
-        @click="$router.push('/registro')" />
-      </div>
-    </div>
+    <q-img src="nopublicidad.jpg" style="height: 400px; width: 100%;" >
+    </q-img>
 
-    <div class="text-h5 q-mt-md text-center">¡Busca lo que necesites!</div>
-    <div class="text-h6 q-mt-md q-ml-sm">Categorias</div>
+    <div class="text-h5 q-my-md text-center text-grey-8 text-bold">¡Busca lo que necesites!</div>
+    <div class="text-h6 q-mx-md text-grey-8">Categorias</div>
     <q-scroll-area
       horizontal
       style="height: 80px;"
@@ -22,7 +16,7 @@
         </div>
       </div>
     </q-scroll-area>
-    <div v-if="subCategorias.length" class="text-h6 q-mt-md q-ml-sm">Subcategorias</div>
+    <div v-if="subCategorias.length" class="text-h6 q-mx-md text-grey-8">Sub categorias</div>
     <q-scroll-area
       v-if="subCategorias.length"
       horizontal
@@ -35,19 +29,19 @@
         </div>
       </div>
     </q-scroll-area>
-    <div class="q-mt-md row justify-center">
+    <div class="q-my-md row justify-center">
       <q-btn style="width:50%" rounded no-caps color="primary" label="Buscar"
       />
     </div>
 
-    <div class="text-h6 q-mt-md q-ml-sm">Algunas de nuestras tiendas</div>
+    <div class="text-h6 q-mx-md text-grey-8">Algunas de nuestras tiendas</div>
     <q-scroll-area
         horizontal
         style="height: 350px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in tiendas" :key="index" >
-            <q-card style="width:400px">
+            <q-card style="width:400px; border-radius:15px">
               <q-img
                 :src="baseuTiendas + card._id"
                 spinner-color="white"
@@ -95,28 +89,23 @@
         </div>
       </q-scroll-area>
 
-    <div class="text-h6 q-my-md text-center">Nuestros nuevos productos</div>
+    <div class="text-h6 q-my-md text-center text-grey-8">Nuestros nuevos productos</div>
     <q-scroll-area
         horizontal
-        style="height: 500px;"
+        style="height: 410px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in productos" :key="index" >
-            <q-card flat class="my-card" style="height: 460px; width: 210px">
+            <q-card flat class="my-card" style="height: 370px; width: 180px">
               <q-img
-                :src="!card.caso ? baseuProducto + card.images[0] : card.images[0]"
+                :src="!card.caso ? baseuProducto + card._id : card.images[0]"
                 spinner-color="white"
-                style="height: 230px; width: 210px"
+                style="height: 180px; width: 100%"
                 @click="producto = card, verProducto = true"/>
 
               <q-card-section>
-                <q-rating readonly v-model="card.rating" :max="5" size="25px" />
-
                 <div class="row no-wrap items-center q-mt-xs">
-                  <div class="col text-subtitle2 ellipsis"> {{card.nombre}} </div>
-                  <div class="col-auto text-grey text-caption row no-wrap items-center">
-                    <q-icon name="favorite_border" size="1.8em" />
-                  </div>
+                  <div class="col-12 text-subtitle2 ellipsis"> {{card.nombre}} </div>
                 </div>
                 <div class="text-caption text-black"> {{card.descripcion}} </div>
               </q-card-section>
@@ -151,7 +140,7 @@
         </div>
       </q-scroll-area>
 
-      <div class="text-h6 q-my-md text-center">Más tiendas</div>
+      <div class="text-h6 q-my-md text-center text-grey-8">Más tiendas</div>
       <div class="row justify-around">
         <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">

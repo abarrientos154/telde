@@ -7,69 +7,75 @@
       infinite
     >
       <q-carousel-slide :name="1" >
-        <div class="q-pa-md">
+        <div class="q-pt-md q-px-md">
           <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
         </div>
         <div class="column items-center justify-center q-mx-md">
           <div class="column items-center justify-center">
-            <div class="q-mb-md row justify-center">
-              <q-img :src="perfil ? perfilImg : 'noimg.png'" style="width:150px;height:150px;border-radius:25px" >
+            <div class="row justify-center">
+              <q-img :src="perfil ? perfilImg : 'nopublicidad.jpg'" style="width:130px;height:130px;border-radius:25px" >
                 <div class="absolute-center bg-transparent text-center" style="width: 100%">
                   <div class="absolute-center" style="z-index:1">
                     <q-file borderless v-model="perfil" class="button-subir" @input="changePerfil()" accept=".jpg, image/*"
                       @blur="$v.perfil.$touch()"
                     >
                       <q-avatar class="absolute-center cursor-pointer">
-                        <q-icon name="cloud_upload" color="white" class="absolute-center" />
+                        <q-icon name="file_upload" color="white" class="absolute-center" />
                       </q-avatar>
                     </q-file>
                   </div>
                 </div>
               </q-img>
             </div>
-            <div :class="!$v.perfil.$error ? 'text-grey-7' : 'text-negative'" class="text-bold"> SUBE UNA FOTO </div>
+            <div :class="!$v.perfil.$error ? 'text-grey-7' : 'text-negative'" class="text-bold text-caption"> SUBE UNA FOTO </div>
           </div>
-          <div class="row justify-center q-gutter-xs q-mt-md">
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input v-model="form.name" label="Nombres" outlined
+          <div class="row justify-center q-mt-md">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Nombres</div>
+              <q-input v-model="form.name" filled
                 error-message="Requerido" :error="$v.form.name.$error" @blur="$v.form.name.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input v-model="form.lastName" label="Apellidos" outlined
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Apellidos</div>
+              <q-input v-model="form.lastName" filled
                 error-message="Requerido" :error="$v.form.lastName.$error" @blur="$v.form.lastName.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input v-model="form.telefono" label="Número de contacto" outlined
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Número de contacto</div>
+              <q-input v-model="form.telefono" filled
                 error-message="Requerido" :error="$v.form.telefono.$error" @blur="$v.form.telefono.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-md">
-              <q-input v-model="form.email" label="Correo de contacto" outlined type="email"
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Correo de contacto</div>
+              <q-input v-model="form.email" filled type="email"
                 error-message="Requerido" :error="$v.form.email.$error" @blur="$v.form.email.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input :type="isPwd ? 'password' : 'text'" v-model="password" label="Contraseña" outlined
-                error-message="ingrese una contraseña valida, minimo de caracteres es de 6" :error="$v.password.$error" @blur="$v.password.$touch()">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Contraseña</div>
+              <q-input :type="isPwd ? 'password' : 'text'" v-model="password" filled
+                error-message="ingrese una contraseña valida, minimo 6 caracteres" :error="$v.password.$error" @blur="$v.password.$touch()">
                 <template v-slot:append>
                   <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer q-pa-sm" color="primary" @click="isPwd = !isPwd" />
                 </template>
               </q-input>
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input :type="isPwd ? 'password' : 'text'" v-model="repeatPassword" label="Confirmar Contraseña" outlined
-                error-message="ingrese una contraseña valida, minimo de caracteres es de 6" :error="$v.repeatPassword.$error" @blur="$v.repeatPassword.$touch()">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Confirmar Contraseña</div>
+              <q-input :type="isPwd ? 'password' : 'text'" v-model="repeatPassword" filled
+                error-message="ingrese una contraseña valida, minimo 6 caracteres" :error="$v.repeatPassword.$error" @blur="$v.repeatPassword.$touch()">
                 <template v-slot:append>
                   <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer q-pa-sm" color="primary" @click="isPwd = !isPwd" />
                 </template>
               </q-input>
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <q-checkbox v-model="terminos_condiciones" :class="textColor" @input="terminos_condiciones ? textColor = 'text-black' : ''" label="Acepto término y condiciones de uso*" />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"
               @click="siguiente()" />
             </div>
@@ -82,28 +88,36 @@
           <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 1" />
         </div>
         <div class="column items-center justify-center q-mx-md">
-          <div class="row justify-center q-gutter-xs" style="width:100%">
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row justify-center">
+          <div class="row justify-center" style="width:100%">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 row justify-center">
               <q-img src="fondo1.jpg" style="width:100%;height:210px;border-radius:25px" >
               </q-img>
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mt-xl">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mt-xl">
               <div class="text-h6">Nueva dirección</div>
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 q-mb-md">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-md">
               <q-separator />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input v-model="direccion.direccion" label="Dirección" outlined
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Provincia</div>
+              <q-input v-model="direccion.provincia" filled
+                error-message="Requerido" :error="$v.direccion.provincia.$error" @blur="$v.direccion.provincia.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Ciudad</div>
+              <q-input v-model="direccion.ciudad" filled
+                error-message="Requerido" :error="$v.direccion.ciudad.$error" @blur="$v.direccion.ciudad.$touch()"
+              />
+            </div>
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <div class="text-subtitle2 text-grey-8">Dirección</div>
+              <q-input v-model="direccion.direccion" filled
                 error-message="Requerido" :error="$v.direccion.direccion.$error" @blur="$v.direccion.direccion.$touch()"
               />
             </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6">
-              <q-input v-model="direccion.codigo_postal" label="Código postal" outlined
-                error-message="Requerido" :error="$v.direccion.codigo_postal.$error" @blur="$v.direccion.codigo_postal.$touch()"
-              />
-            </div>
-            <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Finalizar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
               @click="registrar()" />
             </div>
@@ -114,10 +128,10 @@
       <q-carousel-slide :name="3" >
         <div class="absolute-center" style="width:100%">
           <div class="q-mb-md row justify-center">
-            <q-img src="fondo1.jpg" style="width:150px;height:150px;border-radius:25px" >
+            <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
             </q-img>
           </div>
-          <div class="text-center text-h4 text-bold">¡Registro Exitoso!</div>
+          <div class="text-center text-subtitle1">¡Registro Exitoso!</div>
           <div class="row items-center justify-center q-mt-lg" style="width:100%">
             <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
             @click="onSubmit()" />
@@ -135,7 +149,7 @@ export default {
   data () {
     return {
       form: {
-        direccion: []
+        direcciones: []
       },
       direccion: {},
       perfil: null,
@@ -157,7 +171,8 @@ export default {
     },
     direccion: {
       direccion: { required },
-      codigo_postal: { required }
+      provincia: { required },
+      ciudad: { required }
     },
     terminos_condiciones: { required },
     repeatPassword: { sameAsPassword: sameAs('password') },
@@ -196,7 +211,7 @@ export default {
       this.form.enable = true
       this.$v.direccion.$touch()
       if (!this.$v.direccion.$error) {
-        this.form.direccion.push(this.direccion)
+        this.form.direcciones.push(this.direccion)
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('dat', JSON.stringify(this.form))
@@ -231,11 +246,11 @@ export default {
   padding: 10px;
   font-weight: 540;
   font-size: 0px;
-  color: #0016b0;
-  background-color: $primary;
-  border-radius: 30px;
-  border: 1px solid #7e7e7e;
+  color: white;
+  background-color: $grey;
+  border-radius: 100%;
   height:40px;
-  width: 40px;
+  width:40px;
+  cursor: pointer;
 }
 </style>
