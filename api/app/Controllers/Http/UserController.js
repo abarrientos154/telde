@@ -20,6 +20,10 @@ const Env = use('Env')
  * Resourceful controller for interacting with users
  */
 class UserController {
+  async index({ params, response, auth }) {
+    const user = await User.all()
+    response.send(user)
+  }
 
   async editarP ({ request, response, auth }) {
     const userL = (await auth.getUser()).toJSON()
@@ -161,8 +165,19 @@ class UserController {
     response.send(user)
   }
 
+  async userEnable({ params, request, response }) {
+    let dat = request.all()
+    let modificar = await User.query().where('_id', params.id).update({enable: dat.enable})
+    response.send(modificar)
+  }
+
   async proveedores ({ request, response, auth }) {
     let emprendedores = (await User.query().where({roles: [3], status: 1}).fetch()).toJSON()
+    response.send(emprendedores)
+  }
+
+  async clientes ({ request, response, auth }) {
+    let emprendedores = (await User.query().where({roles: [2]}).fetch()).toJSON()
     response.send(emprendedores)
   }
 
