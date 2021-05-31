@@ -270,8 +270,25 @@
           </div>
           <div class="text-center text-subtitle1">¡Registro Exitoso!</div>
           <div class="row items-center justify-center q-mt-lg" style="width:100%">
-            <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-            @click="onSubmit()" />
+            <q-btn no-caps label="Pagar Membresía" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+            @click="conti()" />
+          </div>
+        </div>
+      </q-carousel-slide>
+
+      <q-carousel-slide :name="5" >
+        <div class="absolute-center" style="width:100%">
+          <div class="q-mb-md row justify-center">
+            <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
+            </q-img>
+          </div>
+          <div class="column items-center justify-center">
+            <div class="text-center text-h6 text-bold">Compra tu Membresía</div>
+            <div class="text-center text-subtitle1" style="width:80%">Adquiere tu membresía y se parte Del nuevo market place de España</div>
+          </div>
+          <div class="row items-center justify-center q-mt-lg" style="width:100%">
+            <q-btn no-caps label="Comprar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+            @click="ruta()"/>
           </div>
         </div>
       </q-carousel-slide>
@@ -374,6 +391,9 @@ export default {
       })
       this.$q.loading.hide()
     },
+    ruta () {
+      this.$router.push('/pago-membresia/' + this.id)
+    },
     siguiente () {
       this.$v.portada.$touch()
       this.$v.perfil.$touch()
@@ -387,6 +407,9 @@ export default {
       if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
         this.slide = 2
       }
+    },
+    conti () {
+      this.slide = 5
     },
     siguiente2 () {
       this.$v.form.ciudad.$touch()
@@ -439,6 +462,7 @@ export default {
             })
             this.id = res._id
             this.slide = 4
+            console.log(this.id, 'revisa id')
             this.$q.loading.hide()
           }
           this.$q.loading.hide()

@@ -9,6 +9,7 @@ const axiosInstance = axios.create({
 export default async ({ store, Vue }) => {
   Vue.prototype.$axios = axios
   Vue.prototype.$api = axiosInstance
+  Vue.prototype.$stripeKey = env.stripeKey
 
   axiosInstance.interceptors.response.use(function (response) {
     // console.log('axiosResponse', response)

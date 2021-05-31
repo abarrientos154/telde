@@ -11,8 +11,11 @@ const Role = use("App/Models/Role")
 const Floww = use("App/Models/Flow")
 const Data = use("App/Models/FlowDatum")
 const Comentario = use('App/Models/Comentario')
+const Payment = use('App/Models/Payment')
 const { validate } = use("Validator")
 const Env = use('Env')
+const Stripe = require('stripe')
+const stripe = Stripe('sk_test_51IjMPfDgF1IR0ee1pWdYfdLbYxeKd1PfdFVbmNiMV5XaW3znB4xzHm2KTCXloNNwwOvMqmByVLAetqnNlnNvYI7q009uyimwQy')
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
@@ -21,6 +24,30 @@ const Env = use('Env')
  * Resourceful controller for interacting with users
  */
 class UserController {
+
+  async procesarPago ({ request, params, view }) {
+    let body = request.post()
+    console.log(body, 'BODY', params.tienda_id, 'tienda id')
+    try {
+      const customer = await stripe.customers.create({
+        email: body.stripeEmail,
+        source: body.stripeToken
+        // token: body.stripeToken
+      })
+      const charge = await stripe.charges.create({
+        amount: body.monto + '00',
+        currency: 'eur',
+        customer: customer.id,
+        description: 'Pago Membresia Telde'
+      })
+      console.log(charge)
+      await User.query().where('_id', params.tienda_id).update({ status: 1 })
+      await Payment.create({ tienda_id: params.tienda_id, monto: body.monto, customer_id: charge.id, cantMeses: body.cantMeses })
+    } catch (error) {
+      console.log(error, 'mensaje de error')
+    }
+    return view.render('backtoapp')
+  }
 
   async editarP ({ request, response, auth }) {
     const userL = (await auth.getUser()).toJSON()
@@ -132,7 +159,7 @@ class UserController {
       } else {
         mkdirp.sync(`${__dirname}/storage/Excel`)
       }
-  
+
       if (!profilePic2.moved()) {
         return profilePic2.error()
       }
@@ -200,7 +227,7 @@ class UserController {
   }
   async flow({ request, response }) {
     let dat = request.all()
-    var tienda = await Data.findBy('tienda_id', dat.tienda_id) 
+    var tienda = await Data.findBy('tienda_id', dat.tienda_id)
     var config = {
        apiKey: tienda.apiKey,
        secretKey: tienda.secretKey,
@@ -239,7 +266,7 @@ class UserController {
     Floww.create(dat)
   }
   async flowResponse ({params, response}) {
-    
+
     let dat = params.token
     const paramss = {
        token: dat

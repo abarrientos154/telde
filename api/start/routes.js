@@ -38,6 +38,7 @@ const addPrefixToGroup = group => {
 addPrefixToGroup(
   Route.group(() => {
     // Insertar rutas sin protección de autenticación aquí
+    Route.post("procesar_pago/:tienda_id", "UserController.procesarPago");
     Route.post("login", "UserController.login");
     Route.post("registrar_cliente", "UserController.register")
     Route.post("registrar_tienda", "UserController.registerTienda")
@@ -110,7 +111,7 @@ addPrefixToGroup(
     Route.delete("favorito/:proveedor_id", "FavoriteController.destroy")
     ///////////////////////FAVORITOS/////////////////////////////////////////
 
-   ///////////////////////Reportes///////////////////////////////////////// 
+   ///////////////////////Reportes/////////////////////////////////////////
     Route.get("reportes/:type", "ProductoController.reportes")
     Route.put("compra_status/:id_pedido", "ProductoController.updateCompra")
     Route.post("calificar_tienda", "ProductoController.calificarTienda")
