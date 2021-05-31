@@ -67,12 +67,24 @@ export default {
       })
       this.$api.post('login', this.form).then(res => {
         if (res) {
-          if (res.TELDE_SESSION_INFO.roles[0] === 3) {
-            this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
-          } else {
-            this.$router.push('/inicio')
+          if (res.TELDE_SESSION_INFO.roles[0] === 2 || res.TELDE_SESSION_INFO.roles[0] === 3) {
+            if (res.TELDE_SESSION_INFO.enable) {
+              if (res.TELDE_SESSION_INFO.roles[0] === 3) {
+                this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+              } else {
+                this.$router.push('/inicio')
+              }
+              this.login(res)
+            } else {
+              this.$q.notify({
+                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+                color: 'negative'
+              })
+            }
+          } else if (res.TELDE_SESSION_INFO.roles[0] === 1) {
+            this.$router.push('/administrador')
+            this.login(res)
           }
-          this.login(res)
         } else {
           console.log('hubo un error')
         }

@@ -67,6 +67,8 @@ addPrefixToGroup(
     // Insertar rutas con protección de autenticación aquí
 
     Route.get("user_info", "UserController.userInfo") // metodo para obtener informacion del usuario que esta logueado
+    Route.put("update_enable/:id", "UserController.userEnable")
+    Route.get("clientes", "UserController.clientes")
     Route.put("editar_proveedor", "UserController.editarP")
     Route.post("subir_foto_perfil/:id", "UploadController.subirPerfil")
     Route.post("subir_foto_portada/:id", "UploadController.subirPortada")

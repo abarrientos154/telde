@@ -208,6 +208,7 @@ export default {
       }
     },
     async registrar () {
+      this.form.enable = true
       this.$v.direccion.$touch()
       if (!this.$v.direccion.$error) {
         this.form.direcciones.push(this.direccion)

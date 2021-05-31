@@ -434,6 +434,7 @@ export default {
     },
     async registrar () {
       this.$v.$touch()
+      this.form.enable = true
       if (!this.confirma_datos) {
         this.textColorBanco = 'text-red'
       }
