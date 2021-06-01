@@ -26,7 +26,8 @@
       <div class="text-h6 q-ma-lg text-grey-8">Ultimas solicitudes</div>
       <div v-if="ultimas.length">
         <div class="q-py-sm row justify-center" v-for="(card, index) in ultimas" :key="index">
-          <q-card class="column justify-between" style="height: 175px; width: 80%; border-radius: 30px; min-width: 300px">
+          <q-card clickable v-ripple class="column justify-between" style="height: 175px; width: 80%; border-radius: 30px; min-width: 300px"
+          @click="selecRetiro = card, verRetiro = true">
             <q-card-section>
               <div class="row justify-around">
                 <div>
@@ -44,14 +45,16 @@
                   </div>
                 </div>
                 <div class="row justify-center items-center">
-                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
+                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps
+                  />
                 </div>
               </div>
             </q-card-section>
           </q-card>
         </div>
-        <div class="row justify-center q-mb-lg q-my-sm">
-          <q-btn rounded class="q-pa-xs" color="primary" label="Ver más" style="width: 90%;" no-caps/>
+        <div v-if="noMas" class="row justify-center q-mb-lg q-my-sm">
+          <q-btn rounded class="q-pa-xs" color="primary" label="Ver más" style="width: 90%;" no-caps
+          @click="verMas()"/>
         </div>
       </div>
       <div v-else class="text-center text-h6 q-my-lg">No tienes solicitudes</div>
@@ -86,10 +89,15 @@
         </q-input>
         <q-separator inset style="width:85%" />
       </div>
+        <div class="row justify-end q-mx-lg">
+          <q-btn rounded class="q-px-md" color="primary" label="Buscar" no-caps
+          />
+        </div>
 
-      <div v-if="retiros.length">
-        <div class="q-py-sm row justify-center" v-for="(card, index) in retiros" :key="index">
-          <q-card class="column justify-between" style="height: 175px; width: 80%; border-radius: 30px; min-width: 300px">
+      <div v-if="retirosFilter.length">
+        <div class="q-py-sm row justify-center" v-for="(card, index) in retirosFilter" :key="index">
+          <q-card clickable v-ripple class="column justify-between" style="height: 175px; width: 80%; border-radius: 30px; min-width: 300px"
+          @click="selecRetiro = card, verRetiro = true">
             <q-card-section>
               <div class="row justify-around">
                 <div>
@@ -107,14 +115,14 @@
                   </div>
                 </div>
                 <div class="row justify-center items-center">
-                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
+                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps
+                  />
                 </div>
               </div>
             </q-card-section>
           </q-card>
         </div>
       </div>
-      <div v-else class="text-center text-h6 q-my-lg">No tienes solicitudes</div>
 
       <q-dialog v-model="solicitar">
         <q-card style="width: 100%; border-radius: 30px">
@@ -171,6 +179,33 @@
           </q-card-actions>
         </q-card>
       </q-dialog>
+
+      <q-dialog v-model="verRetiro">
+        <q-card class="q-py-md" style="width: 100%; border-radius: 30px">
+          <q-card-section>
+            <div class="text-h6 text-center text-bold q-mb-lg">Estado de solicitud</div>
+            <div class="row justify-between items-start">
+              <div>
+                <div class="row">
+                  <div class="text-h6 text-black q-mr-sm text-bold">Estado: </div>
+                  <div :class="selecRetiro.status === 'Aprobado' ? 'text-blue' : 'text-orange'" class="text-h6 text-bold">{{selecRetiro.status}}</div>
+                </div>
+                <div class="text-h6 text-black q-mr-sm text-bold">Fecha de solicitud</div>
+                <div class="text-subtitle1 text-grey-7">{{selecRetiro.created_at}}</div>
+                <div class="text-h6 text-black q-mr-sm text-bold">Fecha de aprobación</div>
+                <div class="text-subtitle1 text-grey-7">{{selecRetiro.status === 'Aprobado' ? selecRetiro.updated_at : 'Aún no hay fecha disponible'}}</div>
+                <div class="row q-mt-xl">
+                  <div class="text-h6 text-black q-mr-sm text-bold">Saldo solicitado </div>
+                  <div class="text-h6 text-grey-7 text-bold">€{{selecRetiro.monto}}</div>
+                </div>
+              </div>
+              <div class="row justify-center items-center">
+                  <q-btn :color="selecRetiro.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="selecRetiro.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
+              </div>
+            </div>
+          </q-card-section>
+        </q-card>
+      </q-dialog>
   </div>
 </template>
 
@@ -182,10 +217,14 @@ export default {
       saldo_actual: 0,
       solicitar: false,
       exitoso: false,
-      form: {},
+      verRetiro: false,
+      noMas: true,
       retiro: null,
+      form: {},
+      selecRetiro: {},
       ultimas: [],
-      retiros: []
+      retiros: [],
+      retirosFilter: []
     }
   },
   validations: {
@@ -208,10 +247,10 @@ export default {
         if (res) {
           this.retiros = res
           this.ultimas = []
-          var largo = res.length - 1
+          var largo = this.retiros.length - 1
           for (let i = 0; i < 2; i++) {
             if (largo >= 0) {
-              this.ultimas.push(res[largo])
+              this.ultimas.push(this.retiros[largo])
               largo = largo - 1
             }
           }
@@ -242,6 +281,17 @@ export default {
           })
         }
       }
+    },
+    verMas () {
+      this.ultimas = []
+      var largo = this.retiros.length - 1
+      for (let i = 0; i < this.retiros.length; i++) {
+        if (largo >= 0) {
+          this.ultimas.push(this.retiros[largo])
+          largo = largo - 1
+        }
+      }
+      this.noMas = false
     }
   }
 }
