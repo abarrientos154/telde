@@ -26,16 +26,16 @@
       <div class="text-h6 q-ma-lg text-grey-8">Estadísticas de ventas</div>
       <div class="row justify-center q-px-lg q-mb-lg">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-sm">
-          <q-select borderless v-model="report" :options="typeReport" label="Seleccione el tipo de reporte" />
+          <q-select borderless v-model="report" @input="fecha = ''" color="black" :options="typeReport" label="Seleccione el tipo de reporte" />
         </div>
-        <div v-if="report == 'Reporte Mensual' || report == 'Reporte Anual'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
-          <q-select v-model="fecha" :options="report == 'Reporte Mensual' ? meses : años" :label="report == 'Reporte Mensual' ? 'Seleccione el Mes' : report == 'Reporte Anual' ? 'Seleccione el Año' : ''">
+        <div v-if="report == 'Mensual' || report == 'Anual'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
+          <q-select v-model="fecha" color="black" :options="report == 'Mensual' ? meses : años" :label="report == 'Mensual' ? 'Seleccione el Mes' : report == 'Anual' ? 'Seleccione el Año' : ''">
             <template v-slot:append>
               <q-icon name="event" />
             </template>
           </q-select>
         </div>
-        <div v-else-if="report == 'Reporte Semanal'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
+        <div v-else-if="report == 'Semanal'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
           <q-input @click="verFecha = !verFecha" v-model="fecha" label="Seleccione la Semana">
             <template v-slot:append>
               <q-icon name="event" />
@@ -107,7 +107,6 @@ export default {
       report: '',
       fecha: '',
       baseuProducto: '',
-      rating: 4,
       saldo_actual: 0,
       fechaReport: { from: '2021/07/08', to: '2021/07/17' },
       chartOptions: {
@@ -127,7 +126,7 @@ export default {
       ],
       allProductos: [],
       productos: [],
-      typeReport: ['Reporte Semanal', 'Reporte Mensual', 'Reporte Anual'],
+      typeReport: ['Semanal', 'Mensual', 'Anual'],
       meses: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
       años: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
     }
