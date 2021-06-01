@@ -59,8 +59,69 @@ export default {
       loading: false
     }
   },
+  mounted () {
+    const vm = this
+    if (this.$q.platform.is.mobile) { // Si es teléfono{
+      universalLinks.subscribe('ul_payStripe', function (eventData) {
+        // do some work
+        // alert('Did launch application from the link: ' + eventData.url)
+        if (eventData.params.user_id) {
+          vm.aprobarPago({ user_id: eventData.params.user_id, cantM: eventData.params.cantM, costoM: eventData.params.costoM })
+        } else {
+          vm.$q.notify({
+            message: 'Su pago no fue procesado',
+            color: 'negative'
+          })
+        }
+      })
+    }
+  },
   methods: {
     ...mapMutations('generals', ['login']),
+    async aprobarPago (datos) {
+      this.$q.loading.show({
+        message: 'Iniciando sesión'
+      })
+      await this.$api.put('aprobar_pago/' + datos.user_id, datos).then(res => {
+        this.$q.loading.hide()
+        if (res) {
+          this.loguear({ user_id: res._id })
+        } else {
+          console.log('hubo un error')
+        }
+      })
+      this.$q.loading.hide()
+    },
+    loguear (datos) {
+      this.$q.loading.show({
+        message: 'Iniciando sesión'
+      })
+      this.$api.post('login_by_mail', datos).then(res => {
+        if (res) {
+          if (res.TELDE_SESSION_INFO.roles[0] === 2 || res.TELDE_SESSION_INFO.roles[0] === 3) {
+            if (res.TELDE_SESSION_INFO.enable) {
+              if (res.TELDE_SESSION_INFO.roles[0] === 3) {
+                this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+              } else {
+                this.$router.push('/inicio')
+              }
+              this.login(res)
+            } else {
+              this.$q.notify({
+                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+                color: 'negative'
+              })
+            }
+          } else if (res.TELDE_SESSION_INFO.roles[0] === 1) {
+            this.$router.push('/administrador')
+            this.login(res)
+          }
+        } else {
+          console.log('hubo un error')
+        }
+      })
+      this.$q.loading.hide()
+    },
     onSubmit () {
       this.$q.loading.show({
         message: 'Iniciando sesión'

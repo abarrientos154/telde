@@ -114,8 +114,8 @@
 
           <q-card-actions class="q-py-md" align="center">
             <div class="q-pb-md">
-              <q-btn v-close-popup rounded color="primary" text-color="white" label="Pagar ahora"  style="width:200px;height:40px" @click="siguiente()" />
-              <pago-membresia :monto="totalPagar" :apiUrl="apiUrl" :cantMeses="cantidad" />
+              <q-btn v-close-popup rounded color="primary" text-color="white" label="Pagar ahora"  style="width:200px;height:40px" @click="redirPay()" />
+              <!-- <pago-membresia :monto="totalPagar" :apiUrl="apiUrl" :cantMeses="cantidad" /> -->
             </div>
           </q-card-actions>
         </div>
@@ -127,10 +127,11 @@
 </template>
 <script>
 import env from '../../env'
-import PagoMembresia from '../../components/StripeBoton'
+import { openURL } from 'quasar'
+// import PagoMembresia from '../../components/StripeBoton'
 export default {
   components: {
-    PagoMembresia
+    // PagoMembresia
   },
   data () {
     return {
@@ -143,7 +144,7 @@ export default {
     }
   },
   mounted () {
-    this.apiUrl = env.apiUrl + '/procesar_pago/' + this.$route.params.id
+    this.apiUrl = env.apiUrl + '/redireccionar_pago?user_id=' + this.$route.params.id
     console.log(this.apiUrl, 'API URLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL')
   },
   computed: {
@@ -162,6 +163,11 @@ export default {
       if (this.cantidad > 1) {
         this.cantidad = this.cantidad - 1
       }
+    },
+    async redirPay () {
+      const ruta = `${this.apiUrl}&costoM=${this.costoMembresia}&cantMeses=${this.cantidad}`
+      await openURL(ruta)
+      navigator.app.exitApp()
     }
   }
 }

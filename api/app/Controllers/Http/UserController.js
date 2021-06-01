@@ -16,6 +16,8 @@ const { validate } = use("Validator")
 const Env = use('Env')
 const Stripe = require('stripe')
 const stripe = Stripe('sk_test_51IjMPfDgF1IR0ee1pWdYfdLbYxeKd1PfdFVbmNiMV5XaW3znB4xzHm2KTCXloNNwwOvMqmByVLAetqnNlnNvYI7q009uyimwQy')
+const View = use('View')
+const apiUrl = Env.get('API_URL')
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
@@ -24,33 +26,65 @@ const stripe = Stripe('sk_test_51IjMPfDgF1IR0ee1pWdYfdLbYxeKd1PfdFVbmNiMV5XaW3zn
  * Resourceful controller for interacting with users
  */
 class UserController {
+
+  async aprobarPagoStripe ({ request, response, params }) {
+    let body = request.only(['cantM', 'costoM'])
+    console.log(body, 'body aprobando pago')
+    await User.query().where('_id', params.tienda_id).update({ status: 1 })
+    await Payment.create({ tienda_id: params.tienda_id, costoM: body.costoM, cantMeses: body.cantM, status: 1 })
+    let user = await User.find(params.tienda_id)
+    response.send(user)
+
+  }
+
+  async redirpay ({ auth, response, params, request, view }) {
+    let body = request.get()
+    console.log(body, 'soy un body testStripe')
+    View.global('ruta', function () {
+      return `/api/procesar_pago/${body.user_id}/${body.cantMeses}/${body.costoM}`
+    })
+    return view.render('redirpay')
+  }
+
+  async logueoSinContrasena ({ auth, response, params, request }) {
+    let body = request.only(['user_id'])
+    let user = await User.find(body.user_id)
+    let token = await auth.generate(user)
+    let data = {}
+    data.TELDE_SESSION_INFO = token
+    return data
+  }
+
   async index({ params, response, auth }) {
     const user = await User.all()
     response.send(user)
   }
 
-  async procesarPago ({ request, params, view }) {
-    let body = request.post()
-    console.log(body, 'BODY', params.tienda_id, 'tienda id')
-    try {
-      const customer = await stripe.customers.create({
-        email: body.stripeEmail,
-        source: body.stripeToken
-        // token: body.stripeToken
-      })
-      const charge = await stripe.charges.create({
-        amount: body.monto + '00',
-        currency: 'eur',
-        customer: customer.id,
-        description: 'Pago Membresia Telde'
-      })
-      console.log(charge)
-      await User.query().where('_id', params.tienda_id).update({ status: 1 })
-      await Payment.create({ tienda_id: params.tienda_id, monto: body.monto, customer_id: charge.id, cantMeses: body.cantMeses })
-    } catch (error) {
-      console.log(error, 'mensaje de error')
-    }
-    return view.render('backtoapp')
+  async procesarPago ({ request, params, view, response }) {
+    let body = params
+    let totalPagar = parseFloat(body.cantM) * parseFloat(body.costoM)
+    console.log(body.cantM, body.costoM, 'soy un body')
+    totalPagar = totalPagar + '00'
+    console.log(totalPagar, 'total')
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ['card'],
+      line_items: [
+        {
+          price_data: {
+            currency: 'eur',
+            product_data: {
+              name: 'Membresia',
+            },
+            unit_amount: totalPagar,
+          },
+          quantity: 1,
+        },
+      ],
+      mode: 'payment',
+      success_url: `https://app.telde.com/pay_stripe?user_id=${params.tienda_id}&cantM=${body.cantM}&costoM=${body.costoM}`,
+      cancel_url: `https://app.telde.com/pay_stripe_cancel`,
+    })
+    response.send({ id: session.id })
   }
 
   async editarP ({ request, response, auth }) {
