@@ -7,7 +7,7 @@
     </q-img>
 
       <div class="q-pt-lg row justify-center">
-        <q-card class="bg-blue column justify-between" style="height: 175px; width: 75%; border-radius: 30px">
+        <q-card class="bg-blue column justify-between" style="height: 175px; width: 80%; border-radius: 30px">
           <q-card-section class="col">
           </q-card-section>
           <q-card-section>
@@ -15,7 +15,8 @@
             <div class="row items-center justify-between">
               <div class="text-h4 text-bold text-white q-mr-sm">€{{saldo_actual}}</div>
               <div>
-                <q-btn class="q-px-sm col" color="primary" label="Solicitar" style="border-radius: 10px;" no-caps/>
+                <q-btn :disable="saldo_actual > 0 ? false : true" class="q-px-sm col" color="primary" label="Solicitar" style="border-radius: 10px;" no-caps
+                @click="retiro = null, $v.retiro.$reset(), solicitar = true"/>
               </div>
             </div>
           </q-card-section>
@@ -25,25 +26,25 @@
       <div class="text-h6 q-ma-lg text-grey-8">Ultimas solicitudes</div>
       <div v-if="ultimas.length">
         <div class="q-py-sm row justify-center" v-for="(card, index) in ultimas" :key="index">
-          <q-card class="column justify-between" style="height: 175px; width: 75%; border-radius: 30px; min-width: 300px">
+          <q-card class="column justify-between" style="height: 175px; width: 80%; border-radius: 30px; min-width: 300px">
             <q-card-section>
               <div class="row justify-around">
                 <div>
                   <div class="row">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Estado: </div>
-                    <div :class="card.status === 'Aprobado' ? 'text-blue' : card.status === 'Pendiente' ? 'text-orange' : 'text-red'" class="text-h6 text-weight-bolder">{{card.status}}</div>
+                    <div :class="card.status === 'Aprobado' ? 'text-blue' : 'text-orange'" class="text-h6 text-weight-bolder">{{card.status}}</div>
                   </div>
                   <div class="column">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Fecha de solicitud</div>
-                    <div class="text-caption text-grey-7">01/08/2021</div>
+                    <div class="text-caption text-grey-7">{{card.created_at}}</div>
                   </div>
                   <div class="row">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Saldo retirado </div>
-                    <div class="text-h6 text-grey-7 text-weight-bolder">€0</div>
+                    <div class="text-h6 text-grey-7 text-weight-bolder">€{{card.monto}}</div>
                   </div>
                 </div>
                 <div class="row justify-center items-center">
-                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : card.status === 'Pendiente' ? 'orange' : 'red'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : card.status === 'Pendiente' ? 'remove' : 'south'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
+                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
                 </div>
               </div>
             </q-card-section>
@@ -88,25 +89,25 @@
 
       <div v-if="retiros.length">
         <div class="q-py-sm row justify-center" v-for="(card, index) in retiros" :key="index">
-          <q-card class="column justify-between" style="height: 175px; width: 75%; border-radius: 30px; min-width: 300px">
+          <q-card class="column justify-between" style="height: 175px; width: 80%; border-radius: 30px; min-width: 300px">
             <q-card-section>
               <div class="row justify-around">
                 <div>
                   <div class="row">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Estado: </div>
-                    <div :class="card.status === 'Aprobado' ? 'text-blue' : card.status === 'Pendiente' ? 'text-orange' : 'text-red'" class="text-h6 text-weight-bolder">{{card.status}}</div>
+                    <div :class="card.status === 'Aprobado' ? 'text-blue' : 'text-orange'" class="text-h6 text-weight-bolder">{{card.status}}</div>
                   </div>
                   <div class="column">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Fecha de solicitud</div>
-                    <div class="text-caption text-grey-7">01/08/2021</div>
+                    <div class="text-caption text-grey-7">{{card.created_at}}</div>
                   </div>
                   <div class="row">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Saldo retirado </div>
-                    <div class="text-h6 text-grey-7 text-weight-bolder">€0</div>
+                    <div class="text-h6 text-grey-7 text-weight-bolder">€{{card.monto}}</div>
                   </div>
                 </div>
                 <div class="row justify-center items-center">
-                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : card.status === 'Pendiente' ? 'orange' : 'red'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : card.status === 'Pendiente' ? 'remove' : 'south'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
+                  <q-btn :color="card.status === 'Aprobado' ? 'blue' : 'orange'" text-color="white" :icon="card.status === 'Aprobado' ? 'north' : 'remove'" style="border-radius: 10px; height: 55px; width: 100%;" no-caps/>
                 </div>
               </div>
             </q-card-section>
@@ -114,21 +115,85 @@
         </div>
       </div>
       <div v-else class="text-center text-h6 q-my-lg">No tienes solicitudes</div>
+
+      <q-dialog v-model="solicitar">
+        <q-card style="width: 100%; border-radius: 30px">
+          <q-card-section>
+            <div class="text-h6 text-center">Solicitud de retiro</div>
+          </q-card-section>
+          <q-card-section>
+            <div class="row justify-center">
+              <q-card class="bg-blue column justify-between" style="height: 175px; width: 100%; border-radius: 30px">
+                <q-card-section class="col">
+                </q-card-section>
+                <q-card-section>
+                  <div class="text-caption text-white">Dinero de tu monedero</div>
+                  <div class="row items-center">
+                    <div class="text-h4 text-bold text-white q-mr-sm">€{{saldo_actual}}</div>
+                  </div>
+                </q-card-section>
+              </q-card>
+            </div>
+            <div class="text-subtitle2 text-grey-8 q-mt-md">Cuanto desea retirar</div>
+            <q-input v-model="retiro" filled
+            error-message="Requerido" :error="$v.retiro.$error" @blur="$v.retiro.$touch()"
+            />
+          </q-card-section>
+          <q-card-actions class="q-py-md" align="center">
+            <div class="q-pb-md">
+              <q-btn rounded no-caps color="primary" label="Solicitar" style="width:200px;"
+              @click="retirar()"/>
+            </div>
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
+
+      <q-dialog v-model="exitoso">
+        <q-card class="q-py-md" style="width: 100%; border-radius: 30px">
+
+          <q-card-section class="q-pt-xl">
+            <div class="row justify-center">
+              <q-img src="fondo1.jpg" style="width:60%;height:170px; border-radius: 20px" >
+              </q-img>
+            </div>
+          </q-card-section>
+          <q-card-section>
+            <div>
+              <div class="text-h6 text-center text-bold">Retiro solicitado con éxito</div>
+              <div class="text-caption text-center text-grey-8">Ahora podrás ver todos tus retiros en tu Dashboard principal</div>
+            </div>
+          </q-card-section>
+          <q-card-actions class="q-py-md" align="center">
+            <div class="q-pb-md">
+              <q-btn rounded no-caps color="primary" label="Finalizar" style="width:200px;"
+              @click="exitoso = false" />
+            </div>
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
   </div>
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators'
 export default {
   data () {
     return {
       saldo_actual: 0,
+      solicitar: false,
+      exitoso: false,
       form: {},
+      retiro: null,
       ultimas: [],
       retiros: []
     }
   },
+  validations: {
+    retiro: { required }
+  },
   mounted () {
     this.getSaldo()
+    this.getRetiros()
   },
   methods: {
     getSaldo () {
@@ -137,6 +202,46 @@ export default {
           this.saldo_actual = res
         }
       })
+    },
+    getRetiros () {
+      this.$api.get('retiros').then(res => {
+        if (res) {
+          this.retiros = res
+          this.ultimas = []
+          var largo = res.length - 1
+          for (let i = 0; i < 2; i++) {
+            if (largo >= 0) {
+              this.ultimas.push(res[largo])
+              largo = largo - 1
+            }
+          }
+        }
+      })
+    },
+    retirar () {
+      this.$v.$touch()
+      if (!this.$v.retiro.$error) {
+        if (this.retiro <= this.saldo_actual) {
+          this.$api.post('solicitar_retiro', { monto: this.retiro }).then(res => {
+            if (res) {
+              this.getSaldo()
+              this.getRetiros()
+              this.solicitar = false
+              this.exitoso = true
+            }
+          })
+        } else {
+          this.$q.dialog({
+            title: 'Atención',
+            message: 'El monto de la solicitud es mayor a tu saldo actual',
+            cancel: false
+          }).onOk(() => {
+            // console.log('>>>> Ok')
+          }).onCancel(() => {
+            // console.log('>>>> Cancel')
+          })
+        }
+      }
     }
   }
 }
