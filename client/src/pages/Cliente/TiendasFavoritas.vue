@@ -1,8 +1,10 @@
 <template>
   <q-page>
-    <div class="bg-secondary column justify-center" style="height: 200px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
-      <div class="text-center text-h5 text-white text-bold">Mis tiendas favoritas</div>
-    </div>
+    <q-img :src="'nopublicidad.jpg'" style="height: 150px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
+      <div class="absolute-full">
+        <div class="absolute-center full-width text-bold text-h5 text-center">Mis tiendas favoritas</div>
+      </div>
+    </q-img>
 
     <div class="text-h6 q-mt-md q-ml-md">Últimas tiendas agregadas</div>
     <q-scroll-area

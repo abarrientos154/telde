@@ -192,10 +192,14 @@ class UserController {
     const user = await User.query().where({_id: params.id}).first()
     var cal = (await Comentario.query().where({tienda_id: params.id}).fetch()).toJSON()
     var total = 0
-    cal.forEach(v => {
-      total += v.rating
-    })
-    user.calificacion = (total / cal.length)
+    if (cal.length) {
+      cal.forEach(v => {
+        total += v.rating
+      })
+      user.calificacion = (total / cal.length)
+    } else {
+      user.calificacion = 0
+    }
     response.send(user)
   }
 
