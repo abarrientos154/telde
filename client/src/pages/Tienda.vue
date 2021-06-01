@@ -108,12 +108,12 @@
 
       <div class="text-h6 q-ma-md text-grey-8">Mejores categorizados</div>
       <q-scroll-area
-          v-if="productos.length"
+          v-if="mejores.length"
           horizontal
-          style="height: 410px;"
+          style="height: 405px;"
         >
           <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-            <div v-for="(card, index) in productos" :key="index" >
+            <div v-for="(card, index) in mejores" :key="index" >
               <q-card flat class="my-card" style="height: 370px; width: 180px">
                 <q-img
                   :src="baseuProducto + card._id"
@@ -154,7 +154,7 @@
     <q-scroll-area
         v-if="ultimosProductos.length"
         horizontal
-        style="height: 410px;"
+        style="height: 405px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in ultimosProductos" :key="index" >
@@ -232,8 +232,8 @@
           <div class="text-center text-caption">Preciona en el botón azul para agregar un nuevo producto</div>
         </div>
         <div v-if="productos.length" class="row items-center justify-center q-mt-lg">
-          <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-          />
+          <q-btn no-caps rounded label="Ver más productos" color="primary" size="lg" style="width: 80%"
+          @click="verMas()"/>
         </div>
 
         <q-page-sticky v-if="miTienda" class="q-pb-lg" position="bottom-right" :offset="[18, 18]">
@@ -453,6 +453,7 @@ export default {
       comentarios: [],
       allProductos: [],
       productos: [],
+      mejores: [],
       ultimosProductos: []
     }
   },
@@ -542,22 +543,10 @@ export default {
       this.$api.get('productos/' + id).then(res => {
         if (res) {
           this.allProductos = res
-          this.ultimosProductos = []
-          var largo = this.allProductos.length - 1
-          for (let i = 0; i < 10; i++) {
-            if (largo >= 0) {
-              this.ultimosProductos.push(this.allProductos[largo])
-              largo = largo - 1
-            }
-          }
-          this.productos = []
-          var largo2 = this.allProductos.length - 1
-          for (let i = 0; i < 4; i++) {
-            if (largo2 >= 0) {
-              this.productos.push(this.allProductos[i])
-              largo2 = largo2 - 1
-            }
-          }
+          var tot = res.slice()
+          this.mejores = this.allProductos.slice(0, 5)
+          this.productos = this.allProductos.slice(0, 4)
+          this.ultimosProductos = tot.reverse().slice(0, 10)
         }
       })
     },
@@ -567,6 +556,9 @@ export default {
           this.comentarios = res
         }
       })
+    },
+    verMas () {
+      this.productos = this.allProductos
     },
     eliminarProducto (id) {
       this.$q.dialog({

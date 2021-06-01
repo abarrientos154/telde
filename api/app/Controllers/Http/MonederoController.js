@@ -21,7 +21,7 @@ class MonederoController {
    */
   async index ({ request, response, auth }) {
     let user = await auth.getUser()
-    let egresos = (await Monedero.query().where({ tienda_id: user._id, type: 2}).fetch()).toJSON()
+    let egresos = (await Monedero.query().where({ tienda_id: user._id, type: 2}).orderBy('created_at', 'desc').fetch()).toJSON()
     response.send(egresos.map(v => {
       return {
         ...v,

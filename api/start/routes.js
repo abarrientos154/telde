@@ -104,6 +104,7 @@ addPrefixToGroup(
 
     Route.post("comprar_productos", "ProductoController.comprarProductos")
     Route.post("comprar_productos_comprobante", "ProductoController.comprarTransferencia")
+    Route.get("productos_vendidos", "ProductoController.productosVendidos")
     //////////////////////////////////////////////////////////////////////////
 
     ///////////////////////FAVORITOS/////////////////////////////////////////

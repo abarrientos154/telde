@@ -258,14 +258,7 @@ export default {
       this.$api.get('retiros').then(res => {
         if (res) {
           this.retiros = res
-          this.ultimas = []
-          var largo = this.retiros.length - 1
-          for (let i = 0; i < 2; i++) {
-            if (largo >= 0) {
-              this.ultimas.push(this.retiros[largo])
-              largo = largo - 1
-            }
-          }
+          this.ultimas = this.retiros.slice(0, 2)
         }
       })
     },
@@ -278,6 +271,7 @@ export default {
               this.getSaldo()
               this.getRetiros()
               this.solicitar = false
+              this.noMas = true
               this.exitoso = true
             }
           })
@@ -314,14 +308,7 @@ export default {
       }
     },
     verMas () {
-      this.ultimas = []
-      var largo = this.retiros.length - 1
-      for (let i = 0; i < this.retiros.length; i++) {
-        if (largo >= 0) {
-          this.ultimas.push(this.retiros[largo])
-          largo = largo - 1
-        }
-      }
+      this.ultimas = this.retiros
       this.noMas = false
     }
   }

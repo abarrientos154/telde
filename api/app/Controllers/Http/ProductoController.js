@@ -36,6 +36,12 @@ class ProductoController {
     })
     response.send(enviar)
   }
+
+  async productosVendidos ({ response, params, auth }) {
+    let user = await auth.getUser()
+    let productos = (await Compras.query().where({ proveedor_id: String(user._id) }).with('producto').orderBy('created_at', 'desc').fetch()).toJSON()
+    response.send(productos)
+  }
   /**
    * Show a list of all productos.
    * GET productos
