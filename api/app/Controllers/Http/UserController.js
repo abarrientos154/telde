@@ -32,9 +32,9 @@ class UserController {
     console.log(body, 'body aprobando pago')
     await User.query().where('_id', params.tienda_id).update({ status: 1 })
     await Payment.create({ tienda_id: params.tienda_id, costoM: body.costoM, cantMeses: body.cantM, status: 1 })
-    let user = await User.find(params.tienda_id)
+    let user = (await User.find(params.tienda_id)).toJSON()
+    console.log(user, 'user create')
     response.send(user)
-
   }
 
   async redirpay ({ auth, response, params, request, view }) {
@@ -48,11 +48,37 @@ class UserController {
 
   async logueoSinContrasena ({ auth, response, params, request }) {
     let body = request.only(['user_id'])
+    console.log(body, 'bodyy')
     let user = await User.find(body.user_id)
-    let token = await auth.generate(user)
+    let tokeng = await auth.generate(user)
+
+    let token = { ...tokeng, ...user }
+    let isUser = false
+    token.roles = user.roles.map(roleMap => {
+      if (roleMap === 3) {
+        isUser = true
+      }
+      return roleMap
+    })
+    let userRoles = await Role.whereIn('id', token.roles).fetch()
+    let permissions = userRoles.toJSON()
+    token.permissions = []
+    permissions.forEach(element => {
+      element.permissions.forEach(element2 => {
+        token.permissions.push(element2)
+      })
+    })
+
+    token.full_name = user.full_name
+    token.last_name = user.last_name
+    token._id = user._id
+    token.enable = user.enable
+    token.email = user.email
+    token.verify = user.verify
     let data = {}
     data.TELDE_SESSION_INFO = token
     return data
+
   }
 
   async index({ params, response, auth }) {
@@ -226,14 +252,10 @@ class UserController {
     const user = await User.query().where({_id: params.id}).first()
     var cal = (await Comentario.query().where({tienda_id: params.id}).fetch()).toJSON()
     var total = 0
-    if (cal.length) {
-      cal.forEach(v => {
-        total += v.rating
-      })
-      user.calificacion = (total / cal.length)
-    } else {
-      user.calificacion = 0
-    }
+    cal.forEach(v => {
+      total += v.rating
+    })
+    user.calificacion = (total / cal.length)
     response.send(user)
   }
 
