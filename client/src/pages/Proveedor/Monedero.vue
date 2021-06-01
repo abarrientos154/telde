@@ -37,7 +37,7 @@
                   </div>
                   <div class="column">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Fecha de solicitud</div>
-                    <div class="text-caption text-grey-7">{{card.created_at}}</div>
+                    <div class="text-caption text-grey-7">{{formatData(card.created_at)}}</div>
                   </div>
                   <div class="row">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Saldo retirado </div>
@@ -61,26 +61,28 @@
 
       <div class="text-center text-h6 q-my-lg text-grey-8">Busca tus retiros</div>
       <div class="q-py-sm row justify-center">
-        <q-input borderless readonly dense v-model="form.fecha_inicio" label="Fecha inicio" color="black" mask="date" :rules="['date']" style="width:85%">
+        <q-input borderless readonly dense v-model="form.fecha_inicio" label="Fecha inicio" color="black" mask="date" :rules="['date']" style="width:85%"
+        :error="$v.form.fecha_inicio.$error" @blur="$v.form.fecha_inicio.$touch()">
           <template v-slot:append>
             <q-icon name="event" class="cursor-pointer" size="md">
               <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale">
                 <q-date v-model="form.fecha_inicio">
                   <div class="row items-center justify-end">
-                    <q-btn v-close-popup label="Close" color="primary" flat />
+                    <q-btn v-close-popup label="Cerrar" color="primary" flat />
                   </div>
                 </q-date>
               </q-popup-proxy>
             </q-icon>
           </template>
         </q-input>
-        <q-input borderless readonly dense v-model="form.fecha_fin" label="Fecha fin" color="black" mask="date" :rules="['date']" style="width:85%">
+        <q-input borderless readonly dense v-model="form.fecha_fin" label="Fecha fin" color="black" mask="date" :rules="['date']" style="width:85%"
+        :error="$v.form.fecha_fin.$error" @blur="$v.form.fecha_fin.$touch()">
           <template v-slot:append>
             <q-icon name="event" class="cursor-pointer" size="md">
               <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale">
                 <q-date v-model="form.fecha_fin">
                   <div class="row items-center justify-end">
-                    <q-btn v-close-popup label="Close" color="primary" flat />
+                    <q-btn v-close-popup label="Cerrar" color="primary" flat />
                   </div>
                 </q-date>
               </q-popup-proxy>
@@ -91,7 +93,7 @@
       </div>
         <div class="row justify-end q-mx-lg">
           <q-btn rounded class="q-px-md" color="primary" label="Buscar" no-caps
-          />
+          @click="filtrar()"/>
         </div>
 
       <div v-if="retirosFilter.length">
@@ -107,7 +109,7 @@
                   </div>
                   <div class="column">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Fecha de solicitud</div>
-                    <div class="text-caption text-grey-7">{{card.created_at}}</div>
+                    <div class="text-caption text-grey-7">{{formatData(card.created_at)}}</div>
                   </div>
                   <div class="row">
                     <div class="text-h6 text-black q-mr-sm text-weight-bolder">Saldo retirado </div>
@@ -123,6 +125,7 @@
           </q-card>
         </div>
       </div>
+      <div v-else class="text-center text-h6 q-my-lg">No tienes solicitudes</div>
 
       <q-dialog v-model="solicitar">
         <q-card style="width: 100%; border-radius: 30px">
@@ -191,7 +194,7 @@
                   <div :class="selecRetiro.status === 'Aprobado' ? 'text-blue' : 'text-orange'" class="text-h6 text-bold">{{selecRetiro.status}}</div>
                 </div>
                 <div class="text-h6 text-black q-mr-sm text-bold">Fecha de solicitud</div>
-                <div class="text-subtitle1 text-grey-7">{{selecRetiro.created_at}}</div>
+                <div class="text-subtitle1 text-grey-7">{{formatData(selecRetiro.created_at)}}</div>
                 <div class="text-h6 text-black q-mr-sm text-bold">Fecha de aprobación</div>
                 <div class="text-subtitle1 text-grey-7">{{selecRetiro.status === 'Aprobado' ? selecRetiro.updated_at : 'Aún no hay fecha disponible'}}</div>
                 <div class="row q-mt-xl">
@@ -211,6 +214,7 @@
 
 <script>
 import { required } from 'vuelidate/lib/validators'
+import moment from 'moment'
 export default {
   data () {
     return {
@@ -228,6 +232,10 @@ export default {
     }
   },
   validations: {
+    form: {
+      fecha_inicio: { required },
+      fecha_fin: { required }
+    },
     retiro: { required }
   },
   mounted () {
@@ -235,6 +243,10 @@ export default {
     this.getRetiros()
   },
   methods: {
+    formatData (dat) {
+      var data = moment(dat).format('DD/MM/YYYY')
+      return data
+    },
     getSaldo () {
       this.$api.get('saldo_actual').then(res => {
         if (res) {
@@ -258,7 +270,7 @@ export default {
       })
     },
     retirar () {
-      this.$v.$touch()
+      this.$v.retiro.$touch()
       if (!this.$v.retiro.$error) {
         if (this.retiro <= this.saldo_actual) {
           this.$api.post('solicitar_retiro', { monto: this.retiro }).then(res => {
@@ -280,6 +292,25 @@ export default {
             // console.log('>>>> Cancel')
           })
         }
+      }
+    },
+    filtrar () {
+      this.$v.form.$touch()
+      if (!this.$v.form.$error) {
+        if (moment(this.form.fecha_inicio) < moment(this.form.fecha_fin)) {
+          this.retirosFilter = this.retiros.filter(v => moment(v.created_at) >= moment(this.form.fecha_inicio) && moment(v.created_at) <= moment(this.form.fecha_fin))
+        } else {
+          this.$q.dialog({
+            title: 'Atención',
+            message: 'La fecha de inicio debe ser menor a la fecha final de búsqueda',
+            cancel: false
+          }).onOk(() => {
+            // console.log('>>>> Ok')
+          }).onCancel(() => {
+            // console.log('>>>> Cancel')
+          })
+        }
+        console.log('filtrados', this.retirosFilter)
       }
     },
     verMas () {

@@ -25,7 +25,6 @@ class MonederoController {
     response.send(egresos.map(v => {
       return {
         ...v,
-        created_at: moment(v.created_at).format('DD-MM-YYYY'),
         updated_at: moment(v.updated_at).format('DD-MM-YYYY')
       }
     }))
