@@ -107,6 +107,7 @@ addPrefixToGroup(
 
     Route.post("comprar_productos", "ProductoController.comprarProductos")
     Route.post("comprar_productos_comprobante", "ProductoController.comprarTransferencia")
+    Route.get("productos_vendidos", "ProductoController.productosVendidos")
     //////////////////////////////////////////////////////////////////////////
 
     ///////////////////////FAVORITOS/////////////////////////////////////////
@@ -122,6 +123,12 @@ addPrefixToGroup(
     Route.post("calificar_tienda", "ProductoController.calificarTienda")
     Route.get("comentarios", "ProductoController.comentariosTienda")
     ///////////////////////Reportes/////////////////////////////////////////
+
+    ///////////////////////Monedero/////////////////////////////////////////
+    Route.get("saldo_actual", "MonederoController.showSaldo")
+    Route.get("retiros", "MonederoController.index")
+    Route.post("solicitar_retiro", "MonederoController.create")
+    ///////////////////////Monedero/////////////////////////////////////////
 
 
 

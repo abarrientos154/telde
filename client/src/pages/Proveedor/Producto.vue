@@ -19,7 +19,7 @@
       <div class="row q-pa-sm justify-around q-mt-md">
         <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
           <div class="text-subtitle2 text-grey-8">Nombre del producto</div>
-          <q-input v-model="form.nombre" label="" filled
+          <q-input v-model="form.nombre" filled
           error-message="Requerido" :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
           />
         </div>
@@ -42,7 +42,7 @@
         </div>
         <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
           <div class="text-subtitle2 text-grey-8">Precio</div>
-          <q-input v-model.number="form.valor" label="" filled type="number"
+          <q-input v-model.number="form.valor" filled type="number"
           error-message="Requerido" :error="$v.form.valor.$error" @blur="$v.form.valor.$touch()"
           />
         </div>

@@ -111,8 +111,8 @@
               </q-card-section>
 
               <q-card-section class="absolute-bottom">
-                <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
-                <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">€{{formatPrice(card.valor)}}</div>
+                <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">€<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                 <div class="row items-center">
                   <q-btn no-caps icon="store" label="Ir tienda" color="primary" style="border-radius: 9px"
                   @click="irTienda(card.proveedor_id)" />

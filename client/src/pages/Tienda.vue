@@ -108,12 +108,12 @@
 
       <div class="text-h6 q-ma-md text-grey-8">Mejores categorizados</div>
       <q-scroll-area
-          v-if="productos.length"
+          v-if="mejores.length"
           horizontal
-          style="height: 410px;"
+          style="height: 405px;"
         >
           <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-            <div v-for="(card, index) in productos" :key="index" >
+            <div v-for="(card, index) in mejores" :key="index" >
               <q-card flat class="my-card" style="height: 370px; width: 180px">
                 <q-img
                   :src="baseuProducto + card._id"
@@ -134,8 +134,8 @@
                 </q-card-section>
 
                 <q-card-section class="absolute-bottom">
-                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
-                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">€{{formatPrice(card.valor)}}</div>
+                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">€<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                   <div v-if="rol === 2 || rol === 0" class="row items-center">
                     <q-btn no-caps label="Agregar producto" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
@@ -154,7 +154,7 @@
     <q-scroll-area
         v-if="ultimosProductos.length"
         horizontal
-        style="height: 410px;"
+        style="height: 405px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <div v-for="(card, index) in ultimosProductos" :key="index" >
@@ -178,8 +178,8 @@
               </q-card-section>
 
               <q-card-section class="absolute-bottom">
-                <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
-                <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">€{{formatPrice(card.valor)}}</div>
+                <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">€<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                 <div v-if="rol === 2 || rol === 0" class="row items-center">
                   <q-btn no-caps label="Agregar producto" color="primary" style="border-radius: 9px"
                   @click="rol === 2 ? addCarrito(card) : noLogin = true" />
@@ -217,8 +217,8 @@
                 </q-card-section>
 
                 <q-card-section class="absolute-bottom">
-                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">${{formatPrice(card.valor)}}</div>
-                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">$<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
+                  <div v-if="!card.oferta" class="text-h6 text-blue q-my-sm">€{{formatPrice(card.valor)}}</div>
+                  <div v-if="card.oferta" class="text-h6 text-blue q-my-sm">€<strike>{{formatPrice(card.valor)}}</strike> - {{formatPrice(card.ofertaVal)}}</div>
                   <div v-if="rol === 2 || rol === 0" class="row items-center">
                     <q-btn no-caps label="Agregar producto" size="sm" color="primary" style="border-radius: 9px"
                     @click="rol === 2 ? addCarrito(card) : noLogin = true" />
@@ -232,8 +232,8 @@
           <div class="text-center text-caption">Preciona en el botón azul para agregar un nuevo producto</div>
         </div>
         <div v-if="productos.length" class="row items-center justify-center q-mt-lg">
-          <q-btn no-caps icon="store" label="Ver más productos" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-          />
+          <q-btn no-caps rounded label="Ver más productos" color="primary" size="lg" style="width: 80%"
+          @click="verMas()"/>
         </div>
 
         <q-page-sticky v-if="miTienda" class="q-pb-lg" position="bottom-right" :offset="[18, 18]">
@@ -288,7 +288,7 @@
                             <div class="text-subtitle1 text-grey-8 ellipsis">{{producto.proveedor_name}}</div>
                           </div>
                           <div class="q-mt-xs q-ml-sm">
-                            <div class="text-h6 text-positive"> {{!producto.oferta ? '$' + formatPrice(producto.valor) : '$' + formatPrice(producto.ofertaVal)}} </div>
+                            <div class="text-h6 text-positive"> {{!producto.oferta ? '€' + formatPrice(producto.valor) : '€' + formatPrice(producto.ofertaVal)}} </div>
                           </div>
                           <div class="row">
                             <q-btn flat no-caps dense class="q-mr-sm" color="grey-6" icon="delete" label="Eliminar" @click="deleteProdCarrito(index)" />
@@ -308,7 +308,7 @@
                   </div>
                   <div class="row justify-between q-my-lg" style="width:100%">
                     <div class="text-h6 text-grey">Total a pagar</div>
-                    <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
+                    <div class="text-h4 text-bold text-primary">€{{formatPrice(totalCarrito)}}</div>
                   </div>
                   <div class="row justify-center" style="width:100%">
                     <q-btn :disable="carrito.length ? false : true" @click="$v.form.$reset(), comprarCarrito = true, verCarrito = false" no-caps label="Checkout" color="primary" size="lg" style="width: 90%; border-radius:15px" />
@@ -367,14 +367,14 @@
                     </div>
                     <div class="row justify-between q-my-sm" style="width:100%">
                       <div class="text-h6 text-grey">Total a pagar</div>
-                      <div class="text-h4 text-bold text-primary">${{formatPrice(totalCarrito)}}</div>
+                      <div class="text-h4 text-bold text-primary">€{{formatPrice(totalCarrito)}}</div>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 q-py-lg column justify-end items-end">
                   <div class="row justify-between q-my-lg" style="width:100%">
                     <div class="text-h6 text-grey">Precio total</div>
-                    <div class="text-h4 text-bold text-blue">${{formatPrice(totalCarrito)}}</div>
+                    <div class="text-h4 text-bold text-blue">€{{formatPrice(totalCarrito)}}</div>
                   </div>
                   <div class="row justify-center" style="width:100%">
                     <q-btn :disable="carrito.length ? false : true" @click="iniciarCompra()" no-caps label="Pagar ahora" color="primary" size="lg" style="width: 90%; border-radius:15px" />
@@ -453,6 +453,7 @@ export default {
       comentarios: [],
       allProductos: [],
       productos: [],
+      mejores: [],
       ultimosProductos: []
     }
   },
@@ -536,30 +537,16 @@ export default {
     getInfoById (id) {
       this.$api.post('user_by_id/' + id).then(res => {
         this.user = res
-        console.log('user', this.user)
       })
     },
     getProductosByProveedor (id) {
       this.$api.get('productos/' + id).then(res => {
         if (res) {
           this.allProductos = res
-          console.log(res)
-          this.ultimosProductos = []
-          var largo = this.allProductos.length - 1
-          for (let i = 0; i < 10; i++) {
-            if (largo >= 0) {
-              this.ultimosProductos.push(this.allProductos[largo])
-              largo = largo - 1
-            }
-          }
-          this.productos = []
-          var largo2 = this.allProductos.length - 1
-          for (let i = 0; i < 4; i++) {
-            if (largo2 >= 0) {
-              this.productos.push(this.allProductos[i])
-              largo2 = largo2 - 1
-            }
-          }
+          var tot = res.slice()
+          this.mejores = this.allProductos.slice(0, 5)
+          this.productos = this.allProductos.slice(0, 4)
+          this.ultimosProductos = tot.reverse().slice(0, 10)
         }
       })
     },
@@ -567,9 +554,11 @@ export default {
       this.$api.get('comentarios').then(res => {
         if (res) {
           this.comentarios = res
-          console.log('comentarios', this.comentarios)
         }
       })
+    },
+    verMas () {
+      this.productos = this.allProductos
     },
     eliminarProducto (id) {
       this.$q.dialog({
@@ -614,7 +603,6 @@ export default {
           prod.ofertaVal = val.ofertaVal
         }
         this.carrito.push(prod)
-        console.log(this.carrito)
         prod = {}
         this.$q.notify({
           message: 'Añadido al carro de compra',

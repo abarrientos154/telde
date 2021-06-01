@@ -10,6 +10,7 @@ const Flow = use('App/Models/Flow')
 const Compras = use('App/Models/ComprasProducto')
 const Pedido = use('App/Models/Compra')
 const Comentario = use('App/Models/Comentario')
+const Monedero = use('App/Models/Monedero')
 const fs = require('fs')
 const { validate } = use("Validator")
 var randomize = require('randomatic')
@@ -34,6 +35,12 @@ class ProductoController {
       }
     })
     response.send(enviar)
+  }
+
+  async productosVendidos ({ response, params, auth }) {
+    let user = await auth.getUser()
+    let productos = (await Compras.query().where({ proveedor_id: String(user._id) }).with('producto').orderBy('created_at', 'desc').fetch()).toJSON()
+    response.send(productos)
   }
   /**
    * Show a list of all productos.
@@ -205,6 +212,13 @@ class ProductoController {
     data.productos_total = productos.length
     data.status = 'En Local'
     var compra = await Pedido.create(data)
+    var moneda = {
+      tienda_id: compra.tienda_id,
+      pedido_id: compra._id,
+      type: 1,
+      monto: compra.totalValor
+    }
+    var crearMoneda = await Monedero.create(moneda)
     for (let i = 0; i < productos.length; i++) {
       var dat = productos[i]
       dat.pedido_id = compra._id

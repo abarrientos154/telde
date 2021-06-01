@@ -1,8 +1,10 @@
 <template>
   <div>
-      <div class="bg-secondary column justify-center" style="height: 150px; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
-        <div class="text-center text-h5 text-white text-bold">Pedidos</div>
+    <q-img :src="'nopublicidad.jpg'" style="height: 150px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
+      <div class="absolute-full">
+        <div class="absolute-center full-width text-bold text-h5 text-center">Pedidos</div>
       </div>
+    </q-img>
 
       <div class="q-px-lg q-mt-lg">
         <div class="q-mt-sm text-subtitle1">Nombre completo</div>
@@ -180,7 +182,7 @@
                   <div class="column">
                     <div class="text-h8 text-bold text-grey">{{item.proveedor_name}}</div>
                     <div class="row">
-                      <div class="text-h6 q-mt-xs text-bold text-primary">$ {{item.oferta ? item.ofertaVal : item.valor}}</div>
+                      <div class="text-h6 q-mt-xs text-bold text-primary">€ {{item.oferta ? item.ofertaVal : item.valor}}</div>
                       <div class="q-pl-md q-mt-xs text-h6 text-bold">|</div>
                       <div class="q-pl-md q-mt-sm">
                       <div style="width:20px;height:20px" class="bg-black"></div>
@@ -199,7 +201,7 @@
               <div class="row">
                 <div class="q-mt-md text-h6 text-grey text-bold">Total a pagar</div>
                 <q-space />
-                <div class="q-mt-md text-h6 text-primary text-bold">$ {{pedidoSelec.totalValor}}</div>
+                <div class="q-mt-md text-h6 text-primary text-bold">€ {{pedidoSelec.totalValor}}</div>
               </div>
           </q-card-section>
         </q-card>
@@ -396,7 +398,6 @@ export default {
           this.pedidos = res
           this.pendientes = res.filter(v => v.status === 'En Local' || v.status === 'Enviado')
           this.completados = res.filter(v => v.status === 'Completado')
-          console.log('pedidos', this.pedidos)
         }
       })
     },
