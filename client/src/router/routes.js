@@ -7,24 +7,24 @@ const routes = [
       // Administrador
       { path: '/all_users', component: () => import('pages/Admin/Users.vue') },
       // Cliente
+      { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tiendas_favoritas', component: () => import('pages/Cliente/TiendasFavoritas.vue') },
-      { path: '/pedidosC', component: () => import('pages/Cliente/Pedidos.vue') },
+      { path: '/mis_pedidos', component: () => import('pages/Cliente/Pedidos.vue') },
       // Tienda
       { path: '/producto', component: () => import('pages/Proveedor/Producto.vue') },
       { path: '/editar_producto/:producto_id', component: () => import('pages/Proveedor/Producto.vue') },
       { path: '/estadisticas', component: () => import('pages/Proveedor/Estadisticas.vue') },
+      { path: '/mis_pedidos_tienda', component: () => import('pages/Proveedor/Pedidos.vue') },
       { path: '/monedero', component: () => import('pages/Proveedor/Monedero.vue') },
       { path: '/editar-perfil', component: () => import('pages/Proveedor/Perfil.vue') },
       // Generales
       { path: '/administrador', component: () => import('pages/Administrador.vue') },
-      { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tienda/:proveedor_id', component: () => import('pages/Tienda.vue') },
       { path: '/Detalleproducto', component: () => import('pages/ProductoDetalle.vue') },
       { path: '/contacto', component: () => import('pages/Contacto.vue') },
       { path: '/Blog', component: () => import('pages/Blog.vue') },
       { path: '/somos', component: () => import('pages/SomosNova.vue') },
       { path: '/Blog2', component: () => import('pages/Blog2.vue') },
-      { path: '/pedidos', component: () => import('pages/Proveedor/Pedidos.vue') },
       { path: '/tiendas', component: () => import('pages/Cliente/Tiendas.vue') }
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
