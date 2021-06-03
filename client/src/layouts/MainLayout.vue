@@ -5,7 +5,7 @@
       <router-view />
     </q-page-container>
 
-      <q-footer elevated v-if="login">
+      <q-footer elevated v-if="rol != 0">
         <div v-if="rol !== 1" class="bg-blue-14 shadow-2 full-width row justify-around" >
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'store' : 'home'" :label="rol === 3 ? 'Tienda' : 'Home'" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/tienda/'+user_id) : $router.push('/inicio')" /></div>
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'monetization_on' : 'store'" :label="rol === 3 ? 'Monedero' : 'Tiendas'" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/monedero/') : $router.push('/tiendas')" /></div>
@@ -32,19 +32,14 @@ export default {
     return {
       rol: 0,
       text: '',
-      user_id: '',
-      login: false
+      user_id: ''
     }
   },
   computed: {
     ...mapGetters('generals', ['can'])
   },
   mounted () {
-    const value = localStorage.getItem('TELDE_SESSION_INFO')
-    if (value) {
-      this.login = true
-      this.getInfo()
-    }
+    this.getInfo()
   },
   methods: {
     ...mapMutations('generals', ['logout']),

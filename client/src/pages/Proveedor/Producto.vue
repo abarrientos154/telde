@@ -162,7 +162,6 @@ export default {
         width: '9px',
         opacity: 0
       },
-      categorias: [],
       form: {},
       images: [],
       imagesSubir: []
@@ -180,7 +179,6 @@ export default {
   },
   computed: {},
   mounted () {
-    this.getCategorias()
     this.baseuProducto = env.apiUrl + '/producto_files/'
     if (this.$route.params.producto_id) {
       this.edit = true
@@ -203,13 +201,6 @@ export default {
           for (let i = 0; i < this.images.length; i++) {
             this.imagesSubir.push(this.baseuProducto + this.images[i])
           }
-        }
-      })
-    },
-    getCategorias () {
-      this.$api.get('categorias_y_sub').then(res => {
-        if (res) {
-          this.categorias = res.categoria
         }
       })
     },

@@ -20,7 +20,6 @@ const routes = [
       // Generales
       { path: '/administrador', component: () => import('pages/Administrador.vue') },
       { path: '/tienda/:proveedor_id', component: () => import('pages/Tienda.vue') },
-      { path: '/Detalleproducto', component: () => import('pages/ProductoDetalle.vue') },
       { path: '/contacto', component: () => import('pages/Contacto.vue') },
       { path: '/Blog', component: () => import('pages/Blog.vue') },
       { path: '/somos', component: () => import('pages/SomosNova.vue') },

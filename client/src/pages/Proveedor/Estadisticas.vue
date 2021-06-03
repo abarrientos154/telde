@@ -14,10 +14,6 @@
             <div class="text-caption text-white">Dinero de tu monedero</div>
             <div class="row items-center justify-between">
               <div class="text-h4 text-bold text-white q-mr-sm">€{{saldo_actual}}</div>
-              <div>
-                <q-btn :disable="saldo_actual > 0 ? false : true" class="q-px-sm col" color="primary" label="Solicitar" style="border-radius: 10px;" no-caps
-                />
-              </div>
             </div>
           </q-card-section>
         </q-card>
@@ -64,7 +60,7 @@
         </div>
       </div>
       <div class="row justify-center q-mb-lg">
-        <q-btn rounded class="q-pa-xs" color="primary" label="Ver estadísticas" style="width: 90%;" no-caps
+        <q-btn :disable="fecha === null ? true : false" rounded class="q-pa-xs" color="primary" label="Ver estadísticas" style="width: 90%;" no-caps
         @click="getReport()"/>
       </div>
 
@@ -104,8 +100,8 @@
           <div class="col-12 row justify-center q-mb-md">
             <q-btn rounded class="q-pa-xs" color="primary" text-color="white" @click="ver()" :label="verMas ? 'Ver menos productos' : 'Ver más productos'" style="width: 90%;" no-caps/>
           </div>
-        </div>
-        <div v-else class="text-center text-h6 q-my-lg">Aún no tienes productos vendidos</div>
+      </div>
+      <div v-else class="text-center text-h6 q-my-lg">Aún no tienes productos vendidos</div>
   </div>
 </template>
 
@@ -165,12 +161,17 @@ export default {
       })
     },
     getReport () {
+      this.$q.loading.show({
+        message: 'Construyendo datos'
+      })
       this.$api.post('estadistica', { type: this.report, fecha: this.fecha }).then(res => {
         if (res) {
           this.chartData = res
           this.verEstadistica = true
+          this.$q.loading.hide()
         }
       })
+      this.$q.loading.hide()
     },
     vaciar () {
       this.fecha = null
@@ -203,8 +204,12 @@ export default {
       }
     },
     ver () {
-      this.productos = this.allProductos
       this.verMas = !this.verMas
+      if (this.verMas) {
+        this.productos = this.allProductos
+      } else {
+        this.productos = this.allProductos.slice(0, 4)
+      }
     },
     formatPrice (value) {
       const val = (value / 1).toFixed(0).replace('.', ',')

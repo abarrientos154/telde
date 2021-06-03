@@ -304,7 +304,6 @@ export default {
             // console.log('>>>> Cancel')
           })
         }
-        console.log('filtrados', this.retirosFilter)
       }
     },
     verMas () {
