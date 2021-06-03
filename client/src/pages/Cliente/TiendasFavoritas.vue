@@ -6,15 +6,15 @@
       </div>
     </q-img>
 
-    <div class="text-h6 q-mt-md q-ml-md">Últimas tiendas agregadas</div>
+    <div class="text-h6 q-mx-md text-grey-8 q-mt-md">Últimas tiendas agregadas</div>
     <q-scroll-area
-        v-if="data.length > 0"
+        v-if="ultimas.length > 0"
         horizontal
         style="height: 350px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-          <div v-for="(card, index) in tiendas" :key="index" >
-            <q-card style="width:400px">
+          <div v-for="(card, index) in ultimas" :key="index" >
+            <q-card style="width:400px; border-radius:15px">
               <q-img
                 :src="baseuTiendas + card.proveedor_id"
                 spinner-color="white"
@@ -44,11 +44,11 @@
           </div>
         </div>
     </q-scroll-area>
-    <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
+    <div v-else class="text-center text-h6 q-my-lg">No hay tiendas agregadas</div>
 
-    <div class="text-h6 q-my-md text-center">Más tiendas</div>
-      <div v-if="data.length > 0" class="row justify-around">
-        <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
+    <div class="q-my-sm text-center text-h6 text-grey-8">Más tiendas</div>
+      <div v-if="tiendas.length" class="row justify-around">
+        <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in tiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">
               <q-img
                 :src="baseuTiendas + card.proveedor_id"
@@ -75,10 +75,10 @@
             </q-card>
         </div>
       </div>
-      <q-card v-else class="column items-center justify-center q-ma-md bg-secondary text-h6 text-white" style="height: 230px; width: 210px">*Nada por aquí*</q-card>
+      <div v-else class="text-center text-h6 q-my-lg">No hay tiendas agregadas</div>
       <div class="row items-center justify-center q-mt-lg">
-        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-        @click="masData()" />
+        <q-btn no-caps rounded label="Ver más tiendas" color="primary" size="lg" style="width: 80%"
+        @click="verMas()" />
       </div>
   </q-page>
 </template>
@@ -88,9 +88,9 @@ import env from '../../env'
 export default {
   data () {
     return {
-      data: [],
+      ultimas: [],
+      allTiendas: [],
       tiendas: [],
-      masTiendas: [],
       baseuTiendas: ''
     }
   },
@@ -99,34 +99,21 @@ export default {
     this.baseuTiendas = env.apiUrl + '/perfil_img/'
   },
   methods: {
+    getFavoritos () {
+      this.$api.get('favoritos').then(res => {
+        this.allTiendas = res
+        var tot = res.slice()
+        this.tiendas = this.allTiendas.slice(0, 4)
+        this.ultimas = tot.reverse().slice(0, 5)
+      })
+    },
     deleteFavorito (id) {
       this.$api.delete('favorito/' + id).then(res => {
         this.getFavoritos()
       })
     },
-    getFavoritos () {
-      this.$api.get('favoritos').then(res => {
-        this.data = res
-        this.tiendas = []
-        var largo1 = this.data.length - 1
-        for (let i = 0; i < 20; i++) {
-          if (largo1 >= 0) {
-            this.tiendas.push(this.data[largo1])
-            largo1 = largo1 - 1
-          }
-        }
-        this.masTiendas = []
-        var largo = this.data.length - 1
-        for (let i = 0; i < 4; i++) {
-          if (largo >= 0) {
-            this.masTiendas.push(this.data[i])
-            largo = largo - 1
-          }
-        }
-      })
-    },
-    masData () {
-      this.masTiendas = this.data
+    verMas () {
+      this.tiendas = this.allTiendas
     },
     irTienda (id) {
       this.$router.push('/tienda/' + id)

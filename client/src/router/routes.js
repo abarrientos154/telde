@@ -9,6 +9,9 @@ const routes = [
       // Cliente
       { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tiendas_favoritas', component: () => import('pages/Cliente/TiendasFavoritas.vue') },
+      { path: '/tiendas', component: () => import('pages/Cliente/Tiendas.vue') },
+      { path: '/tiendas/:cat', component: () => import('pages/Cliente/Tiendas.vue') },
+      { path: '/tiendas/:cat/:subcat', component: () => import('pages/Cliente/Tiendas.vue') },
       { path: '/mis_pedidos', component: () => import('pages/Cliente/Pedidos.vue') },
       // Tienda
       { path: '/producto', component: () => import('pages/Proveedor/Producto.vue') },
@@ -23,8 +26,7 @@ const routes = [
       { path: '/contacto', component: () => import('pages/Contacto.vue') },
       { path: '/Blog', component: () => import('pages/Blog.vue') },
       { path: '/somos', component: () => import('pages/SomosNova.vue') },
-      { path: '/Blog2', component: () => import('pages/Blog2.vue') },
-      { path: '/tiendas', component: () => import('pages/Cliente/Tiendas.vue') }
+      { path: '/Blog2', component: () => import('pages/Blog2.vue') }
       // Administrador
       /* { path: '/banners_publicidad', component: () => import('pages/Admin/Banners.vue') },
       { path: '/emprendedores', component: () => import('pages/Admin/Proveedores.vue') },
