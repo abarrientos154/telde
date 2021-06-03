@@ -2,7 +2,6 @@
   <div class="window-height window-width column bg-primary">
     <div class="fit column items-center justify-center">
       <div class="logo-splash"></div>
-      <div class="text-h5 text-bold q-mt-sm text-indigo-9">Bienvenido</div>
     </div>
   </div>
 </template>
@@ -16,12 +15,6 @@ export default {
     }
   },
   mounted () {
-    if (this.$q.platform.is.mobile) {
-      console.log('es emprendedor')
-    } else {
-      console.log('no es emprendedor')
-      this.$router.push('inicio')
-    }
   },
   methods: {
     ejecutar () {
@@ -32,7 +25,7 @@ export default {
     clearInterval(this.timer)
   },
   created () {
-    this.timer = setInterval(this.ejecutar, 5000)
+    this.timer = setInterval(this.ejecutar, 4000)
   },
   cancelAutoUpdate () { clearInterval(this.timer) }
 }
