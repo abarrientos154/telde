@@ -389,7 +389,7 @@
           <q-card class="q-py-xl" style="width: 100%">
               <div style="width:100%">
                 <div class="q-mb-md row justify-center">
-                  <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
+                  <q-img src="nova_telde-01.png" style="width:100%" >
                   </q-img>
                 </div>
                 <div class="text-center text-h6 text-bold">Compra exitosa</div>
@@ -397,6 +397,23 @@
                 <div class="row items-center justify-center q-mt-lg" style="width:100%">
                   <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
                   @click="compraExitosa = false" />
+                </div>
+              </div>
+          </q-card>
+        </q-dialog>
+
+        <q-dialog persistent v-model="compraFallo">
+          <q-card class="q-py-xl" style="width: 100%">
+              <div style="width:100%">
+                <div class="q-mb-md row justify-center">
+                  <q-img src="nova_telde-02.png" style="width:100%" >
+                  </q-img>
+                </div>
+                <div class="text-center text-h6 text-bold">Tuvimos problemas con tu pago</div>
+                <div class="text-center text-subtitle1 q-mx-md text-grey-8">Te estamos redireccionando al carro de compra para que verifiques tus datos de transacción</div>
+                <div class="row items-center justify-center q-mt-lg" style="width:100%">
+                  <q-btn no-caps label="Aceptar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+                  @click="comprarCarrito = true, compraFallo = false" />
                 </div>
               </div>
           </q-card>
