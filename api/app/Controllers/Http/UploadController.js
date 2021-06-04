@@ -94,6 +94,11 @@ class UploadController {
     response.download(Helpers.appRoot('storage/uploads/perfil') + `/${dir}`)
   }
 
+  async getFileByDirectoryPerfil ({ params, request, response }) {
+    const dir = params.file
+    response.download(Helpers.appRoot('storage/uploads/perfil') + `/${dir}`)
+  }
+
   async getFilePublicidad ({ params, response, request }) {
     let dir = params.file
     response.download(Helpers.appRoot('storage/uploads/publicidades') + `/${dir}`)

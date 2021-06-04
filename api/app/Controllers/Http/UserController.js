@@ -161,6 +161,35 @@ class UserController {
     }
   }
 
+  async edit ({ request, response }) {
+    let dat = request.only(['dat'])
+    dat = JSON.parse(dat.dat)
+    const validation = await validate(dat, User.fieldValidationRules())
+    if (validation.fails()) {
+      response.unprocessableEntity(validation.messages())
+    } else {
+      let body = dat
+      body.roles = [2]
+      const user = await User.create(body)
+
+      const profilePic = request.file('perfil', {
+      })
+      if (Helpers.appRoot('storage/uploads/perfil')) {
+        await profilePic.move(Helpers.appRoot('storage/uploads/perfil'), {
+          name: user._id.toString(),
+          overwrite: true
+        })
+      } else {
+        mkdirp.sync(`${__dirname}/storage/Excel`)
+      }
+      if (!profilePic.moved()) {
+        return profilePic.error()
+      }
+
+      response.send(user)
+    }
+  }
+
   async registerTienda ({ request, response }) {
     let dat = request.only(['dat'])
     dat = JSON.parse(dat.dat)

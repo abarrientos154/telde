@@ -51,6 +51,7 @@ const routes = [
   { path: '/login', component: () => import('pages/Login.vue') },
   { path: '/registro', component: () => import('pages/Registro/Parte1.vue') },
   { path: '/registro-cliente', component: () => import('pages/Registro/RegistroCliente.vue') },
+  { path: '/editar-cliente/', component: () => import('pages/Registro/EditarPerfilCliente.vue') },
   { path: '/registro-tienda', component: () => import('pages/Registro/RegistroTienda.vue') },
   { path: '/pago-membresia/:id', component: () => import('pages/Registro/PagoMembresia.vue') },
   /* { path: '/splash', component: () => import('pages/Splash.vue') }, */

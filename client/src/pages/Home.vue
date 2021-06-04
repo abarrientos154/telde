@@ -1,6 +1,12 @@
 <template>
   <div>
     <q-img src="nopublicidad.jpg" style="height: 400px; width: 100%;" >
+      <q-btn flat class="q-ml-md q-mt-md" @click="$router.push('/editar-cliente/')">
+        <q-chip>
+          <q-avatar icon="edit" color="primary" text-color="white" />
+          Editar Perfil
+        </q-chip>
+      </q-btn>
     </q-img>
 
     <div class="text-h5 q-my-md text-center text-grey-8 text-bold">¡Busca lo que necesites!</div>
@@ -211,7 +217,8 @@ export default {
       favoritoData: [],
       categorias: ['Comida', 'Tienda'],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
-      subCategorias: []
+      subCategorias: [],
+      idClient: ''
     }
   },
   mounted () {
@@ -234,6 +241,7 @@ export default {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.rol = res.roles[0]
+          this.idClient = res._id
           if (this.rol === 2) {
             this.getFavoritos()
           }
