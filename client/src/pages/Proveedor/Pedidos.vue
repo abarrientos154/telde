@@ -137,7 +137,7 @@
                   <q-img
                     style="height: 80px;width: 80px; border-radius:25px;"
                     class="rounded-borders"
-                    :src="'nopublicidad.jpg'"
+                    :src="baseuProducto + item.image"
                   />
                   </div>
               </q-card-section>
@@ -283,9 +283,11 @@
   </div>
 </template>
 <script>
+import env from '../../env'
 export default {
   data () {
     return {
+      baseuProducto: '',
       verPedido: false,
       stadosPedido: false,
       confirmCambio: false,
@@ -298,6 +300,7 @@ export default {
     }
   },
   mounted () {
+    this.baseuProducto = env.apiUrl + '/producto_files/'
     this.getPedidos()
   },
   methods: {

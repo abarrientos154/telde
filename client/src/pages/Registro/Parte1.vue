@@ -3,11 +3,11 @@
     <q-page-container>
       <q-page>
         <div>
-          <div class="q-pa-md">
+          <div class="q-px-md q-pt-md">
             <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
           </div>
           <div class="row justify-center absolute-center" style="width:100%">
-            <q-img src="fondo1.jpg" style="width:200px;height:200px;border-radius:25px" >
+            <q-img src="nova_telde-04.png" style="width:100%" >
             </q-img>
           </div>
           <div class="absolute-bottom q-mb-xl" style="width:100%">

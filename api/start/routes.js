@@ -53,15 +53,12 @@ addPrefixToGroup(
     Route.post("user_by_id/:id", "UserController.userById")
     Route.get("productos/:proveedor_id", "ProductoController.productosByProveedorId")
 
-    Route.post("categorias_no_logueado/:proveedor_id", "CategoriaController.indexNoLogueado")
-
     Route.post("flow_by_id/:id", "UserController.flowConfigData")
 
     Route.get('publicidad_img/:file', 'UploadController.getFilePublicidad')
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
     Route.get("all_productos", "ProductoController.allProductos")
-    Route.get("todo", "ProductoController.todo")
   })
 );
 
@@ -90,10 +87,6 @@ addPrefixToGroup(
     Route.put('publicidad/:id', 'PublicidadController.update')
     Route.delete('publicidad/:id', 'PublicidadController.destroy')
     Route.post("publicidad_enable/:id", "PublicidadController.publicidadEnable")
-
-    ////////////////CATEGORIAS Y SUBCATEGORIAS//////////////////
-    Route.get("categorias_y_sub", "CategoriaController.index")
-    ///////////////////////////////////////////////////////////////////////////
 
     //////////////////////////PRODUCTOS///////////////////////////////////////
     Route.post("producto", "ProductoController.store")
@@ -129,6 +122,7 @@ addPrefixToGroup(
     Route.get("saldo_actual", "MonederoController.showSaldo")
     Route.get("retiros", "MonederoController.index")
     Route.post("solicitar_retiro", "MonederoController.create")
+    Route.post("estadistica", "MonederoController.crearEstadistica")
     ///////////////////////Monedero/////////////////////////////////////////
 
 

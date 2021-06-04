@@ -4,11 +4,9 @@
       <q-page class="column justify-center items-center">
             <div class="column items-center justify-center">
                 <div class="row justify-center q-my-md">
-                  <img src="logo.png" alt="logo" style="width: 90px">
+                  <img src="logo_inicio.png" alt="logo" style="width: 270px">
                 </div>
-                <div class="q-mt-sm text-black text-h4">NOVA TELDE</div>
-                <div class="text-blue text-subtitle1">A tu alcance</div>
-                <div class="q-mt-sm text-black text-h6">Inicio de Sesión</div>
+                <div class="text-black text-h5 text-bold">Inicio de Sesión</div>
             </div>
 
             <q-form @submit="onSubmit" class="q-gutter-sm q-ma-sm q-mt-sm">
@@ -128,10 +126,15 @@ export default {
       })
       this.$api.post('login', this.form).then(res => {
         if (res) {
+          console.log('user', res.TELDE_SESSION_INFO)
           if (res.TELDE_SESSION_INFO.roles[0] === 2 || res.TELDE_SESSION_INFO.roles[0] === 3) {
             if (res.TELDE_SESSION_INFO.enable) {
               if (res.TELDE_SESSION_INFO.roles[0] === 3) {
-                this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+                if (res.TELDE_SESSION_INFO.status === 2) {
+                  this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+                } else {
+                  this.$router.push('/pago-membresia/' + res.TELDE_SESSION_INFO._id)
+                }
               } else {
                 this.$router.push('/inicio')
               }

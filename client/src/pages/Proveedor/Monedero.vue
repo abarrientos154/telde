@@ -52,8 +52,8 @@
             </q-card-section>
           </q-card>
         </div>
-        <div v-if="noMas" class="row justify-center q-mb-lg q-my-sm">
-          <q-btn rounded class="q-pa-xs" color="primary" label="Ver más" style="width: 90%;" no-caps
+        <div class="row justify-center q-mb-lg q-my-sm">
+          <q-btn rounded class="q-pa-xs" color="primary" :label="noMas ? 'Ver más' : 'Ver menos'" style="width: 90%;" no-caps
           @click="verMas()"/>
         </div>
       </div>
@@ -164,7 +164,7 @@
 
           <q-card-section class="q-pt-xl">
             <div class="row justify-center">
-              <q-img src="fondo1.jpg" style="width:60%;height:170px; border-radius: 20px" >
+              <q-img src="nova_telde-03.png" style="width:100%" >
               </q-img>
             </div>
           </q-card-section>
@@ -304,12 +304,15 @@ export default {
             // console.log('>>>> Cancel')
           })
         }
-        console.log('filtrados', this.retirosFilter)
       }
     },
     verMas () {
-      this.ultimas = this.retiros
-      this.noMas = false
+      if (this.noMas) {
+        this.ultimas = this.retiros
+      } else {
+        this.ultimas = this.retiros.slice(0, 2)
+      }
+      this.noMas = !this.noMas
     }
   }
 }

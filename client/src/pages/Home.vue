@@ -36,8 +36,8 @@
       </div>
     </q-scroll-area>
     <div class="q-my-md row justify-center">
-      <q-btn style="width:50%" rounded no-caps color="primary" label="Buscar"
-      />
+      <q-btn :disable="selecCategoria === '' ? true : false" style="width:50%" rounded no-caps color="primary" label="Buscar"
+      @click="filterTiendas()"/>
     </div>
 
     <div class="text-h6 q-mx-md text-grey-8">Algunas de nuestras tiendas</div>
@@ -176,8 +176,8 @@
         </div>
       </div>
       <div class="row items-center justify-center q-mt-lg">
-        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-        />
+        <q-btn no-caps rounded label="Ver más tiendas" color="primary" size="lg" style="width: 80%"
+        @click="$router.push('/tiendas')"/>
       </div>
 
     <q-dialog v-model="verProducto">
@@ -331,24 +331,22 @@ export default {
         this.selecSubCategoria = btn
       }
     },
+    filterTiendas () {
+      if (this.selecCategoria === 'Comida') {
+        if (this.selecSubCategoria !== '') {
+          this.$router.push('/tiendas/' + this.selecCategoria + '/' + this.selecSubCategoria)
+        } else {
+          this.$router.push('/tiendas/' + this.selecCategoria)
+        }
+      } else {
+        this.$router.push('/tiendas/' + this.selecCategoria)
+      }
+    },
     irRuta (ruta) {
       openURL(ruta)
     },
     irTienda (id) {
-      if (this.login) {
-        this.$api.get('user_info').then(res => {
-          if (res) {
-            var mio = res._id
-            if (mio === id) {
-              this.$router.push('/tienda/' + id)
-            } else {
-              this.$router.push('/tienda/' + id)
-            }
-          }
-        })
-      } else {
-        this.$router.push('/tienda/' + id)
-      }
+      this.$router.push('/tienda/' + id)
     }
   }
 }
