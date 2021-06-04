@@ -170,7 +170,7 @@
                   <q-img
                     style="height: 80px;width: 80px; border-radius:25px;"
                     class="rounded-borders"
-                    :src="'nopublicidad.jpg'"
+                    :src="baseuProducto + item.image"
                   />
                   </div>
               </q-card-section>
@@ -326,8 +326,8 @@
         <q-card class="q-py-md" style="width: 100%; border-radius: 30px">
 
           <q-card-section class="q-pt-xl">
-            <div class="q-mb-md row justify-center">
-              <q-img src="fondo1.jpg" style="width:80%;height:170px;" >
+            <div class="row justify-center">
+              <q-img src="nova_telde-07.png" style="width:100%" >
               </q-img>
             </div>
           </q-card-section>
@@ -349,6 +349,7 @@
 </template>
 <script>
 import { required } from 'vuelidate/lib/validators'
+import env from '../../env'
 export default {
   data () {
     return {
@@ -363,6 +364,7 @@ export default {
       numberP: 0,
       text1: '',
       text2: '',
+      baseuProducto: '',
       form: {},
       comentario: {
         rating: 0
@@ -380,6 +382,7 @@ export default {
     }
   },
   mounted () {
+    this.baseuProducto = env.apiUrl + '/producto_files/'
     this.getInfo()
     this.getPedidos()
   },
