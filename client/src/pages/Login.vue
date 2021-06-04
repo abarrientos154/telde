@@ -126,10 +126,15 @@ export default {
       })
       this.$api.post('login', this.form).then(res => {
         if (res) {
+          console.log('user', res.TELDE_SESSION_INFO)
           if (res.TELDE_SESSION_INFO.roles[0] === 2 || res.TELDE_SESSION_INFO.roles[0] === 3) {
             if (res.TELDE_SESSION_INFO.enable) {
               if (res.TELDE_SESSION_INFO.roles[0] === 3) {
-                this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+                if (res.TELDE_SESSION_INFO.status === 2) {
+                  this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+                } else {
+                  this.$router.push('/pago-membresia/' + res.TELDE_SESSION_INFO._id)
+                }
               } else {
                 this.$router.push('/inicio')
               }

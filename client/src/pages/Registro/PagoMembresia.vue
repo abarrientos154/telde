@@ -6,123 +6,121 @@
         v-model="slide"
         infinite
       >
-        <q-carousel-slide :name="1" class="q-pa-none">
-           <q-card flat class="my-card window-height">
-          <q-card-section>
+        <q-carousel-slide :name="1" >
           <div class="row">
-              <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.go(-1)" />
-            <div class="q-mt-xs q-ml-md text-h6">Carro de compra</div>
+            <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="$router.push('/login')" />
+          </div>
+          <div class="absolute-center" style="width:100%">
+            <div class="q-mb-md row justify-center">
+              <q-img src="nova_telde-05.png" style="width:100%" >
+              </q-img>
             </div>
-          </q-card-section>
-          <q-card-section horizontal class="">
-              <q-card-section>
-                <div class="column items-center justify-center">
-                  <q-img
-                    style="height: 80px;width: 80px; border-radius:25px"
-                    class="rounded-borders"
-                    :src="'nopublicidad.jpg'"
-                  />
-                  </div>
-              </q-card-section>
-
-              <q-card-section class="q-pt-xs">
-                <div class="row">
-                  <div class="q-mt-md text-h7 text-bold">Membresía de tienda</div>
-                </div>
-                <div class="column">
-                  <div class="text-h8 text-bold text-grey">Nova Telde</div>
-                  <div class="row">
-                    <div class="text-h6 q-pr-sm text-bold text-primary">€{{costoMembresia}}  </div>
-                  </div>
-                </div>
-              </q-card-section>
-
-          </q-card-section>
-
-          <q-card-section class="q-pt-none">
-            <div class="row">
-            <q-space />
-              <div class="column">
-                <div class="q-mt-md text-h7 text-grey">Cantidad de meses</div>
-                <div class="row">
-                  <div class="row q-pr-xs">
-                    <q-icon class="bg-grey q-mt-sm" size="sm" name="remove" @click="resta()" />
-                    <q-input v-model.number="cantidad" borderless class="q-pr-sm q-ml-sm" type="number" dense style="width: 25px" min="0"/>
-                    <q-icon class="bg-primary q-mt-sm text-white" size="sm" name="add" @click="cantidad++" />
-                  </div>
-                </div>
-              </div>
+            <div class="row items-center justify-center q-mt-lg" style="width:100%">
+              <q-btn no-caps label="Adquirir membresia" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+              @click="slide = 2"/>
             </div>
-          </q-card-section>
-
-          <div class="absolute-bottom">
-            <q-card-section class="q-pt-xs">
-              <div class="row">
-                <div class="q-mt-md text-h6 text-grey text-bold">total a pagar:</div>
-                <q-space />
-                <div class="q-mt-md text-h6 text-primary text-bold">€{{totalPagar}} </div>
-              </div>
-            </q-card-section>
-
-          <q-card-actions class="q-py-md" align="center">
-            <div class="q-pb-md">
-              <q-btn v-close-popup rounded color="primary" text-color="white" label="Pagar" style="width:200px;height:40px" @click="siguiente()" />
-            </div>
-          </q-card-actions>
-        </div>
-      </q-card>
+          </div>
         </q-carousel-slide>
 
         <q-carousel-slide :name="2" class="q-pa-none">
-           <q-card flat class="my-card window-height">
-          <q-card-section>
-          <div class="row">
-              <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="atras()" />
-            <div class="q-mt-xs q-ml-md text-h6">Carro de compra/Checkout</div>
+          <q-card flat class="my-card window-height">
+            <q-card-section>
+              <div class="row items-center">
+                <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 1" />
+                <div class="q-ml-md text-h6 text-grey-9">Carro de compra</div>
+              </div>
+            </q-card-section>
+            <div class="row items-start justify-start q-ma-xs">
+                <div class="col-3 q-mr-sm column justify-center items-center">
+                  <img
+                    :src="'nopublicidad.jpg'"
+                    spinner-color="white"
+                    style="height: 80px; width: 80%; border-radius: 10px"/>
+                </div>
+
+                <div class="col-8">
+                  <div class="text-subtitle1">Membresía de tienda</div>
+                  <div class="text-subtitle2 text-grey-8">Nova Telde</div>
+                  <div class="text-h6 text-bold text-primary">€{{costoMembresia}}</div>
+                </div>
             </div>
-          </q-card-section>
-          <q-card-section class="">
+            <div class="row justify-end">
+                <div class="col-6 column items-end q-mr-lg">
+                  <div class="text-h7 text-grey">Cantidad de meses</div>
+                  <div class="row">
+                      <q-icon class="bg-grey q-mt-sm" size="sm" name="remove" @click="resta()" />
+                      <q-input v-model.number="cantidad" borderless class="q-pr-sm q-ml-sm" type="number" dense style="width: 25px" min="0"/>
+                      <q-icon class="bg-primary q-mt-sm text-white" size="sm" name="add" @click="cantidad++" />
+                  </div>
+                </div>
+            </div>
+
+            <div class="absolute-bottom">
               <q-card-section class="q-pt-xs">
                 <div class="row">
-                  <div class="q-mt-md q-ml-xs text-h5 text-bold">Pedido</div>
-                </div>
-                <div class="column">
-                  <div class="row">
-                    <div class="q-mt-md text-h7 text-grey text-bold">Membresia de tienda:</div>
-                    <q-space />
-                    <div class="q-mt-md text-h7 text-bold">{{cantidad}}</div>
-                  </div>
-                  <div class="row">
-                    <div class="q-mt-md text-h7 text-grey text-bold">Total a pagar:</div>
-                    <q-space />
-                    <div class="q-mt-md text-h7 text-bold">€{{totalPagar}}</div>
-
-                  </div>
+                  <div class="q-mt-md text-h6 text-grey text-bold">Total a pagar:</div>
+                  <q-space />
+                  <div class="q-mt-md text-h6 text-primary text-bold">€{{totalPagar}} </div>
                 </div>
               </q-card-section>
 
-          </q-card-section>
+              <q-card-actions class="q-py-md" align="center">
+                <div class="q-pb-md">
+                  <q-btn v-close-popup rounded no-caps color="primary" text-color="white" label="Pagar" size="lg" style="width:200px" @click="siguiente()" />
+                </div>
+              </q-card-actions>
+            </div>
+          </q-card>
+        </q-carousel-slide>
 
-          <div class="absolute-bottom">
-            <q-card-section class="q-pt-xs">
-              <div class="row">
-                <div class="q-mt-md text-h6 text-grey text-bold">Precio total:</div>
-                <q-space />
-                <div class="q-mt-md text-h6 text-blue text-bold">€{{totalPagar}}</div>
+        <q-carousel-slide :name="3" class="q-pa-none">
+          <q-card flat class="my-card window-height">
+            <q-card-section>
+            <div class="row">
+                <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 2" />
+              <div class="q-mt-xs q-ml-md text-h6">Carro de compra/Checkout</div>
               </div>
             </q-card-section>
+            <q-card-section class="">
+                <q-card-section class="q-pt-xs">
+                  <div class="row">
+                    <div class="q-mt-md text-h6">Pedido</div>
+                  </div>
+                  <div class="column">
+                    <div class="row q-mt-md items-center">
+                      <div class="text-subtitle1 text-grey-8">Membresia de tienda:</div>
+                      <q-space />
+                      <div class="text-subtitle1 text-bold">{{cantidad}}</div>
+                    </div>
+                    <div class="row q-mt-md items-center">
+                      <div class="text-subtitle1 text-grey-8">Total a pagar:</div>
+                      <q-space />
+                      <div class="text-subtitle1 text-bold">€{{totalPagar}}</div>
+                    </div>
+                  </div>
+                </q-card-section>
 
-          <q-card-actions class="q-py-md" align="center">
-            <div class="q-pb-md">
-              <q-btn v-close-popup rounded color="primary" text-color="white" label="Pagar ahora"  style="width:200px;height:40px" @click="redirPay()" />
-              <!-- <pago-membresia :monto="totalPagar" :apiUrl="apiUrl" :cantMeses="cantidad" /> -->
+            </q-card-section>
+
+            <div class="absolute-bottom">
+              <q-card-section class="q-pt-xs">
+                <div class="row">
+                  <div class="q-mt-md text-h6 text-grey text-bold">Precio total:</div>
+                  <q-space />
+                  <div class="q-mt-md text-h6 text-blue text-bold">€{{totalPagar}}</div>
+                </div>
+              </q-card-section>
+
+              <q-card-actions class="q-py-md" align="center">
+                <div class="q-pb-md">
+                  <q-btn v-close-popup rounded no-caps color="primary" text-color="white" label="Pagar ahora" size="lg" style="width:200px" @click="redirPay()" />
+                  <!-- <pago-membresia :monto="totalPagar" :apiUrl="apiUrl" :cantMeses="cantidad" /> -->
+                </div>
+              </q-card-actions>
             </div>
-          </q-card-actions>
-        </div>
-      </q-card>
+          </q-card>
         </q-carousel-slide>
-        </q-carousel>
-
+    </q-carousel>
   </div>
 </template>
 <script>
@@ -154,10 +152,7 @@ export default {
   },
   methods: {
     siguiente () {
-      this.slide = 2
-    },
-    atras () {
-      this.slide = 1
+      this.slide = 3
     },
     resta () {
       if (this.cantidad > 1) {

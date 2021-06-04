@@ -30,7 +30,7 @@ class UserController {
   async aprobarPagoStripe ({ request, response, params }) {
     let body = request.only(['cantM', 'costoM'])
     console.log(body, 'body aprobando pago')
-    await User.query().where('_id', params.tienda_id).update({ status: 1 })
+    await User.query().where('_id', params.tienda_id).update({ status: 2 })
     await Payment.create({ tienda_id: params.tienda_id, costoM: body.costoM, cantMeses: body.cantM, status: 1 })
     let user = (await User.find(params.tienda_id)).toJSON()
     console.log(user, 'user create')
@@ -196,7 +196,6 @@ class UserController {
       let body = dat
       body.roles = [3]
       body.status = 1
-      body.delivery = false
       const user = await User.create(body)
 
       const profilePic = request.file('perfil', {
@@ -280,98 +279,6 @@ class UserController {
     let enable = await User.query().where({_id: params.id}).update({status: dat.status})
     response.send(enable)
   }
-  async flowConfigData({ request, response, params }) {
-    let flowDat = await flowData.query().where({tienda_id: params.id}).first()
-    response.send(flowDat)
-  }
-  async flowConfig({ params, request, response }) {
-    let dat = request.all()
-    let id = dat.tienda_id
-    let exist = await flowData.findBy('tienda_id', id)
-    if (exist) {
-      let update = await flowData.query().where({tienda_id: id}).update(dat)
-    } else {
-      const crear = await flowData.create(dat)
-    }
-    let tienda = await User.find(id)
-    if (!tienda.metodoPago.find(v => v === '3')) {
-      tienda.metodoPago.push('3')
-    }
-    let user = await User.query().where({_id: id}).update({metodoPago: tienda.metodoPago})
-    response.send(true)
-  }
-  async flow({ request, response }) {
-    let dat = request.all()
-    var tienda = await Data.findBy('tienda_id', dat.tienda_id)
-    var config = {
-       apiKey: tienda.apiKey,
-       secretKey: tienda.secretKey,
-       apiURL: Env.get('FLOW_APIURL'),
-       baseURL: Env.get('FLOW_BASEURL')
-    }
-    const params = {
-        commerceOrder: Math.floor(Math.random() * (2000 - 1100 + 1)) + 1100,
-        subject: 'Pago de prueba',
-        currency: 'CLP',
-        amount: dat.amount,
-        email: dat.email,
-        paymentMethod: 9,
-        urlConfirmation: config.baseURL + '/php/respuesta_flow.php',
-        urlReturn: config.baseURL + '/php/respuesta_flow.php',
-      }
-    //console.log(params,config)
-    const serviceName = 'payment/create'
-    try {
-        //console.log(Flow)
-        // Instancia la clase FlowApi
-        const flowApi = new Flow.default(config)
-        // Ejecuta el servicio
-        var respon = await flowApi.send(serviceName, params, 'POST')
-        // Prepara url para redireccionar el browser del pagador
-        var redirect = respon.url + '?token=' + respon.token
-        console.log(`location: ${redirect}`)
-        response.send({redirect, token:respon.token})
-      } catch (error) {
-        console.log(error)
-        response.unprocessableEntity(error.message)
-      }
-  }
-  async store_flow ({request, response}) {
-    let dat = request.all()
-    Floww.create(dat)
-  }
-  async flowResponse ({params, response}) {
-
-    let dat = params.token
-    const paramss = {
-       token: dat
-      }
-    const infoLocal = (await Floww.query().where({token: dat}).fetch()).toJSON()
-    var tienda = await Data.findBy('tienda_id', infoLocal[0].tienda_id)
-    var config = {
-        apiKey: tienda.apiKey,
-       secretKey: tienda.secretKey,
-       apiURL: Env.get('FLOW_APIURL'),
-       baseURL: Env.get('FLOW_BASEURL')
-    }
-    const serviceName = 'payment/getStatus'
-    console.log(dat,'floww')
-    try {
-        //console.log(Flow)
-        // Instancia la clase FlowApi
-        const flowApi = new Flow.default(config)
-        // Ejecuta el servicio
-        var respon = await flowApi.send(serviceName, paramss, 'get')
-        // Prepara url para redireccionar el browser del pagador
-        //var redirect = respon.url + '?token=' + respon.token
-        console.log(`location: ${respon}`)
-        const infoLocal = (await Floww.query().where({token: dat}).fetch()).toJSON()
-        response.send({flow:respon , localData: infoLocal[0]})
-      } catch (error) {
-        console.log(error)
-        response.unprocessableEntity(error.message)
-      }
-  }
   async login({ auth, request }) {
     const { email, password } = request.all();
     let token = await auth.attempt(email, password)
@@ -392,10 +299,9 @@ class UserController {
       })
     })
 
-    token.full_name = user.full_name
-    token.last_name = user.last_name
     token._id = user._id
     token.enable = user.enable
+    token.status = user.status
     token.email = user.email
     token.verify = user.verify
     let data = {}
