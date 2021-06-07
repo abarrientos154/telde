@@ -31,7 +31,7 @@
                   </div>
                   <div class="row items-center" style="width: 100%">
                     <q-icon class="col-1" name="room" size="xs" />
-                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.info_tienda.ciudad + ', ' + card.info_tienda.direccion}} </div>
+                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.info_tienda.ciudad.name + ', ' + card.info_tienda.direccion}} </div>
                   </div>
                 </div>
 
@@ -63,7 +63,7 @@
                     </div>
                     <div class="row items-center" style="width: 100%">
                       <q-icon class="col-1" name="room" size="xs" />
-                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.info_tienda.ciudad + ', ' + card.info_tienda.direccion}} </div>
+                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.info_tienda.ciudad.name + ', ' + card.info_tienda.direccion}} </div>
                     </div>
 
                     <div class="row items-center q-mt-md">

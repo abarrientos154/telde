@@ -64,7 +64,7 @@
                   </div>
                   <div class="row items-center" style="width: 100%">
                     <q-icon class="col-1" name="room" size="xs" />
-                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
+                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad ? card.ciudad.name + ', ' + card.direccion : ''}} </div>
                   </div>
                 </div>
 
@@ -163,7 +163,7 @@
                     </div>
                     <div class="row items-center" style="width: 100%">
                       <q-icon class="col-1" name="room" size="xs" />
-                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
+                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad ? card.ciudad.name + ', ' + card.direccion : ''}} </div>
                     </div>
 
                     <div class="row items-center q-mt-md">
@@ -251,31 +251,17 @@ export default {
     getTiendas () {
       this.$api.get('proveedores').then(res => {
         if (res) {
-          this.allTiendas = res.filter(v => v.status === 1)
+          this.allTiendas = res
           this.tiendas = this.allTiendas
           this.tiendas.sort(() => Math.random() - 0.5)
-          this.masTiendas = []
-          var largo = this.allTiendas.length - 1
-          for (let i = 0; i < 4; i++) {
-            if (largo >= 0) {
-              this.masTiendas.push(this.allTiendas[i])
-              largo = largo - 1
-            }
-          }
+          this.masTiendas = this.allTiendas.slice(0, 4)
         }
       })
     },
     getProductos () {
       this.$api.get('all_productos').then(res => {
         if (res) {
-          this.productos = []
-          var largo = res.length - 1
-          for (let i = 0; i < 20; i++) {
-            if (largo >= 0) {
-              this.productos.push(res[largo])
-              largo = largo - 1
-            }
-          }
+          this.productos = res.reverse().slice(0, 20)
         }
       })
     },
