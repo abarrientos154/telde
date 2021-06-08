@@ -232,7 +232,7 @@
             <q-separator />
             <q-card-section class="q-pt-none">
               <div class="text-h6 text-bold">Estado de pedido</div>
-              <div class="text-h8 text-bold text-grey">{{pedidoSelec.tienda_id}}</div>
+              <div class="text-h8 text-bold text-grey">{{pedidoSelec.tienda}}</div>
             </q-card-section>
           <q-card flat style="width: 100%;">
             <q-card-section horizontal>
@@ -360,7 +360,6 @@ export default {
       calificacion: false,
       publicarCali: false,
       cali: true,
-      rol: 0,
       numberP: 0,
       text1: '',
       text2: '',
@@ -390,7 +389,6 @@ export default {
     getInfo () {
       this.$api.get('user_info').then(res => {
         if (res) {
-          this.rol = res.roles[0]
           this.form = res
         }
       })

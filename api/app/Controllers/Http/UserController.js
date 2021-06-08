@@ -294,7 +294,7 @@ class UserController {
   }
 
   async proveedores ({ request, response, auth }) {
-    let emprendedores = (await User.query().where({roles: [3], status: 1}).fetch()).toJSON()
+    let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
     response.send(emprendedores)
   }
 

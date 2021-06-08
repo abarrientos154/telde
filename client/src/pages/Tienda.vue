@@ -17,21 +17,21 @@
         <q-rating readonly v-model="user.calificacion" icon-selected="star" icon="star_border" color="orange" :max="5" size="23px" />
       </div>
       <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
-        <div class="row items-end" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="location_city" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Comunidad autónoma</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.ciudad}} </div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.provincia ? user.provincia.name : ''}} </div>
           </div>
         </div>
-        <div class="row items-center" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="room" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Dirección del local</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.direccion}} </div>
+            <div class="text-subtitle2 text-grey"> {{user.ciudad ? user.ciudad.name + ', ' + user.direccion : ''}} </div>
           </div>
         </div>
-        <div class="row items-center" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="phone" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Teléfono de contacto</div>

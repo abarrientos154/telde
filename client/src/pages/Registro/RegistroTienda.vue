@@ -153,14 +153,37 @@
           <div class="row justify-center">
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Provincia</div>
-                    <q-input v-model="form.provincia" filled
-                        error-message="Requerido" :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()"
-                    />
+                  <q-select @input="ciudadesOpt(form.provincia._id)" filled v-model="form.provincia" :options="optionsProvincias" map-options option-label="name"
+                    :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.name" />
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
                 </div>
-                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-sm">
                   <div class="text-subtitle2 text-grey-8">Ciudad</div>
-                    <q-input v-model="form.ciudad" filled
-                        error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
+                  <q-select @input="''" filled v-model="form.ciudad" :options="optionsCiudad" map-options option-label="name"
+                      :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()" >
+                        <template v-slot:option="scope">
+                          <q-item
+                            v-bind="scope.itemProps"
+                            v-on="scope.itemEvents"
+                          >
+                            <q-item-section>
+                              <q-item-label v-html="scope.opt.name" />
+                              <q-item-label caption>{{ scope.opt.codigo_postal }}</q-item-label>
+                            </q-item-section>
+                          </q-item>
+                        </template>
+                    </q-select>
+                    <q-input v-if="form.ciudad" v-model="form.ciudad.codigo_postal" filled readonly label="Código postal"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -206,16 +229,16 @@
                     </q-input>
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 text-subtitle1 q-mb-md">Agrega fotos de tu local comercial (hasta 5 imagenes)</div>
-                <q-scroll-area horizontal style="height:150px; width: 100%;"
+                <q-scroll-area horizontal style="height:120px; width: 100%;"
                 :thumb-style="thumbStyle" :bar-style="barStyle"
                 >
                     <div class="no-wrap q-px-md q-gutter-md row items-center">
-                        <q-card class="bg-grey column justify-center items-center" style="height:140px;border-radius:12px;width:140px">
+                        <q-card class="bg-grey column justify-center items-center" style="height:110px;border-radius:12px;width:110px">
                             <q-file borderless :disable="images.length < 5 ? false : true" v-model="img" class="button-camera" @input="insertarImagen()" accept=".jpg, image/*">
                                 <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
                             </q-file>
                         </q-card>
-                        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:140px;border-radius:12px;width:140px" >
+                        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:110px;border-radius:12px;width:110px" >
                             <q-btn @click="images.splice(index, 1), imagesSubir.splice(index, 1)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
                         </q-img>
                     </div>
@@ -318,6 +341,15 @@ export default {
       optionsCategoria: ['Comida', 'Tienda'],
       optionsSubCategorias: [],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
+      optionsProvincias: [
+        { name: 'Provincia 1', _id: 1 },
+        { name: 'Provincia 2', _id: 2 }
+      ],
+      optionsCiudad: [],
+      ciudadesFilter: [
+        { name: 'ciudad del 1', codigo_postal: '0101', provincia_id: 1 },
+        { name: 'ciudad del 2', codigo_postal: '0202', provincia_id: 2 }
+      ],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -425,6 +457,9 @@ export default {
           this.$q.loading.hide()
         })
       }
+    },
+    ciudadesOpt (id) {
+      this.optionsCiudad = this.ciudadesFilter.filter(v => v.provincia_id === id)
     },
     changePerfil () {
       if (this.perfil) { this.perfilImg = URL.createObjectURL(this.perfil) }

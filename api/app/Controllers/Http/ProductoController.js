@@ -72,7 +72,7 @@ class ProductoController {
 
   async allProductos ({ response, auth }) {
     let filter = (await Producto.query().where({}).with('datos_proveedor').fetch()).toJSON()
-    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 1)
+    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 2 && v.datos_proveedor.enable)
     let enviar = productos.map(v => {
       let entro = false
       if (v.oferta) {
@@ -237,16 +237,24 @@ class ProductoController {
     const user = (await auth.getUser()).toJSON()
     var data
     if (params.type == 1){
-      data = (await Pedido.query().where({cliente_id: user._id}).with('productos').fetch()).toJSON()
+      data = (await Pedido.query().where({cliente_id: user._id}).with('productos').with('tienda').fetch()).toJSON()
+      response.send(data.map(v => {
+        return {
+          ...v,
+          tienda: v.tienda ? v.tienda.nombre : '',
+          created_at: moment(v.created_at).format('DD-MM-YYYY')
+        }
+      }))
     } else {
-      data = (await Pedido.query().where({tienda_id: user._id}).with('productos').fetch()).toJSON()
+      data = (await Pedido.query().where({tienda_id: user._id}).with('productos').with('cliente').fetch()).toJSON()
+      response.send(data.map(v => {
+        return {
+          ...v,
+          cliente: v.cliente ? v.cliente.name + ' ' + v.cliente.lastName : '',
+          created_at: moment(v.created_at).format('DD-MM-YYYY')
+        }
+      }))
     }
-    response.send(data.map(v => {
-      return {
-        ...v,
-        created_at: moment(v.created_at).format('DD-MM-YYYY')
-      }
-    }))
   }
 
   async updateCompra ({ params, request, response }) {

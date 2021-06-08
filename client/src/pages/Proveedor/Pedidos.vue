@@ -199,7 +199,7 @@
             <q-separator />
             <q-card-section class="q-pt-none">
               <div class="text-h6 text-bold">Estado de pedido</div>
-              <div class="text-h8 text-bold text-grey">{{pedidoSelec.tienda_id}}</div>
+              <div class="text-h8 text-bold text-grey">{{pedidoSelec.cliente}}</div>
             </q-card-section>
           <q-card flat style="width: 100%;">
             <q-card-section horizontal>
@@ -307,6 +307,7 @@ export default {
     getPedidos () {
       this.$api.get('reportes/2').then(res => {
         if (res) {
+          console.log(res)
           this.pendientes = res.filter(v => v.status === 'En Local')
           this.enviados = res.filter(v => v.status === 'Enviado')
           this.completados = res.filter(v => v.status === 'Completado')
