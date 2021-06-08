@@ -153,7 +153,7 @@
           <div class="row justify-center">
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Provincia</div>
-                  <q-select @input="ciudadesOpt(form.provincia._id)" filled v-model="form.provincia" :options="optionsProvincias" map-options option-label="name"
+                  <q-select @input="ciudadesOpt(form.provincia.id)" filled v-model="form.provincia" :options="optionsProvincias" map-options option-label="nombre"
                     :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()" >
                       <template v-slot:option="scope">
                         <q-item
@@ -161,7 +161,7 @@
                           v-on="scope.itemEvents"
                         >
                           <q-item-section>
-                            <q-item-label v-html="scope.opt.name" />
+                            <q-item-label v-html="scope.opt.nombre" />
                           </q-item-section>
                         </q-item>
                       </template>
@@ -169,21 +169,21 @@
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-sm">
                   <div class="text-subtitle2 text-grey-8">Ciudad</div>
-                  <q-select @input="''" filled v-model="form.ciudad" :options="optionsCiudad" map-options option-label="name"
-                      :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()" >
-                        <template v-slot:option="scope">
-                          <q-item
-                            v-bind="scope.itemProps"
-                            v-on="scope.itemEvents"
-                          >
-                            <q-item-section>
-                              <q-item-label v-html="scope.opt.name" />
-                              <q-item-label caption>{{ scope.opt.codigo_postal }}</q-item-label>
-                            </q-item-section>
-                          </q-item>
-                        </template>
-                    </q-select>
-                    <q-input v-if="form.ciudad" v-model="form.ciudad.codigo_postal" filled readonly label="Código postal"
+                  <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="form.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
+                    :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.nombre" />
+                            <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
+                    <q-input dense v-if="form.ciudad" v-model="form.ciudad.cp" filled readonly label="Código postal"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -341,15 +341,9 @@ export default {
       optionsCategoria: ['Comida', 'Tienda'],
       optionsSubCategorias: [],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
-      optionsProvincias: [
-        { name: 'Provincia 1', _id: 1 },
-        { name: 'Provincia 2', _id: 2 }
-      ],
+      optionsProvincias: [],
       optionsCiudad: [],
-      ciudadesFilter: [
-        { name: 'ciudad del 1', codigo_postal: '0101', provincia_id: 1 },
-        { name: 'ciudad del 2', codigo_postal: '0202', provincia_id: 2 }
-      ],
+      ciudadesFilter: [],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -374,9 +368,9 @@ export default {
           return this.form.categoria === 'Comida'
         })
       },
-      ciudad: { required },
       direccion: { required },
       provincia: { required },
+      ciudad: { required },
       cif: { required },
       email: { email, required },
       telefono: { required },
@@ -389,6 +383,9 @@ export default {
     password: { required, maxLength: maxLength(256), minLength: minLength(6) },
     portada: { required },
     perfil: { required }
+  },
+  mounted () {
+    this.getProvincia()
   },
   methods: {
     siguiente () {
@@ -406,15 +403,15 @@ export default {
       }
     },
     siguiente2 () {
-      this.$v.form.ciudad.$touch()
       this.$v.form.provincia.$touch()
+      this.$v.form.ciudad.$touch()
       this.$v.form.direccion.$touch()
       this.$v.form.cif.$touch()
       this.$v.form.email.$touch()
       this.$v.form.telefono.$touch()
       this.$v.password.$touch()
       this.$v.repeatPassword.$touch()
-      if (!this.$v.form.ciudad.$error && !this.$v.form.provincia.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
+      if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
         this.form.password = this.password
         this.slide = 3
       }
@@ -458,8 +455,40 @@ export default {
         })
       }
     },
+    getProvincia () {
+      this.$api.get('provincias').then(res => {
+        if (res) {
+          this.optionsProvincias = res
+        }
+      })
+    },
     ciudadesOpt (id) {
-      this.optionsCiudad = this.ciudadesFilter.filter(v => v.provincia_id === id)
+      this.$q.loading.show({
+        message: 'Buscando ciudades'
+      })
+      if (this.form.ciudad) {
+        this.form.ciudad = null
+      }
+      this.$api.get('ciudades/' + id).then(res => {
+        if (res) {
+          this.ciudadesFilter = res
+          this.optionsCiudad = res
+          this.$q.loading.hide()
+        }
+      })
+    },
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.optionsCiudad = this.ciudadesFilter
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
+      })
     },
     changePerfil () {
       if (this.perfil) { this.perfilImg = URL.createObjectURL(this.perfil) }

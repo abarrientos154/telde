@@ -59,6 +59,14 @@ addPrefixToGroup(
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
     Route.get("all_productos", "ProductoController.allProductos")
+
+    ///////////////////////Direccion/////////////////////////////////////////
+    Route.put("direccion/:id", "UserController.editarDireccion")
+    Route.post("nueva_direccion", "UserController.nuevaDireccion")
+    Route.get("provincias", "UserController.provincias")
+    Route.get("ciudades/:id", "UserController.ciudades")
+    Route.delete("direccion/:id", "UserController.eliminarDireccion")
+    ///////////////////////Direccion/////////////////////////////////////////
   })
 );
 

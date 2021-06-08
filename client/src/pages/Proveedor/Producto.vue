@@ -224,10 +224,6 @@ export default {
           }
         }).then(res => {
           if (res) {
-            this.$q.notify({
-              message: 'Producto agregado Correctamente',
-              color: 'positive'
-            })
             this.$q.loading.hide()
             this.modal = true
           } else {

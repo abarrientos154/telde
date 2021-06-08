@@ -101,14 +101,37 @@
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Provincia</div>
-              <q-input v-model="direccion.provincia" filled
-                error-message="Requerido" :error="$v.direccion.provincia.$error" @blur="$v.direccion.provincia.$touch()"
-              />
+              <q-select @input="ciudadesOpt(direccion.provincia.id)" filled v-model="direccion.provincia" :options="optionsProvincias" map-options option-label="nombre"
+                :error="$v.direccion.provincia.$error" @blur="$v.direccion.provincia.$touch()" >
+                  <template v-slot:option="scope">
+                    <q-item
+                      v-bind="scope.itemProps"
+                      v-on="scope.itemEvents"
+                    >
+                      <q-item-section>
+                        <q-item-label v-html="scope.opt.nombre" />
+                      </q-item-section>
+                    </q-item>
+                  </template>
+              </q-select>
             </div>
-            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-sm">
               <div class="text-subtitle2 text-grey-8">Ciudad</div>
-              <q-input v-model="direccion.ciudad" filled
-                error-message="Requerido" :error="$v.direccion.ciudad.$error" @blur="$v.direccion.ciudad.$touch()"
+              <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="direccion.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
+                :error="$v.direccion.ciudad.$error" @blur="$v.direccion.ciudad.$touch()" >
+                  <template v-slot:option="scope">
+                    <q-item
+                      v-bind="scope.itemProps"
+                      v-on="scope.itemEvents"
+                    >
+                      <q-item-section>
+                        <q-item-label v-html="scope.opt.nombre" />
+                        <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                      </q-item-section>
+                    </q-item>
+                  </template>
+              </q-select>
+              <q-input dense v-if="direccion.ciudad" v-model="direccion.ciudad.cp" filled readonly label="Código postal"
               />
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -148,9 +171,7 @@ import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
-      form: {
-        direcciones: []
-      },
+      form: {},
       direccion: {},
       perfil: null,
       perfilImg: null,
@@ -159,7 +180,10 @@ export default {
       password: '',
       repeatPassword: '',
       textColor: 'text-black',
-      slide: 1
+      slide: 1,
+      optionsProvincias: [],
+      optionsCiudad: [],
+      ciudadesFilter: []
     }
   },
   validations: {
@@ -178,6 +202,9 @@ export default {
     repeatPassword: { sameAsPassword: sameAs('password') },
     password: { required, maxLength: maxLength(256), minLength: minLength(6) },
     perfil: { required }
+  },
+  mounted () {
+    this.getProvincia()
   },
   methods: {
     ...mapMutations('generals', ['login']),
@@ -211,10 +238,10 @@ export default {
       this.form.enable = true
       this.$v.direccion.$touch()
       if (!this.$v.direccion.$error) {
-        this.form.direcciones.push(this.direccion)
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('dat', JSON.stringify(this.form))
+        formData.append('dir', JSON.stringify(this.direccion))
         this.$q.loading.show()
         await this.$api.post('registrar_cliente', formData, {
           headers: {
@@ -232,6 +259,41 @@ export default {
           this.$q.loading.hide()
         })
       }
+    },
+    getProvincia () {
+      this.$api.get('provincias').then(res => {
+        if (res) {
+          this.optionsProvincias = res
+        }
+      })
+    },
+    ciudadesOpt (id) {
+      this.$q.loading.show({
+        message: 'Buscando ciudades'
+      })
+      if (this.direccion.ciudad) {
+        this.direccion.ciudad = null
+      }
+      this.$api.get('ciudades/' + id).then(res => {
+        if (res) {
+          this.ciudadesFilter = res
+          this.optionsCiudad = res
+          this.$q.loading.hide()
+        }
+      })
+    },
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.optionsCiudad = this.ciudadesFilter
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
+      })
     },
     changePerfil () {
       if (this.perfil) { this.perfilImg = URL.createObjectURL(this.perfil) }

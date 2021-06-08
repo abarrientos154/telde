@@ -4,12 +4,11 @@ const Helpers = use('Helpers')
 const mkdirp = use('mkdirp')
 const fs = require('fs')
 var randomize = require('randomatic');
-const Flow = require('flowcl-node-api-client')
 const User = use("App/Models/User")
-const flowData = use("App/Models/FlowDatum")
+const Direccion = use('App/Models/Direccione')
+const Provincia = use('App/Models/Provincia')
+const Ciudad = use('App/Models/Ciudad')
 const Role = use("App/Models/Role")
-const Floww = use("App/Models/Flow")
-const Data = use("App/Models/FlowDatum")
 const Comentario = use('App/Models/Comentario')
 const Payment = use('App/Models/Payment')
 const { validate } = use("Validator")
@@ -130,7 +129,9 @@ class UserController {
 
   async register ({ request, response }) {
     let dat = request.only(['dat'])
+    let dir = request.only(['dir'])
     dat = JSON.parse(dat.dat)
+    dir = JSON.parse(dir.dir)
     const validation = await validate(dat, User.fieldValidationRules())
     if (validation.fails()) {
       response.unprocessableEntity(validation.messages())
@@ -142,6 +143,13 @@ class UserController {
       let body = dat
       body.roles = [2]
       const user = await User.create(body)
+
+      dir.user_id = user._id
+      dir.provincia_id = dir.provincia.id
+      dir.ciudad_id = dir.ciudad._id
+      delete dir.provincia
+      delete dir.ciudad
+      const direccion = await Direccion.create(dir)
 
       const profilePic = request.file('perfil', {
       })
@@ -273,17 +281,33 @@ class UserController {
 
   async userInfo({ request, response, auth }) {
     const user = (await auth.getUser()).toJSON()
-    response.send(user)
+    let data
+    if (user.roles[0] === 2) {
+      data = (await User.with('direccionC.ciudad').with('direccionC.provincia').find(user._id)).toJSON()
+      data.direccionC = data.direccionC.map(v => {
+        return {
+          ...v,
+          ciudad_name: v.ciudad.nombre
+        }
+      })
+    } else if (user.roles[0] === 3) {
+      data = await User.query().where({_id: user._id}).first()
+    }
+    response.send(data)
   }
 
   async userById({ params, response, auth }) {
     const user = await User.query().where({_id: params.id}).first()
     var cal = (await Comentario.query().where({tienda_id: params.id}).fetch()).toJSON()
     var total = 0
-    cal.forEach(v => {
-      total += v.rating
-    })
-    user.calificacion = (total / cal.length)
+    if (cal.length) {
+      cal.forEach(v => {
+        total += v.rating
+      })
+      user.calificacion = (total / cal.length)
+    } else {
+      user.calificacion = total
+    }
     response.send(user)
   }
 
@@ -336,6 +360,46 @@ class UserController {
     let data = {}
     data.TELDE_SESSION_INFO = token
     return data
+  }
+
+  async nuevaDireccion ({ request, response, auth }) {
+    const user = (await auth.getUser()).toJSON()
+    let data = request.only(Direccion.fillable)
+    let nuevo = {
+      user_id: user._id,
+      provincia_id: data.provincia.id,
+      ciudad_id: data.ciudad._id,
+      direccion:  data.direccion
+    }
+    const crear = await Direccion.create(nuevo)
+    response.send(crear)
+  }
+
+  async editarDireccion ({ request, response, params }) {
+    let data = request.only(Direccion.fillable)
+    let nuevo = {
+      provincia_id: data.provincia.id,
+      ciudad_id: data.ciudad._id,
+      direccion:  data.direccion
+    }
+    let editar = await Direccion.query().where({_id: params.id}).update(nuevo)
+    response.send(editar)
+  }
+
+  async eliminarDireccion ({ request, response, params }) {
+    let direccion = await Direccion.find(params.id)
+    direccion.delete()
+    response.send(direccion)
+  }
+
+  async provincias ({ request, response, params }) {
+    let provincias = await Provincia.all()
+    response.send(provincias)
+  }
+
+  async ciudades ({ request, response, params }) {
+    let ciudades = (await Ciudad.query().where({provinciaid: Number(params.id)}).fetch()).toJSON()
+    response.send(ciudades)
   }
 
 }
