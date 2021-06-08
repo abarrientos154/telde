@@ -32,7 +32,7 @@ class ProvinciaSeeder {
         await Provincia.create(i)
       }
     }
-    console.log('Finished Categorias')
+    console.log('Finished Provincias')
   }
 }
 

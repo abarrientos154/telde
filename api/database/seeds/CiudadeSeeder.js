@@ -139888,7 +139888,7 @@ class CiudadSeeder {
     for (let i of data) {
       await Ciudad.create(i)
     }
-    console.log('Finished Categorias')
+    console.log('Finished Ciudades')
   }
 }
 

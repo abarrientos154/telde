@@ -6,7 +6,6 @@
 const Helpers = use('Helpers')
 const mkdirp = use('mkdirp')
 const Producto = use('App/Models/Producto')
-const Flow = use('App/Models/Flow')
 const Compras = use('App/Models/ComprasProducto')
 const Pedido = use('App/Models/Compra')
 const Comentario = use('App/Models/Comentario')
@@ -21,7 +20,7 @@ const moment = require("moment")
 class ProductoController {
 
   async productosByProveedorId ({ response, params }) {
-    let filter = (await Producto.query().where({ proveedor_id: params.proveedor_id}).with('datos_proveedor').with('categoria_info').fetch()).toJSON()
+    let filter = (await Producto.query().where({ proveedor_id: params.proveedor_id}).with('datos_proveedor').fetch()).toJSON()
     let productos = filter.filter(v => !v.disable)
     let enviar = productos.map(v => {
       let entro = false
@@ -53,7 +52,7 @@ class ProductoController {
    */
   async index ({ response, auth }) {
     let user = await auth.getUser()
-    let filter = (await Producto.query().where({ proveedor_id: user._id.toString()}).with('datos_proveedor').with('categoria_info').fetch()).toJSON()
+    let filter = (await Producto.query().where({ proveedor_id: user._id.toString()}).with('datos_proveedor').fetch()).toJSON()
     let productos = filter.filter(v => !v.disable)
     let enviar = productos.map(v => {
       let entro = false
@@ -64,7 +63,6 @@ class ProductoController {
       return {
         ...v,
         oferta: entro ? (diferencia < 0 ? false : true) : null
-        //categoria: categoria.nombre
       }
     })
     response.send(enviar)
@@ -82,7 +80,6 @@ class ProductoController {
       return {
         ...v,
         oferta: entro ? (diferencia < 0 ? false : true) : null
-        //categoria: categoria.nombre
       }
     })
     response.send(enviar)
@@ -211,6 +208,8 @@ class ProductoController {
     var productos = request.all().carrito
     data.productos_total = productos.length
     data.status = 'En Local'
+    data.direccion_id = data.direccion._id
+    delete data.direccion
     var compra = await Pedido.create(data)
     var moneda = {
       tienda_id: compra.tienda_id,
@@ -224,7 +223,7 @@ class ProductoController {
       dat.pedido_id = compra._id
       dat.producto_id = dat._id
       delete dat._id
-      delete dat.cantidad
+      delete dat.cantidadFiles
       var producto = await Compras.create(dat)
       var cantidad = await Producto.query().where({_id: productos[i]._id}).update({cantidad: productos[i].cantidad})
       if (productos[i].cantidad === 0) {
