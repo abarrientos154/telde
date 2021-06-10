@@ -42,6 +42,7 @@
 
     <div class="text-h6 q-mx-md text-grey-8">Algunas de nuestras tiendas</div>
     <q-scroll-area
+        v-if="tiendas.length"
         horizontal
         style="height: 350px;"
       >
@@ -64,7 +65,7 @@
                   </div>
                   <div class="row items-center" style="width: 100%">
                     <q-icon class="col-1" name="room" size="xs" />
-                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
+                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad ? card.ciudad.nombre + ', ' + card.direccion : ''}} </div>
                   </div>
                 </div>
 
@@ -77,6 +78,7 @@
           </div>
         </div>
       </q-scroll-area>
+      <div v-else class="text-center text-h6 q-my-lg">No hay ninguna tienda</div>
 
       <q-scroll-area
         horizontal
@@ -97,6 +99,7 @@
 
     <div class="text-h6 q-my-md text-center text-grey-8">Nuestros nuevos productos</div>
     <q-scroll-area
+        v-if="productos.length"
         horizontal
         style="height: 410px;"
       >
@@ -128,6 +131,7 @@
           </div>
         </div>
       </q-scroll-area>
+      <div v-else class="text-center text-h6 q-my-lg">No hay ningún producto</div>
 
       <q-scroll-area
         horizontal
@@ -147,7 +151,7 @@
       </q-scroll-area>
 
       <div class="text-h6 q-my-md text-center text-grey-8">Más tiendas</div>
-      <div class="row justify-around">
+      <div v-if="masTiendas.length" class="row justify-around">
         <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">
               <q-img
@@ -163,7 +167,7 @@
                     </div>
                     <div class="row items-center" style="width: 100%">
                       <q-icon class="col-1" name="room" size="xs" />
-                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
+                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad ? card.ciudad.nombre + ', ' + card.direccion : ''}} </div>
                     </div>
 
                     <div class="row items-center q-mt-md">
@@ -175,6 +179,7 @@
             </q-card>
         </div>
       </div>
+      <div v-else class="text-center text-h6 q-my-lg">No hay ninguna tienda</div>
       <div class="row items-center justify-center q-mt-lg">
         <q-btn no-caps rounded label="Ver más tiendas" color="primary" size="lg" style="width: 80%"
         @click="$router.push('/tiendas')"/>
@@ -251,31 +256,17 @@ export default {
     getTiendas () {
       this.$api.get('proveedores').then(res => {
         if (res) {
-          this.allTiendas = res.filter(v => v.status === 1)
+          this.allTiendas = res
           this.tiendas = this.allTiendas
           this.tiendas.sort(() => Math.random() - 0.5)
-          this.masTiendas = []
-          var largo = this.allTiendas.length - 1
-          for (let i = 0; i < 4; i++) {
-            if (largo >= 0) {
-              this.masTiendas.push(this.allTiendas[i])
-              largo = largo - 1
-            }
-          }
+          this.masTiendas = this.allTiendas.slice(0, 4)
         }
       })
     },
     getProductos () {
       this.$api.get('all_productos').then(res => {
         if (res) {
-          this.productos = []
-          var largo = res.length - 1
-          for (let i = 0; i < 20; i++) {
-            if (largo >= 0) {
-              this.productos.push(res[largo])
-              largo = largo - 1
-            }
-          }
+          this.productos = res.reverse().slice(0, 20)
         }
       })
     },

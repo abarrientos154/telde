@@ -153,14 +153,37 @@
           <div class="row justify-center">
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Provincia</div>
-                    <q-input v-model="form.provincia" filled
-                        error-message="Requerido" :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()"
-                    />
+                  <q-select @input="ciudadesOpt(form.provincia.id)" filled v-model="form.provincia" :options="optionsProvincias" map-options option-label="nombre"
+                    :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.nombre" />
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
                 </div>
-                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-sm">
                   <div class="text-subtitle2 text-grey-8">Ciudad</div>
-                    <q-input v-model="form.ciudad" filled
-                        error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
+                  <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="form.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
+                    :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.nombre" />
+                            <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
+                    <q-input dense v-if="form.ciudad" v-model="form.ciudad.cp" filled readonly label="Código postal"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -206,16 +229,16 @@
                     </q-input>
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 text-subtitle1 q-mb-md">Agrega fotos de tu local comercial (hasta 5 imagenes)</div>
-                <q-scroll-area horizontal style="height:150px; width: 100%;"
+                <q-scroll-area horizontal style="height:120px; width: 100%;"
                 :thumb-style="thumbStyle" :bar-style="barStyle"
                 >
                     <div class="no-wrap q-px-md q-gutter-md row items-center">
-                        <q-card class="bg-grey column justify-center items-center" style="height:140px;border-radius:12px;width:140px">
+                        <q-card class="bg-grey column justify-center items-center" style="height:110px;border-radius:12px;width:110px">
                             <q-file borderless :disable="images.length < 5 ? false : true" v-model="img" class="button-camera" @input="insertarImagen()" accept=".jpg, image/*">
                                 <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
                             </q-file>
                         </q-card>
-                        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:140px;border-radius:12px;width:140px" >
+                        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:110px;border-radius:12px;width:110px" >
                             <q-btn @click="images.splice(index, 1), imagesSubir.splice(index, 1)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
                         </q-img>
                     </div>
@@ -318,6 +341,9 @@ export default {
       optionsCategoria: ['Comida', 'Tienda'],
       optionsSubCategorias: [],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
+      optionsProvincias: [],
+      optionsCiudad: [],
+      ciudadesFilter: [],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -342,9 +368,9 @@ export default {
           return this.form.categoria === 'Comida'
         })
       },
-      ciudad: { required },
       direccion: { required },
       provincia: { required },
+      ciudad: { required },
       cif: { required },
       email: { email, required },
       telefono: { required },
@@ -357,6 +383,9 @@ export default {
     password: { required, maxLength: maxLength(256), minLength: minLength(6) },
     portada: { required },
     perfil: { required }
+  },
+  mounted () {
+    this.getProvincia()
   },
   methods: {
     siguiente () {
@@ -374,15 +403,15 @@ export default {
       }
     },
     siguiente2 () {
-      this.$v.form.ciudad.$touch()
       this.$v.form.provincia.$touch()
+      this.$v.form.ciudad.$touch()
       this.$v.form.direccion.$touch()
       this.$v.form.cif.$touch()
       this.$v.form.email.$touch()
       this.$v.form.telefono.$touch()
       this.$v.password.$touch()
       this.$v.repeatPassword.$touch()
-      if (!this.$v.form.ciudad.$error && !this.$v.form.provincia.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
+      if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
         this.form.password = this.password
         this.slide = 3
       }
@@ -425,6 +454,41 @@ export default {
           this.$q.loading.hide()
         })
       }
+    },
+    getProvincia () {
+      this.$api.get('provincias').then(res => {
+        if (res) {
+          this.optionsProvincias = res
+        }
+      })
+    },
+    ciudadesOpt (id) {
+      this.$q.loading.show({
+        message: 'Buscando ciudades'
+      })
+      if (this.form.ciudad) {
+        this.form.ciudad = null
+      }
+      this.$api.get('ciudades/' + id).then(res => {
+        if (res) {
+          this.ciudadesFilter = res
+          this.optionsCiudad = res
+          this.$q.loading.hide()
+        }
+      })
+    },
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.optionsCiudad = this.ciudadesFilter
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
+      })
     },
     changePerfil () {
       if (this.perfil) { this.perfilImg = URL.createObjectURL(this.perfil) }

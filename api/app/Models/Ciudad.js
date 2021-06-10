@@ -3,7 +3,7 @@
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
 const Model = use('Model')
 
-class FlowDatum extends Model {
+class Ciudad extends Model {
 }
 
-module.exports = FlowDatum
+module.exports = Ciudad

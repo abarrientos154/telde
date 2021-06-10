@@ -17,21 +17,21 @@
         <q-rating readonly v-model="user.calificacion" icon-selected="star" icon="star_border" color="orange" :max="5" size="23px" />
       </div>
       <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
-        <div class="row items-end" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="location_city" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Comunidad autónoma</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.ciudad}} </div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.provincia ? user.provincia.nombre : ''}} </div>
           </div>
         </div>
-        <div class="row items-center" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="room" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Dirección del local</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.direccion}} </div>
+            <div class="text-subtitle2 text-grey"> {{user.ciudad ? user.ciudad.nombre + ', ' + user.direccion : ''}} </div>
           </div>
         </div>
-        <div class="row items-center" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="phone" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Teléfono de contacto</div>
@@ -337,9 +337,9 @@
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
                     <div class="text-subtitle1 text-grey-7">{{cliente.name + ' ' + cliente.lastName}}</div>
-                    <q-select borderless dense color="black" v-model="form" :options="cliente.direcciones" label="Seleccione dirección" map-options
-                      error-message="requerido" :error="$v.form.$error" @blur="$v.form.$touch()"
-                      option-label="ciudad" >
+                    <q-select borderless dense color="black" v-model="form.direccion" :options="cliente.direccionC" label="Seleccione dirección" map-options
+                      error-message="requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+                      option-label="ciudad_name" >
                         <template v-slot:no-option>
                         <q-item>
                           <q-item-section class="text-grey text-italic">
@@ -353,7 +353,7 @@
                           v-on="scope.itemEvents"
                         >
                           <q-item-section>
-                            <q-item-label v-html="scope.opt.ciudad" />
+                            <q-item-label v-html="scope.opt.ciudad.nombre" />
                             <q-item-label caption>{{ scope.opt.direccion }}</q-item-label>
                           </q-item-section>
                         </q-item>
@@ -460,7 +460,7 @@ export default {
       baseuImgsTienda: '',
       imgSelec: '',
       producto: {},
-      form: null,
+      form: {},
       cliente: {},
       user: {
         images: [],
@@ -475,7 +475,9 @@ export default {
     }
   },
   validations: {
-    form: { required }
+    form: {
+      direccion: { required }
+    }
   },
   computed: {
     totalCarrito () {
@@ -519,8 +521,9 @@ export default {
   },
   methods: {
     iniciarCompra () {
-      this.$v.$touch()
-      if (!this.$v.form.$error) {
+      this.$v.form.direccion.$touch()
+      console.log(this.$v.form)
+      if (!this.$v.form.direccion.$error) {
         this.form.cliente_id = this.cliente._id
         this.form.tienda_id = this.user._id
         this.tienda_name = this.user.nombre
@@ -530,11 +533,12 @@ export default {
           if (res) {
             this.comprarCarrito = false
             this.compraExitosa = true
-            this.form = null
+            this.form = {}
             this.carrito = []
             this.$v.form.$reset()
             this.getProductosByProveedor(this.id_tienda)
           } else {
+            this.comprarCarrito = false
             this.compraFallo = true
           }
         })

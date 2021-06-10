@@ -53,15 +53,23 @@ addPrefixToGroup(
     Route.post("user_by_id/:id", "UserController.userById")
     Route.get("productos/:proveedor_id", "ProductoController.productosByProveedorId")
 
-    Route.post("flow_by_id/:id", "UserController.flowConfigData")
-
     Route.get('publicidad_img/:file', 'UploadController.getFilePublicidad')
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
     Route.get("all_productos", "ProductoController.allProductos")
 
+<<<<<<< HEAD
     Route.get("pagar_telde", "PaymentController.create")
     Route.post("procesador_pagos/:user_id/:montoTotal/:ref", "PaymentController.procesarPago");
+=======
+    ///////////////////////Direccion/////////////////////////////////////////
+    Route.put("direccion/:id", "UserController.editarDireccion")
+    Route.post("nueva_direccion", "UserController.nuevaDireccion")
+    Route.get("provincias", "UserController.provincias")
+    Route.get("ciudades/:id", "UserController.ciudades")
+    Route.delete("direccion/:id", "UserController.eliminarDireccion")
+    ///////////////////////Direccion/////////////////////////////////////////
+>>>>>>> abb92781fa92bc76fb12f1f0dfdfebf0923e763c
   })
 );
 
@@ -78,13 +86,7 @@ addPrefixToGroup(
     Route.post("subir_archivo_proveedor/:id", "UploadController.subirImgTienda")
     Route.delete("eliminar_archivo_proveedor/:file", "UploadController.eliminarImgTienda")
 
-    Route.put("configuracion_flow", "UserController.flowConfig")
-
     Route.post("proveedor_status/:id", "UserController.proveedorStatus")
-
-    Route.post("flow", "UserController.flow")
-    Route.get("get_info_flow/:token", "UserController.flowResponse")
-    Route.post("store_flow", "UserController.store_flow")
 
     Route.post("publicidad", "PublicidadController.create")
     Route.put('publicidad/:id', 'PublicidadController.update')
