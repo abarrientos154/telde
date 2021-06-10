@@ -42,19 +42,6 @@
 
               <div class="text-center text-primary text-bold cursor-pointer" @click="$router.push('registro')"> ¿Eres Nuevo? Registrate </div> -->
             </q-form>
-             <q-dialog v-model="prueba">
-              <q-card class="q-pa-md">
-                <q-card-section>
-                  <div class="q-ml-sm text-center text-subtitle2"></div>
-                  <div class="q-ml-sm text-center text-h6 text-bold">{{info.user}}</div>
-                </q-card-section>
-
-                <q-card-section class="column items-center">
-                  <q-btn style="border-radius: 14px" label="Iniciar Sesión" color="primary" />
-                  <q-btn flat label="Registrarme" color="primary" @click="prueba = false" />
-                </q-card-section>
-              </q-card>
-            </q-dialog>
       </q-page>
     </q-page-container>
   </q-layout>
@@ -67,9 +54,7 @@ export default {
     return {
       form: {},
       isPwd: true,
-      loading: false,
-      info: {},
-      prueba: false
+      loading: false
     }
   },
   mounted () {
@@ -130,12 +115,9 @@ export default {
         if (resp) {
           this.$q.loading.hide()
           if (resp.TELDE_SESSION_INFO.enable) {
-            this.info = resp
-            // this.info.dos = data
             var est = data.cancel ? '2' : '1'
             this.$router.push('/tienda/' + data.tienda_id + '/' + est)
             this.login(resp)
-            this.prueba = true
           } else {
             this.$q.notify({
               message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',

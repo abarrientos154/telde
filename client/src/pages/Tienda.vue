@@ -413,7 +413,7 @@
                 <div class="text-center text-subtitle1 q-mx-md text-grey-8">Te estamos redireccionando al carro de compra para que verifiques tus datos de transacción</div>
                 <div class="row items-center justify-center q-mt-lg" style="width:100%">
                   <q-btn no-caps label="Aceptar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-                  @click="comprarCarrito = true, compraFallo = false" />
+                  @click="compraFallo = false" />
                 </div>
               </div>
           </q-card>
@@ -516,7 +516,7 @@ export default {
       this.getComentarios()
     }
     if (this.$route.params.result) {
-      if (this.$route.params.result === 1) {
+      if (this.$route.params.result === '1') {
         this.compraExitosa = true
       } else {
         this.compraFallo = true
