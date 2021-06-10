@@ -438,8 +438,8 @@
 <script>
 import { required } from 'vuelidate/lib/validators'
 import DetalleProducto from '../pages/DetalleProducto'
+import { openURL, uid } from 'quasar'
 import env from '../env'
-import { uid } from 'quasar'
 export default {
   components: { DetalleProducto },
   data () {
@@ -516,7 +516,7 @@ export default {
       this.getComentarios()
     }
     if (this.$route.params.result) {
-      if (this.$route.params.result == 1){
+      if (this.$route.params.result === 1) {
         this.compraExitosa = true
       } else {
         this.compraFallo = true
@@ -528,7 +528,7 @@ export default {
     }
   },
   methods: {
-    iniciarCompra () {
+    async iniciarCompra () {
       this.$v.form.direccion.$touch()
       console.log(this.$v.form)
       if (!this.$v.form.direccion.$error) {
@@ -538,11 +538,11 @@ export default {
         this.form.totalValor = this.totalCarrito
         this.form.totalProductos = this.totalProductos
         var ref = uid()
-        this.form.uid = ref 
-        this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(res => {
+        this.form.uid = ref
+        this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(async res => {
           if (res) {
             var apiUrl = env.apiUrl + '/pagar_telde?tienda_id=' + this.user._id
-            const ruta = `${this.apiUrl}&montoTotal=${this.form.totalValor}&ref=${ref}&user_id=${this.cliente._id}`
+            const ruta = `${apiUrl}&montoTotal=${this.form.totalValor}&ref=${ref}&user_id=${this.cliente._id}`
             await openURL(ruta)
             navigator.app.exitApp()
             /* this.comprarCarrito = false

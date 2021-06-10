@@ -94,8 +94,8 @@ export default {
         message: 'Procesando'
       })
       await this.$api.post('pago_ok', data).then(res => {
-        this.$api.post('login_by_mail', {user_id: data.user_id}).then(resp => {
-        if (res) {
+        this.$api.post('login_by_mail', { user_id: data.user_id }).then(resp => {
+          if (res) {
             if (res.TELDE_SESSION_INFO.enable) {
               this.$router.push('/tienda/' + data.tienda_id + '/' + 1)
               this.login(resp)
@@ -105,11 +105,11 @@ export default {
                 color: 'negative'
               })
             }
-        } else {
-          this.$q.loading.hide()
-          console.log('hubo un error')
-        }
-      })
+          } else {
+            this.$q.loading.hide()
+            console.log('hubo un error')
+          }
+        })
       })
     },
     async aprobarPago (datos) {
