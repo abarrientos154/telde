@@ -72,6 +72,11 @@ export default {
           })
         }
       })
+
+      universalLinks.subscribe('ul_payStripeShop', function (eventData) {
+        // do some work
+        // alert('Did launch application from the link: ' + eventData.url)
+      })
     }
   },
   methods: {
