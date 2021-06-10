@@ -183,10 +183,16 @@ export default {
   },
   methods: {
     async getUser () {
+      this.$q.loading.show({
+        message: 'Cargando datos'
+      })
       await this.$api.get('user_info').then(res => {
         if (res) {
           this.form = res
           this.baseu = env.apiUrl + '/perfil_img/' + res._id
+          this.$q.loading.hide()
+        } else {
+          this.$q.loading.hide()
         }
       })
     },
