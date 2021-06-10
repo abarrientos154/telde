@@ -203,33 +203,56 @@ class ProductoController {
     response.send(true)
   }
 
-  async comprarProductos ({ request, response }) {
+  async pre_pago ({request, response}) {
     var data = request.all().dat
     var productos = request.all().carrito
     data.productos_total = productos.length
     data.status = 'En Local'
     data.direccion_id = data.direccion._id
+    data.type = 1
     delete data.direccion
     var compra = await Pedido.create(data)
-    var moneda = {
-      tienda_id: compra.tienda_id,
-      pedido_id: compra._id,
-      type: 1,
-      monto: compra.totalValor
-    }
-    var crearMoneda = await Monedero.create(moneda)
     for (let i = 0; i < productos.length; i++) {
       var dat = productos[i]
       dat.pedido_id = compra._id
       dat.producto_id = dat._id
       delete dat._id
-      delete dat.cantidadFiles
-      var producto = await Compras.create(dat)
-      var cantidad = await Producto.query().where({_id: productos[i]._id}).update({cantidad: productos[i].cantidad})
-      if (productos[i].cantidad === 0) {
-        var disable = await Producto.query().where({_id: productos[i]._id}).update({disable: true})
-      }
+      delete dat.cantidad
+      var producto = await Compras.create(dat) 
     }
+  }
+  async pago_ok ({ request, response }) {
+    var data = request.all()
+    var cantidad = await Pedido.query().where({ref: data.ref}).update({type: 2})
+    var pedido = (await Pedido.findBy('ref', data.ref))
+    var moneda = {
+      tienda_id: data.tienda_id,
+      pedido_id: pedido._id,
+      type: 1,
+      monto: pedido.totalValor
+    }
+    var crearMoneda = await Monedero.create(moneda)
+    var productos = (await Compras.query().where({pedido_id: pedido._id}).fetch()).toJSON()
+    for (let i = 0; i < productos.length; i++) {
+      var produ = await Producto.find(productos[i].producto_id)
+      var new_cantidad = produ.cantidad - productos[i].cantidad_compra
+      var obj = {}
+      new_cantidad = new_cantidad < 0 ? 0 : new_cantidad
+      if (new_cantidad == 0){
+        obj.cantidad = 0
+        obj.disable = true
+      } else {
+        obj.cantidad = new_cantidad
+      }
+      var cantidad = await Producto.query().where({_id: productos[i].producto_id}).update(obj)
+    }
+    response.send(true)
+  }
+  async pago_no_ok ({ request, response }) {
+    var data = request.all()
+    var pedido = (await Pedido.findBy('ref', data.ref))
+    var borrar1 = await Pedido.query().where({ref: data.ref}).delete()
+    var borrar2 = await Compras.query().where({pedido_id: pedido.ref}).delete()
     response.send(true)
   }
   async reportes ({ params, response, auth }) {

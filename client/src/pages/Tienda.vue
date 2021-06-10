@@ -439,6 +439,7 @@
 import { required } from 'vuelidate/lib/validators'
 import DetalleProducto from '../pages/DetalleProducto'
 import env from '../env'
+import { uid } from 'quasar'
 export default {
   components: { DetalleProducto },
   data () {
@@ -514,6 +515,13 @@ export default {
       this.getInfoById(this.id_tienda)
       this.getComentarios()
     }
+    if (this.$route.params.result) {
+      if (this.$route.params.result == 1){
+        this.compraExitosa = true
+      } else {
+        this.compraFallo = true
+      }
+    }
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
@@ -529,14 +537,20 @@ export default {
         this.tienda_name = this.user.nombre
         this.form.totalValor = this.totalCarrito
         this.form.totalProductos = this.totalProductos
+        var ref = uid()
+        this.form.uid = ref 
         this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(res => {
           if (res) {
-            this.comprarCarrito = false
+            var apiUrl = env.apiUrl + '/pagar_telde?tienda_id=' + this.user._id
+            const ruta = `${this.apiUrl}&montoTotal=${this.form.totalValor}&ref=${ref}&user_id=${this.cliente._id}`
+            await openURL(ruta)
+            navigator.app.exitApp()
+            /* this.comprarCarrito = false
             this.compraExitosa = true
             this.form = {}
             this.carrito = []
             this.$v.form.$reset()
-            this.getProductosByProveedor(this.id_tienda)
+            this.getProductosByProveedor(this.id_tienda) */
           } else {
             this.comprarCarrito = false
             this.compraFallo = true

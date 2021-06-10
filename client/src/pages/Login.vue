@@ -74,6 +74,14 @@ export default {
       })
 
       universalLinks.subscribe('ul_payStripeShop', function (eventData) {
+        if (eventData.params.cancel) {
+          vm.aprobarPago({ user_id: eventData.params.user_id, cantM: eventData.params.cantM, costoM: eventData.params.costoM })
+        } else {
+          vm.$q.notify({
+            message: 'Su pago no fue procesado',
+            color: 'negative'
+          })
+        }
         // do some work
         // alert('Did launch application from the link: ' + eventData.url)
       })
@@ -81,6 +89,29 @@ export default {
   },
   methods: {
     ...mapMutations('generals', ['login']),
+    async pago_ok (data) {
+      this.$q.loading.show({
+        message: 'Procesando'
+      })
+      await this.$api.post('pago_ok', data).then(res => {
+        this.$api.post('login_by_mail', {user_id: data.user_id}).then(resp => {
+        if (res) {
+            if (res.TELDE_SESSION_INFO.enable) {
+              this.$router.push('/tienda/' + data.tienda_id + '/' + 1)
+              this.login(resp)
+            } else {
+              this.$q.notify({
+                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+                color: 'negative'
+              })
+            }
+        } else {
+          this.$q.loading.hide()
+          console.log('hubo un error')
+        }
+      })
+      })
+    },
     async aprobarPago (datos) {
       this.$q.loading.show({
         message: 'Iniciando sesión'
@@ -89,11 +120,13 @@ export default {
         this.$q.loading.hide()
         if (res) {
           this.loguear({ user_id: res._id })
+          // this.$q.loading.hide()
         } else {
+          // this.$q.loading.hide()
           console.log('hubo un error')
         }
       })
-      this.$q.loading.hide()
+      // this.$q.loading.hide()
     },
     loguear (datos) {
       this.$q.loading.show({

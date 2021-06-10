@@ -22,7 +22,7 @@ const routes = [
       { path: '/editar-perfil', component: () => import('pages/Proveedor/Perfil.vue') },
       // Generales
       { path: '/administrador', component: () => import('pages/Administrador.vue') },
-      { path: '/tienda/:proveedor_id', component: () => import('pages/Tienda.vue') },
+      { path: '/tienda/:proveedor_id/:result', component: () => import('pages/Tienda.vue') },
       { path: '/contacto', component: () => import('pages/Contacto.vue') },
       { path: '/Blog', component: () => import('pages/Blog.vue') },
       { path: '/somos', component: () => import('pages/SomosNova.vue') },
