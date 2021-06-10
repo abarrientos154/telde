@@ -76,6 +76,7 @@ class UserController {
     token.verify = user.verify
     let data = {}
     data.TELDE_SESSION_INFO = token
+    console.log(data)
     return data
 
   }

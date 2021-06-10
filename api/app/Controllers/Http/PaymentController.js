@@ -51,7 +51,7 @@ class PaymentController {
         },
       ],
       mode: 'payment',
-      success_url: `https://app.teldepayshop.com/pay_stripe?user_id=${params.user_id}&tienda_id=${body.tienda_id}&ref=${params.ref}`,
+      success_url: `https://app.teldepayshop.com/pay_stripe?user_id=${params.user_id}&tienda_id=${params.tienda_id}&ref=${params.ref}`,
       cancel_url: `https://app.teldepayshop.com/pay_stripe_cancel?user_id=${params.user_id}&ref=${params.ref}&tienda_id=${params.tienda_id}&cancel=${0}`,
     })
     response.send({ id: session.id })

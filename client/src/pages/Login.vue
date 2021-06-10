@@ -42,6 +42,19 @@
 
               <div class="text-center text-primary text-bold cursor-pointer" @click="$router.push('registro')"> ¿Eres Nuevo? Registrate </div> -->
             </q-form>
+             <q-dialog v-model="prueba">
+              <q-card class="q-pa-md">
+                <q-card-section>
+                  <div class="q-ml-sm text-center text-subtitle2"></div>
+                  <div class="q-ml-sm text-center text-h6 text-bold">{{info.user}}</div>
+                </q-card-section>
+
+                <q-card-section class="column items-center">
+                  <q-btn style="border-radius: 14px" label="Iniciar Sesión" color="primary" />
+                  <q-btn flat label="Registrarme" color="primary" @click="prueba = false" />
+                </q-card-section>
+              </q-card>
+            </q-dialog>
       </q-page>
     </q-page-container>
   </q-layout>
@@ -54,7 +67,9 @@ export default {
     return {
       form: {},
       isPwd: true,
-      loading: false
+      loading: false,
+      info: {},
+      prueba: false
     }
   },
   mounted () {
@@ -91,22 +106,7 @@ export default {
         message: 'Procesando'
       })
       await this.$api.post(data.cancel ? 'pago_no_ok' : 'pago_ok', data).then(res => {
-        this.$api.post('login_by_mail', { user_id: data.user_id }).then(resp => {
-          if (res) {
-            if (res.TELDE_SESSION_INFO.enable) {
-              this.$router.push('/tienda/' + data.tienda_id + '/' + data.cancel ? 2 : 1)
-              this.login(resp)
-            } else {
-              this.$q.notify({
-                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
-                color: 'negative'
-              })
-            }
-          } else {
-            this.$q.loading.hide()
-            console.log('hubo un error')
-          }
-        })
+        this.logeo_ok({ ...data })
       })
     },
     async aprobarPago (datos) {
@@ -124,6 +124,33 @@ export default {
         }
       })
       // this.$q.loading.hide()
+    },
+    logeo_ok (data) {
+      this.$api.post('login_by_mail', { user_id: data.user_id }).then(resp => {
+        if (resp) {
+          this.$q.loading.hide()
+          if (resp.TELDE_SESSION_INFO.enable) {
+            this.info = resp
+            // this.info.dos = data
+            var est = data.cancel ? '2' : '1'
+            this.$router.push('/tienda/' + data.tienda_id + '/' + est)
+            this.login(resp)
+            this.prueba = true
+          } else {
+            this.$q.notify({
+              message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+              color: 'negative'
+            })
+          }
+        } else {
+          this.$q.notify({
+            message: 'err',
+            color: 'negative'
+          })
+          this.$q.loading.hide()
+          console.log('hubo un error')
+        }
+      })
     },
     loguear (datos) {
       this.$q.loading.show({
