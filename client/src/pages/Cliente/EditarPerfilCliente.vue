@@ -179,6 +179,7 @@ export default {
   },
   mounted () {
     this.getUser()
+    this.getProvincia()
   },
   methods: {
     async getUser () {
