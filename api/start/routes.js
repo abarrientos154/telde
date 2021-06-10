@@ -59,6 +59,9 @@ addPrefixToGroup(
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
     Route.get("all_productos", "ProductoController.allProductos")
+
+    Route.get("pagar_telde", "PaymentController.create")
+    Route.post("procesador_pagos/:user_id/:montoTotal/:ref", "PaymentController.procesarPago");
   })
 );
 
