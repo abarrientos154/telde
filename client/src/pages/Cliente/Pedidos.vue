@@ -17,7 +17,7 @@
             <div class="text-subtitle2">{{form.email}}</div>
           </div>
           <div>
-            <q-btn no-caps color="primary" label="Editar Perfil" @click="$router.push('/editar-cliente/')"/>
+            <q-btn no-caps color="primary" label="Editar Perfil" @click="$router.push('/editar-mi-perfil')"/>
           </div>
         </div>
       </div>
@@ -508,10 +508,14 @@ export default {
     crearD () {
       this.$v.direccion.$touch()
       if (!this.$v.direccion.$error) {
+        this.$q.loading.show({
+          message: 'Creando dirección'
+        })
         this.$api.post('nueva_direccion', this.direccion).then(res => {
           if (res) {
             this.getInfo()
             this.miDireccion = false
+            this.$q.loading.hide()
           }
         })
       }
@@ -519,10 +523,14 @@ export default {
     actualizarD (id) {
       this.$v.direccion.$touch()
       if (!this.$v.direccion.$error) {
+        this.$q.loading.show({
+          message: 'Actualizando dirección'
+        })
         this.$api.put('direccion/' + id, this.direccion).then(res => {
           if (res) {
             this.getInfo()
             this.miDireccion = false
+            this.$q.loading.hide()
           }
         })
       }

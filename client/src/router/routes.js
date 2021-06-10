@@ -13,6 +13,7 @@ const routes = [
       { path: '/tiendas/:cat', component: () => import('pages/Cliente/Tiendas.vue') },
       { path: '/tiendas/:cat/:subcat', component: () => import('pages/Cliente/Tiendas.vue') },
       { path: '/mis_pedidos', component: () => import('pages/Cliente/Pedidos.vue') },
+      { path: '/editar-mi-perfil', component: () => import('pages/Cliente/EditarPerfilCliente.vue') },
       // Tienda
       { path: '/producto', component: () => import('pages/Proveedor/Producto.vue') },
       { path: '/editar_producto/:producto_id', component: () => import('pages/Proveedor/Producto.vue') },
@@ -38,7 +39,6 @@ const routes = [
   { path: '/splash', component: () => import('pages/Splash.vue') },
   { path: '/registro', component: () => import('pages/Registro/Parte1.vue') },
   { path: '/registro-cliente', component: () => import('pages/Registro/RegistroCliente.vue') },
-  { path: '/editar-cliente/', component: () => import('pages/Registro/EditarPerfilCliente.vue') },
   { path: '/registro-tienda', component: () => import('pages/Registro/RegistroTienda.vue') },
   { path: '/pago-membresia/:id', component: () => import('pages/Registro/PagoMembresia.vue') },
   { path: '/pagar_telde/:user_id', component: () => import('pages/PagarTelde.vue') },

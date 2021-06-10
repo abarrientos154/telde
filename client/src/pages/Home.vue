@@ -1,7 +1,7 @@
 <template>
   <div>
     <q-img src="nopublicidad.jpg" style="height: 400px; width: 100%;" >
-      <q-btn flat class="q-ml-md q-mt-md" @click="$router.push('/editar-cliente/')">
+      <q-btn flat class="q-ml-md q-mt-md" @click="$router.push('/editar-mi-perfil')">
         <q-chip>
           <q-avatar icon="edit" color="primary" text-color="white" />
           Editar Perfil
