@@ -114,11 +114,12 @@ export default {
             this.$router.push('/administrador')
             this.login(res)
           }
+          this.$q.loading.hide()
         } else {
+          this.$q.loading.hide()
           console.log('hubo un error')
         }
       })
-      this.$q.loading.hide()
     },
     onSubmit () {
       this.$q.loading.show({
@@ -126,7 +127,6 @@ export default {
       })
       this.$api.post('login', this.form).then(res => {
         if (res) {
-          console.log('user', res.TELDE_SESSION_INFO)
           if (res.TELDE_SESSION_INFO.roles[0] === 2 || res.TELDE_SESSION_INFO.roles[0] === 3) {
             if (res.TELDE_SESSION_INFO.enable) {
               if (res.TELDE_SESSION_INFO.roles[0] === 3) {
@@ -149,11 +149,12 @@ export default {
             this.$router.push('/administrador')
             this.login(res)
           }
+          this.$q.loading.hide()
         } else {
+          this.$q.loading.hide()
           console.log('hubo un error')
         }
       })
-      this.$q.loading.hide()
     }
   }
 }

@@ -98,7 +98,7 @@
             </q-card>
           </div>
           <div class="col-12 row justify-center q-mb-md">
-            <q-btn rounded class="q-pa-xs" color="primary" text-color="white" @click="ver()" :label="verMas ? 'Ver menos productos' : 'Ver más productos'" style="width: 90%;" no-caps/>
+            <q-btn rounded color="primary" @click="ver()" size="lg" :label="verMas ? 'Ver menos productos' : 'Ver más productos'" style="width: 80%;" no-caps/>
           </div>
       </div>
       <div v-else class="text-center text-h6 q-my-lg">Aún no tienes productos vendidos</div>

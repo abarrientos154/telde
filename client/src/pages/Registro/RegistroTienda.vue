@@ -400,6 +400,11 @@ export default {
       this.$v.form.subCategoria.$touch()
       if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
         this.slide = 2
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
+        })
       }
     },
     siguiente2 () {
@@ -414,6 +419,11 @@ export default {
       if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
         this.form.password = this.password
         this.slide = 3
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
+        })
       }
     },
     addSubCategoria (btn) {
@@ -430,6 +440,9 @@ export default {
         this.textColorBanco = 'text-red'
       }
       if (!this.$v.form.$error && this.confirma_datos) {
+        this.$q.loading.show({
+          message: 'Registrando datos'
+        })
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('portada', this.portada)
@@ -440,7 +453,6 @@ export default {
           this.form.cantidadFiles = this.images.length
         } else { this.form.cantidadFiles = 0 }
         formData.append('dat', JSON.stringify(this.form))
-        this.$q.loading.show()
         await this.$api.post('registrar_tienda', formData, {
           headers: {
             'Content-Type': undefined
@@ -450,8 +462,14 @@ export default {
             this.id = res._id
             this.slide = 4
             this.$q.loading.hide()
+          } else {
+            this.$q.loading.hide()
           }
-          this.$q.loading.hide()
+        })
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
         })
       }
     },

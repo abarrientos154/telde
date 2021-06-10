@@ -561,6 +561,9 @@ export default {
       })
     },
     getProductosByProveedor (id) {
+      this.$q.loading.show({
+        message: 'Cargando productos'
+      })
       this.$api.get('productos/' + id).then(res => {
         if (res) {
           this.allProductos = res
@@ -568,6 +571,9 @@ export default {
           this.mejores = this.allProductos.slice(0, 5)
           this.productos = this.allProductos.slice(0, 4)
           this.ultimosProductos = tot.reverse().slice(0, 10)
+          this.$q.loading.hide()
+        } else {
+          this.$q.loading.hide()
         }
       })
     },
@@ -588,7 +594,9 @@ export default {
         cancel: true,
         persistent: true
       }).onOk(() => {
-        this.$q.loading.show()
+        this.$q.loading.show({
+          message: 'Eliminando producto'
+        })
         this.$api.delete('producto/' + id).then(res => {
           if (res) {
             this.$q.loading.hide()
@@ -597,6 +605,12 @@ export default {
               color: 'positive'
             })
             this.getProductosByProveedor(this.id_tienda)
+          } else {
+            this.$q.loading.hide()
+            this.$q.notify({
+              message: 'Hubo un error',
+              color: 'negative'
+            })
           }
         })
       }).onCancel(() => {

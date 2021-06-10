@@ -232,31 +232,40 @@ export default {
       if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && !this.$v.perfil.$error && this.terminos_condiciones) {
         this.form.password = this.password
         this.slide = 2
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
+        })
       }
     },
     async registrar () {
       this.form.enable = true
       this.$v.direccion.$touch()
       if (!this.$v.direccion.$error) {
+        this.$q.loading.show({
+          message: 'Registrando datos'
+        })
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('dat', JSON.stringify(this.form))
         formData.append('dir', JSON.stringify(this.direccion))
-        this.$q.loading.show()
         await this.$api.post('registrar_cliente', formData, {
           headers: {
             'Content-Type': undefined
           }
         }).then(res => {
           if (res) {
-            this.$q.notify({
-              message: 'Ya formas parte de Nova Telde, Bienvenido',
-              color: 'positive'
-            })
             this.slide = 3
             this.$q.loading.hide()
+          } else {
+            this.$q.loading.hide()
           }
-          this.$q.loading.hide()
+        })
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
         })
       }
     },

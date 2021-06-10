@@ -66,7 +66,7 @@
     </div>
     <div v-else class="text-center text-h6 q-my-lg">No existen tiendas creadas</div>
     <div v-if="verTiendas" class="row justify-center q-ma-md">
-      <q-btn rounded class="q-pa-xs" color="primary" text-color="white" @click="verMas()" label="Ver más tiendas" style="width: 90%;" no-caps/>
+      <q-btn rounded no-caps color="primary" @click="verMas()" label="Ver más tiendas" size="lg" style="width: 80%;" />
     </div>
   </div>
 </template>

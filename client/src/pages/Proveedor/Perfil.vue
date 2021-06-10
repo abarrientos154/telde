@@ -46,7 +46,7 @@
                     <div style="width:100%">
                         <div class="text-subtitle2">Horario de atención</div>
                         <div class="row justify-between">
-                            <q-input borderless readonly dense v-model="form.hapertura" mask="time" :rules="['time']" style="width:45%" label="Apertura"
+                            <q-input borderless readonly dense v-model="form.hapertura" style="width:45%" label="Apertura"
                             error-message="Requerido" :error="$v.form.hapertura.$error" @blur="$v.form.hapertura.$touch()">
                             <template v-slot:prepend>
                               <q-icon name="access_time" class="cursor-pointer">
@@ -61,7 +61,7 @@
                               </q-icon>
                             </template>
                             </q-input>
-                            <q-input borderless readonly dense v-model="form.hcierre" mask="time" :rules="['time']" style="width:45%" class="q-ml-sm" label="Cierre"
+                            <q-input borderless readonly dense v-model="form.hcierre" style="width:45%" class="q-ml-sm" label="Cierre"
                             error-message="Requerido" :error="$v.form.hcierre.$error" @blur="$v.form.hcierre.$touch()">
                             <template v-slot:prepend>
                               <q-icon name="access_time" class="cursor-pointer">

@@ -82,7 +82,7 @@
                   <template v-slot:prepend>
                     <q-icon name="event" class="cursor-pointer" color="primary">
                       <q-popup-proxy transition-show="scale" transition-hide="scale">
-                        <q-date v-model="form.ofertaDate" mask="YYYY-MM-DD HH:mm">
+                        <q-date v-model="form.ofertaDate" mask="YYYY-MM-DD">
                           <div class="row items-center justify-end">
                             <q-btn v-close-popup label="Cerrar" color="primary" flat />
                           </div>
@@ -99,7 +99,7 @@
                   <template v-slot:prepend>
                     <q-icon name="access_time" class="cursor-pointer" color="primary">
                       <q-popup-proxy transition-show="scale" transition-hide="scale">
-                        <q-time v-model="form.ofertaTime" mask="YYYY-MM-DD HH:mm" format24h>
+                        <q-time v-model="form.ofertaTime" mask="HH:mm" format24h>
                           <div class="row items-center justify-end">
                             <q-btn v-close-popup label="Cerrar" color="primary" flat />
                           </div>
