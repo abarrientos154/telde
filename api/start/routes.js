@@ -105,7 +105,9 @@ addPrefixToGroup(
     Route.delete("eliminar_archivo_producto/:file/:producto_id", "UploadController.eliminarImgProducto")
     Route.get('perfil_img/:file', 'UploadController.getFileByDirectoryPerfil')
 
-    Route.post("comprar_productos", "ProductoController.comprarProductos")
+    Route.post("comprar_productos", "ProductoController.pre_pago")
+    Route.post("pago_ok", "ProductoController.pago_ok")
+    Route.post("pago_no_ok", "ProductoController.pago_no_ok")
     Route.post("comprar_productos_comprobante", "ProductoController.comprarTransferencia")
     Route.get("productos_vendidos", "ProductoController.productosVendidos")
     //////////////////////////////////////////////////////////////////////////

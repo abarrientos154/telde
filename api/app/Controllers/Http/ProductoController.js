@@ -220,6 +220,7 @@ class ProductoController {
       delete dat.cantidad
       var producto = await Compras.create(dat) 
     }
+    response.send(true)
   }
   async pago_ok ({ request, response }) {
     var data = request.all()

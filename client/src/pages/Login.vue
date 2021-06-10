@@ -75,12 +75,9 @@ export default {
 
       universalLinks.subscribe('ul_payStripeShop', function (eventData) {
         if (eventData.params.cancel) {
-          vm.aprobarPago({ user_id: eventData.params.user_id, cantM: eventData.params.cantM, costoM: eventData.params.costoM })
+          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id })
         } else {
-          vm.$q.notify({
-            message: 'Su pago no fue procesado',
-            color: 'negative'
-          })
+          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id, cancel: eventData.params.cancel })
         }
         // do some work
         // alert('Did launch application from the link: ' + eventData.url)
@@ -93,11 +90,11 @@ export default {
       this.$q.loading.show({
         message: 'Procesando'
       })
-      await this.$api.post('pago_ok', data).then(res => {
+      await this.$api.post(data.cancel ? 'pago_no_ok' : 'pago_ok', data).then(res => {
         this.$api.post('login_by_mail', { user_id: data.user_id }).then(resp => {
           if (res) {
             if (res.TELDE_SESSION_INFO.enable) {
-              this.$router.push('/tienda/' + data.tienda_id + '/' + 1)
+              this.$router.push('/tienda/' + data.tienda_id + '/' + data.cancel ? 2 : 1)
               this.login(resp)
             } else {
               this.$q.notify({
