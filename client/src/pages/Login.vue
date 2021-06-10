@@ -25,7 +25,7 @@
               <div class="text-center text-body2 text-grey-7">¿Olvidaste tu contraseña?</div>
 
               <div class="row justify-center q-mt-lg">
-                <q-btn rounded no-caps color="primary" style="width:200px" label="Iniciar sesión" :loading="loading" @click="onSubmit()">
+                <q-btn rounded no-caps color="primary" style="width:200px" size="18px" label="Iniciar sesión" :loading="loading" @click="onSubmit()">
                   <template v-slot:loading>
                     <q-spinner-hourglass class="on-left" />
                     Cargando...
