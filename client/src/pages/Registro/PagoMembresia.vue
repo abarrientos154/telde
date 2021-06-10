@@ -141,7 +141,7 @@ export default {
     }
   },
   mounted () {
-    this.apiUrl = env.apiUrl + '/redireccionar_pago?user_id=' + this.$route.params.id
+    this.apiUrl = env.apiUrl + 'redireccionar_pago?user_id=' + this.$route.params.id
     console.log(this.apiUrl, 'API URLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL')
   },
   computed: {
