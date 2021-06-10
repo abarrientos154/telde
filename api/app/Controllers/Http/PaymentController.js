@@ -26,7 +26,7 @@ class PaymentController {
     let body = request.get()
     console.log(body, 'soy un body testStripe')
     View.global('ruta', function () {
-      return `/api/procesador_pagos/${body.user_id}/${body.montoTotal}/${body.ref}`
+      return `/api/procesador_pagos/${body.user_id}/${body.montoTotal}/${body.ref}/${body.tienda_id}`
     })
     return view.render('paytoshop')
   }
@@ -51,8 +51,8 @@ class PaymentController {
         },
       ],
       mode: 'payment',
-      success_url: `https://app.teldepayshop.com/pay_stripe?user_id=${params.user_id}&montoTotal=${body.montoTotal}&ref=${params.ref}`,
-      cancel_url: `https://app.teldepayshop.com/pay_stripe_cancel?user_id=${params.user_id}&ref=${params.ref}`,
+      success_url: `https://app.teldepayshop.com/pay_stripe?user_id=${params.user_id}&tienda_id=${body.tienda_id}&ref=${params.ref}`,
+      cancel_url: `https://app.teldepayshop.com/pay_stripe_cancel?user_id=${params.user_id}&ref=${params.ref}&tienda_id=${params.tienda_id}&cancel=${0}`,
     })
     response.send({ id: session.id })
   }

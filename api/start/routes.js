@@ -42,6 +42,7 @@ addPrefixToGroup(
     Route.post("procesar_pago/:tienda_id/:costoM/:cantM", "UserController.procesarPago");
     Route.get("redireccionar_pago", "UserController.redirpay");
     Route.put("aprobar_pago/:tienda_id", "UserController.aprobarPagoStripe");
+    Route.post("pago_ok/:tienda_id/:user_id/", "ProductoController.pago_ok");
     Route.post("login", "UserController.login");
     Route.post("registrar_cliente", "UserController.register")
     Route.post("registrar_tienda", "UserController.registerTienda")
@@ -67,7 +68,7 @@ addPrefixToGroup(
     ///////////////////////Direccion/////////////////////////////////////////
 
     Route.get("pagar_telde", "PaymentController.create")
-    Route.post("procesador_pagos/:user_id/:montoTotal/:ref", "PaymentController.procesarPago");
+    Route.post("procesador_pagos/:user_id/:montoTotal/:ref/:tiend_id", "PaymentController.procesarPago");
 
   })
 );
