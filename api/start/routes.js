@@ -58,18 +58,9 @@ addPrefixToGroup(
     Route.get("proveedores", "UserController.proveedores")
     Route.get("all_productos", "ProductoController.allProductos")
 
-<<<<<<< HEAD
     Route.get("pagar_telde", "PaymentController.create")
     Route.post("procesador_pagos/:user_id/:montoTotal/:ref", "PaymentController.procesarPago");
-=======
-    ///////////////////////Direccion/////////////////////////////////////////
-    Route.put("direccion/:id", "UserController.editarDireccion")
-    Route.post("nueva_direccion", "UserController.nuevaDireccion")
-    Route.get("provincias", "UserController.provincias")
-    Route.get("ciudades/:id", "UserController.ciudades")
-    Route.delete("direccion/:id", "UserController.eliminarDireccion")
-    ///////////////////////Direccion/////////////////////////////////////////
->>>>>>> abb92781fa92bc76fb12f1f0dfdfebf0923e763c
+
   })
 );
 
