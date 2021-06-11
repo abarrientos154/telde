@@ -107,19 +107,19 @@
           <div class="row justify-center" style="width: 100%">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Nombre de tienda</div>
-              <q-input v-model="form.nombre" label="" filled
+              <q-input v-model="form.nombre" filled
                 :error="$v.form.nombre.$error" @blur="$v.form.nombre.$touch()"
               />
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Reseña de tu tienda</div>
-              <q-input v-model="form.descripcion" label="" filled type="textarea"
+              <q-input v-model="form.descripcion" filled type="textarea"
                 :error="$v.form.descripcion.$error" @blur="$v.form.descripcion.$touch()"
               />
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Selecciona tu categoria</div>
-              <q-select @input="form.categoria === 'Comida' ? optionsSubCategorias = subCategoria1 : '', form.subCategoria = []" filled v-model="form.categoria" :options="optionsCategoria" label="" emit-value map-options
+              <q-select @input="form.categoria === 'Comida' ? optionsSubCategorias = subCategoria1 : '', form.subCategoria = []" filled v-model="form.categoria" :options="optionsCategoria" emit-value map-options
                 :error="$v.form.categoria.$error" @blur="$v.form.categoria.$touch()" >
               </q-select>
             </div>
@@ -153,43 +153,66 @@
           <div class="row justify-center">
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Provincia</div>
-                    <q-input v-model="form.provincia" label="" filled
-                        error-message="Requerido" :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()"
-                    />
+                  <q-select @input="ciudadesOpt(form.provincia.id)" filled v-model="form.provincia" :options="optionsProvincias" map-options option-label="nombre"
+                    :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.nombre" />
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
                 </div>
-                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-sm">
                   <div class="text-subtitle2 text-grey-8">Ciudad</div>
-                    <q-input v-model="form.ciudad" label="" filled
-                        error-message="Requerido" :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()"
+                  <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="form.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
+                    :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.nombre" />
+                            <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
+                    <q-input dense v-if="form.ciudad" v-model="form.ciudad.cp" filled readonly label="Código postal"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Dirección</div>
-                    <q-input v-model="form.direccion" label="" filled
+                    <q-input v-model="form.direccion" filled
                         error-message="Requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">CIF</div>
-                    <q-input v-model="form.cif" label="" filled
+                    <q-input v-model="form.cif" filled
                         error-message="Requerido" :error="$v.form.cif.$error" @blur="$v.form.cif.$touch()"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Teléfono de contacto</div>
-                    <q-input v-model="form.telefono" label="" filled
+                    <q-input v-model="form.telefono" filled
                         error-message="Requerido" :error="$v.form.telefono.$error" @blur="$v.form.telefono.$touch()"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Correo de contacto</div>
-                    <q-input v-model="form.email" label="" filled type="email"
+                    <q-input v-model="form.email" filled type="email"
                         error-message="Requerido" :error="$v.form.email.$error" @blur="$v.form.email.$touch()"
                     />
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Contraseña</div>
-                    <q-input :type="isPwd ? 'password' : 'text'" v-model="password" label="" filled
+                    <q-input :type="isPwd ? 'password' : 'text'" v-model="password" filled
                         error-message="ingrese una contraseña valida, minimo 6 caracteres" :error="$v.password.$error" @blur="$v.password.$touch()">
                         <template v-slot:append>
                         <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer q-pa-sm" color="primary" @click="isPwd = !isPwd" />
@@ -198,7 +221,7 @@
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
                   <div class="text-subtitle2 text-grey-8">Confirmar Contraseña</div>
-                    <q-input :type="isPwd ? 'password' : 'text'" v-model="repeatPassword" label="" filled
+                    <q-input :type="isPwd ? 'password' : 'text'" v-model="repeatPassword" filled
                         error-message="ingrese una contraseña valida, minimo 6 caracteres" :error="$v.repeatPassword.$error" @blur="$v.repeatPassword.$touch()">
                         <template v-slot:append>
                         <q-icon :name="isPwd ? 'visibility' : 'visibility_off'" class="cursor-pointer q-pa-sm" color="primary" @click="isPwd = !isPwd" />
@@ -206,16 +229,16 @@
                     </q-input>
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 text-subtitle1 q-mb-md">Agrega fotos de tu local comercial (hasta 5 imagenes)</div>
-                <q-scroll-area horizontal style="height:150px; width: 100%;"
+                <q-scroll-area horizontal style="height:120px; width: 100%;"
                 :thumb-style="thumbStyle" :bar-style="barStyle"
                 >
                     <div class="no-wrap q-px-md q-gutter-md row items-center">
-                        <q-card class="bg-grey column justify-center items-center" style="height:140px;border-radius:12px;width:140px">
+                        <q-card class="bg-grey column justify-center items-center" style="height:110px;border-radius:12px;width:110px">
                             <q-file borderless :disable="images.length < 5 ? false : true" v-model="img" class="button-camera" @input="insertarImagen()" accept=".jpg, image/*">
                                 <q-icon name="add_a_photo" class="absolute-center" size="30px" color="white" />
                             </q-file>
                         </q-card>
-                        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:140px;border-radius:12px;width:140px" >
+                        <q-img v-for="(item, index) in imagesSubir" :key="index" :src="item" style="height:110px;border-radius:12px;width:110px" >
                             <q-btn @click="images.splice(index, 1), imagesSubir.splice(index, 1)" flat class="absolute all-pointer-events" size="15px" dense icon="clear" color="negative" style="top: 0px; right: 0px" rounded />
                         </q-img>
                     </div>
@@ -236,19 +259,19 @@
           <div class="row justify-center q-gutter-xs q-mt-lg">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Titular del banco</div>
-              <q-input v-model="form.titular" label="" filled
+              <q-input v-model="form.titular" filled
                 error-message="Requerido" :error="$v.form.titular.$error" @blur="$v.form.titular.$touch()"
               />
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Código IBAN</div>
-              <q-input v-model="form.codigo_iban" label="" filled
+              <q-input v-model="form.codigo_iban" filled
                 error-message="Requerido" :error="$v.form.codigo_iban.$error" @blur="$v.form.codigo_iban.$touch()"
               />
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <div class="text-subtitle2 text-grey-8">Banco</div>
-              <q-input v-model="form.banco" label="" filled
+              <q-input v-model="form.banco" filled
                 error-message="Requerido" :error="$v.form.banco.$error" @blur="$v.form.banco.$touch()"
               />
             </div>
@@ -265,30 +288,12 @@
       <q-carousel-slide :name="4" >
         <div class="absolute-center" style="width:100%">
           <div class="q-mb-md row justify-center">
-            <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
+            <q-img src="nova_telde-06.png" style="width:100%" >
             </q-img>
           </div>
-          <div class="text-center text-subtitle1">¡Registro Exitoso!</div>
           <div class="row items-center justify-center q-mt-lg" style="width:100%">
             <q-btn no-caps label="Pagar Membresía" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-            @click="conti()" />
-          </div>
-        </div>
-      </q-carousel-slide>
-
-      <q-carousel-slide :name="5" >
-        <div class="absolute-center" style="width:100%">
-          <div class="q-mb-md row justify-center">
-            <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
-            </q-img>
-          </div>
-          <div class="column items-center justify-center">
-            <div class="text-center text-h6 text-bold">Compra tu Membresía</div>
-            <div class="text-center text-subtitle1" style="width:80%">Adquiere tu membresía y se parte Del nuevo market place de España</div>
-          </div>
-          <div class="row items-center justify-center q-mt-lg" style="width:100%">
-            <q-btn no-caps label="Comprar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-            @click="ruta()"/>
+            @click="$router.push('/pago-membresia/' + id)" />
           </div>
         </div>
       </q-carousel-slide>
@@ -298,7 +303,6 @@
 
 <script>
 import { required, requiredIf, email, sameAs, maxLength, minLength } from 'vuelidate/lib/validators'
-import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -337,6 +341,9 @@ export default {
       optionsCategoria: ['Comida', 'Tienda'],
       optionsSubCategorias: [],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
+      optionsProvincias: [],
+      optionsCiudad: [],
+      ciudadesFilter: [],
       optionsDias: [
         { label: 'Lunes', value: 0 },
         { label: 'Martes', value: 1 },
@@ -361,9 +368,9 @@ export default {
           return this.form.categoria === 'Comida'
         })
       },
-      ciudad: { required },
       direccion: { required },
       provincia: { required },
+      ciudad: { required },
       cif: { required },
       email: { email, required },
       telefono: { required },
@@ -377,23 +384,10 @@ export default {
     portada: { required },
     perfil: { required }
   },
+  mounted () {
+    this.getProvincia()
+  },
   methods: {
-    ...mapMutations('generals', ['login']),
-    onSubmit () {
-      this.$q.loading.show()
-      this.$api.post('login', this.form).then(res => {
-        if (res) {
-          this.$router.push('/tienda/' + this.id)
-          this.login(res)
-        } else {
-          console.log('hubo un error')
-        }
-      })
-      this.$q.loading.hide()
-    },
-    ruta () {
-      this.$router.push('/pago-membresia/' + this.id)
-    },
     siguiente () {
       this.$v.portada.$touch()
       this.$v.perfil.$touch()
@@ -406,23 +400,30 @@ export default {
       this.$v.form.subCategoria.$touch()
       if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
         this.slide = 2
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
+        })
       }
     },
-    conti () {
-      this.slide = 5
-    },
     siguiente2 () {
-      this.$v.form.ciudad.$touch()
       this.$v.form.provincia.$touch()
+      this.$v.form.ciudad.$touch()
       this.$v.form.direccion.$touch()
       this.$v.form.cif.$touch()
       this.$v.form.email.$touch()
       this.$v.form.telefono.$touch()
       this.$v.password.$touch()
       this.$v.repeatPassword.$touch()
-      if (!this.$v.form.ciudad.$error && !this.$v.form.provincia.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
+      if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
         this.form.password = this.password
         this.slide = 3
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
+        })
       }
     },
     addSubCategoria (btn) {
@@ -439,7 +440,9 @@ export default {
         this.textColorBanco = 'text-red'
       }
       if (!this.$v.form.$error && this.confirma_datos) {
-        this.form.metodoPago = []
+        this.$q.loading.show({
+          message: 'Registrando datos'
+        })
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('portada', this.portada)
@@ -450,25 +453,60 @@ export default {
           this.form.cantidadFiles = this.images.length
         } else { this.form.cantidadFiles = 0 }
         formData.append('dat', JSON.stringify(this.form))
-        this.$q.loading.show()
         await this.$api.post('registrar_tienda', formData, {
           headers: {
             'Content-Type': undefined
           }
         }).then(res => {
           if (res) {
-            this.$q.notify({
-              message: 'Ya formas parte de Nova Telde, Bienvenido',
-              color: 'positive'
-            })
             this.id = res._id
             this.slide = 4
-            console.log(this.id, 'revisa id')
+            this.$q.loading.hide()
+          } else {
             this.$q.loading.hide()
           }
-          this.$q.loading.hide()
+        })
+      } else {
+        this.$q.notify({
+          message: 'Faltan campos por llenar',
+          color: 'negative'
         })
       }
+    },
+    getProvincia () {
+      this.$api.get('provincias').then(res => {
+        if (res) {
+          this.optionsProvincias = res
+        }
+      })
+    },
+    ciudadesOpt (id) {
+      this.$q.loading.show({
+        message: 'Buscando ciudades'
+      })
+      if (this.form.ciudad) {
+        this.form.ciudad = null
+      }
+      this.$api.get('ciudades/' + id).then(res => {
+        if (res) {
+          this.ciudadesFilter = res
+          this.optionsCiudad = res
+          this.$q.loading.hide()
+        }
+      })
+    },
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.optionsCiudad = this.ciudadesFilter
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
+      })
     },
     changePerfil () {
       if (this.perfil) { this.perfilImg = URL.createObjectURL(this.perfil) }

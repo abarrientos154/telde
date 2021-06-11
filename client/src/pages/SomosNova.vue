@@ -10,7 +10,7 @@
             <q-card-section>
                 <div class="column justify-center">
                   <div class="row justify-center">
-                    <q-img class="q-ml-md" src="flaagfooter.png" style="width:50px" />
+                    <q-img class="q-ml-md" src="novafooter.png" style="width:50px" />
                   </div>
                   <div class="text-center text-h6">NOVA TELDE</div>
                   <div class="text-center text-primary">A tu alcance</div>

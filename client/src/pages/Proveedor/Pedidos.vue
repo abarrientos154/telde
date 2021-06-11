@@ -106,7 +106,7 @@
           </q-card-section>
         </q-card-section>
       </q-card>
-      <q-btn rounded no-caps color="primary" label="Ver mas" style="width:80%;" />
+      <q-btn rounded no-caps color="primary" label="Ver mas" size="lg" style="width:80%;" />
     </div>
     <div v-else class="q-my-lg">
       <div class="text-center text-subtitle1">No tienes pedidos finalizados</div>
@@ -137,7 +137,7 @@
                   <q-img
                     style="height: 80px;width: 80px; border-radius:25px;"
                     class="rounded-borders"
-                    :src="'nopublicidad.jpg'"
+                    :src="baseuProducto + item.image"
                   />
                   </div>
               </q-card-section>
@@ -199,7 +199,7 @@
             <q-separator />
             <q-card-section class="q-pt-none">
               <div class="text-h6 text-bold">Estado de pedido</div>
-              <div class="text-h8 text-bold text-grey">{{pedidoSelec.tienda_id}}</div>
+              <div class="text-h8 text-bold text-grey">{{pedidoSelec.cliente}}</div>
             </q-card-section>
           <q-card flat style="width: 100%;">
             <q-card-section horizontal>
@@ -283,9 +283,11 @@
   </div>
 </template>
 <script>
+import env from '../../env'
 export default {
   data () {
     return {
+      baseuProducto: '',
       verPedido: false,
       stadosPedido: false,
       confirmCambio: false,
@@ -298,12 +300,14 @@ export default {
     }
   },
   mounted () {
+    this.baseuProducto = env.apiUrl + '/producto_files/'
     this.getPedidos()
   },
   methods: {
     getPedidos () {
       this.$api.get('reportes/2').then(res => {
         if (res) {
+          console.log(res)
           this.pendientes = res.filter(v => v.status === 'En Local')
           this.enviados = res.filter(v => v.status === 'Enviado')
           this.completados = res.filter(v => v.status === 'Completado')

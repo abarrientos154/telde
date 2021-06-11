@@ -42,6 +42,7 @@ addPrefixToGroup(
     Route.post("procesar_pago/:tienda_id/:costoM/:cantM", "UserController.procesarPago");
     Route.get("redireccionar_pago", "UserController.redirpay");
     Route.put("aprobar_pago/:tienda_id", "UserController.aprobarPagoStripe");
+    Route.post("pago_ok/:tienda_id/:user_id/", "ProductoController.pago_ok");
     Route.post("login", "UserController.login");
     Route.post("registrar_cliente", "UserController.register")
     Route.post("registrar_tienda", "UserController.registerTienda")
@@ -53,15 +54,22 @@ addPrefixToGroup(
     Route.post("user_by_id/:id", "UserController.userById")
     Route.get("productos/:proveedor_id", "ProductoController.productosByProveedorId")
 
-    Route.post("categorias_no_logueado/:proveedor_id", "CategoriaController.indexNoLogueado")
-
-    Route.post("flow_by_id/:id", "UserController.flowConfigData")
-
     Route.get('publicidad_img/:file', 'UploadController.getFilePublicidad')
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
     Route.get("all_productos", "ProductoController.allProductos")
-    Route.get("todo", "ProductoController.todo")
+
+    ///////////////////////Direccion/////////////////////////////////////////
+    Route.put("direccion/:id", "UserController.editarDireccion")
+    Route.post("nueva_direccion", "UserController.nuevaDireccion")
+    Route.get("provincias", "UserController.provincias")
+    Route.get("ciudades/:id", "UserController.ciudades")
+    Route.delete("direccion/:id", "UserController.eliminarDireccion")
+    ///////////////////////Direccion/////////////////////////////////////////
+
+    Route.get("pagar_telde", "PaymentController.create")
+    Route.post("procesador_pagos/:user_id/:montoTotal/:ref/:tienda_id", "PaymentController.procesarPago");
+
   })
 );
 
@@ -73,27 +81,18 @@ addPrefixToGroup(
     Route.put("update_enable/:id", "UserController.userEnable")
     Route.get("clientes", "UserController.clientes")
     Route.put("editar_proveedor", "UserController.editarP")
+    Route.put("editar_cliente", "UserController.editarC")
     Route.post("subir_foto_perfil/:id", "UploadController.subirPerfil")
     Route.post("subir_foto_portada/:id", "UploadController.subirPortada")
     Route.post("subir_archivo_proveedor/:id", "UploadController.subirImgTienda")
     Route.delete("eliminar_archivo_proveedor/:file", "UploadController.eliminarImgTienda")
 
-    Route.put("configuracion_flow", "UserController.flowConfig")
-
     Route.post("proveedor_status/:id", "UserController.proveedorStatus")
-
-    Route.post("flow", "UserController.flow")
-    Route.get("get_info_flow/:token", "UserController.flowResponse")
-    Route.post("store_flow", "UserController.store_flow")
 
     Route.post("publicidad", "PublicidadController.create")
     Route.put('publicidad/:id', 'PublicidadController.update')
     Route.delete('publicidad/:id', 'PublicidadController.destroy')
     Route.post("publicidad_enable/:id", "PublicidadController.publicidadEnable")
-
-    ////////////////CATEGORIAS Y SUBCATEGORIAS//////////////////
-    Route.get("categorias_y_sub", "CategoriaController.index")
-    ///////////////////////////////////////////////////////////////////////////
 
     //////////////////////////PRODUCTOS///////////////////////////////////////
     Route.post("producto", "ProductoController.store")
@@ -104,8 +103,11 @@ addPrefixToGroup(
     Route.post("subir_archivo_producto/:producto_id", "UploadController.subirImgProducto")
     Route.post("subir_perfil_producto/:producto_id", "UploadController.subirPerfilProducto")
     Route.delete("eliminar_archivo_producto/:file/:producto_id", "UploadController.eliminarImgProducto")
+    Route.get('perfil_img/:file', 'UploadController.getFileByDirectoryPerfil')
 
-    Route.post("comprar_productos", "ProductoController.comprarProductos")
+    Route.post("comprar_productos", "ProductoController.pre_pago")
+    Route.post("pago_ok", "ProductoController.pago_ok")
+    Route.post("pago_no_ok", "ProductoController.pago_no_ok")
     Route.post("comprar_productos_comprobante", "ProductoController.comprarTransferencia")
     Route.get("productos_vendidos", "ProductoController.productosVendidos")
     //////////////////////////////////////////////////////////////////////////
@@ -128,6 +130,7 @@ addPrefixToGroup(
     Route.get("saldo_actual", "MonederoController.showSaldo")
     Route.get("retiros", "MonederoController.index")
     Route.post("solicitar_retiro", "MonederoController.create")
+    Route.post("estadistica", "MonederoController.crearEstadistica")
     ///////////////////////Monedero/////////////////////////////////////////
 
 

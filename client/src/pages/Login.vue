@@ -4,11 +4,9 @@
       <q-page class="column justify-center items-center">
             <div class="column items-center justify-center">
                 <div class="row justify-center q-my-md">
-                  <img src="logo.png" alt="logo" style="width: 90px">
+                  <img src="logo_inicio.png" alt="logo" style="width: 270px">
                 </div>
-                <div class="q-mt-sm text-black text-h4">NOVA TELDE</div>
-                <div class="text-blue text-subtitle1">A tu alcance</div>
-                <div class="q-mt-sm text-black text-h6">Inicio de Sesión</div>
+                <div class="text-black text-h5 text-bold">Inicio de Sesión</div>
             </div>
 
             <q-form @submit="onSubmit" class="q-gutter-sm q-ma-sm q-mt-sm">
@@ -27,7 +25,7 @@
               <div class="text-center text-body2 text-grey-7">¿Olvidaste tu contraseña?</div>
 
               <div class="row justify-center q-mt-lg">
-                <q-btn rounded no-caps color="primary" style="width:200px" label="Iniciar sesión" :loading="loading" @click="onSubmit()">
+                <q-btn rounded no-caps color="primary" style="width:200px" size="18px" label="Iniciar sesión" :loading="loading" @click="onSubmit()">
                   <template v-slot:loading>
                     <q-spinner-hourglass class="on-left" />
                     Cargando...
@@ -74,10 +72,28 @@ export default {
           })
         }
       })
+
+      universalLinks.subscribe('ul_payStripeShop', function (eventData) {
+        if (eventData.params.cancel) {
+          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id })
+        } else {
+          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id, cancel: eventData.params.cancel })
+        }
+        // do some work
+        // alert('Did launch application from the link: ' + eventData.url)
+      })
     }
   },
   methods: {
     ...mapMutations('generals', ['login']),
+    async pago_ok (data) {
+      this.$q.loading.show({
+        message: 'Procesando'
+      })
+      await this.$api.post(data.cancel ? 'pago_no_ok' : 'pago_ok', data).then(res => {
+        this.logeo_ok({ ...data })
+      })
+    },
     async aprobarPago (datos) {
       this.$q.loading.show({
         message: 'Iniciando sesión'
@@ -86,11 +102,37 @@ export default {
         this.$q.loading.hide()
         if (res) {
           this.loguear({ user_id: res._id })
+          // this.$q.loading.hide()
         } else {
+          // this.$q.loading.hide()
           console.log('hubo un error')
         }
       })
-      this.$q.loading.hide()
+      // this.$q.loading.hide()
+    },
+    logeo_ok (data) {
+      this.$api.post('login_by_mail', { user_id: data.user_id }).then(resp => {
+        if (resp) {
+          this.$q.loading.hide()
+          if (resp.TELDE_SESSION_INFO.enable) {
+            var est = data.cancel ? '2' : '1'
+            this.$router.push('/tienda/' + data.tienda_id + '/' + est)
+            this.login(resp)
+          } else {
+            this.$q.notify({
+              message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+              color: 'negative'
+            })
+          }
+        } else {
+          this.$q.notify({
+            message: 'err',
+            color: 'negative'
+          })
+          this.$q.loading.hide()
+          console.log('hubo un error')
+        }
+      })
     },
     loguear (datos) {
       this.$q.loading.show({
@@ -116,11 +158,12 @@ export default {
             this.$router.push('/administrador')
             this.login(res)
           }
+          this.$q.loading.hide()
         } else {
+          this.$q.loading.hide()
           console.log('hubo un error')
         }
       })
-      this.$q.loading.hide()
     },
     onSubmit () {
       this.$q.loading.show({
@@ -131,7 +174,11 @@ export default {
           if (res.TELDE_SESSION_INFO.roles[0] === 2 || res.TELDE_SESSION_INFO.roles[0] === 3) {
             if (res.TELDE_SESSION_INFO.enable) {
               if (res.TELDE_SESSION_INFO.roles[0] === 3) {
-                this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+                if (res.TELDE_SESSION_INFO.status === 2) {
+                  this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
+                } else {
+                  this.$router.push('/pago-membresia/' + res.TELDE_SESSION_INFO._id)
+                }
               } else {
                 this.$router.push('/inicio')
               }
@@ -146,11 +193,12 @@ export default {
             this.$router.push('/administrador')
             this.login(res)
           }
+          this.$q.loading.hide()
         } else {
+          this.$q.loading.hide()
           console.log('hubo un error')
         }
       })
-      this.$q.loading.hide()
     }
   }
 }

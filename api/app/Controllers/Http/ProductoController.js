@@ -6,7 +6,6 @@
 const Helpers = use('Helpers')
 const mkdirp = use('mkdirp')
 const Producto = use('App/Models/Producto')
-const Flow = use('App/Models/Flow')
 const Compras = use('App/Models/ComprasProducto')
 const Pedido = use('App/Models/Compra')
 const Comentario = use('App/Models/Comentario')
@@ -21,7 +20,7 @@ const moment = require("moment")
 class ProductoController {
 
   async productosByProveedorId ({ response, params }) {
-    let filter = (await Producto.query().where({ proveedor_id: params.proveedor_id}).with('datos_proveedor').with('categoria_info').fetch()).toJSON()
+    let filter = (await Producto.query().where({ proveedor_id: params.proveedor_id}).with('datos_proveedor').fetch()).toJSON()
     let productos = filter.filter(v => !v.disable)
     let enviar = productos.map(v => {
       let entro = false
@@ -53,7 +52,7 @@ class ProductoController {
    */
   async index ({ response, auth }) {
     let user = await auth.getUser()
-    let filter = (await Producto.query().where({ proveedor_id: user._id.toString()}).with('datos_proveedor').with('categoria_info').fetch()).toJSON()
+    let filter = (await Producto.query().where({ proveedor_id: user._id.toString()}).with('datos_proveedor').fetch()).toJSON()
     let productos = filter.filter(v => !v.disable)
     let enviar = productos.map(v => {
       let entro = false
@@ -64,7 +63,6 @@ class ProductoController {
       return {
         ...v,
         oferta: entro ? (diferencia < 0 ? false : true) : null
-        //categoria: categoria.nombre
       }
     })
     response.send(enviar)
@@ -72,7 +70,7 @@ class ProductoController {
 
   async allProductos ({ response, auth }) {
     let filter = (await Producto.query().where({}).with('datos_proveedor').fetch()).toJSON()
-    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 1)
+    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 2 && v.datos_proveedor.enable)
     let enviar = productos.map(v => {
       let entro = false
       if (v.oferta) {
@@ -82,7 +80,6 @@ class ProductoController {
       return {
         ...v,
         oferta: entro ? (diferencia < 0 ? false : true) : null
-        //categoria: categoria.nombre
       }
     })
     response.send(enviar)
@@ -206,47 +203,81 @@ class ProductoController {
     response.send(true)
   }
 
-  async comprarProductos ({ request, response }) {
+  async pre_pago ({request, response}) {
     var data = request.all().dat
     var productos = request.all().carrito
     data.productos_total = productos.length
     data.status = 'En Local'
+    data.direccion_id = data.direccion._id
+    data.type = 1
+    delete data.direccion
     var compra = await Pedido.create(data)
-    var moneda = {
-      tienda_id: compra.tienda_id,
-      pedido_id: compra._id,
-      type: 1,
-      monto: compra.totalValor
-    }
-    var crearMoneda = await Monedero.create(moneda)
     for (let i = 0; i < productos.length; i++) {
       var dat = productos[i]
       dat.pedido_id = compra._id
       dat.producto_id = dat._id
       delete dat._id
       delete dat.cantidad
-      var producto = await Compras.create(dat)
-      var cantidad = await Producto.query().where({_id: productos[i]._id}).update({cantidad: productos[i].cantidad})
-      if (productos[i].cantidad === 0) {
-        var disable = await Producto.query().where({_id: productos[i]._id}).update({disable: true})
-      }
+      var producto = await Compras.create(dat) 
     }
+    response.send(true)
+  }
+  async pago_ok ({ request, response }) {
+    var data = request.all()
+    var cantidad = await Pedido.query().where({ref: data.ref}).update({type: 2})
+    var pedido = (await Pedido.findBy('ref', data.ref))
+    var moneda = {
+      tienda_id: data.tienda_id,
+      pedido_id: pedido._id,
+      type: 1,
+      monto: pedido.totalValor
+    }
+    var crearMoneda = await Monedero.create(moneda)
+    var productos = (await Compras.query().where({pedido_id: pedido._id}).fetch()).toJSON()
+    for (let i = 0; i < productos.length; i++) {
+      var produ = await Producto.find(productos[i].producto_id)
+      var new_cantidad = produ.cantidad - productos[i].cantidad_compra
+      var obj = {}
+      new_cantidad = new_cantidad < 0 ? 0 : new_cantidad
+      if (new_cantidad == 0){
+        obj.cantidad = 0
+        obj.disable = true
+      } else {
+        obj.cantidad = new_cantidad
+      }
+      var cantidad = await Producto.query().where({_id: productos[i].producto_id}).update(obj)
+    }
+    response.send(true)
+  }
+  async pago_no_ok ({ request, response }) {
+    var data = request.all()
+    var pedido = (await Pedido.findBy('ref', data.ref))
+    var borrar1 = await Pedido.query().where({ref: data.ref}).delete()
+    var borrar2 = await Compras.query().where({pedido_id: pedido.ref}).delete()
     response.send(true)
   }
   async reportes ({ params, response, auth }) {
     const user = (await auth.getUser()).toJSON()
     var data
     if (params.type == 1){
-      data = (await Pedido.query().where({cliente_id: user._id}).with('productos').fetch()).toJSON()
+      data = (await Pedido.query().where({cliente_id: user._id}).with('productos').with('tienda').fetch()).toJSON()
+      response.send(data.map(v => {
+        return {
+          ...v,
+          tienda: v.tienda ? v.tienda.nombre : '',
+          created_at: moment(v.created_at).format('DD-MM-YYYY')
+        }
+      }))
     } else {
-      data = (await Pedido.query().where({tienda_id: user._id}).with('productos').fetch()).toJSON()
+      data = (await Pedido.query().where({tienda_id: user._id}).with('productos').with('cliente').fetch()).toJSON()
+      response.send(data.map(v => {
+        return {
+          ...v,
+          cliente: v.cliente ? v.cliente.name + ' ' + v.cliente.lastName : '',
+          created_at: moment(v.created_at).format('DD-MM-YYYY')
+        }
+      }))
     }
-    response.send(data.map(v => {
-      return {
-        ...v,
-        created_at: moment(v.created_at).format('DD-MM-YYYY')
-      }
-    }))
   }
 
   async updateCompra ({ params, request, response }) {

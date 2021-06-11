@@ -94,6 +94,11 @@ class UploadController {
     response.download(Helpers.appRoot('storage/uploads/perfil') + `/${dir}`)
   }
 
+  async getFileByDirectoryPerfil ({ params, request, response }) {
+    const dir = params.file
+    response.download(Helpers.appRoot('storage/uploads/perfil') + `/${dir}`)
+  }
+
   async getFilePublicidad ({ params, response, request }) {
     let dir = params.file
     response.download(Helpers.appRoot('storage/uploads/publicidades') + `/${dir}`)
@@ -107,11 +112,6 @@ class UploadController {
     })
     if (profilePic) {
       if (Helpers.appRoot('storage/uploads/perfil')) {
-        /* if (user.roles[0] !== 1) {
-          status = await User.query().where({_id: id}).update({status: 2})
-        } else {
-          status = await User.query().where({_id: id}).update({status: 1})
-        } */
         await profilePic.move(Helpers.appRoot('storage/uploads/perfil'), {
           name: id,
           overwrite: true
@@ -123,7 +123,6 @@ class UploadController {
       if (!profilePic.moved()) {
         return profilePic.error()
       } else {
-        user = await User.query().where({_id: id}).update({perfil: true})
         response.send(user)
       }
     }

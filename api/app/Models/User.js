@@ -8,11 +8,13 @@ const Hash = use('Hash')
 
 class User extends Model {
   static get fillableProveedor() {
-    return ['nombre', 'descripcion', 'cif', 'ciudad', 'direccion', 'provincia', 'email', 'telefono', 'password', 'cantidadFiles', 'delivery', 'dias', 'hapertura', 'hcierre', 'deliveryPrice', 'status', 'metodoPago', 'banco', 'titular', 'codigo_iban', 'categoria', 'subCategoria']
+    return ['nombre', 'descripcion', 'cif', 'ciudad', 'direccion', 'provincia', 'email', 'telefono', 'password', 'cantidadFiles', 'dias', 'hapertura', 'hcierre', 'status', 'banco', 'titular', 'codigo_iban', 'categoria', 'subCategoria']
+  }
+  static get fillableCliente() {
+    return ['name', 'lastName',  'telefono']
   }
   static fieldValidationRules() {
     const rulesUser = {
-      direcciones: 'required',
       name: 'string|required',
       lastName: 'string|required',
       password: 'string|required',
@@ -47,6 +49,10 @@ class User extends Model {
    */
   tokens() {
     return this.hasMany('App/Models/Token')
+  }
+
+  direccionC () {
+    return this.hasMany('App/Models/Direccione', '_id', 'user_id')
   }
   // static get objectIDs () { return [ 'country_id','_id', 'city_id' ] }
 }

@@ -17,21 +17,21 @@
         <q-rating readonly v-model="user.calificacion" icon-selected="star" icon="star_border" color="orange" :max="5" size="23px" />
       </div>
       <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
-        <div class="row items-end" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="location_city" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Comunidad autónoma</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.ciudad}} </div>
+            <div class="ellipsis text-subtitle2 text-grey"> {{user.provincia ? user.provincia.nombre : ''}} </div>
           </div>
         </div>
-        <div class="row items-center" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="room" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Dirección del local</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.direccion}} </div>
+            <div class="text-subtitle2 text-grey"> {{user.ciudad ? user.ciudad.nombre + ', ' + user.direccion : ''}} </div>
           </div>
         </div>
-        <div class="row items-center" style="width: 100%">
+        <div class="row items-start" style="width: 100%">
           <q-icon class="col-1" name="phone" size="sm" />
           <div class="col q-ml-sm">
             <div class="ellipsis text-subtitle2">Teléfono de contacto</div>
@@ -337,9 +337,9 @@
                       <q-btn icon="edit" round dense color="grey" />
                     </div>
                     <div class="text-subtitle1 text-grey-7">{{cliente.name + ' ' + cliente.lastName}}</div>
-                    <q-select borderless dense color="black" v-model="form" :options="cliente.direcciones" label="Seleccione dirección" map-options
-                      error-message="requerido" :error="$v.form.$error" @blur="$v.form.$touch()"
-                      option-label="ciudad" >
+                    <q-select borderless dense color="black" v-model="form.direccion" :options="cliente.direccionC" label="Seleccione dirección" map-options
+                      error-message="requerido" :error="$v.form.direccion.$error" @blur="$v.form.direccion.$touch()"
+                      option-label="ciudad_name" >
                         <template v-slot:no-option>
                         <q-item>
                           <q-item-section class="text-grey text-italic">
@@ -353,7 +353,7 @@
                           v-on="scope.itemEvents"
                         >
                           <q-item-section>
-                            <q-item-label v-html="scope.opt.ciudad" />
+                            <q-item-label v-html="scope.opt.ciudad.nombre" />
                             <q-item-label caption>{{ scope.opt.direccion }}</q-item-label>
                           </q-item-section>
                         </q-item>
@@ -389,7 +389,7 @@
           <q-card class="q-py-xl" style="width: 100%">
               <div style="width:100%">
                 <div class="q-mb-md row justify-center">
-                  <q-img src="fondo1.jpg" style="width:200px;height:170px;border-radius:25px" >
+                  <q-img src="nova_telde-01.png" style="width:100%" >
                   </q-img>
                 </div>
                 <div class="text-center text-h6 text-bold">Compra exitosa</div>
@@ -397,6 +397,23 @@
                 <div class="row items-center justify-center q-mt-lg" style="width:100%">
                   <q-btn no-caps label="Ir a Nova Telde" color="primary" size="lg" style="border-radius: 25px; width: 80%"
                   @click="compraExitosa = false" />
+                </div>
+              </div>
+          </q-card>
+        </q-dialog>
+
+        <q-dialog persistent v-model="compraFallo">
+          <q-card class="q-py-xl" style="width: 100%">
+              <div style="width:100%">
+                <div class="q-mb-md row justify-center">
+                  <q-img src="nova_telde-02.png" style="width:100%" >
+                  </q-img>
+                </div>
+                <div class="text-center text-h6 text-bold">Tuvimos problemas con tu pago</div>
+                <div class="text-center text-subtitle1 q-mx-md text-grey-8">Te estamos redireccionando al carro de compra para que verifiques tus datos de transacción</div>
+                <div class="row items-center justify-center q-mt-lg" style="width:100%">
+                  <q-btn no-caps label="Aceptar" color="primary" size="lg" style="border-radius: 25px; width: 80%"
+                  @click="compraFallo = false" />
                 </div>
               </div>
           </q-card>
@@ -421,6 +438,7 @@
 <script>
 import { required } from 'vuelidate/lib/validators'
 import DetalleProducto from '../pages/DetalleProducto'
+import { openURL, uid } from 'quasar'
 import env from '../env'
 export default {
   components: { DetalleProducto },
@@ -443,7 +461,7 @@ export default {
       baseuImgsTienda: '',
       imgSelec: '',
       producto: {},
-      form: null,
+      form: {},
       cliente: {},
       user: {
         images: [],
@@ -458,7 +476,9 @@ export default {
     }
   },
   validations: {
-    form: { required }
+    form: {
+      direccion: { required }
+    }
   },
   computed: {
     totalCarrito () {
@@ -495,29 +515,44 @@ export default {
       this.getInfoById(this.id_tienda)
       this.getComentarios()
     }
+    if (this.$route.params.result) {
+      if (this.$route.params.result === '1') {
+        this.compraExitosa = true
+      } else {
+        this.compraFallo = true
+      }
+    }
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
     }
   },
   methods: {
-    iniciarCompra () {
-      this.$v.$touch()
-      if (!this.$v.form.$error) {
+    async iniciarCompra () {
+      this.$v.form.direccion.$touch()
+      console.log(this.$v.form)
+      if (!this.$v.form.direccion.$error) {
         this.form.cliente_id = this.cliente._id
         this.form.tienda_id = this.user._id
         this.tienda_name = this.user.nombre
         this.form.totalValor = this.totalCarrito
         this.form.totalProductos = this.totalProductos
-        this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(res => {
+        var ref = uid()
+        this.form.uid = ref
+        this.$api.post('comprar_productos', { dat: this.form, carrito: this.carrito }).then(async res => {
           if (res) {
-            this.comprarCarrito = false
+            var apiUrl = env.apiUrl + '/pagar_telde?tienda_id=' + this.user._id
+            const ruta = `${apiUrl}&montoTotal=${this.form.totalValor}&ref=${ref}&user_id=${this.cliente._id}`
+            await openURL(ruta)
+            navigator.app.exitApp()
+            /* this.comprarCarrito = false
             this.compraExitosa = true
-            this.form = null
+            this.form = {}
             this.carrito = []
             this.$v.form.$reset()
-            this.getProductosByProveedor(this.id_tienda)
+            this.getProductosByProveedor(this.id_tienda) */
           } else {
+            this.comprarCarrito = false
             this.compraFallo = true
           }
         })
@@ -540,6 +575,9 @@ export default {
       })
     },
     getProductosByProveedor (id) {
+      this.$q.loading.show({
+        message: 'Cargando productos'
+      })
       this.$api.get('productos/' + id).then(res => {
         if (res) {
           this.allProductos = res
@@ -547,6 +585,9 @@ export default {
           this.mejores = this.allProductos.slice(0, 5)
           this.productos = this.allProductos.slice(0, 4)
           this.ultimosProductos = tot.reverse().slice(0, 10)
+          this.$q.loading.hide()
+        } else {
+          this.$q.loading.hide()
         }
       })
     },
@@ -567,7 +608,9 @@ export default {
         cancel: true,
         persistent: true
       }).onOk(() => {
-        this.$q.loading.show()
+        this.$q.loading.show({
+          message: 'Eliminando producto'
+        })
         this.$api.delete('producto/' + id).then(res => {
           if (res) {
             this.$q.loading.hide()
@@ -576,6 +619,12 @@ export default {
               color: 'positive'
             })
             this.getProductosByProveedor(this.id_tienda)
+          } else {
+            this.$q.loading.hide()
+            this.$q.notify({
+              message: 'Hubo un error',
+              color: 'negative'
+            })
           }
         })
       }).onCancel(() => {

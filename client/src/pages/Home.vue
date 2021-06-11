@@ -1,6 +1,12 @@
 <template>
   <div>
     <q-img src="nopublicidad.jpg" style="height: 400px; width: 100%;" >
+      <q-btn flat class="q-ml-md q-mt-md" @click="$router.push('/editar-mi-perfil')">
+        <q-chip>
+          <q-avatar icon="edit" color="primary" text-color="white" />
+          Editar Perfil
+        </q-chip>
+      </q-btn>
     </q-img>
 
     <div class="text-h5 q-my-md text-center text-grey-8 text-bold">¡Busca lo que necesites!</div>
@@ -30,12 +36,13 @@
       </div>
     </q-scroll-area>
     <div class="q-my-md row justify-center">
-      <q-btn style="width:50%" rounded no-caps color="primary" label="Buscar"
-      />
+      <q-btn :disable="selecCategoria === '' ? true : false" style="width:50%" rounded no-caps color="primary" label="Buscar"
+      @click="filterTiendas()"/>
     </div>
 
     <div class="text-h6 q-mx-md text-grey-8">Algunas de nuestras tiendas</div>
     <q-scroll-area
+        v-if="tiendas.length"
         horizontal
         style="height: 350px;"
       >
@@ -58,7 +65,7 @@
                   </div>
                   <div class="row items-center" style="width: 100%">
                     <q-icon class="col-1" name="room" size="xs" />
-                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
+                    <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad ? card.ciudad.nombre + ', ' + card.direccion : ''}} </div>
                   </div>
                 </div>
 
@@ -71,6 +78,7 @@
           </div>
         </div>
       </q-scroll-area>
+      <div v-else class="text-center text-h6 q-my-lg">No hay ninguna tienda</div>
 
       <q-scroll-area
         horizontal
@@ -91,6 +99,7 @@
 
     <div class="text-h6 q-my-md text-center text-grey-8">Nuestros nuevos productos</div>
     <q-scroll-area
+        v-if="productos.length"
         horizontal
         style="height: 410px;"
       >
@@ -122,6 +131,7 @@
           </div>
         </div>
       </q-scroll-area>
+      <div v-else class="text-center text-h6 q-my-lg">No hay ningún producto</div>
 
       <q-scroll-area
         horizontal
@@ -141,7 +151,7 @@
       </q-scroll-area>
 
       <div class="text-h6 q-my-md text-center text-grey-8">Más tiendas</div>
-      <div class="row justify-around">
+      <div v-if="masTiendas.length" class="row justify-around">
         <div class="col-6 row justify-center q-mt-md" v-for="(card, index) in masTiendas" :key="index">
           <q-card style="width:95%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-top-left-radius: 15px; border-top-right-radius: 15px">
               <q-img
@@ -157,7 +167,7 @@
                     </div>
                     <div class="row items-center" style="width: 100%">
                       <q-icon class="col-1" name="room" size="xs" />
-                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad + ', ' + card.direccion}} </div>
+                      <div class="col text-subtitle1 q-ml-xs ellipsis"> {{card.ciudad ? card.ciudad.nombre + ', ' + card.direccion : ''}} </div>
                     </div>
 
                     <div class="row items-center q-mt-md">
@@ -169,9 +179,10 @@
             </q-card>
         </div>
       </div>
+      <div v-else class="text-center text-h6 q-my-lg">No hay ninguna tienda</div>
       <div class="row items-center justify-center q-mt-lg">
-        <q-btn no-caps icon="store" label="Ver más tiendas" color="primary" size="lg" style="border-radius: 15px; width: 80%"
-        />
+        <q-btn no-caps rounded label="Ver más tiendas" color="primary" size="lg" style="width: 80%"
+        @click="$router.push('/tiendas')"/>
       </div>
 
     <q-dialog v-model="verProducto">
@@ -211,7 +222,8 @@ export default {
       favoritoData: [],
       categorias: ['Comida', 'Tienda'],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
-      subCategorias: []
+      subCategorias: [],
+      idClient: ''
     }
   },
   mounted () {
@@ -234,6 +246,7 @@ export default {
       this.$api.get('user_info').then(res => {
         if (res) {
           this.rol = res.roles[0]
+          this.idClient = res._id
           if (this.rol === 2) {
             this.getFavoritos()
           }
@@ -243,31 +256,17 @@ export default {
     getTiendas () {
       this.$api.get('proveedores').then(res => {
         if (res) {
-          this.allTiendas = res.filter(v => v.status === 1)
+          this.allTiendas = res
           this.tiendas = this.allTiendas
           this.tiendas.sort(() => Math.random() - 0.5)
-          this.masTiendas = []
-          var largo = this.allTiendas.length - 1
-          for (let i = 0; i < 4; i++) {
-            if (largo >= 0) {
-              this.masTiendas.push(this.allTiendas[i])
-              largo = largo - 1
-            }
-          }
+          this.masTiendas = this.allTiendas.slice(0, 4)
         }
       })
     },
     getProductos () {
       this.$api.get('all_productos').then(res => {
         if (res) {
-          this.productos = []
-          var largo = res.length - 1
-          for (let i = 0; i < 20; i++) {
-            if (largo >= 0) {
-              this.productos.push(res[largo])
-              largo = largo - 1
-            }
-          }
+          this.productos = res.reverse().slice(0, 20)
         }
       })
     },
@@ -323,24 +322,22 @@ export default {
         this.selecSubCategoria = btn
       }
     },
+    filterTiendas () {
+      if (this.selecCategoria === 'Comida') {
+        if (this.selecSubCategoria !== '') {
+          this.$router.push('/tiendas/' + this.selecCategoria + '/' + this.selecSubCategoria)
+        } else {
+          this.$router.push('/tiendas/' + this.selecCategoria)
+        }
+      } else {
+        this.$router.push('/tiendas/' + this.selecCategoria)
+      }
+    },
     irRuta (ruta) {
       openURL(ruta)
     },
     irTienda (id) {
-      if (this.login) {
-        this.$api.get('user_info').then(res => {
-          if (res) {
-            var mio = res._id
-            if (mio === id) {
-              this.$router.push('/tienda/' + id)
-            } else {
-              this.$router.push('/tienda/' + id)
-            }
-          }
-        })
-      } else {
-        this.$router.push('/tienda/' + id)
-      }
+      this.$router.push('/tienda/' + id)
     }
   }
 }

@@ -14,10 +14,6 @@
             <div class="text-caption text-white">Dinero de tu monedero</div>
             <div class="row items-center justify-between">
               <div class="text-h4 text-bold text-white q-mr-sm">€{{saldo_actual}}</div>
-              <div>
-                <q-btn :disable="saldo_actual > 0 ? false : true" class="q-px-sm col" color="primary" label="Solicitar" style="border-radius: 10px;" no-caps
-                />
-              </div>
             </div>
           </q-card-section>
         </q-card>
@@ -26,30 +22,46 @@
       <div class="text-h6 q-ma-lg text-grey-8">Estadísticas de ventas</div>
       <div class="row justify-center q-px-lg q-mb-lg">
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-sm">
-          <q-select borderless v-model="report" @input="fecha = ''" color="black" :options="typeReport" label="Seleccione el tipo de reporte" />
+          <q-select borderless v-model="report" @input="vaciar()" color="black" :options="typeReport" label="Seleccione el tipo de reporte" />
         </div>
-        <div v-if="report == 'Mensual' || report == 'Anual'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
-          <q-select v-model="fecha" color="black" :options="report == 'Mensual' ? meses : años" :label="report == 'Mensual' ? 'Seleccione el Mes' : report == 'Anual' ? 'Seleccione el Año' : ''">
+
+        <div v-if="report == 'Anual' || report == 'Mensual'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
+          <q-input borderless readonly v-model="fecha" :label="report == 'Anual' ? 'Seleccione el año' : 'Seleccione el mes'" :mask="report == 'Anual' ? '####' : '#'">
             <template v-slot:append>
-              <q-icon name="event" />
-            </template>
-          </q-select>
-        </div>
-        <div v-else-if="report == 'Semanal'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
-          <q-input @click="verFecha = !verFecha" v-model="fecha" label="Seleccione la Semana">
-            <template v-slot:append>
-              <q-icon name="event" />
+              <q-icon name="event" class="cursor-pointer">
+                <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale">
+                  <q-date v-model="fecha" text-color="black" :mask="report == 'Anual' ? 'YYYY' : 'M'" minimal emit-immediately :default-view="report == 'Anual' ? 'Years' : 'Months'"
+                  @input="selecFecha(1)">
+                    <div class="row items-center justify-end">
+                      <q-btn v-close-popup label="Cerrar" color="primary" flat />
+                    </div>
+                  </q-date>
+                </q-popup-proxy>
+              </q-icon>
             </template>
           </q-input>
-          <q-dialog v-model="verFecha">
-            <div>
-              <q-date v-model="fechaReport" @input="selecFecha()" range />
-            </div>
-          </q-dialog>
+        </div>
+
+        <div v-if="report == 'Semanal'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
+          <q-input borderless readonly v-model="fechaTex" label="Seleccione la semana" hint="Selecciona el inicio y el fin de la semana">
+            <template v-slot:append>
+              <q-icon name="event" class="cursor-pointer">
+                <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale">
+                  <q-date v-model="fechaSemanal" text-color="black" range
+                  @input="selecFecha(2)">
+                    <div class="row items-center justify-end">
+                      <q-btn v-close-popup @click="selecFecha(2)" label="Aceptar" color="primary" flat />
+                    </div>
+                  </q-date>
+                </q-popup-proxy>
+              </q-icon>
+            </template>
+          </q-input>
         </div>
       </div>
       <div class="row justify-center q-mb-lg">
-        <q-btn rounded class="q-pa-xs" color="primary" label="Ver estadísticas" style="width: 90%;" no-caps/>
+        <q-btn :disable="fecha === null ? true : false" rounded class="q-pa-xs" color="primary" label="Ver estadísticas" style="width: 90%;" no-caps
+        @click="getReport()"/>
       </div>
 
       <div class="column items-center q-mb-lg">
@@ -57,8 +69,8 @@
           <div class="text-white text-center text-caption">Ventas</div>
           <div class="text-white text-center text-caption">Diarias</div>
         </div>
-        <div class="bg-blue-14 q-pa-xs" style="width: 90%;">
-          <GChart type="ColumnChart" :data="chartData" :options="chartOptions"/>
+        <div class="bg-blue q-pa-xs" style="width: 90%;">
+          <GChart v-if="verEstadistica" type="ColumnChart" :data="chartData" :options="chartOptions"/>
         </div>
       </div>
 
@@ -85,15 +97,16 @@
                 </q-card-section>
             </q-card>
           </div>
-        </div>
-        <div v-else class="text-center text-h6 q-my-lg">Aún no tienes productos vendidos</div>
-      <div class="row justify-center q-mb-md">
-        <q-btn rounded class="q-pa-xs" color="primary" text-color="white" @click="ver()" :label="verMas ? 'Ver menos productos' : 'Ver más productos'" style="width: 90%;" no-caps/>
+          <div class="col-12 row justify-center q-mb-md">
+            <q-btn rounded color="primary" @click="ver()" size="lg" :label="verMas ? 'Ver menos productos' : 'Ver más productos'" style="width: 80%;" no-caps/>
+          </div>
       </div>
+      <div v-else class="text-center text-h6 q-my-lg">Aún no tienes productos vendidos</div>
   </div>
 </template>
 
 <script>
+import moment from 'moment'
 import { GChart } from 'vue-google-charts'
 import env from '../../env'
 export default {
@@ -104,31 +117,26 @@ export default {
     return {
       verMas: false,
       verFecha: false,
+      verEstadistica: false,
+      fecha: null,
+      fechaTex: '',
       report: '',
-      fecha: '',
       baseuProducto: '',
       saldo_actual: 0,
-      fechaReport: { from: '2021/07/08', to: '2021/07/17' },
+      fechaSemanal: {},
       chartOptions: {
         height: 200,
         legend: { position: 'none' },
-        bar: { groupWidth: '20%' },
+        bar: { groupWidth: '30%' },
         isStacked: true,
-        colors: ['yellow', 'blue']
+        colors: ['blue']
       },
       chartData: [
-        ['Genre', 'Ganancia', 'Presupuesto', { role: 'annotation' }],
-        ['01', 20, 5, ''],
-        ['02', 25, 8, ''],
-        ['03', 15, 5, ''],
-        ['04', 35, 4, ''],
-        ['05', 10, 35, '']
+        ['Genre', 'Ventas', { role: 'annotation' }]
       ],
       allProductos: [],
       productos: [],
-      typeReport: ['Semanal', 'Mensual', 'Anual'],
-      meses: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-      años: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021']
+      typeReport: ['Semanal', 'Mensual', 'Anual']
     }
   },
   mounted () {
@@ -149,15 +157,59 @@ export default {
         if (res) {
           this.allProductos = res
           this.productos = this.allProductos.slice(0, 4)
-          console.log('vendidos', this.productos)
         }
       })
     },
-    selecFecha () {
-      this.fecha = this.fechaReport.from + ' - ' + this.fechaReport.to
+    getReport () {
+      this.$q.loading.show({
+        message: 'Construyendo datos'
+      })
+      this.$api.post('estadistica', { type: this.report, fecha: this.fecha }).then(res => {
+        if (res) {
+          this.chartData = res
+          this.verEstadistica = true
+          this.$q.loading.hide()
+        }
+      })
+      this.$q.loading.hide()
+    },
+    vaciar () {
+      this.fecha = null
+      this.fechaTex = ''
+      this.fechaSemanal = {
+        from: moment().subtract(6, 'days').format('YYYY/MM/DD'),
+        to: moment().format('YYYY/MM/DD')
+      }
+    },
+    selecFecha (val) {
+      if (val === 1) {
+        this.$refs.qDateProxy.hide()
+      } else {
+        var resta = moment(this.fechaSemanal.to).diff(moment(this.fechaSemanal.from), 'days')
+        if (resta !== 6) {
+          this.$q.dialog({
+            title: 'Atención',
+            message: 'Debes seleccionar el rango de una semana (7 días)',
+            cancel: false
+          }).onOk(() => {
+            // console.log('>>>> Ok')
+          }).onCancel(() => {
+            // console.log('>>>> Cancel')
+          })
+          this.vaciar()
+        } else {
+          this.fechaTex = this.fechaSemanal.from + ' - ' + this.fechaSemanal.to
+          this.fecha = this.fechaSemanal
+        }
+      }
     },
     ver () {
       this.verMas = !this.verMas
+      if (this.verMas) {
+        this.productos = this.allProductos
+      } else {
+        this.productos = this.allProductos.slice(0, 4)
+      }
     },
     formatPrice (value) {
       const val = (value / 1).toFixed(0).replace('.', ',')

@@ -4,6 +4,7 @@
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */
 const Monedero = use('App/Models/Monedero')
+const Compras = use('App/Models/Compra')
 const moment = require("moment")
 
 /**
@@ -50,6 +51,56 @@ class MonederoController {
     }
     var crearMoneda = await Monedero.create(moneda)
     response.send(true)
+  }
+
+  async crearEstadistica ({ request, response, auth }) {
+    let user = await auth.getUser()
+    let data = request.all()
+    var fecha = data.fecha
+    let ventas = (await Compras.query().where({ tienda_id: String(user._id)}).fetch()).toJSON()
+    let todas = []
+    var respuesta = [['Genre', 'Ventas', { role: 'annotation' }]]
+    if (data.type === 'Anual') {
+      todas = ventas.filter(v => moment(v.created_at).year() == fecha)
+      for (let i = 1; i < 13; i++) {
+        var arr = todas.filter(v => (moment(v.created_at).month() + 1) == i)
+        var num = 0
+        for (let j = 0; j < arr.length; j++) {
+          num += arr[j].totalValor
+        }
+        var nuevo = [String(i), num, '']
+        respuesta.push(nuevo)
+      }
+    } else if (data.type === 'Mensual') {
+      if (fecha < 10)
+      fecha = '0' + fecha
+      todas = ventas.filter(v => moment(v.created_at).format('YYYY/MM') == moment().format('YYYY') + '/' + fecha)
+      var num = 0
+      for (let j = 0; j < todas.length; j++) {
+        num += todas[j].totalValor
+      }
+      var nuevo = [String(1), num, '']
+      respuesta.push(nuevo)
+    } else {
+      todas = ventas.filter(v => {
+        if (moment(v.created_at).format('YYYY/MM/DD') >= fecha.from && moment(v.created_at).format('YYYY/MM/DD') <= fecha.to) {
+          return v
+        }
+      })
+      var dd = moment(fecha.from).dayOfYear() - 1
+      for (let i = 1; i < 8; i++) {
+        var arr = todas.filter(v => (moment(v.created_at).dayOfYear()) == dd + i)
+        var num = 0
+        for (let j = 0; j < arr.length; j++) {
+          num += arr[j].totalValor
+        }
+        var name = moment().dayOfYear(dd+i)
+        var nuevo = [String(moment(name).date()), num, '']
+        respuesta.push(nuevo)
+      }
+
+    }
+    response.send(respuesta)
   }
 
   /**

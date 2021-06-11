@@ -17,33 +17,33 @@
             <div class="text-subtitle2">{{form.email}}</div>
           </div>
           <div>
-            <q-btn no-caps color="primary" label="Editar Perfil"/>
+            <q-btn no-caps color="primary" label="Editar Perfil" @click="$router.push('/editar-mi-perfil')"/>
           </div>
         </div>
       </div>
 
       <div class="text-h6 q-ma-lg text-grey-8">Mis direcciones</div>
-      <div class="q-px-md q-gutter-md">
-          <q-card v-for="(card, index) in form.direcciones" :key="index" class="shadow-10" style="width: 90%;height:120px;border-radius:25px;">
-            <q-card-section class="items-center justify-center" horizontal>
-            <div class="q-pl-md q-mt-md">
-            <div class="text-h6 text-bold">Dirección Registrada</div>
-            <div class="text-h8">{{card.provincia}}</div>
-            <div class="text-h8">{{card.ciudad}}</div>
-            <div class="text-h8">{{card.direccion}}</div>
-            </div>
-              <q-space />
-              <q-card-actions vertical class="justify-around">
-                <q-btn no-caps color="primary" label="Eliminar" style="width:80px"/>
-                <div class="q-mt-md">
-                  <q-btn no-caps color="primary" label="Editar" style="width:80px" @click="editDireccion=true"/>
+      <div class="column items-center q-gutter-md">
+          <q-card v-for="(card, index) in form.direccionC" :key="index" class="shadow-10" style="width: 90%;height:120px;border-radius:25px;">
+            <q-card-section class="row items-start justify-between">
+              <div class="col-8 no-wrap">
+                <div class="text-h6 text-bold ellipsis">Dirección Registrada</div>
+                <div class="text-h8">{{card.provincia.nombre}}</div>
+                <div class="text-h8 ellipsis">{{card.ciudad.nombre + ' - ' + card.ciudad.cp}}</div>
+                <div class="text-h8 ellipsis">{{card.direccion}}</div>
+              </div>
+              <q-card-actions vertical class="col-4 justify-around">
+                <q-btn no-caps color="primary" label="Eliminar" style="width:80px" @click="eliminarD(card._id)"/>
+                <div class="q-mt-sm">
+                  <q-btn no-caps color="primary" label="Editar" style="width:80px" @click="actionDir(1, card)"/>
                 </div>
               </q-card-actions>
             </q-card-section>
           </q-card>
       </div>
       <div class="column items-center justify-center q-py-md">
-        <q-btn no-caps rounded color="primary" label="Agregar nueva" size="lg" style="width:70%" />
+        <q-btn no-caps rounded color="primary" label="Agregar nueva" size="lg" style="width:70%"
+        @click="actionDir(2)" />
       </div>
 
       <div class="q-ma-lg text-h6 text-grey-8">Pedidos pendientes por recibir</div>
@@ -110,13 +110,13 @@
               </q-card-section>
             </q-card-section>
         </q-card>
-        <q-btn no-caps rounded color="primary" label="Ver mas" style="width:350px;height:40px" />
+        <q-btn no-caps rounded color="primary" label="Ver mas" size="lg" style="width:80%" />
       </div>
       <div v-else class="q-my-lg">
         <div class="text-center text-subtitle1">No tienes pedidos completados</div>
       </div>
 
-      <!-- <q-dialog v-model="editDireccion">
+      <q-dialog v-model="miDireccion">
         <q-card class="my-card" style="width: 100%; border-radius: 30px">
           <q-card-section>
               <q-img
@@ -126,24 +126,56 @@
               </q-img>
           </q-card-section>
 
-          <q-card-section class="q-pt-none">
-            <div class="text-h6">Tus direcciones</div>
+          <q-card-section class="q-py-none">
+            <div class="text-h6">{{!editD ? 'Nueva dirección' : 'Mi dirección'}}</div>
             <q-separator inset />
             <div class="q-pa-sm">
-              <div class="q-mt-md text-subtitle2 text-grey-8">Direccion</div>
-              <q-input filled v-model="text" label="Mi direccion #1234" />
-              <div class="q-mt-md text-subtitle2 text-grey-8">Codigo postal</div>
-              <q-input filled v-model="text" label="Codigo postal donde" />
+              <div class="text-subtitle2 text-grey-8">Provincia</div>
+              <q-select @input="ciudadesOpt(direccion.provincia.id)" filled v-model="direccion.provincia" :options="optionsProvincias" map-options option-label="nombre"
+                :error="$v.direccion.provincia.$error" @blur="$v.direccion.provincia.$touch()" >
+                  <template v-slot:option="scope">
+                    <q-item
+                      v-bind="scope.itemProps"
+                      v-on="scope.itemEvents"
+                    >
+                      <q-item-section>
+                        <q-item-label v-html="scope.opt.nombre" />
+                      </q-item-section>
+                    </q-item>
+                  </template>
+              </q-select>
+              <div class="text-subtitle2 text-grey-8">Ciudad</div>
+              <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="direccion.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
+                :error="$v.direccion.ciudad.$error" @blur="$v.direccion.ciudad.$touch()" >
+                  <template v-slot:option="scope">
+                    <q-item
+                      v-bind="scope.itemProps"
+                      v-on="scope.itemEvents"
+                    >
+                      <q-item-section>
+                        <q-item-label v-html="scope.opt.nombre" />
+                        <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                      </q-item-section>
+                    </q-item>
+                  </template>
+              </q-select>
+              <q-input dense v-if="direccion.ciudad" v-model="direccion.ciudad.cp" filled readonly label="Código postal"
+              />
+              <div class="text-subtitle2 text-grey-8 q-mt-sm">Dirección</div>
+              <q-input v-model="direccion.direccion" filled
+                error-message="Requerido" :error="$v.direccion.direccion.$error" @blur="$v.direccion.direccion.$touch()"
+              />
             </div>
           </q-card-section>
 
-          <q-card-actions class="q-py-md" align="center">
+          <q-card-actions class="q-py-sm" align="center">
             <div class="q-pb-md">
-              <q-btn v-close-popup rounded no-caps color="primary" size="lg" label="Guardar" style="width:200px" />
+              <q-btn v-close-popup rounded no-caps color="primary" size="lg" label="Guardar" style="width:200px"
+              @click="editD ? actualizarD(direccion._id) : crearD()" />
             </div>
           </q-card-actions>
         </q-card>
-      </q-dialog> -->
+      </q-dialog>
 
       <q-dialog v-model="verPedido">
       <q-card class="q-py-md" style="width: 100%; border-radius: 30px">
@@ -170,7 +202,7 @@
                   <q-img
                     style="height: 80px;width: 80px; border-radius:25px;"
                     class="rounded-borders"
-                    :src="'nopublicidad.jpg'"
+                    :src="baseuProducto + item.image"
                   />
                   </div>
               </q-card-section>
@@ -232,7 +264,7 @@
             <q-separator />
             <q-card-section class="q-pt-none">
               <div class="text-h6 text-bold">Estado de pedido</div>
-              <div class="text-h8 text-bold text-grey">{{pedidoSelec.tienda_id}}</div>
+              <div class="text-h8 text-bold text-grey">{{pedidoSelec.tienda}}</div>
             </q-card-section>
           <q-card flat style="width: 100%;">
             <q-card-section horizontal>
@@ -326,8 +358,8 @@
         <q-card class="q-py-md" style="width: 100%; border-radius: 30px">
 
           <q-card-section class="q-pt-xl">
-            <div class="q-mb-md row justify-center">
-              <q-img src="fondo1.jpg" style="width:80%;height:170px;" >
+            <div class="row justify-center">
+              <q-img src="nova_telde-07.png" style="width:100%" >
               </q-img>
             </div>
           </q-card-section>
@@ -349,20 +381,23 @@
 </template>
 <script>
 import { required } from 'vuelidate/lib/validators'
+import env from '../../env'
 export default {
   data () {
     return {
       verPedido: false,
-      editDireccion: false,
+      miDireccion: false,
+      editD: false,
       stadosPedido: false,
       confirmCambio: false,
       calificacion: false,
       publicarCali: false,
       cali: true,
-      rol: 0,
       numberP: 0,
       text1: '',
       text2: '',
+      baseuProducto: '',
+      direccion: {},
       form: {},
       comentario: {
         rating: 0
@@ -370,24 +405,33 @@ export default {
       pedidoSelec: {},
       pedidos: [],
       pendientes: [],
-      completados: []
+      completados: [],
+      optionsProvincias: [],
+      optionsCiudad: [],
+      ciudadesFilter: []
     }
   },
   validations: {
     comentario: {
       rating: { required },
       comentario: { required }
+    },
+    direccion: {
+      direccion: { required },
+      provincia: { required },
+      ciudad: { required }
     }
   },
   mounted () {
+    this.baseuProducto = env.apiUrl + '/producto_files/'
     this.getInfo()
     this.getPedidos()
+    this.getProvincia()
   },
   methods: {
     getInfo () {
       this.$api.get('user_info').then(res => {
         if (res) {
-          this.rol = res.roles[0]
           this.form = res
         }
       })
@@ -411,7 +455,7 @@ export default {
     },
     calificarPedido (bool) {
       if (bool) {
-        this.$v.$touch()
+        this.$v.comentario.$touch()
         if (!this.$v.comentario.$error) {
           this.cali = true
           this.text1 = 'Hemos publicado tu comentario'
@@ -438,6 +482,106 @@ export default {
           this.getPedidos()
           this.calificacion = false
           this.confirmCambio = true
+        }
+      })
+    },
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.optionsCiudad = this.ciudadesFilter
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
+      })
+    },
+    getProvincia () {
+      this.$api.get('provincias').then(res => {
+        if (res) {
+          this.optionsProvincias = res
+        }
+      })
+    },
+    crearD () {
+      this.$v.direccion.$touch()
+      if (!this.$v.direccion.$error) {
+        this.$q.loading.show({
+          message: 'Creando dirección'
+        })
+        this.$api.post('nueva_direccion', this.direccion).then(res => {
+          if (res) {
+            this.getInfo()
+            this.miDireccion = false
+            this.$q.loading.hide()
+          }
+        })
+      }
+    },
+    actualizarD (id) {
+      this.$v.direccion.$touch()
+      if (!this.$v.direccion.$error) {
+        this.$q.loading.show({
+          message: 'Actualizando dirección'
+        })
+        this.$api.put('direccion/' + id, this.direccion).then(res => {
+          if (res) {
+            this.getInfo()
+            this.miDireccion = false
+            this.$q.loading.hide()
+          }
+        })
+      }
+    },
+    eliminarD (id) {
+      this.$q.dialog({
+        title: '¡Atención!',
+        message: '¿Esta seguro que desea eliminar esta dirección?',
+        cancel: true,
+        persistent: true
+      }).onOk(() => {
+        this.$q.loading.show({
+          message: 'Eliminando dirección'
+        })
+        this.$api.delete('direccion/' + id).then(res => {
+          if (res) {
+            this.getInfo()
+            this.$q.loading.hide()
+          }
+        })
+      }).onCancel(() => {
+        // console.log('>>>> Cancel')
+      }).onDismiss(() => {
+        // console.log('I am triggered on both OK and Cancel')
+      })
+    },
+    actionDir (val, data) {
+      if (val === 1) {
+        this.direccion = JSON.parse(JSON.stringify(data))
+        this.ciudadesOpt(this.direccion.provincia_id, true)
+        this.editD = true
+        this.miDireccion = true
+      } else {
+        this.direccion = {}
+        this.$v.direccion.$reset()
+        this.editD = false
+        this.miDireccion = true
+      }
+    },
+    ciudadesOpt (id, bool) {
+      this.$q.loading.show({
+        message: 'Buscando ciudades'
+      })
+      if (this.direccion.ciudad && !bool) {
+        this.direccion.ciudad = null
+      }
+      this.$api.get('ciudades/' + id).then(res => {
+        if (res) {
+          this.ciudadesFilter = res
+          this.optionsCiudad = res
+          this.$q.loading.hide()
         }
       })
     }
