@@ -145,7 +145,7 @@ class PublicidadController {
         dat.fileName = data.name
         delete dat.buscar_file
       }
-    } else { }
+    }
     let modificar = await Publicidad.query().where('_id', params.id).update(dat)
     response.send(modificar)
   }

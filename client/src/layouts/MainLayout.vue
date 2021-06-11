@@ -16,8 +16,8 @@
         <div v-else class="bg-blue-14 shadow-2 full-width row justify-around" >
           <div class="row items-center"><q-btn icon="home" label="Home" color="white" flat stack dense no-caps size="md" @click="$router.push('/administrador')" /></div>
           <div class="row items-center"><q-btn icon="store" label="Usuarios" color="white" flat stack dense no-caps size="md" @click="$router.push('/all_users')" /></div>
-          <div class="row items-center"><q-btn icon="favorite" label="Retiros" color="white" flat stack dense no-caps size="md" /></div>
-          <div class="row items-center"><q-btn icon="shopping_basket" label="Estadísticas" color="white" flat stack dense no-caps size="md" /></div>
+          <div class="row items-center"><q-btn icon="favorite" label="Retiros" color="white" flat stack dense no-caps size="md" @click="$router.push('/requests')" /></div>
+          <div class="row items-center"><q-btn icon="shopping_basket" label="Estadísticas" color="white" flat stack dense no-caps size="md" @click="$router.push('/reports')" /></div>
           <div class="row items-center"><q-btn icon="logout" label="Salir" color="white" flat stack dense no-caps size="md" @click="cerrarSesion()" /></div>
         </div>
       </q-footer>

@@ -259,14 +259,62 @@
       </div>
     </div>
 
-    <!-- <div>
+    <div>
       <div class="q-pa-md text-h5 text-grey text-bold">Cambia tu publicidad</div>
-      <div></div>
-    </div> -->
+      <div>
+        <q-avatar square style="height: 200px; width: 100%;" :class="slidePrincipal !=  null ? 'q-mb-md':'bg-secondary q-mb-md'">
+          <q-img style="height: 100%;" :src="slidePrincipal !=  null ? slidePrincipal : ''">
+            <q-icon name="mode_edit" class="absolute-top-right q-ma-sm" size="30px" color="black" />
+          </q-img>
+        </q-avatar>
+      </div>
+      <q-scroll-area horizontal style="height: 200px;" class="q-mb-md">
+        <div class="row no-wrap">
+          <q-avatar rounded style="height: 200px; width: 300px;" class="bg-secondary q-mx-sm" v-for="(img, index) in publicidad1" :key="index">
+            <q-img style="height: 100%;" :src="img.fileName != 'nopublicidad.jpg' ? baseuPublicidad + img.fileName : img.fileName">
+              <q-btn round flat icon="mode_edit" class="absolute-top-right" size="20px" color="black"  @click="editPublicidad(img)"/>
+            </q-img>
+          </q-avatar>
+        </div>
+      </q-scroll-area>
+      <q-scroll-area horizontal style="height: 200px;">
+        <div class="row no-wrap">
+          <q-avatar rounded style="height: 200px; width: 300px;" class="bg-secondary q-mx-sm" v-for="(img, index) in publicidad2" :key="index">
+            <q-img style="height: 100%;" :src="img.fileName != 'nopublicidad.jpg' ? baseuPublicidad + img.fileName.src : img.fileName">
+              <q-btn round flat icon="mode_edit" class="absolute-top-right" size="20px" color="black"  @click="editPublicidad(img)"/>
+            </q-img>
+          </q-avatar>
+        </div>
+      </q-scroll-area>
+    </div>
+
+    <q-dialog v-model="publicidad">
+      <q-card style="width: 300px; border-radius:25px;">
+        <q-card-section>
+          <q-avatar rounded style="height: 200px; width: 100%; border-radius:25px;" class="bg-secondary">
+            <q-img style="height: 100%;" :src="mostrarImg">
+              <q-file borderless v-model="publicidadFile" @input="publicidad_img()" class="q-ma-sm button-camera" accept=".jpg, image/*" style="z-index:1; width: 100%; height: 100%;"/>
+              <q-icon name="mode_edit" class="absolute-top-right q-ma-sm" size="30px" color="black" />
+            </q-img>
+          </q-avatar>
+        </q-card-section>
+        <q-card-section>
+          <q-input v-model="form.ruta" label="Ingrese URL" error-message="Requerido" :error="$v.form.ruta.$error" @blur="$v.form.ruta.$touch()">
+            <template v-slot:append>
+              <q-icon name="language" />
+            </template>
+          </q-input>
+          <div class="row justify-center q-mt-md">
+            <q-btn rounded class="q-pa-xs" color="light-green-13" text-color="white" label="Guardar" style="width: 75%;" @click="actualizarP()" no-caps/>
+          </div>
+        </q-card-section>
+      </q-card>
+    </q-dialog>
   </div>
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators'
 import { GChart } from 'vue-google-charts'
 import env from '../env'
 export default {
@@ -276,6 +324,8 @@ export default {
   data () {
     return {
       baseuTienda: '',
+      baseuPublicidad: '',
+      slidePrincipal: null,
       tiendas: [],
       user: { roles: [] },
       estado: false,
@@ -303,12 +353,25 @@ export default {
       fechaReport: { from: '2021/07/08', to: '2021/07/17' },
       fch: false,
       report: '',
-      fecha: ''
+      fecha: '',
+      publicidad1: [],
+      publicidad2: [],
+      publicidad: false,
+      form: {},
+      publicidadFile: null,
+      mostrarImg: null
+    }
+  },
+  validations: {
+    form: {
+      ruta: { required }
     }
   },
   mounted () {
     this.baseuTienda = env.apiUrl + 'perfil_img/'
+    this.baseuPublicidad = env.apiUrl + '/publicidad_img/'
     this.getTiendas()
+    this.getPublicidad()
   },
   methods: {
     getTiendas () {
@@ -355,6 +418,56 @@ export default {
       }).onCancel(() => {
         // cancel
       })
+    },
+    getPublicidad () {
+      this.$api.get('publicidad').then(res => {
+        if (res) {
+          this.publicidad1 = res.filter(v => v.tipo === 'publicidad1' && v.enable)
+          this.publicidad2 = res.filter(v => v.tipo === 'publicidad2' && v.enable)
+        }
+      })
+    },
+    async actualizarP () {
+      this.$v.form.$touch()
+      if (!this.$v.form.$error) {
+        var formData = new FormData()
+        formData.append('dat', JSON.stringify(this.form))
+        await this.$api.put('publicidad/' + this.form._id, formData, {
+          headers: {
+            'Content-Type': undefined
+          }
+        }).then((res) => {
+          this.$q.notify({
+            message: 'La publicidad se actualizo con exito',
+            color: 'primary'
+          })
+          this.$q.loading.hide()
+        })
+      }
+    },
+    editPublicidad (itm) {
+      console.log(itm)
+      this.publicidad = !this.publicidad
+      this.form = { ...itm }
+      this.mostrarImg = this.form.fileName
+      console.log(this.mostrarImg)
+    },
+    convertImg (img) {
+      try {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader()
+          reader.readAsDataURL(img)
+          reader.onload = () => resolve(reader.result)
+          reader.onerror = error => reject(error)
+        })
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    publicidad_img () {
+      this.form.fileName = { file: this.publicidadFile, src: this.convertImg(this.publicidadFile) }
+      this.mostrarImg = URL.createObjectURL(this.publicidadFile)
+      this.publicidadFile = null
     }
   }
 }
