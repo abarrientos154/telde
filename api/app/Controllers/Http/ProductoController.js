@@ -224,8 +224,9 @@ class ProductoController {
   }
   async pago_ok ({ request, response }) {
     var data = request.all()
-    var cantidad = await Pedido.query().where({ref: data.ref}).update({type: 2})
-    var pedido = (await Pedido.findBy('ref', data.ref))
+    console.log(data, 'paho ok')
+    var cantidad = await Pedido.query().where({uid: data.ref}).update({type: 2})
+    var pedido = (await Pedido.findBy('uid', data.ref))
     var moneda = {
       tienda_id: data.tienda_id,
       pedido_id: pedido._id,
@@ -236,6 +237,7 @@ class ProductoController {
     var productos = (await Compras.query().where({pedido_id: pedido._id}).fetch()).toJSON()
     for (let i = 0; i < productos.length; i++) {
       var produ = await Producto.find(productos[i].producto_id)
+      console.log(produ.cantidad, produ.nombre, productos[i], pedido , 'itera')
       var new_cantidad = produ.cantidad - productos[i].cantidad_compra
       var obj = {}
       new_cantidad = new_cantidad < 0 ? 0 : new_cantidad

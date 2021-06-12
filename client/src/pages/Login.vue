@@ -38,6 +38,19 @@
                 <q-btn no-caps flat color="black" label="¡Regístrate ahora!" size="lg" @click="$router.push('/registro')">
                 </q-btn>
               </div>
+              <q-dialog v-model="noLogin">
+                <q-card class="q-pa-md">
+                  <q-card-section>
+                    <div class="q-ml-sm text-center text-subtitle2">Para poder comprar debes tener una cuenta.</div>
+                    <div class="q-ml-sm text-center text-h6 text-bold">{{dd}}</div>
+                  </q-card-section>
+
+                  <q-card-section class="column items-center">
+                    <q-btn style="border-radius: 14px" label="Iniciar Sesión" color="primary" @click="$router.push('/login')" />
+                    <q-btn flat label="Registrarme" color="primary" @click="noLogin = false" />
+                  </q-card-section>
+                </q-card>
+              </q-dialog>
               <!-- <q-separator inset class="q-mt-lg q-mb-lg" />
 
               <div class="text-center text-primary text-bold cursor-pointer" @click="$router.push('registro')"> ¿Eres Nuevo? Registrate </div> -->
@@ -54,7 +67,9 @@ export default {
     return {
       form: {},
       isPwd: true,
-      loading: false
+      loading: false,
+      noLogin: false,
+      dd: {}
     }
   },
   mounted () {
@@ -74,10 +89,12 @@ export default {
       })
 
       universalLinks.subscribe('ul_payStripeShop', function (eventData) {
+        // vm.dd = eventData.params
+        // vm.noLogin = true
         if (eventData.params.cancel) {
-          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id })
+          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id, ref: eventData.params.ref, cancel: eventData.params.cancel })
         } else {
-          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id, cancel: eventData.params.cancel })
+          vm.pago_ok({ user_id: eventData.params.user_id, tienda_id: eventData.params.tienda_id, ref: eventData.params.ref })
         }
         // do some work
         // alert('Did launch application from the link: ' + eventData.url)
@@ -90,6 +107,10 @@ export default {
       this.$q.loading.show({
         message: 'Procesando'
       })
+      /* this.dd.a = data.cancel ? 'pago_no_ok' : 'pago_ok'
+      this.dd.b = data.cancel
+      this.dd.c = data.cancel === '1' ? 'pago_no_ok' : 'pago_ok'
+      this.noLogin = true */
       await this.$api.post(data.cancel ? 'pago_no_ok' : 'pago_ok', data).then(res => {
         this.logeo_ok({ ...data })
       })
