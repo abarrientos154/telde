@@ -47,7 +47,7 @@
       </div>
       <div class="row justify-center q-mb-lg">
         <q-btn :disable="fechaVentas === null ? true : false" rounded class="q-pa-xs" color="primary" label="Ver estadística" style="width: 90%;" no-caps
-        @click="getReport(1, reportVentas, fechaVentas)"/>
+        @click="getReportVentas()"/>
       </div>
 
       <div class="column items-center q-mb-lg">
@@ -101,7 +101,7 @@
       </div>
       <div class="row justify-center q-mb-lg">
         <q-btn :disable="fechaMembresias === null ? true : false" rounded class="q-pa-xs" color="primary" label="Ver estadística" style="width: 90%;" no-caps
-        @click="getReport(2, reportMembresias, fechaMembresias)"/>
+        @click="getReportMembresias()"/>
       </div>
 
       <div class="column items-center q-mb-lg">
@@ -155,7 +155,7 @@
       </div>
       <div class="row justify-center q-mb-lg">
         <q-btn :disable="fechaRetiros === null ? true : false" rounded class="q-pa-xs" color="primary" label="Ver estadística" style="width: 90%;" no-caps
-        @click="getReport(3, reportRetiros, fechaRetiros)"/>
+        @click="getReportRetiros()"/>
       </div>
 
       <div class="column items-center">
@@ -216,22 +216,42 @@ export default {
   mounted () {
   },
   methods: {
-    getReport (val, report, data) {
+    getReportVentas () {
       this.$q.loading.show({
         message: 'Construyendo datos'
       })
-      this.$api.post('estadistica', { type: report, fecha: data }).then(res => {
+      this.$api.post('estadistica', { modelo: 'Compras', campo: 'totalValor', type: this.reportVentas, fecha: this.fechaVentas }).then(res => {
         if (res) {
-          if (val === 1) {
-            this.chartData1 = res
-            this.verEstadistica1 = true
-          } else if (val === 2) {
-            this.chartData2 = res
-            this.verEstadistica2 = true
-          } else {
-            this.chartData3 = res
-            this.verEstadistica3 = true
-          }
+          this.chartData1 = res
+          this.verEstadistica1 = true
+          this.$q.loading.hide()
+        } else {
+          this.$q.loading.hide()
+        }
+      })
+    },
+    getReportMembresias () {
+      this.$q.loading.show({
+        message: 'Construyendo datos'
+      })
+      this.$api.post('estadisticaMembresias', { type: this.reportMembresias, fecha: this.fechaMembresias }).then(res => {
+        if (res) {
+          this.chartData2 = res
+          this.verEstadistica2 = true
+          this.$q.loading.hide()
+        } else {
+          this.$q.loading.hide()
+        }
+      })
+    },
+    getReportRetiros () {
+      this.$q.loading.show({
+        message: 'Construyendo datos'
+      })
+      this.$api.post('estadistica', { modelo: 'Monedero', campo: 'monto', type: this.reportRetiros, fecha: this.fechaRetiros }).then(res => {
+        if (res) {
+          this.chartData3 = res
+          this.verEstadistica3 = true
           this.$q.loading.hide()
         } else {
           this.$q.loading.hide()
