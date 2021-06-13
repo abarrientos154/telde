@@ -31,6 +31,16 @@ class MonederoController {
     }))
   }
 
+  async indexAdmin ({ request, response, auth }) {
+    let egresos = (await Monedero.query().where({ type: 2}).orderBy('created_at', 'desc').fetch()).toJSON()
+    response.send(egresos.map(v => {
+      return {
+        ...v,
+        updated_at: moment(v.updated_at).format('DD-MM-YYYY')
+      }
+    }))
+  }
+
   /**
    * Render a form to be used for creating a new monedero.
    * GET monederos/create
@@ -162,6 +172,8 @@ class MonederoController {
    * @param {Response} ctx.response
    */
   async update ({ params, request, response }) {
+    let aprobar = await Monedero.query().where({_id: params.id}).update({status: 'Aprobado'})
+    response.send(aprobar)
   }
 
   /**

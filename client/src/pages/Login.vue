@@ -141,7 +141,7 @@ export default {
             this.login(resp)
           } else {
             this.$q.notify({
-              message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+              message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada por el administrador.',
               color: 'negative'
             })
           }
@@ -171,7 +171,7 @@ export default {
               this.login(res)
             } else {
               this.$q.notify({
-                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada por el administrador.',
                 color: 'negative'
               })
             }
@@ -206,7 +206,7 @@ export default {
               this.login(res)
             } else {
               this.$q.notify({
-                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada.',
+                message: 'Lo sentimos no puede acceder, su cuenta a sido bloqueada por el administrador.',
                 color: 'negative'
               })
             }

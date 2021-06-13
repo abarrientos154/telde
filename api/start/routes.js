@@ -129,6 +129,8 @@ addPrefixToGroup(
     ///////////////////////Monedero/////////////////////////////////////////
     Route.get("saldo_actual", "MonederoController.showSaldo")
     Route.get("retiros", "MonederoController.index")
+    Route.get("aprobar_retiro/:id", "MonederoController.update")
+    Route.get("retiros_admin", "MonederoController.indexAdmin")
     Route.post("solicitar_retiro", "MonederoController.create")
     Route.post("estadistica", "MonederoController.crearEstadistica")
     ///////////////////////Monedero/////////////////////////////////////////

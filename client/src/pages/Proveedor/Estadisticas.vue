@@ -26,7 +26,7 @@
         </div>
 
         <div v-if="report == 'Anual' || report == 'Mensual'" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 q-mb-md q-px-xs">
-          <q-input borderless readonly v-model="fecha" :label="report == 'Anual' ? 'Seleccione el año' : 'Seleccione el mes'" :mask="report == 'Anual' ? '####' : '#'">
+          <q-input borderless readonly v-model="fecha" :label="report == 'Anual' ? 'Seleccione el año' : 'Seleccione el mes'" :mask="report == 'Anual' ? '####' : '##'">
             <template v-slot:append>
               <q-icon name="event" class="cursor-pointer">
                 <q-popup-proxy ref="qDateProxy" transition-show="scale" transition-hide="scale">
@@ -127,7 +127,7 @@ export default {
       chartOptions: {
         height: 200,
         legend: { position: 'none' },
-        bar: { groupWidth: '30%' },
+        bar: { groupWidth: '20%' },
         isStacked: true,
         colors: ['blue']
       },
@@ -169,9 +169,10 @@ export default {
           this.chartData = res
           this.verEstadistica = true
           this.$q.loading.hide()
+        } else {
+          this.$q.loading.hide()
         }
       })
-      this.$q.loading.hide()
     },
     vaciar () {
       this.fecha = null

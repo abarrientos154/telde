@@ -20,7 +20,7 @@ class FavoriteController {
   async index ({ response, auth }) {
     const userL = (await auth.getUser()).toJSON()
     let misFavoritos = (await Favorite.query().where({cliente_id: userL._id.toString()}).with('info_tienda').fetch()).toJSON()
-    response.send(misFavoritos)
+    response.send(misFavoritos.filter(v => v.info_tienda.enable && v.info_tienda.status === 2))
   }
 
   /**

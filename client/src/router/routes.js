@@ -5,9 +5,10 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       // Administrador
-      { path: '/all_users', component: () => import('pages/Admin/Users.vue') },
-      { path: '/requests', component: () => import('pages/Admin/Monedero.vue') },
-      { path: '/reports', component: () => import('pages/Admin/Reports.vue') },
+      { path: '/administrador', component: () => import('pages/Admin/Administrador.vue') },
+      { path: '/usuarios', component: () => import('pages/Admin/Users.vue') },
+      { path: '/retiros', component: () => import('pages/Admin/Monedero.vue') },
+      { path: '/reportes', component: () => import('pages/Admin/Reports.vue') },
       // Cliente
       { path: '/inicio', component: () => import('pages/Home.vue') },
       { path: '/tiendas_favoritas', component: () => import('pages/Cliente/TiendasFavoritas.vue') },
@@ -24,7 +25,6 @@ const routes = [
       { path: '/monedero', component: () => import('pages/Proveedor/Monedero.vue') },
       { path: '/editar-perfil', component: () => import('pages/Proveedor/Perfil.vue') },
       // Generales
-      { path: '/administrador', component: () => import('pages/Administrador.vue') },
       { path: '/tienda/:proveedor_id', component: () => import('pages/Tienda.vue') },
       { path: '/tienda/:proveedor_id/:result', component: () => import('pages/Tienda.vue') },
       { path: '/contacto', component: () => import('pages/Contacto.vue') },

@@ -1,7 +1,12 @@
 <template>
   <div>
-    <div class="q-mt-xl">
-      <div class="q-pa-md text-h5 text-grey text-bold">Resumen de ventas diarias y mensuales</div>
+    <q-img :src="'nopublicidad.jpg'" style="height: 150px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
+      <div class="absolute-full">
+        <div class="absolute-center full-width text-bold text-h5 text-center"></div>
+      </div>
+    </q-img>
+
+      <div class="text-h6 q-ma-lg text-grey-8">Resumen de ventas</div>
       <q-scroll-area horizontal style="height: 190px;">
         <div class="row no-wrap">
           <q-card class="bg-blue-14 column justify-between q-mx-md" style="height: 175px; width: 275px; border-radius: 30px;">
@@ -22,10 +27,8 @@
           </q-card>
         </div>
       </q-scroll-area>
-    </div>
 
-    <div>
-      <div class="q-pa-md text-h5 text-grey text-bold">Ultimas tiendas registradas</div>
+      <div class="text-h6 q-ma-lg text-grey-8">Ultimas tiendas registradas</div>
       <div v-if="tiendas.length <= 2" class="row q-pa-sm">
         <div v-for="(item, index) in tiendas"  :key="index" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mb-md q-px-sm">
           <q-card bordered style="width: 100%; border-radius:25px;">
@@ -145,10 +148,9 @@
           </q-card-section>
         </q-card>
       </q-dialog>
-    </div>
 
     <div>
-      <div class="q-pa-md text-h5 text-grey text-bold">Pendientes por aprobar</div>
+      <div class="text-h6 q-ma-lg text-grey-8">Pendientes por aprobar</div>
       <div v-if="pendientes.length <= 2" class="row q-pa-sm">
         <div v-for="(item, index) in pendientes"  :key="index" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 q-mb-md q-px-sm">
           <q-card bordered style="width: 100%; border-radius:25px;">
@@ -260,7 +262,7 @@
     </div>
 
     <div>
-      <div class="q-pa-md text-h5 text-grey text-bold">Cambia tu publicidad</div>
+      <div class="text-h6 q-ma-lg text-grey-8 text-center">Cambia tu publicidad</div>
       <div>
         <q-avatar square style="height: 200px; width: 100%;" :class="slidePrincipal !=  null ? 'q-mb-md':'bg-secondary q-mb-md'">
           <q-img style="height: 100%;" :src="slidePrincipal !=  null ? slidePrincipal : ''">
@@ -316,7 +318,7 @@
 <script>
 import { required } from 'vuelidate/lib/validators'
 import { GChart } from 'vue-google-charts'
-import env from '../env'
+import env from '../../env'
 export default {
   components: {
     GChart
@@ -368,7 +370,7 @@ export default {
     }
   },
   mounted () {
-    this.baseuTienda = env.apiUrl + 'perfil_img/'
+    this.baseuTienda = env.apiUrl + '/perfil_img/'
     this.baseuPublicidad = env.apiUrl + '/publicidad_img/'
     this.getTiendas()
     this.getPublicidad()
