@@ -160,49 +160,6 @@ class ProductoController {
       response.send(guardar)
     }
   }
-
-  async comprarTransferencia ({ request, response, auth }) {
-    const user = (await auth.getUser()).toJSON()
-    let codeFile = randomize('Aa0', 30)
-    var dat = request.only(['dat'])
-    dat = JSON.parse(dat.dat)
-    var carrito = dat.carrito
-    var metodoPago = dat.pago
-    const profilePic = request.file('files', {
-      types: ['image'],
-      size: '20mb'
-    })
-    if (Helpers.appRoot('storage/uploads/comprobantes')) {
-      await profilePic.move(Helpers.appRoot('storage/uploads/comprobantes'), {
-        name: codeFile,
-        overwrite: true
-      })
-    } else {
-      mkdirp.sync(`${__dirname}/storage/Excel`)
-    }
-    const data = { name: profilePic.fileName }
-    if (!profilePic.moved()) {
-      return profilePic.error()
-    } else {
-      for (let i = 0; i < carrito.length; i++) {
-        var item = {
-          producto: carrito[i]._id,
-          comprador: user._id,
-          tienda: carrito[i].proveedor_id,
-          metodo_pago: metodoPago,
-          comprobante: data.name,
-          cantidad: carrito[i].cantidad_compra
-        }
-        var compra = await Compras.create(item)
-        var cantidad = await Producto.query().where({_id: carrito[i]._id}).update({cantidad: carrito[i].cantidad})
-        if (carrito[i].cantidad === 0) {
-          var disable = await Producto.query().where({_id: carrito[i]._id}).update({disable: true})
-        }
-      }
-    }
-    response.send(true)
-  }
-
   async pre_pago ({request, response}) {
     var data = request.all().dat
     var productos = request.all().carrito
