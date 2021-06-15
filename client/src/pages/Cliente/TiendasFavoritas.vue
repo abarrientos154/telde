@@ -76,7 +76,7 @@
         </div>
       </div>
       <div v-else class="text-center text-h6 q-my-lg">No hay tiendas agregadas</div>
-      <div class="row items-center justify-center q-mt-lg">
+      <div v-if="tiendas.length" class="row items-center justify-center q-mt-lg">
         <q-btn no-caps rounded label="Ver más tiendas" color="primary" size="lg" style="width: 80%"
         @click="verMas()" />
       </div>

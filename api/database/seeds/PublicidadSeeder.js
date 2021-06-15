@@ -16,8 +16,8 @@ const Publicidad = use("App/Models/Publicidad")
 
 const publicidadData = [
   {
-    tipo: 'publicidad1',
-    posicion: '1.1',
+    tipo: 'principal',
+    posicion: '0',
     enable: true,
     nuevo: true,
     fileName: 'nopublicidad.jpg',
@@ -25,7 +25,15 @@ const publicidadData = [
   },
   {
     tipo: 'publicidad1',
-    posicion: '1.2',
+    posicion: '1',
+    enable: true,
+    nuevo: true,
+    fileName: 'nopublicidad.jpg',
+    ruta: ''
+  },
+  {
+    tipo: 'publicidad1',
+    posicion: '2',
     enable: true,
     nuevo: true,
     fileName: 'nopublicidad.jpg',
@@ -33,7 +41,7 @@ const publicidadData = [
   },
   {
     tipo: 'publicidad2',
-    posicion: '2.1',
+    posicion: '3',
     enable: true,
     nuevo: true,
     fileName: 'nopublicidad.jpg',
@@ -41,7 +49,7 @@ const publicidadData = [
   },
   {
     tipo: 'publicidad2',
-    posicion: '2.2',
+    posicion: '4',
     enable: true,
     nuevo: true,
     fileName: 'nopublicidad.jpg',

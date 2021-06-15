@@ -1,13 +1,7 @@
 <template>
   <div>
-    <q-img src="nopublicidad.jpg" style="height: 400px; width: 100%;" >
-      <q-btn flat class="q-ml-md q-mt-md" @click="$router.push('/editar-mi-perfil')">
-        <q-chip>
-          <q-avatar icon="edit" color="primary" text-color="white" />
-          Editar Perfil
-        </q-chip>
-      </q-btn>
-    </q-img>
+    <img :src="!principal.nuevo ? baseuPublicidad + principal.fileName : principal.fileName" style="height: 400px; width: 100%;"
+    @click="!principal.nuevo ? irRuta(principal.ruta) : ''" />
 
     <div class="text-h5 q-my-md text-center text-grey-8 text-bold">¡Busca lo que necesites!</div>
     <div class="text-h6 q-mx-md text-grey-8">Categorias</div>
@@ -82,17 +76,12 @@
 
       <q-scroll-area
         horizontal
-        style="height: 420px;"
+        style="height: 370px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <q-card style="border-radius: 24px; width:450px" clickable v-ripple v-for="(card, index) in publicidad1" :key="index">
-            <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName"
-            style="height: 380px; width: 100%" >
-              <div class="absolute-bottom">
-                <div class="text-white text-h6">BANNER</div>
-                <div class="text-white text-h6">PUBLICIDAD {{index + 1}}</div>
-              </div>
-            </q-img>
+            <img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName"
+            style="height: 320px; width: 100%" @click="!card.nuevo ? irRuta(card.ruta) : ''"/>
           </q-card>
         </div>
       </q-scroll-area>
@@ -135,17 +124,12 @@
 
       <q-scroll-area
         horizontal
-        style="height: 420px;"
+        style="height: 370px;"
       >
         <div class="row no-wrap q-py-md q-px-md q-gutter-md">
           <q-card style="border-radius: 24px; width:450px" clickable v-ripple v-for="(card, index) in publicidad2" :key="index">
-            <q-img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName"
-            style="height: 380px; width: 100%" >
-              <div class="absolute-bottom">
-                <div class="text-white text-h6">BANNER</div>
-                <div class="text-white text-h6">PUBLICIDAD {{index + 1}}</div>
-              </div>
-            </q-img>
+            <img :src="!card.nuevo ? baseuPublicidad + card.fileName : card.fileName"
+            style="height: 320px; width: 100%" @click="!card.nuevo ? irRuta(card.ruta) : ''"/>
           </q-card>
         </div>
       </q-scroll-area>
@@ -180,7 +164,7 @@
         </div>
       </div>
       <div v-else class="text-center text-h6 q-my-lg">No hay ninguna tienda</div>
-      <div class="row items-center justify-center q-mt-lg">
+      <div v-if="masTiendas.length" class="row items-center justify-center q-mt-lg">
         <q-btn no-caps rounded label="Ver más tiendas" color="primary" size="lg" style="width: 80%"
         @click="$router.push('/tiendas')"/>
       </div>
@@ -213,6 +197,7 @@ export default {
       selecCategoria: '',
       selecSubCategoria: '',
       producto: {},
+      principal: {},
       publicidad1: [],
       publicidad2: [],
       productos: [],
@@ -273,8 +258,9 @@ export default {
     getPublicidad () {
       this.$api.get('publicidad').then(res => {
         if (res) {
-          this.publicidad1 = res.filter(v => v.tipo === 'publicidad1' && v.enable)
-          this.publicidad2 = res.filter(v => v.tipo === 'publicidad2' && v.enable)
+          this.principal = res.find(v => v.tipo === 'principal')
+          this.publicidad1 = res.filter(v => v.tipo === 'publicidad1')
+          this.publicidad2 = res.filter(v => v.tipo === 'publicidad2')
         }
       })
     },

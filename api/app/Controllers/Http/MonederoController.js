@@ -64,6 +64,84 @@ class MonederoController {
     response.send(true)
   }
 
+  async ventasDyM ({ request, response, auth }) {
+    var hoy = moment().format('DD/MM/YYYY')
+    var mes = moment().month() + 1
+    var allVentas = (await Monedero.query().where({type: 1}).fetch()).toJSON()
+    var diario = allVentas.filter(v => {
+      if (moment(v.created_at).format('DD/MM/YYYY') === hoy) {
+        return v
+      }
+    })
+    var mensual = allVentas.filter(v => {
+      if (moment(v.created_at).month() + 1 === mes) {
+        return v
+      }
+    })
+    var totalDia = 0
+    var totalMes = 0
+    for (let i = 0; i < diario.length; i++) {
+      totalDia = totalDia + diario[i].monto
+    }
+    for (let i = 0; i < mensual.length; i++) {
+      totalMes = totalMes + mensual[i].monto
+    }
+    var ventas = {
+      diarias: totalDia,
+      mensuales: totalMes
+    }
+    response.send(ventas)
+  }
+
+  async crearEstadisticaAdmin ({ request, response, auth }) {
+    let data = request.all()
+    var fecha = data.fecha
+    let ventas = (await Compras.all()).toJSON()
+    let todas = []
+    var respuesta = [['Genre', 'Ventas', { role: 'annotation' }]]
+    if (data.type === 'Anual') {
+      todas = ventas.filter(v => moment(v.created_at).year() == fecha)
+      for (let i = 1; i < 13; i++) {
+        var arr = todas.filter(v => (moment(v.created_at).month() + 1) == i)
+        var num = 0
+        for (let j = 0; j < arr.length; j++) {
+          num += arr[j]['totalValor']
+        }
+        var nuevo = [String(i), num, '']
+        respuesta.push(nuevo)
+      }
+    } else if (data.type === 'Mensual') {
+      if (fecha < 10)
+      fecha = '0' + fecha
+      todas = ventas.filter(v => moment(v.created_at).format('YYYY/MM') == moment().format('YYYY') + '/' + fecha)
+      var num = 0
+      for (let j = 0; j < todas.length; j++) {
+        num += todas[j]['totalValor']
+      }
+      var nuevo = [String(1), num, '']
+      respuesta.push(nuevo)
+    } else {
+      todas = ventas.filter(v => {
+        if (moment(v.created_at).format('YYYY/MM/DD') >= fecha.from && moment(v.created_at).format('YYYY/MM/DD') <= fecha.to) {
+          return v
+        }
+      })
+      var dd = moment(fecha.from).dayOfYear() - 1
+      for (let i = 1; i < 8; i++) {
+        var arr = todas.filter(v => (moment(v.created_at).dayOfYear()) == dd + i)
+        var num = 0
+        for (let j = 0; j < arr.length; j++) {
+          num += arr[j]['totalValor']
+        }
+        var name = moment().dayOfYear(dd+i)
+        var nuevo = [String(moment(name).date()), num, '']
+        respuesta.push(nuevo)
+      }
+
+    }
+    response.send(respuesta)
+  }
+
   async crearEstadistica ({ request, response, auth }) {
     let data = request.all()
     const Modelo = use(`App/Models/${data.modelo}`)
@@ -125,6 +203,7 @@ class MonederoController {
     }
     response.send(respuesta)
   }
+
   async crearEstadisticaMembresia ({ request, response, auth }) {
     let data = request.all()
     var fecha = data.fecha

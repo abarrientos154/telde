@@ -143,6 +143,7 @@ class PublicidadController {
         return profilePic.error()
       } else {
         dat.fileName = data.name
+        dat.nuevo = false
         delete dat.buscar_file
       }
     }

@@ -30,7 +30,7 @@
       </div>
     </div>
     <div v-else class="text-center text-h6 q-my-lg">No existen tiendas registradas</div>
-    <div v-if="ultimas.length" class="row justify-center q-ma-md">
+    <div v-if="ultimas.length > 2" class="row justify-center q-ma-md">
       <q-btn rounded class="q-pa-xs" color="primary" @click="verMasTiendas()" :label="ver1 ? 'Ver menos' : 'Ver más'" style="width: 75%;" no-caps/>
     </div>
 
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div v-else class="text-center text-h6 q-my-lg">No hay ninguna tienda</div>
-    <div v-if="tiendas.length" class="row justify-center q-ma-md">
+    <div v-if="tiendas.length > 2" class="row justify-center q-ma-md">
       <q-btn rounded class="q-pa-xs" color="primary" @click="verMasMembresia()" :label="ver2 ? 'Ver menos' : 'Ver más'" style="width: 75%;" no-caps/>
     </div>
 
@@ -86,7 +86,7 @@
       </div>
     </div>
     <div v-else class="text-center text-h6 q-my-lg">No existen clientes registrados</div>
-    <div v-if="clientes.length" class="row justify-center q-ma-md">
+    <div v-if="clientes.length > 2" class="row justify-center q-ma-md">
       <q-btn rounded class="q-pa-xs" color="primary" @click="verMasClientes()" :label="ver3 ? 'Ver menos' : 'Ver más'" style="width: 75%;" no-caps/>
     </div>
 
