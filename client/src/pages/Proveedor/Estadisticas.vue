@@ -164,7 +164,7 @@ export default {
       this.$q.loading.show({
         message: 'Construyendo datos'
       })
-      this.$api.post('estadistica', { modelo: 'Compras', campo: 'totalValor', type: this.report, fecha: this.fecha }).then(res => {
+      this.$api.post('estadistica', { modelo: 'Compra', campo: 'totalValor', type: this.report, fecha: this.fecha }).then(res => {
         if (res) {
           this.chartData = res
           this.verEstadistica = true

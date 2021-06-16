@@ -2,7 +2,7 @@
   <div>
     <q-img :src="'nopublicidad.jpg'" style="height: 150px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px">
       <div class="absolute-full">
-        <div class="absolute-center full-width text-bold text-h5 text-center"></div>
+        <div class="absolute-center full-width text-bold text-h5 text-center">Bienvenido</div>
       </div>
     </q-img>
 
@@ -40,11 +40,9 @@
               </q-card-section>
 
               <q-card-section class="q-pl-xs column justify-between col">
-                <div>
-                  <div class="text-h6 text-bold">{{item.nombre}}</div>
-                  <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
-                </div>
-                <div class="text-subtitle4 text-grey">01/08/2021</div>
+                <div class="text-h6 text-bold">{{item.nombre}}</div>
+                <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
+                <div class="text-subtitle4 text-grey">{{item.membresia ? item.membresia.fecha_vence : 'No tiene membresia'}}</div>
                 <q-btn color="primary" label="Cambiar estado" style="border-radius:10px;" @click="estadoUser(item)" no-caps/>
               </q-card-section>
             </q-card-section>
@@ -218,7 +216,7 @@
                 <div class="row items-center justify-between">
                 <div>
                   <div>Fecha vencimiento membresia</div>
-                  <div class="text-caption text-grey-8">12/08/2021</div>
+                  <div class="text-caption text-grey-8">{{user.membresia ? user.membresia.fecha_vence : 'No tiene membresia'}}</div>
                   <q-chip :color="user.status === 2 ? 'positive' : 'red'" text-color="white">
                     {{user.status === 2 ? 'Membresia activa' : 'Membresia vencida'}}
                   </q-chip>

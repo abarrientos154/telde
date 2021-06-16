@@ -4,6 +4,7 @@ const Helpers = use('Helpers')
 const mkdirp = use('mkdirp')
 const fs = require('fs')
 var randomize = require('randomatic');
+const moment = require("moment")
 const User = use("App/Models/User")
 const Direccion = use('App/Models/Direccione')
 const Provincia = use('App/Models/Provincia')
@@ -28,17 +29,26 @@ class UserController {
 
   async aprobarPagoStripe ({ request, response, params }) {
     let body = request.only(['cantM', 'costoM'])
-    console.log(body, 'body aprobando pago')
+    var vencimiento = moment().add(Number(body.costoM), 'month').format('YYYY-MM-DD')
+    let existe = (await Payment.findBy('tienda_id', params.tienda_id))
+    if (existe) {
+      if (existe.status === 1) {
+        var a = moment(existe.fecha_vence)
+        var b = moment()
+        var restante = a.diff(b, 'days')
+        vencimiento = moment(vencimiento).add(restante, 'days').format('YYYY-MM-DD')
+      }
+      let nuevo = await Payment.query().where({tienda_id: params.tienda_id}).update({costoM: body.cantM, cantMeses: body.costoM, fecha_vence: vencimiento, status: 1})
+    } else {
+      await Payment.create({ tienda_id: params.tienda_id, costoM: body.cantM, cantMeses: body.costoM, fecha_vence: vencimiento, status: 1 })
+    }
     await User.query().where('_id', params.tienda_id).update({ status: 2 })
-    await Payment.create({ tienda_id: params.tienda_id, costoM: body.costoM, cantMeses: body.cantM, status: 1 })
     let user = (await User.find(params.tienda_id)).toJSON()
-    console.log(user, 'user create')
     response.send(user)
   }
 
   async redirpay ({ auth, response, params, request, view }) {
     let body = request.get()
-    console.log(body, 'soy un body testStripe')
     View.global('ruta', function () {
       return `/api/procesar_pago/${body.user_id}/${body.cantMeses}/${body.costoM}`
     })
@@ -47,7 +57,6 @@ class UserController {
 
   async logueoSinContrasena ({ auth, response, params, request }) {
     let body = request.only(['user_id'])
-    console.log(body, 'bodyy')
     let user = await User.find(body.user_id)
     let tokeng = await auth.generate(user)
 
@@ -76,7 +85,6 @@ class UserController {
     token.verify = user.verify
     let data = {}
     data.TELDE_SESSION_INFO = token
-    //console.log(data)
     return data
 
   }
@@ -89,9 +97,7 @@ class UserController {
   async procesarPago ({ request, params, view, response }) {
     let body = params
     let totalPagar = parseFloat(body.cantM) * parseFloat(body.costoM)
-    console.log(body.cantM, body.costoM, 'soy un body')
     totalPagar = totalPagar + '00'
-    console.log(totalPagar, 'total')
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -308,6 +314,18 @@ class UserController {
     } else {
       user.calificacion = total
     }
+    let membresia = (await Payment.query().where({tienda_id: params.id}).first())
+    var a = moment(membresia.fecha_vence)
+    var b = moment()
+    var restante = a.diff(b, 'days')
+    if (membresia.fecha_vence === moment().format('YYYY-MM-DD')) {
+      membresia.status = 2
+      membresia.save()
+      await User.query().where({_id: params.id}).update({status: 1})
+      user.status = 1
+    } else if (restante < 11) {
+      user.vence = restante + 1
+    }
     response.send(user)
   }
 
@@ -320,7 +338,7 @@ class UserController {
   async proveedores ({ request, response, auth }) {
     const user = (await auth.getUser()).toJSON()
     if (user.roles[0] === 1) {
-      let todos = (await User.query().where({roles: [3]}).fetch()).toJSON()
+      let todos = (await User.query().where({roles: [3]}).with('membresia').fetch()).toJSON()
       response.send(todos)
     } else {
       let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
@@ -342,6 +360,15 @@ class UserController {
     const { email, password } = request.all();
     let token = await auth.attempt(email, password)
     const user = (await User.findBy('email', email)).toJSON()
+    if (user.status && user.status === 2) {
+      let membresia = (await Payment.query().where({tienda_id: String(user._id)}).first())
+      if (membresia.fecha_vence === moment().format('YYYY-MM-DD')) {
+        membresia.status = 2
+        membresia.save()
+        await User.query().where('_id', user._id).update({status: 1})
+        user.status = 1
+      }
+    }
     let isUser = false
     token.roles = user.roles.map(roleMap => {
       if (roleMap === 3) {

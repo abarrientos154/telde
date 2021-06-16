@@ -18,11 +18,9 @@
             </q-card-section>
 
             <q-card-section class="q-pl-xs column justify-between col">
-              <div>
-                <div class="text-h6 text-bold">{{item.nombre}}</div>
-                <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
-              </div>
-              <div class="text-subtitle4 text-grey">01/08/2021</div>
+              <div class="text-h6 text-bold">{{item.nombre}}</div>
+              <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
+              <div class="text-subtitle4 text-grey">{{item.membresia ? item.membresia.fecha_vence : 'No tiene membresia'}}</div>
               <q-btn color="primary" label="Cambiar estado" style="border-radius:10px;" @click="estadoUser(item, false)" no-caps/>
             </q-card-section>
           </q-card-section>
@@ -46,11 +44,9 @@
             </q-card-section>
 
             <q-card-section class="q-pl-xs column justify-between col">
-              <div>
-                <div class="text-h6 text-bold">{{item.nombre}}</div>
-                <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
-              </div>
-              <div class="text-subtitle4 text-grey">01/08/2021</div>
+              <div class="text-h6 text-bold">{{item.nombre}}</div>
+              <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
+              <div class="text-subtitle4 text-grey">{{item.membresia ? item.membresia.fecha_vence : 'No tiene membresia'}}</div>
               <q-btn color="primary" label="Cambiar estado" style="border-radius:10px;" @click="estadoUser(item, false)" no-caps/>
             </q-card-section>
           </q-card-section>
@@ -74,11 +70,7 @@
             </q-card-section>
 
             <q-card-section class="q-pl-xs column justify-between col">
-              <div>
-                <div class="text-h6 text-bold">{{item.name}}</div>
-                <div class="text-bold text-subtitle2">Fecha de vencimiento</div>
-              </div>
-              <div class="text-subtitle4 text-grey">01/08/2021</div>
+              <div class="text-h6 text-bold">{{item.name}}</div>
               <q-btn color="primary" label="Cambiar estado" style="border-radius:10px;" @click="estadoUser(item, true)" no-caps/>
             </q-card-section>
           </q-card-section>
@@ -127,7 +119,7 @@
               <div v-if="!client" class="row items-center justify-between">
                 <div>
                   <div>Fecha vencimiento membresia</div>
-                  <div class="text-caption text-grey-8">12/08/2021</div>
+                  <div class="text-caption text-grey-8">{{user.membresia ? user.membresia.fecha_vence : 'No tiene membresia'}}</div>
                   <q-chip :color="user.status === 2 ? 'positive' : 'red'" text-color="white">
                     {{user.status === 2 ? 'Membresia activa' : 'Membresia vencida'}}
                   </q-chip>
@@ -174,6 +166,7 @@ export default {
       this.$api.get('proveedores').then(res => {
         if (res) {
           this.allTiendas = res.reverse()
+          console.log(this.allTiendas)
           this.ultimas = this.allTiendas.slice(0, 2)
           this.tiendas = this.allTiendas.slice(0, 2)
         }

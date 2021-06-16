@@ -26,7 +26,7 @@
           <q-card flat class="my-card window-height">
             <q-card-section>
               <div class="row items-center">
-                <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 1" />
+                <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="!tienda ? slide = 1 : $router.push('/tienda/' + id)" />
                 <div class="q-ml-md text-h6 text-grey-9">Carro de compra</div>
               </div>
             </q-card-section>
@@ -133,14 +133,19 @@ export default {
   },
   data () {
     return {
+      tienda: false,
       costoMembresia: 15,
       slide: 1,
-      id: this.$route.params,
+      id: this.$route.params.id,
       cantidad: 1,
       apiUrl: ''
     }
   },
   mounted () {
+    if (this.$route.params.slide === '2') {
+      this.slide = 2
+      this.tienda = true
+    }
     this.apiUrl = env.apiUrl + '/redireccionar_pago?user_id=' + this.$route.params.id
     console.log(this.apiUrl, 'API URLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL')
   },

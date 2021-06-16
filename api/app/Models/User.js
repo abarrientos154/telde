@@ -54,6 +54,10 @@ class User extends Model {
   direccionC () {
     return this.hasMany('App/Models/Direccione', '_id', 'user_id')
   }
+
+  membresia () {
+    return this.hasOne('App/Models/Payment', '_id', 'tienda_id')
+  }
   // static get objectIDs () { return [ 'country_id','_id', 'city_id' ] }
 }
 

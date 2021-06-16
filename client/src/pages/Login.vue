@@ -198,7 +198,7 @@ export default {
                 if (res.TELDE_SESSION_INFO.status === 2) {
                   this.$router.push('/tienda/' + res.TELDE_SESSION_INFO._id)
                 } else {
-                  this.$router.push('/pago-membresia/' + res.TELDE_SESSION_INFO._id)
+                  this.$router.push('/pago-membresia/' + res.TELDE_SESSION_INFO._id + '/1')
                 }
               } else {
                 this.$router.push('/inicio')

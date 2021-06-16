@@ -293,7 +293,7 @@
           </div>
           <div class="row items-center justify-center q-mt-lg" style="width:100%">
             <q-btn no-caps label="Pagar Membresía" color="primary" size="lg" style="border-radius: 25px; width: 80%"
-            @click="$router.push('/pago-membresia/' + id)" />
+            @click="$router.push('/pago-membresia/' + id + '/1')" />
           </div>
         </div>
       </q-carousel-slide>

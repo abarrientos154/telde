@@ -1,6 +1,11 @@
 <template>
   <q-page>
     <q-img :src="baseuPortada" style="height: 300px; width: 100%; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px" >
+      <div v-if="miTienda && user.vence > -1" class="bg-transparent">
+        <q-chip clickable v-ripple color="blue" text-color="white" @click="$router.push('/pago-membresia/' + user._id + '/2')">
+          Vencimiento en {{user.vence}} días
+        </q-chip>
+      </div>
       <div class="absolute-bottom-right q-mb-md bg-transparent">
         <q-btn v-if="miTienda" class="q-px-md" size="md" label="Editar perfil" no-caps color="primary" style="border-radius: 25px"
         @click="$router.push('/editar-perfil')" />
@@ -440,6 +445,7 @@ import { required } from 'vuelidate/lib/validators'
 import DetalleProducto from '../pages/DetalleProducto'
 import { openURL, uid } from 'quasar'
 import env from '../env'
+import { mapMutations } from 'vuex'
 export default {
   components: { DetalleProducto },
   data () {
@@ -528,6 +534,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('generals', ['logout']),
     async iniciarCompra () {
       this.$v.form.direccion.$touch()
       console.log(this.$v.form)
@@ -571,7 +578,14 @@ export default {
     },
     getInfoById (id) {
       this.$api.post('user_by_id/' + id).then(res => {
-        this.user = res
+        if (res) {
+          this.user = res
+          console.log(this.user)
+          if (res.status === 1) {
+            this.logout()
+            this.$router.push('/login')
+          }
+        }
       })
     },
     getProductosByProveedor (id) {

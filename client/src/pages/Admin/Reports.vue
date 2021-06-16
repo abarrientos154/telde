@@ -220,7 +220,7 @@ export default {
       this.$q.loading.show({
         message: 'Construyendo datos'
       })
-      this.$api.post('estadistica', { modelo: 'Compras', campo: 'totalValor', type: this.reportVentas, fecha: this.fechaVentas }).then(res => {
+      this.$api.post('estadistica', { modelo: 'Compra', campo: 'totalValor', type: this.reportVentas, fecha: this.fechaVentas }).then(res => {
         if (res) {
           this.chartData1 = res
           this.verEstadistica1 = true
