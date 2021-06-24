@@ -50,7 +50,7 @@ class UserController {
   async redirpay ({ auth, response, params, request, view }) {
     let body = request.get()
     View.global('ruta', function () {
-      return `/api/procesar_pago/${body.user_id}/${body.cantMeses}/${body.costoM}`
+      return `/api/procesar_pago/${body.user_id}/${body.cantMeses}/${body.costoM}/${body.type}/${body.op}`
     })
     return view.render('redirpay')
   }
@@ -98,6 +98,9 @@ class UserController {
     let body = params
     let totalPagar = parseFloat(body.cantM) * parseFloat(body.costoM)
     totalPagar = totalPagar + '00'
+    var url1, url2
+    url1 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe' : 'http://localhost:8080/#/login'
+    url2 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe_cancel' : 'http://localhost:8080/#/login'
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -113,8 +116,8 @@ class UserController {
         },
       ],
       mode: 'payment',
-      success_url: `https://app.telde.com/pay_stripe?user_id=${params.tienda_id}&cantM=${body.cantM}&costoM=${body.costoM}`,
-      cancel_url: `https://app.telde.com/pay_stripe_cancel`,
+      success_url: `${url1}?user_id=${params.tienda_id}&cantM=${body.cantM}&costoM=${body.costoM}&type=${body.type}&op=${body.op}`,
+      cancel_url: url2,
     })
     response.send({ id: session.id })
   }

@@ -39,7 +39,7 @@ addPrefixToGroup(
   Route.group(() => {
     // Insertar rutas sin protección de autenticación aquí
     Route.post('login_by_mail', 'UserController.logueoSinContrasena')
-    Route.post("procesar_pago/:tienda_id/:costoM/:cantM", "UserController.procesarPago");
+    Route.post("procesar_pago/:tienda_id/:costoM/:cantM/:type/:op", "UserController.procesarPago");
     Route.get("redireccionar_pago", "UserController.redirpay");
     Route.put("aprobar_pago/:tienda_id", "UserController.aprobarPagoStripe");
     Route.post("pago_ok/:tienda_id/:user_id/", "ProductoController.pago_ok");
