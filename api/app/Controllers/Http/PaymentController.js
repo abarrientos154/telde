@@ -26,7 +26,7 @@ class PaymentController {
     let body = request.get()
     console.log(body, 'soy un body testStripe')
     View.global('ruta', function () {
-      return `/api/procesador_pagos/${body.user_id}/${body.montoTotal}/${body.ref}/${body.tienda_id}`
+      return `/api/procesador_pagos/${body.user_id}/${body.montoTotal}/${body.ref}/${body.tienda_id}/${body.type}/${body.op}`
     })
     return view.render('paytoshop')
   }
@@ -36,6 +36,9 @@ class PaymentController {
     console.log(body, 'soy un body')
     let totalPagar = body.montoTotal + '00'
     console.log(totalPagar, 'total')
+    var url1, url2
+    url1 = body.type === 'mobile' ? 'https://app.teldepayshop.com/pay_stripe' : 'http://localhost:8080/#/login'
+    url2 = body.type === 'mobile' ? 'https://app.teldepayshop.com/pay_stripe_cancel' : 'http://localhost:8080/#/login'
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -51,8 +54,8 @@ class PaymentController {
         },
       ],
       mode: 'payment',
-      success_url: `https://app.teldepayshop.com/pay_stripe?user_id=${params.user_id}&tienda_id=${params.tienda_id}&ref=${params.ref}`,
-      cancel_url: `https://app.teldepayshop.com/pay_stripe_cancel?user_id=${params.user_id}&ref=${params.ref}&tienda_id=${params.tienda_id}&cancel=${0}`,
+      success_url: `${url1}?user_id=${params.user_id}&tienda_id=${params.tienda_id}&ref=${params.ref}&type=${body.type}&op=${body.op}`,
+      cancel_url: `${url2}?user_id=${params.user_id}&ref=${params.ref}&tienda_id=${params.tienda_id}&cancel=${0}&type=${body.type}&op=${body.op}`,
     })
     response.send({ id: session.id })
   }

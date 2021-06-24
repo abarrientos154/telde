@@ -68,7 +68,7 @@ addPrefixToGroup(
     ///////////////////////Direccion/////////////////////////////////////////
 
     Route.get("pagar_telde", "PaymentController.create")
-    Route.post("procesador_pagos/:user_id/:montoTotal/:ref/:tienda_id", "PaymentController.procesarPago");
+    Route.post("procesador_pagos/:user_id/:montoTotal/:ref/:tienda_id/:type/:op", "PaymentController.procesarPago");
 
   })
 );
