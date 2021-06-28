@@ -42,7 +42,6 @@ addPrefixToGroup(
     Route.post("procesar_pago/:tienda_id/:costoM/:cantM/:type/:op", "UserController.procesarPago");
     Route.get("redireccionar_pago", "UserController.redirpay");
     Route.put("aprobar_pago/:tienda_id", "UserController.aprobarPagoStripe");
-    Route.post("pago_ok/:tienda_id/:user_id/", "ProductoController.pago_ok");
     Route.post("login", "UserController.login");
     Route.post("registrar_cliente", "UserController.register")
     Route.post("registrar_tienda", "UserController.registerTienda")
@@ -66,6 +65,10 @@ addPrefixToGroup(
     Route.get("ciudades/:id", "UserController.ciudades")
     Route.delete("direccion/:id", "UserController.eliminarDireccion")
     ///////////////////////Direccion/////////////////////////////////////////
+
+    Route.post("pago_ok", "ProductoController.pago_ok")
+    /* Route.post("pago_ok/:tienda_id/:user_id/", "ProductoController.pago_ok"); */
+    Route.post("pago_no_ok", "ProductoController.pago_no_ok")
 
     Route.get("pagar_telde", "PaymentController.create")
     Route.post("procesador_pagos/:user_id/:montoTotal/:ref/:tienda_id/:type/:op", "PaymentController.procesarPago");
@@ -106,8 +109,6 @@ addPrefixToGroup(
     Route.get('perfil_img/:file', 'UploadController.getFileByDirectoryPerfil')
 
     Route.post("comprar_productos", "ProductoController.pre_pago")
-    Route.post("pago_ok", "ProductoController.pago_ok")
-    Route.post("pago_no_ok", "ProductoController.pago_no_ok")
     Route.post("comprar_productos_comprobante", "ProductoController.comprarTransferencia")
     Route.get("productos_vendidos", "ProductoController.productosVendidos")
     //////////////////////////////////////////////////////////////////////////

@@ -99,8 +99,8 @@ class UserController {
     let totalPagar = parseFloat(body.cantM) * parseFloat(body.costoM)
     totalPagar = totalPagar + '00'
     var url1, url2
-    url1 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe' : 'https://teldeweb.eichechile.com/#/login'
-    url2 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe_cancel' : 'https://teldeweb.eichechile.com/#/login'
+    url1 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe' : 'http://localhost:8080/#/login'
+    url2 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe_cancel' : 'http://localhost:8080/#/login'
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
