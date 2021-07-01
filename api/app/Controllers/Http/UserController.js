@@ -349,6 +349,18 @@ class UserController {
     }
   }
 
+  async proveeUbi ({ request, response, params }) {
+    let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
+    let formatEmprendedores = emprendedores.map(v => {
+      return {
+        ...v,
+        ciudad_id: v.ciudad._id
+      }
+    })
+    let filtrado = formatEmprendedores.filter(v => v.ciudad_id === params.id)
+    response.send(filtrado)
+  }
+
   async clientes ({ request, response, auth }) {
     let emprendedores = (await User.query().where({roles: [2]}).fetch()).toJSON()
     response.send(emprendedores)

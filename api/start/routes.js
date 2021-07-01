@@ -56,6 +56,7 @@ addPrefixToGroup(
     Route.get('publicidad_img/:file', 'UploadController.getFilePublicidad')
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
+    Route.get("proveedores/:id", "UserController.proveeUbi")
     Route.get("all_productos", "ProductoController.allProductos")
 
     ///////////////////////Direccion/////////////////////////////////////////
