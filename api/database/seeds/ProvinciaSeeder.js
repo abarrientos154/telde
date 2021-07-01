@@ -41,7 +41,16 @@ const ProvinciasData = [
   {
     id: 17,
     nombre: 'Santiago de Compostela'
+  },
+  {
+    id: 27,
+    nombre: 'Lugo'
+  },
+  {
+    id: 32,
+    nombre: 'Ourense'
   }
+
 ]
 
 class ProvinciaSeeder {
