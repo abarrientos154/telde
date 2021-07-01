@@ -37,6 +37,10 @@ const ProvinciasData = [
   {
     id: 16,
     nombre: 'Ferrol'
+  },
+  {
+    id: 17,
+    nombre: 'Santiago de Compostela'
   }
 ]
 
