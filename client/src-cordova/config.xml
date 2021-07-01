@@ -83,4 +83,5 @@
     </universal-links>
     <allow-navigation href="about:*" />
     <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="Fullscreen" value="true" />
 </widget>
