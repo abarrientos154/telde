@@ -139879,8 +139879,17342 @@ const data = [
       "cp": 28341,
       "nombre": "Valdemoro",
       "provinciaid": 28
-    }
- 
+    },
+  {
+    "cp": "36589",
+    "nombre": "Abades (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Abalo (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36954",
+    "nombre": "Abelendo (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36867",
+    "nombre": "Abelleira (angoares)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Acevedo (ponte Sampaio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Achadiza, A (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36888",
+    "nombre": "Achas, As (san Sebastian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36555",
+    "nombre": "Aciveiro (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36141",
+    "nombre": "Acuña (vilaboa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36979",
+    "nombre": "Adina (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Aduana De Coron, A (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Agar (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36520",
+    "nombre": "Agolada",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36526",
+    "nombre": "Agra (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36854",
+    "nombre": "Aguasantas (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36190",
+    "nombre": "Agudelo (san Martiño )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36913",
+    "nombre": "Aguete (seixo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Aguions (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Aios (noalla)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36157",
+    "nombre": "Alba (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36516",
+    "nombre": "Albarellos (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36418",
+    "nombre": "Albarin (atios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36720",
+    "nombre": "Albelos (guillarei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36429",
+    "nombre": "Albeos (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Albergue (agolada)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36391",
+    "nombre": "Albores Grande (priegue)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Alcabre (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Alceme (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Aldan (san Cibran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Aldea, A (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Alemparte (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36859",
+    "nombre": "Almofrei (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36458",
+    "nombre": "Alxen (san Paio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36419",
+    "nombre": "Ameiro Longo (sanguiñeda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36885",
+    "nombre": "Ameixeira, A (san Bernabeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36954",
+    "nombre": "Ameixoada (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36669",
+    "nombre": "Amil (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36840",
+    "nombre": "Amoedo (san Saturniño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36791",
+    "nombre": "Amorin (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36829",
+    "nombre": "Anceu (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36628",
+    "nombre": "Andras (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36867",
+    "nombre": "Angoares (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36428",
+    "nombre": "Angudes (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36350",
+    "nombre": "Angustia, A (nigran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Ansean (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Ansemil (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36853",
+    "nombre": "Antas (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Anzo (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36585",
+    "nombre": "Añobre (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Aralde (sobran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36458",
+    "nombre": "Arantei (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Aranza (soutomaior)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36430",
+    "nombre": "Arbo (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36430",
+    "nombre": "Arbo (santa Maria )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Arca (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Arcade (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36677",
+    "nombre": "Arcos (cuntis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36865",
+    "nombre": "Arcos (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36655",
+    "nombre": "Arcos Da Condesa (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36912",
+    "nombre": "Ardan (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Ardia (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "Area Alta, A (panxon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Arealonga (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36613",
+    "nombre": "Arealonga (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Areas (mourente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Areas (parroquia Mourente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36861",
+    "nombre": "Areas (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36711",
+    "nombre": "Areas (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36992",
+    "nombre": "Aren (samieira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Aris (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36192",
+    "nombre": "Armenteira (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Arnego (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Arnego (vila De Cruces)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36584",
+    "nombre": "Arnois (san Xiao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36892",
+    "nombre": "Arnoso (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36979",
+    "nombre": "Arra (san Amaro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36794",
+    "nombre": "Arrabal, O (oia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36791",
+    "nombre": "Arrotea, A (amorin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36412",
+    "nombre": "Arrotea, A (pontellas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36415",
+    "nombre": "Arrufana (louredo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Artoño (santalla)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36598",
+    "nombre": "Asorei (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36418",
+    "nombre": "Atios (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36510",
+    "nombre": "Bailas (goias)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36308",
+    "nombre": "Baiña (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Baiña, A  (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36614",
+    "nombre": "Baion (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36300",
+    "nombre": "Baiona (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36300",
+    "nombre": "Baiona (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36729",
+    "nombre": "Baldrans (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Balea (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36988",
+    "nombre": "Balea (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36682",
+    "nombre": "Baloira (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36979",
+    "nombre": "Baltar (adina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36140",
+    "nombre": "Balteiro (figueirido)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36618",
+    "nombre": "Bamio (san Xens)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36570",
+    "nombre": "Bandeira, A",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36729",
+    "nombre": "Baños, Os (caldelas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36979",
+    "nombre": "Barbeito (adina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Barbude (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36826",
+    "nombre": "Barbudo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36683",
+    "nombre": "Barcala (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36435",
+    "nombre": "Barcela (san Xoan )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Barcia (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36878",
+    "nombre": "Barcia De Mera (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36837",
+    "nombre": "Barcia Do Seixo (santa Ana)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Barcia, A (marcon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Barciela (cobres)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36309",
+    "nombre": "Baredo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36636",
+    "nombre": "Barrantes (ribadumia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36749",
+    "nombre": "Barrantes (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36911",
+    "nombre": "Barriada, A (mogor)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36191",
+    "nombre": "Barro (san Breixo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36527",
+    "nombre": "Basadre (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36527",
+    "nombre": "Basadroa (agolada)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36580",
+    "nombre": "Bascuas (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Bastida, A (couso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36448",
+    "nombre": "Batallans (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Beade (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36307",
+    "nombre": "Belesar (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Beluso (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Bembrive (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36659",
+    "nombre": "Bemil (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Bendoiro (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36517",
+    "nombre": "Bermes (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Berredo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36688",
+    "nombre": "Berres (san Vicenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36598",
+    "nombre": "Besexos (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36636",
+    "nombre": "Besomaño (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Bidueiros (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36613",
+    "nombre": "Bocas,as (arealonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36598",
+    "nombre": "Bodaño (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Bon De Abaixo (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Bon De Arriba (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36154",
+    "nombre": "Bora (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36842",
+    "nombre": "Borben (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36966",
+    "nombre": "Bordons (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36858",
+    "nombre": "Borela (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36525",
+    "nombre": "Borraxeiros (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36378",
+    "nombre": "Borreiros (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Botos (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "Bouza Vella, A (panxon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36639",
+    "nombre": "Bouza, A (castrelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36585",
+    "nombre": "Brandariz (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36316",
+    "nombre": "Brandufe (vincios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36524",
+    "nombre": "Brantega (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Breixa (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36692",
+    "nombre": "Bretoña (curro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36658",
+    "nombre": "Briallos (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36526",
+    "nombre": "Brocos (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36954",
+    "nombre": "Broullon (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36828",
+    "nombre": "Buchabade (touron)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36930",
+    "nombre": "Bueu (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Bueu (s. Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36869",
+    "nombre": "Bugarin (santa Cristina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36308",
+    "nombre": "Burgo, O (baiña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36779",
+    "nombre": "Burgueira (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Busto (san Facundo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Cabalo, O (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36634",
+    "nombre": "Cabana, A (corvillon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Cabanas (salcedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36436",
+    "nombre": "Cabeiras (san Sebastian )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36813",
+    "nombre": "Cabeiro (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Cabral (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36458",
+    "nombre": "Cabreira (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Cabreira, A (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36914",
+    "nombre": "Cadrelo (piñeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36514",
+    "nombre": "Cadron (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36650",
+    "nombre": "Caldas De Reis (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36655",
+    "nombre": "Caldas De Reis (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36820",
+    "nombre": "Caldelas (ponte Caldelas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36721",
+    "nombre": "Caldelas De Miño (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36610",
+    "nombre": "Caldigñela, A  (carril)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Caleiro (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Calle, A (arcade)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36688",
+    "nombre": "Callobre (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36957",
+    "nombre": "Calvar, O (domaio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36770",
+    "nombre": "Calvario, O (rosal,o)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36845",
+    "nombre": "Calvos (santo Adrian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36587",
+    "nombre": "Camanzo (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36539",
+    "nombre": "Camba (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36630",
+    "nombre": "Cambados (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36360",
+    "nombre": "Camos (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36618",
+    "nombre": "Campanario, O (bamio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36647",
+    "nombre": "Campaña (santa Cristina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36157",
+    "nombre": "Campaño (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Campelo (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Campo (covelo, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36419",
+    "nombre": "Campo De Eiro (pereiras)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36110",
+    "nombre": "Campo Lameiro (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36779",
+    "nombre": "Campo, O (burgueira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36914",
+    "nombre": "Campo, O (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Campos (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36988",
+    "nombre": "Campos, Os (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36596",
+    "nombre": "Camposancos (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36788",
+    "nombre": "Camposancos (santa Isabel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Candean (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36860",
+    "nombre": "Canedo (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36517",
+    "nombre": "Cangas (lalin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36940",
+    "nombre": "Cangas Do Morrazo",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Canicouva, A (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36350",
+    "nombre": "Canido (nigran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Canido (oia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36411",
+    "nombre": "Cans (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36880",
+    "nombre": "Cañiza, A (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36888",
+    "nombre": "Cañiza, A (santa Teresa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36969",
+    "nombre": "Carabuxeira, A (padriñan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Carballal, O (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36856",
+    "nombre": "Carballedo (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36910",
+    "nombre": "Carballeira, A (lourizan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36582",
+    "nombre": "Carbia (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Carboeiro (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Carboentes (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36627",
+    "nombre": "Cardalda (deiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36829",
+    "nombre": "Caritel (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36524",
+    "nombre": "Carmoega (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36856",
+    "nombre": "Caroi (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36659",
+    "nombre": "Carracedo (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Carramal, O (salcedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Carrasqueira, A (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "Carreiras (pontecesures)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36610",
+    "nombre": "Carril (parroquia Santiago De Afora)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36610",
+    "nombre": "Carril (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36646",
+    "nombre": "Casal De Eirigo (setecoros)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36618",
+    "nombre": "Casal, O (bamio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36475",
+    "nombre": "Casal, O (budiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36954",
+    "nombre": "Casal, O (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Casal, O (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Casal, O (tameiga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Casalvito (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36912",
+    "nombre": "Casas (ardan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Casas Novas (mourente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36876",
+    "nombre": "Castelans (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36156",
+    "nombre": "Castelo, O (lerez",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36450",
+    "nombre": "Castelo, O (salvaterra)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36938",
+    "nombre": "Castiñans, As (cela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36938",
+    "nombre": "Castrelo (cela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36639",
+    "nombre": "Castrelo (santa Cruz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36558",
+    "nombre": "Castrelo (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Castrelos (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36117",
+    "nombre": "Castro (cerdedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36116",
+    "nombre": "Castro (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Castro (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Castro, O (dozon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36415",
+    "nombre": "Castro, O (mos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36789",
+    "nombre": "Castro, O (salcidos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Castro, O (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Castro,o (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36617",
+    "nombre": "Castrogudin (cea)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36417",
+    "nombre": "Castros, Os (dornelas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Catasos (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Catoira (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36617",
+    "nombre": "Cea (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Cedeira (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36720",
+    "nombre": "Cegoñeiras, As (guillarei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36419",
+    "nombre": "Cela (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36938",
+    "nombre": "Cela (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36865",
+    "nombre": "Celeiros (san Fins)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36517",
+    "nombre": "Cello (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36100",
+    "nombre": "Centro Militar Base General Morillo (usba)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36817",
+    "nombre": "Cepeda (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36438",
+    "nombre": "Cequelinos (san Miguel )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36678",
+    "nombre": "Cequeril (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36596",
+    "nombre": "Cercio (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36139",
+    "nombre": "Cerdedo (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36447",
+    "nombre": "Cerdeira (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36687",
+    "nombre": "Cereixo (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36875",
+    "nombre": "Cernadela (riofrio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36152",
+    "nombre": "Cerponzons (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36579",
+    "nombre": "Cervaña (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36579",
+    "nombre": "Cervaña (silleda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36693",
+    "nombre": "Cesantes (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Chain (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36456",
+    "nombre": "Chan Da Igrexa (pesqueiras)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36827",
+    "nombre": "Chan Do Casal, O (xustans)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36993",
+    "nombre": "Chancelas (combarro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36360",
+    "nombre": "Chandebrito (san Xose)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36570",
+    "nombre": "Chapa (san Cibrao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36320",
+    "nombre": "Chapela (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36320",
+    "nombre": "Chapela (san Fausto)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36414",
+    "nombre": "Chenlo (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Cima De Vila (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36587",
+    "nombre": "Cira (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Coaxe (dimo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Cobres (santo Adran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Codeseda (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Coiro (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36967",
+    "nombre": "Coiron (dena)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36993",
+    "nombre": "Combarro (san Roque)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Comboa (soutomaior)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Comesaña (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36379",
+    "nombre": "Con (parada)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Con, O (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Conde, O (arcade)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36430",
+    "nombre": "Consistorio (arbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36682",
+    "nombre": "Cora (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36647",
+    "nombre": "Cordeiro (santa Comba)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Cores (abalo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36619",
+    "nombre": "Cornazo (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Coron (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36856",
+    "nombre": "Corredoira (san Gregorio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Corredoira, A (catoira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36865",
+    "nombre": "Correlo (arcos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36545",
+    "nombre": "Cortegada (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36789",
+    "nombre": "Coruto Vello, O (salcidos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Coruxo (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36634",
+    "nombre": "Corvillon (san Amedio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Corzans (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36668",
+    "nombre": "Cosoirado (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36957",
+    "nombre": "Costa, A (domaio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36966",
+    "nombre": "Costa, A (dorron)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36417",
+    "nombre": "Cotiño, O (dornelas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Cotros, Os (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36677",
+    "nombre": "Couselo (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36119",
+    "nombre": "Couso (campo Lameiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36682",
+    "nombre": "Couso (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Couso (gondomar)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Couso (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36150",
+    "nombre": "Couso, O (santo Andre De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36639",
+    "nombre": "Couto De Abaixo, O (castrelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36636",
+    "nombre": "Couto De Arriba (barrantes)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36639",
+    "nombre": "Couto De Arriba, O (castrelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36886",
+    "nombre": "Couto, O (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36300",
+    "nombre": "Cova Terreña (baiona)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36151",
+    "nombre": "Covadaspera (verducido)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36638",
+    "nombre": "Covas (santa Cristina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36633",
+    "nombre": "Covas De Lobos (vilariño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36839",
+    "nombre": "Covelo (san Sebastian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36876",
+    "nombre": "Covelo (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36418",
+    "nombre": "Covelo, O (atios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36992",
+    "nombre": "Covelo, O (samieira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36420",
+    "nombre": "Crecente (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36749",
+    "nombre": "Cristelos (barrantes)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Cristimil (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36863",
+    "nombre": "Cristiñade (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36628",
+    "nombre": "Cruceiro, O  (andras)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Cruceiro, O (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36954",
+    "nombre": "Cruceiro, O (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36633",
+    "nombre": "Cruceiro, O (vilariño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36590",
+    "nombre": "Cruces (nosa Señora Da Piedade)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36770",
+    "nombre": "Cruces, As (rosal, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36619",
+    "nombre": "Cruz, A (cornazo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36789",
+    "nombre": "Cruz, A (salcidos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Cumeiro (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36893",
+    "nombre": "Cumiar (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Cunchido (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36670",
+    "nombre": "Cuntis (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36678",
+    "nombre": "Cuntis (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36820",
+    "nombre": "Cuñas (ponte Caldelas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36686",
+    "nombre": "Curantes (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Curras (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36791",
+    "nombre": "Curras (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36692",
+    "nombre": "Curro (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Darbo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36627",
+    "nombre": "Deiro (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36628",
+    "nombre": "Deiro (tremoedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36967",
+    "nombre": "Dena (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36157",
+    "nombre": "Devesa, A (alba)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Devesa, A (arcade)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36649",
+    "nombre": "Devesa, A (campaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Dimo (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Doade (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36957",
+    "nombre": "Domaio (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36388",
+    "nombre": "Donas (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36515",
+    "nombre": "Donramiro (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Donsion (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36579",
+    "nombre": "Dornelas (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36417",
+    "nombre": "Dornelas (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36966",
+    "nombre": "Dorron (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Dozon (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36559",
+    "nombre": "Duas Igrexas (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Duxame (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36527",
+    "nombre": "Eidian (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36418",
+    "nombre": "Eidos, Os (atios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Eira Pedriña, A (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36760",
+    "nombre": "Eiras, As (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36967",
+    "nombre": "Eirexe, A (dena)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36471",
+    "nombre": "Entenza (santos Xusto E Pastor)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Erbello (aldan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36938",
+    "nombre": "Ermelo (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Ermida, A (marcon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36841",
+    "nombre": "Ermida, A (nosa Señora Da Anunciacion)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36316",
+    "nombre": "Ervillas (vincios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36419",
+    "nombre": "Erville (cela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36838",
+    "nombre": "Escuadra (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36547",
+    "nombre": "Escuadro (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36636",
+    "nombre": "Escusa, A (ribadumia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36470",
+    "nombre": "Esfarrapada, A (salceda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36520",
+    "nombre": "Esperante (san Cibrao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Espiñeira, A (aldan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Espirito Santo, O (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36679",
+    "nombre": "Estacas (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36851",
+    "nombre": "Estacas, As (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36692",
+    "nombre": "Estacion De Portela (portela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36430",
+    "nombre": "Estacion, A (arbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36730",
+    "nombre": "Estas (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Estibada, A (petelos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36680",
+    "nombre": "Estrada, A (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36713",
+    "nombre": "Estrada, A (randufe)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36681",
+    "nombre": "Estrada, A (san Paio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36910",
+    "nombre": "Estribela (lourizan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36639",
+    "nombre": "Facho, O (castrelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36537",
+    "nombre": "Fafian (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Faxilde (sobran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36524",
+    "nombre": "Feira Nova (agolada)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36520",
+    "nombre": "Ferreiroa (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36647",
+    "nombre": "Ferreiros (cordeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Ferreiros (san Xes)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36548",
+    "nombre": "Fiestras (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36140",
+    "nombre": "Figueirido (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36792",
+    "nombre": "Figueiro (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36139",
+    "nombre": "Figueroa (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36490",
+    "nombre": "Filgueira (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Filgueira (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36150",
+    "nombre": "Filgueira (santo Andre De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Fiolledo (san Paio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Fofe (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36558",
+    "nombre": "Folgoso (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36659",
+    "nombre": "Follente (bemil)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36151",
+    "nombre": "Fontans, Os (santa Maria De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36583",
+    "nombre": "Fontao (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Fonte De Ons (noalla)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36692",
+    "nombre": "Fonte Do Curro (curro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36600",
+    "nombre": "Fontecarmoa (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36750",
+    "nombre": "Fontenla (goian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36865",
+    "nombre": "Fontenla (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36958",
+    "nombre": "Fontes (tiran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36730",
+    "nombre": "Forcadela (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36550",
+    "nombre": "Forcarei (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36556",
+    "nombre": "Forcarei (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Formiga, A (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36455",
+    "nombre": "Fornelos (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36847",
+    "nombre": "Fornelos De Montes (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36647",
+    "nombre": "Forno, O (cordeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Forte, O (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Fortons (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36853",
+    "nombre": "Forzans (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36866",
+    "nombre": "Fozara (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36875",
+    "nombre": "Frades (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36683",
+    "nombre": "Frades (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36316",
+    "nombre": "Fraga, A (vincios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36118",
+    "nombre": "Fragas (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36150",
+    "nombre": "Fragoso (santo Andre De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36455",
+    "nombre": "Fraguiñas, As (fornelos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36889",
+    "nombre": "Franqueira, A  (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Freixeiro (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36636",
+    "nombre": "Freixo, O (ribadumia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36428",
+    "nombre": "Freixo, O (san Roque)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "Gaifar (panxon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36596",
+    "nombre": "Galegos (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36720",
+    "nombre": "Gandara, A (guillarei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36415",
+    "nombre": "Gandara, A (mos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36789",
+    "nombre": "Gandara, A (salcidos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36475",
+    "nombre": "Gandaras, As (poligono Industrial)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36946",
+    "nombre": "Gandon (aldan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36875",
+    "nombre": "Gargamala (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36668",
+    "nombre": "Gargantans (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36151",
+    "nombre": "Gatomorto (santa Maria De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36853",
+    "nombre": "Gaxate (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Godons (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36615",
+    "nombre": "Godos (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36750",
+    "nombre": "Goian (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36510",
+    "nombre": "Goias (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Golada, A (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Gondar (san Tome)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36380",
+    "nombre": "Gondomar (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36380",
+    "nombre": "Gondomar (san Bieito)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36843",
+    "nombre": "Gorgoreiro, O (moscoso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36659",
+    "nombre": "Gorgullon, O (carracedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36548",
+    "nombre": "Graba (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36966",
+    "nombre": "Granxa, A (dorron)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Graña, A (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Graña, A (san Bernabeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36587",
+    "nombre": "Gres (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Gresande (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36980",
+    "nombre": "Grove, O (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Grove, O (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Gruncheiras, As (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36780",
+    "nombre": "Guarda, A (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36780",
+    "nombre": "Guarda, A (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Guia, A (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36868",
+    "nombre": "Guillade (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36610",
+    "nombre": "Guillan (carril)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36538",
+    "nombre": "Guillar (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36720",
+    "nombre": "Guillarei (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36681",
+    "nombre": "Guimarei (san Xiao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36417",
+    "nombre": "Guizan (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36861",
+    "nombre": "Gulans (san Xulian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36529",
+    "nombre": "Gurgueiro (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Hio (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36458",
+    "nombre": "Igrexa, A (alxen)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36840",
+    "nombre": "Igrexa, A (amoedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36458",
+    "nombre": "Igrexa, A (arantei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36627",
+    "nombre": "Igrexa, A (deiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36847",
+    "nombre": "Igrexa, A (fornelos De Montes)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Igrexa, A (maceira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36151",
+    "nombre": "Igrexa, A (santa Maria De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Igrexa, A (tameiga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Igrexario, O (hio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Igrexario, O (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36911",
+    "nombre": "Igrexario, O (mogor)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36958",
+    "nombre": "Igrexario, O (tiran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36626",
+    "nombre": "Illa De Arousa, A (san Xulian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "Infesta (pontecesures)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36826",
+    "nombre": "Insua, A (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Isamil (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36687",
+    "nombre": "Lagartons (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36110",
+    "nombre": "Lagoa, A (campo Lameiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Lagoa, A (sobran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36500",
+    "nombre": "Lalin (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Lalin (santa Maria Das Dores)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36500",
+    "nombre": "Lalin De Arriba",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36830",
+    "nombre": "Lama, A (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36686",
+    "nombre": "Lamas (san Breixo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36668",
+    "nombre": "Lamas (santa Cruz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36579",
+    "nombre": "Lamela (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Lamosa, A (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36657",
+    "nombre": "Lantaño (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Larazo (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36544",
+    "nombre": "Laro (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Laton, O (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Lavadores (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36529",
+    "nombre": "Laxe (agolada)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36668",
+    "nombre": "Laxe (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36613",
+    "nombre": "Laxe, A (arealonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36852",
+    "nombre": "Laxe, A (fornelos De Montes)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Laxe, A (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36308",
+    "nombre": "Laxes, As (baiña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36634",
+    "nombre": "Laxes, As (corvillon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Lebozan (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Leirado (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36635",
+    "nombre": "Leiro (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36635",
+    "nombre": "Leiromean (leiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36156",
+    "nombre": "Lerez (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Limens (hio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Liñares (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36449",
+    "nombre": "Liñares (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36459",
+    "nombre": "Lira (san Simon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Liripio (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Lodeiro (san Paio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36588",
+    "nombre": "Loimil (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36635",
+    "nombre": "Lois (san Fins)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Loño (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36969",
+    "nombre": "Lores (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Loson (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36876",
+    "nombre": "Lougares (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36415",
+    "nombre": "Louredo (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36300",
+    "nombre": "Loureiral (baiona)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36855",
+    "nombre": "Loureiro (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36779",
+    "nombre": "Loureza (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36455",
+    "nombre": "Lourido (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Lourido (soutomaior)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36153",
+    "nombre": "Lourizan (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36887",
+    "nombre": "Luneda (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Lusquiños (tomeza)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36516",
+    "nombre": "Maceira (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Maceira (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Maceiras, As (san Remixio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36567",
+    "nombre": "Madanela De Montes, A (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Madriñan (san Adrao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Magdalena, A (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36379",
+    "nombre": "Mallon (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36714",
+    "nombre": "Malvas (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36570",
+    "nombre": "Manduas (san Tirso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36388",
+    "nombre": "Mañufe (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Marcon (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36548",
+    "nombre": "Margaride (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36900",
+    "nombre": "Marin (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36920",
+    "nombre": "Marin (escuela Naval)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Marin (parroquia San Xulian De Afora)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36900",
+    "nombre": "Marin (parroquia Santa Maria Do Porto)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Marrua, A (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Martixe (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36770",
+    "nombre": "Marzan (rosal, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36689",
+    "nombre": "Matalobos (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Matama (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Means, As (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36557",
+    "nombre": "Meavia (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Meder (santo Adrian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36307",
+    "nombre": "Medialdea (baiona)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Meira (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Meiro (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36877",
+    "nombre": "Meirol (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36637",
+    "nombre": "Meis (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Meixome (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Meloxo (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Menda, A (dimo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Menduiña (aldan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Merlin (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36580",
+    "nombre": "Merza (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36556",
+    "nombre": "Millarada (san Amedio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36579",
+    "nombre": "Moalde (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36950",
+    "nombre": "Moaña (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36954",
+    "nombre": "Moaña (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Moaña (virxe Do Carme)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36633",
+    "nombre": "Modia, A (vilariño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36911",
+    "nombre": "Mogor (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36119",
+    "nombre": "Moimenta (campo Lameiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36514",
+    "nombre": "Moimenta (lalin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36912",
+    "nombre": "Moledo (ardan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36870",
+    "nombre": "Mondariz (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36870",
+    "nombre": "Mondariz (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36890",
+    "nombre": "Mondariz-balneario",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36515",
+    "nombre": "Moneixas (san Adrao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36627",
+    "nombre": "Monte, O (deiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36913",
+    "nombre": "Montecelo (seixo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Montemogos (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36117",
+    "nombre": "Montes (san Isidro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36863",
+    "nombre": "Moreira (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36688",
+    "nombre": "Moreira (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Moreira (soutomaior)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Moreira, A (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Morgadans (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36119",
+    "nombre": "Morillas (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36415",
+    "nombre": "Mos (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36843",
+    "nombre": "Moscoso (san Paio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36413",
+    "nombre": "Mosende (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36637",
+    "nombre": "Mosteiro, O (meis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36309",
+    "nombre": "Mougas (santa Uxia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Moureira, A (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Mourelos (noalla)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36437",
+    "nombre": "Mourentan (san Cristovo )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Mourente (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36877",
+    "nombre": "Mouriscados (san Cibran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Muiño (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Muiño, O (cobres)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36969",
+    "nombre": "Nantes (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Navia (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Negreiros (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36538",
+    "nombre": "Negrelos (san Cibrao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36814",
+    "nombre": "Negros (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Nerga (hio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36817",
+    "nombre": "Nespereira (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36789",
+    "nombre": "Netos (salcidos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36440",
+    "nombre": "Neves, As (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36440",
+    "nombre": "Neves, As (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Nigoi (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36350",
+    "nombre": "Nigran (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Noalla (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Noceda (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36863",
+    "nombre": "Nogueira (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36637",
+    "nombre": "Nogueira (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Nogueiro (meder)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Nores (cobres)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Norte, O (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36410",
+    "nombre": "Noval, O (torneiros)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36585",
+    "nombre": "Obra (san Tome)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Oca (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Oeste (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Oia (san Miguel) (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36794",
+    "nombre": "Oia (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36598",
+    "nombre": "Oiros (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36846",
+    "nombre": "Oitaven (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36545",
+    "nombre": "Oleiros (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Oleiros (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36862",
+    "nombre": "Oliveira (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36864",
+    "nombre": "Oliveira (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36686",
+    "nombre": "Olives (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36586",
+    "nombre": "Ollares (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36588",
+    "nombre": "Orazo (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36885",
+    "nombre": "Oroso (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Orrea (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36635",
+    "nombre": "Oubiña (san Vicenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Ousensa (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Outeiriño, O (catoira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36659",
+    "nombre": "Outeiro  (bemil)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36788",
+    "nombre": "Outeiro, O (camposancos",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36393",
+    "nombre": "Outeiro, O (ramallosa, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36681",
+    "nombre": "Ouzande (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36638",
+    "nombre": "Padrenda (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36969",
+    "nombre": "Padriñan (san Xenxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36866",
+    "nombre": "Padrons (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36957",
+    "nombre": "Palmas (domaio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36510",
+    "nombre": "Palmaz (goias)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36517",
+    "nombre": "Palmou (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36770",
+    "nombre": "Pancenteo (rosal, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Pantrigueira, A (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "Panxon (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36558",
+    "nombre": "Parada (cerdedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Parada (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36529",
+    "nombre": "Parada (lalin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36379",
+    "nombre": "Parada (nigran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36544",
+    "nombre": "Parada (silleda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36887",
+    "nombre": "Parada Das Achas (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36659",
+    "nombre": "Paradela (bemil)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Paradela (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36616",
+    "nombre": "Paradela (meis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Paradela (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36619",
+    "nombre": "Paradela De Arriba (cornazo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36729",
+    "nombre": "Paramos (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36877",
+    "nombre": "Paraños (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36915",
+    "nombre": "Pardavila (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36686",
+    "nombre": "Pardemarin (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36472",
+    "nombre": "Parderrubias (san Tome)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36568",
+    "nombre": "Pardesoa (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36866",
+    "nombre": "Paredes (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36141",
+    "nombre": "Paredes (vilaboa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36510",
+    "nombre": "Pareizo (goias)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "Patos (panxon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pazo, O (mourente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Pazos (cobres)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Pazos (marcon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36820",
+    "nombre": "Pazos (ponte Caldelas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36589",
+    "nombre": "Pazos (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36841",
+    "nombre": "Pazos (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36841",
+    "nombre": "Pazos De Borben",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36715",
+    "nombre": "Pazos De Reis ( O Sagrario)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36309",
+    "nombre": "Pedornes (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Pedraucha (tameiga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36139",
+    "nombre": "Pedre (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Pedreira, A (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Pedroso (san Xiao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Peitieiros (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36300",
+    "nombre": "Percebelleira (baiona)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36194",
+    "nombre": "Perdecanai (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36557",
+    "nombre": "Pereira (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36419",
+    "nombre": "Pereiras (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36456",
+    "nombre": "Pesqueiras (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36884",
+    "nombre": "Petan (san Xian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Petelos (san Mamed)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36711",
+    "nombre": "Pexegueiro (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36895",
+    "nombre": "Pias (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36474",
+    "nombre": "Picoña, A (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36586",
+    "nombre": "Piloño (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Pintens (hio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Pintos (marcon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36749",
+    "nombre": "Pinzas (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Piñeiro (aldan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36679",
+    "nombre": "Piñeiro (cuntis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36862",
+    "nombre": "Piñeiro (oliveira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36579",
+    "nombre": "Piñeiro (silleda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36739",
+    "nombre": "Piñeiro (tomiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Piñeiro, O (covelo, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Piñeiro, O (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36163",
+    "nombre": "Poio (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Poio (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36543",
+    "nombre": "Ponte (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36820",
+    "nombre": "Ponte Caldelas (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36820",
+    "nombre": "Ponte Caldelas (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Ponte Sampaio (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Ponte, A (catoira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36860",
+    "nombre": "Ponteareas (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36860",
+    "nombre": "Ponteareas (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "Pontecesures  (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "Pontecesures (san Xulian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36412",
+    "nombre": "Pontellas (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Pontevedra (ver Callejero)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "Porqueira, A (panxon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36191",
+    "nombre": "Porrans (barro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36400",
+    "nombre": "Porriño, O (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36400",
+    "nombre": "Porriño, O (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "Portarraxoi (pontecesures)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36658",
+    "nombre": "Portas (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36677",
+    "nombre": "Portela (cuntis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36539",
+    "nombre": "Portela (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36692",
+    "nombre": "Portela (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Portela, A  (tameiga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Portela, A (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Portela, A (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Porteliña, A (petelos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36458",
+    "nombre": "Porto (san Paulo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "Porto De Arriba (pontecesures)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Porto De Meloxo, O (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "Portodemouros (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36970",
+    "nombre": "Portonovo (adina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Pousada (cobres)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36910",
+    "nombre": "Praceres, Os (lourizan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Prado (covelo,o)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Prado (lalin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Prado (morgadans)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36895",
+    "nombre": "Prado (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36391",
+    "nombre": "Prado (priegue)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36873",
+    "nombre": "Prado De Canda (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36814",
+    "nombre": "Pregal (negros)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36391",
+    "nombre": "Priegue (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Progreso, O (oeste)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36862",
+    "nombre": "Puzo (oliveira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36877",
+    "nombre": "Queimadelos (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Quintela  (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36492",
+    "nombre": "Quintela (creciente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36817",
+    "nombre": "Quintela (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36557",
+    "nombre": "Quintillan (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36117",
+    "nombre": "Quireza (cerdedo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36116",
+    "nombre": "Quireza (santo Tome)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36614",
+    "nombre": "Rabuñade",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Ramallosa, A (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36527",
+    "nombre": "Ramil (pñ San Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36527",
+    "nombre": "Ramil (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Ramorta, A (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36812",
+    "nombre": "Rande (cedeira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36713",
+    "nombre": "Randufe (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36992",
+    "nombre": "Raxo (san Gregorio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36669",
+    "nombre": "Rebon (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36712",
+    "nombre": "Rebordans (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36491",
+    "nombre": "Rebordechan (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36857",
+    "nombre": "Rebordelo (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36818",
+    "nombre": "Reboreda (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Reboredo (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36988",
+    "nombre": "Reboredo (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36800",
+    "nombre": "Redondela (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36800",
+    "nombre": "Redondela (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Redondo (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36542",
+    "nombre": "Refoxos (san Paio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Reibon (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36547",
+    "nombre": "Rellas (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36410",
+    "nombre": "Relva, A (torneiros)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Remesar (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Retirosa, A (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36472",
+    "nombre": "Revolta, A (parderrubias)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Rial, O (soutomaior)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36710",
+    "nombre": "Ribadelouro (santa Comba)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36866",
+    "nombre": "Ribadetea (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36636",
+    "nombre": "Ribadumia (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36493",
+    "nombre": "Ribeira (creciente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Ribeira (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36955",
+    "nombre": "Ribeira, A (meira)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36410",
+    "nombre": "Ribeira, A (torneiros)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36634",
+    "nombre": "Ribeiro, O (corvillon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36687",
+    "nombre": "Ribela (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36794",
+    "nombre": "Riña, A (oia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36537",
+    "nombre": "Rio (pñ Santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36537",
+    "nombre": "Rio (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36634",
+    "nombre": "Rio Da Ucha, O (corvillon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "Riobo (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "Riobo (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36875",
+    "nombre": "Riofrio (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36418",
+    "nombre": "Rocha, A (atios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36316",
+    "nombre": "Rocha, A (vincios)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36891",
+    "nombre": "Rocha, A (xinzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36530",
+    "nombre": "Rodeiro (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36596",
+    "nombre": "Rodis (san Xiao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36652",
+    "nombre": "Romai (san Xian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Romarigo (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Romariz (soutomaior)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36770",
+    "nombre": "Rosal, O (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Rosaleda (sobradelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Rouxique (vilalonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Roza, A (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36947",
+    "nombre": "Rozada (coiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Rua Nova De Abaixo, A (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Rua Nova De Arriba, A (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36619",
+    "nombre": "Rubians (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36686",
+    "nombre": "Rubin (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36449",
+    "nombre": "Rubios (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36516",
+    "nombre": "Saa (dozon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Sabaceda (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36938",
+    "nombre": "Sabarigo (cela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36157",
+    "nombre": "Sabaris (campaño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36393",
+    "nombre": "Sabaris (ramallosa, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36878",
+    "nombre": "Sabaxans (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36581",
+    "nombre": "Sabrexo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Sabucedo (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36121",
+    "nombre": "Sacos (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36669",
+    "nombre": "Saians (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Saians (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36656",
+    "nombre": "Saiar (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36546",
+    "nombre": "Saidres (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36470",
+    "nombre": "Salceda De Caselas (nucleo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Salcedo (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36789",
+    "nombre": "Salcidos (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Salgueira, A (vilalonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36586",
+    "nombre": "Salgueiros (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36539",
+    "nombre": "Salto, O (san Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36450",
+    "nombre": "Salvaterra De Miño (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36450",
+    "nombre": "Salvaterra De Miño (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36633",
+    "nombre": "Sameiro (vilariño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36992",
+    "nombre": "Samieira (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36692",
+    "nombre": "San Amaro (portela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36878",
+    "nombre": "San Amaro, O (barcia De Mera)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "San Cibran (aldan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36446",
+    "nombre": "San Cibran De Ribarteme (san Cibran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36654",
+    "nombre": "San Clemente De Cesar (san Clemente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36538",
+    "nombre": "San Cristovo De Az (san Cristovo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36667",
+    "nombre": "San Lourenzo De Moraña (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36637",
+    "nombre": "San Lourenzo De Nogueira (meis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36864",
+    "nombre": "San Lourenzo De Oliveira (ponteareas)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "San Luis (pontecesures)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "San Martiño De Asperelo (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36637",
+    "nombre": "San Martiño De Meis (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36683",
+    "nombre": "San Miguel De Barcala (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36584",
+    "nombre": "San Miguel De Castro (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36569",
+    "nombre": "San Miguel De Presqueiras (forcarei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36760",
+    "nombre": "San Miguel De Tabagon (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "San Paio De Bais (agolada)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36511",
+    "nombre": "San Paio De Senra (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "San Pedro (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36685",
+    "nombre": "San Pedro De Ancorados (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36448",
+    "nombre": "San Pedro De Batallans (neves, As)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36598",
+    "nombre": "San Pedro De Loson (vila De Cruces)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "San Roque (leirado)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "San Roque Do Monte (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36627",
+    "nombre": "San Roque Do Monte (deiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36475",
+    "nombre": "San Salvador De Budiño (porriño, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36539",
+    "nombre": "San Salvador De Camba (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36748",
+    "nombre": "San Salvador De Tebra (tomiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36686",
+    "nombre": "San Tome De Ancorados (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36599",
+    "nombre": "San Tome De Insua (vila De Cruces)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36637",
+    "nombre": "San Tome De Nogueira (meis)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36914",
+    "nombre": "San Tome De Piñeiro (marin)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36988",
+    "nombre": "San Vicente Do Grove (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36676",
+    "nombre": "San Xiao De Vea (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36340",
+    "nombre": "San Xoan (panxon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36447",
+    "nombre": "San Xose De Ribarteme (neves, As)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36640",
+    "nombre": "San Xulian (pontecesures)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36121",
+    "nombre": "San Xurxo De Sacos (cotobade)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36470",
+    "nombre": "San Xurxo De Salceda (san Xurxo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36683",
+    "nombre": "San Xurxo De Vea (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36418",
+    "nombre": "Sanguiñeda (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36518",
+    "nombre": "Sanguiñedo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36537",
+    "nombre": "Santa Baia De Camba (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36524",
+    "nombre": "Santa Comba (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36140",
+    "nombre": "Santa Comba De Bertola (santa Comba)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36393",
+    "nombre": "Santa Cristina Da Ramallosa",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36142",
+    "nombre": "Santa Cristina De Cobres (vilaboa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36682",
+    "nombre": "Santa Cristina De Vea (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36660",
+    "nombre": "Santa Lucia De Moraña",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36470",
+    "nombre": "Santa Maria De Salceda (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36151",
+    "nombre": "Santa Maria De Xeve (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36538",
+    "nombre": "Santa Mariña De Pescoso (rodeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36569",
+    "nombre": "Santa Mariña De Presqueiras (forcarei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36668",
+    "nombre": "Santa Xusta De Moraña (santa Xusta)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36689",
+    "nombre": "Santeles (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36872",
+    "nombre": "Santiago De Covelo (covelo, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36447",
+    "nombre": "Santiago De Ribarteme (neves, As)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36512",
+    "nombre": "Santiso (san Roman)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36653",
+    "nombre": "Santo  Andre De Cesar (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36676",
+    "nombre": "Santo Andre De Vea (estrada, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36475",
+    "nombre": "Santo Estevo De Budiño (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36960",
+    "nombre": "Sanxenxo (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36937",
+    "nombre": "Sar (beluso)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36629",
+    "nombre": "Saradelo (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Sardoma (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Sartal, O (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36816",
+    "nombre": "Saxamonde (san Roman)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36995",
+    "nombre": "Seara, A (poio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36867",
+    "nombre": "Searas, As (angoares)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36835",
+    "nombre": "Seixido (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36967",
+    "nombre": "Seixiños, Os (dena)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36913",
+    "nombre": "Seixo (nosa Señora Do Carme)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Seixo, O (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36740",
+    "nombre": "Seixo, O (tomiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36494",
+    "nombre": "Sela (santa Maria )",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36517",
+    "nombre": "Sello (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36428",
+    "nombre": "Sendelle (santa Cruz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36865",
+    "nombre": "Serra (arcos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Serra De Poente, A (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36139",
+    "nombre": "Serrapio",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36526",
+    "nombre": "Sesto (san Cibrao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36446",
+    "nombre": "Setados (santa Euxenia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36646",
+    "nombre": "Setecoros (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36526",
+    "nombre": "Sexo, O (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36547",
+    "nombre": "Siador (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36540",
+    "nombre": "Silleda (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36540",
+    "nombre": "Silleda (santa Baia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36826",
+    "nombre": "Silvoso (insua)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36969",
+    "nombre": "Simes (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36620",
+    "nombre": "Sinas, As (vilanova De Arousa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36633",
+    "nombre": "Sineiro, O (vilariño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36638",
+    "nombre": "Sisan (san Clemenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36516",
+    "nombre": "Sisto, O (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36790",
+    "nombre": "Sobrada (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Sobradelo (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36150",
+    "nombre": "Sobral (santo Andre De Xeve)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Sobran (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36417",
+    "nombre": "Sobrans, As (guizan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36720",
+    "nombre": "Sobredo (guillarei)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36614",
+    "nombre": "Solobeira (san Fins)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Somoza (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36560",
+    "nombre": "Soutelo  De Montes",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36460",
+    "nombre": "Soutelo (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Souto (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36457",
+    "nombre": "Soutolobre (santa Comba)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Soutolongo (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36691",
+    "nombre": "Soutomaior (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Soutullo (noalla)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36760",
+    "nombre": "Tabagon (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36684",
+    "nombre": "Tabeiros (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36543",
+    "nombre": "Taboada (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36827",
+    "nombre": "Taboadelo (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36448",
+    "nombre": "Taboexa (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36739",
+    "nombre": "Taborda (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Tameiga (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36350",
+    "nombre": "Tarela, A (nigran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36612",
+    "nombre": "Tarrio (dimo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36746",
+    "nombre": "Tebra (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Teis (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36350",
+    "nombre": "Telleiras, As (nigran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36120",
+    "nombre": "Tenorio (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36958",
+    "nombre": "Tiran (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36682",
+    "nombre": "Toedo (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36597",
+    "nombre": "Toiriz (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36750",
+    "nombre": "Tollo (goian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36360",
+    "nombre": "Tomadas, As (chandebrito)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Tomadas, As (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Tomeza (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36740",
+    "nombre": "Tomiño (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36116",
+    "nombre": "Tomonde (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36410",
+    "nombre": "Torneiros (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36613",
+    "nombre": "Torre, A (arealonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36648",
+    "nombre": "Torre, A (campaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36938",
+    "nombre": "Torre, A (cela)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36417",
+    "nombre": "Torroso (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36449",
+    "nombre": "Tortoreos (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36828",
+    "nombre": "Touron (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36874",
+    "nombre": "Touton (san Mateo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36991",
+    "nombre": "Toxa (illa Da)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36613",
+    "nombre": "Trabanca Badiña (arealonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36618",
+    "nombre": "Trabanca Sardiñeira (carril)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36529",
+    "nombre": "Trabancas, As (san Mamede)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36634",
+    "nombre": "Tragove (corvillon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36811",
+    "nombre": "Trasmaño (san Vicente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36849",
+    "nombre": "Traspielas (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36628",
+    "nombre": "Tremoedo (santo Estevo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36675",
+    "nombre": "Troans (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36700",
+    "nombre": "Tui (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36700",
+    "nombre": "Tui (o Sagrario)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36459",
+    "nombre": "Uma (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36307",
+    "nombre": "Urgal (baiona)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36526",
+    "nombre": "Val De Sangorza (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36596",
+    "nombre": "Val Do Carrio (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36158",
+    "nombre": "Valadares (marcon)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Valadares (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36939",
+    "nombre": "Valado, O (bueu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36883",
+    "nombre": "Valeixe (santa Cristina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36645",
+    "nombre": "Valga (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36193",
+    "nombre": "Valiñas (santo  Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36854",
+    "nombre": "Valongo (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36816",
+    "nombre": "Valos, Os (saxamonde)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36157",
+    "nombre": "Vao, O (poligono Ndustrial)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36416",
+    "nombre": "Veigadaña (petelos)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36470",
+    "nombre": "Venda Nova, A (salceda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36848",
+    "nombre": "Ventin (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36617",
+    "nombre": "Vento, O (cea)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36529",
+    "nombre": "Ventosa (san Xulian)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36818",
+    "nombre": "Ventosela (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36555",
+    "nombre": "Ventoxo (san Nicolao)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36957",
+    "nombre": "Verdeal (domaio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36959",
+    "nombre": "Verducedo (moaña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36853",
+    "nombre": "Verducido (lama, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36151",
+    "nombre": "Verducido (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36121",
+    "nombre": "Viascon (santiago)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36446",
+    "nombre": "Vide (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Vigo (ver Callejero)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36590",
+    "nombre": "Vila De Cruces",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36141",
+    "nombre": "Vilaboa (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Vilaboa (sobradelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36459",
+    "nombre": "Vilacoba (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36309",
+    "nombre": "Viladesuso (san Miguel)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36600",
+    "nombre": "Vilagarcia (parroquia Santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36600",
+    "nombre": "Vilagarcia De Arousa",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Vilalonga (san Pedro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36620",
+    "nombre": "Vilamaior (caleiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36350",
+    "nombre": "Vilamean (nigran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36747",
+    "nombre": "Vilamean (san Bieito)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Vilanova (hio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36515",
+    "nombre": "Vilanova (san Xoan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36120",
+    "nombre": "Vilanova (tenorio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36620",
+    "nombre": "Vilanova De Arousa",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36620",
+    "nombre": "Vilanova De Arousa  (casco Urbano)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36618",
+    "nombre": "Vilar (bamio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36647",
+    "nombre": "Vilar (cordeiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36429",
+    "nombre": "Vilar (crecente)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36874",
+    "nombre": "Vilar (mondariz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36543",
+    "nombre": "Vilar (silleda)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36990",
+    "nombre": "Vilar (vilalonga)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36815",
+    "nombre": "Vilar De Infesta (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36828",
+    "nombre": "Vilarchan (touron)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36516",
+    "nombre": "Vilarello (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36633",
+    "nombre": "Vilariño (cambados)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36945",
+    "nombre": "Vilariño (hio)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36528",
+    "nombre": "Vilariño (pñ Santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Vilariño De Abaixo (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36389",
+    "nombre": "Vilas (morgadns)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36912",
+    "nombre": "Vilaseca (ardan)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36879",
+    "nombre": "Vilasobroso (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36519",
+    "nombre": "Vilatuxe (san Lourenzo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36611",
+    "nombre": "Vilaxoan (vilagarcia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36380",
+    "nombre": "Vilaza (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36537",
+    "nombre": "Vilela (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36958",
+    "nombre": "Vilela (tiran)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36967",
+    "nombre": "Viliquin (dena)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36316",
+    "nombre": "Vincios (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36687",
+    "nombre": "Vinseiro (santa Cristina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36627",
+    "nombre": "Viña Grande (deiro)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36989",
+    "nombre": "Virxe Das Mareas (grove, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36770",
+    "nombre": "Viso Dos Eidos (rosal, O)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Viso, O (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36810",
+    "nombre": "Viso, O (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36979",
+    "nombre": "Vista Alegre (adina)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36652",
+    "nombre": "Xagove-vilavedra (romai)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36648",
+    "nombre": "Xanza (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36510",
+    "nombre": "Xaxan (pñ Santa Maria  De Saleta)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36510",
+    "nombre": "Xaxan (santa Maria Da Saleta)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36853",
+    "nombre": "Xende (san Paulo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36515",
+    "nombre": "Xesta (pñ San Pedro Felix)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36836",
+    "nombre": "Xesta (san Bartolomeu)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36515",
+    "nombre": "Xesta, A (san Fiz)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36639",
+    "nombre": "Xesteira (castrelo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36690",
+    "nombre": "Xesteira, A (arcade)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36370",
+    "nombre": "Xesteira, A (ramallosa)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36548",
+    "nombre": "Xestoso (santa Maria)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36150",
+    "nombre": "Xeve (santo Andre)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36968",
+    "nombre": "Xil (santa Eulalia)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36949",
+    "nombre": "Ximeu (darbo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36891",
+    "nombre": "Xinzo (santa Mariña)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36393",
+    "nombre": "Xuncal, O (ramallosa, A)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36844",
+    "nombre": "Xunqueiras (san Salvador)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36827",
+    "nombre": "Xustans (san Martiño)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36000",
+    "nombre": "Zamans (ver Callejero De Vigo)",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36070",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36071",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36080",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36156",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36164",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36163",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36160",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36162",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36003",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36161",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36143",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36005",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36001",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36004",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36002",
+    "nombre": "Pontevedra",
+    "provinciaid": "1"
+  },
+  {
+    "cp": "36200",
+    "nombre": "Codigo Apartados Particulares Oficiales Y Lista",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36200",
+    "nombre": "Codigo Correspondencia Oficial Correos-telegrafos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "10 De Marzo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Abad (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Abade Juan Bastos (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Abaixo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Abanico (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Abeleira Menendez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Aeroporto,avenida (impares Del 1 Al 129)  (pares Del 2 Al 140)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Aeroporto,avenida (impares Del 131 Al 299)  (pares Del 142 Al 314)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Aeroporto,avenida (impares Del 301 Al 435)  (pares Del 316 Al 468)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Aeroporto,avenida (impares Del 437 Al 535)  (pares Del 470 Al 616)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Aeroporto,avenida (impares Del 537 Al Final)  (pares Del 618 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Aeroporto Peinador (vigo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Aguadina",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Aguia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Alba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Alba-cruce (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Alba-monte (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Alborada-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Alcabre,playa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Alcalde De Lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Alcalde Gregorio Espino",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Alcalde Jose Ramon Fontan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Alcalde Portanet,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Alcalde Portanet,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Alen",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Alexandre Boveda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Alfolies",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Alfonso X El Sabio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Alfonso Xii,paseo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Alfonso Xiii",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Alfonso Xiii,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Alfredo Brañas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Almeida,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Aloia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Alonso Ojeda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Alza (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Amador Montenegro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Amariz (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Amariz (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Amaro (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Ameal (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Ameixeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "America,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Amieiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Amor Ruibal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Andalucia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Anduriña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Angel De Lema Y Marina (impares Del 1 Al 21)  (pares Del 2 Al 10)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Angel De Lema Y Marina (impares Del 23 Al Final)  (pares Del 12 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Angel Llanos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Angela Iglesias Rebollar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Anguia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Anguia (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Angustias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Animas (bouzas)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Animas (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Animas (sampaio)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Animas (teis)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Antergo De Maquias (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Antonio Nieto Figueroa (leri)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Anxos, O,cami",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Aragon (impares Del 1 Al 213)  (pares Del 2 Al 200)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Aragon (impares Del 215 Al Final)  (pares Del 202 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Aral (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Arbo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Area De Recreo (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Areal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Areiro-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Areosa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Argazada (impares Del 1 Al 27)  (pares Del 2 Al 12)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Argazada (impares Del 29 Al Final)  (pares Del 14 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Arguelles,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Arieiro (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Arins",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Arnela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Arquitecto Alberto Baltar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Arquitecto Antonio Cominges (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Arquitecto Gomez Roman (canido)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Arquitecto Perez Bellas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Arquitectos Castro E Alonso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Arriba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Arrieiros, Dos,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Arzobispo Xelmirez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Aspras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Asturias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Atalaya",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Atlantida,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Aurora,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Avion (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Azor",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Azucena",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Babio (beade)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Badajoz",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Bagunda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Bailen",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Baiona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Baixa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Baixada A Don Martin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Baixada A Penis (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Baixada O Bao (impares Del 1 Al 59)  (pares Del 2 Al 84)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Baixada O Bao (impares Del 61 Al Final)  (pares Del 86 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Baixada Samil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Balado (calexon)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Balaidos,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Balanciña (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Balbarda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Balde (beade),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Ballesta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Balsa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Balvis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Banqueiro (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Barallas, As (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Barcelona (impares Del 1 Al 63)  (pares Del 2 Al 74)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Barcelona (impares Del 65 Al Final)  (pares Del 76 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Barciela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Barranco-vigo Vello,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Barreira (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Barreira (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Barreiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Barreiro,travesia (impares Del 1 Al 45)  (pares Del 2 Al 44)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Barreiro,travesia (impares Del 47 Al Final)  (pares Del 46 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Barreiro (alcabre),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Barreiro, Travesia Do (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Barrio Cura-vigo Vello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Barrio De Ribadavia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Barrio De Ribadavia, 1a Y 2a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Barrio Samil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Barroca",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Barrocas (valladares),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Barrouco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Baruxans",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Barxa (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Barxa (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Batalla (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Bayona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Beade,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Beceira (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Becerreira (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Beillesa (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Beillesa-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Beiramar (impares Del 1 Al 79)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Beiramar (impares Del 81 Al Final)  (pares Del 2 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Beiramar, Estrada (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Beiran",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Beleira (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Bembribe-bembribe,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Benedicto Conde",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Benito Castro Nogueira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Besada (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Besada (candean),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Bispo Jose Cerviño Y Cerviño,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Boan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Boavista (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Bolboreta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Bolivia (impares Del 1 Al 17)  (pares Del 2 Al 18)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Bolivia (impares Del 19 Al Final)  (pares Del 20 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Borralleiro,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Borreiros (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Bote,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Bouciña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Bouza, A,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Bouzaboa-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Bouzafria (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Bouzas, Servicios Portuarios",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Bouzo (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Bouzos (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Brasil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Bravo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Brea",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Brea (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Brea Muiñeira-lavadores,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Breadouro (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Breadouro (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Bubela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Budiases (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Budino (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Budiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Buenos Aires,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Bueu",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Buiña, A",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Buraquiña-teis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Burdes (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Burgos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Buxo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cabadiñas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Cabalaria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Cabo Estai (oia),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Caceira (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Caceiro (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Cachada (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Cachamuiña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Cacharela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Cacheira (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cacheno",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Caeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Cal Do Outeiro (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Calatrava,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Calazas,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Caldas De Reis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Cales (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Callao",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Callao,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Calvario, O (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Calzada (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Calzadiña (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Cambados",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cambeses",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Camelias,avenida (impares Del 1 Al 33)  (pares Del 2 Al 40)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Camelias,avenida (impares Del 35 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Camilo Jose Cela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Camilo Tuche",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Camilo Veiga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Camiño Das Patas (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Camiño Do Cocho (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Camiño Do Couto (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Camiño Saladiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Camiño Vello A Mo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Campana, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Campelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Campelos-sardoma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Campos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Camposancos,carretera (impares Del 1 Al 145)  (pares Del 2 Al 146)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Camposancos,carretera (impares Del 147 Al 323)  (pares Del 148 Al 398)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Camposancos,carretera (impares Del 325 Al 463)  (pares Del 400 Al 448)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Camposancos,carretera (impares Del 465 Al Final)  (pares Del 450 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Canabido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Canadelo Alto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Canadelo Baixo,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Canadelo Bajo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Canario",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Canceleiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Canceleiro Interior",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Cancelo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Canchadas (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Candean,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Candean De Arriba,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Candieiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Canexa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Canexa,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Cangas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Canicouba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Canido (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Canos Dos-vigo, Vello,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Canovas Del Castillo,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Cantabria (impares Del 1 Al 35)  (pares Del 2 Al 54)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Cantabria (impares Del 37 Al 149)  (pares Del 56 Al 192)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Cantabria (impares Del 151 Al Final)  (pares Del 194 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Cantabria,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Canteira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Canteira De Ramiso (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Cantigas, Das,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Canto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Canto (cabral-igrexa),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Cañiza, A",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Cañizo (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Cañizo (valladares),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Cañutales (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Capela (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Capela (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Capitan, Al,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Caracas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Caracol",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Caramuxo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Carapucha",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Caravel",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Carballa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Carballal (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Carballal (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Carballal (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Carballeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Carballeiros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Carballido (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Carballo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Carballo Do Pazo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Carcere Vella-vigo Vello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Careiro (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Caringosta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Carlos Casares Mouriño,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Carlos Maside",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Carmen",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Carmen Miguel Agra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Carneiras (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Carral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Carrasqueira (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Carrazons",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Carregal (alcabre)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Carregal (valladares)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Carreiros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Carretera Corta (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Carretera De Canido (impares Del 61 Al 103)  (pares Del 2 Al 42)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Carretera De Canido (impares Del 105 Al Final)  (pares Del 44 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Carrizo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Casal De Abaixo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Casal De Abaixo, O (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Casal De Arriba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Casal, O (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Casal-sampaio (impares Del 1 Al 11)  (pares Del 2 Al 10)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Casal-sampaio (impares Del 13 Al Final)  (pares Del 12 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Casas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Cascalleira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Casiano Martinez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Casmarcelo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Castaña (alcabre)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Castañal (alcabre)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Castañal (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Castañal (teis)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Castañal-san Xoan Do Monte",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Castañeira (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Castaño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Castaño,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Castaño (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Castaño, Baixada,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Castelao,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Castelar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Castelo,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Castelo-bembribe,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Castilla",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Castiñeira-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Castiñeiras (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Castiñeiras-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Castreliños",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Castrelos,avenida (impares Del 1 Al 255)  (pares Del 2 Al 340)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Castrelos,avenida (impares Del 257 Al Final)  (pares Del 342 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Castrelos, Sindical,grupo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Castriño-cabral,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Castro (comesana)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Castro (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Castro (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Castro Castriño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Castro Salcidos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Cataboi,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Cataboy",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Cataluña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Cavada (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Cavadas-sampaio,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Cavadon (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Caxide",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Cayetano Pereira De Lima",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Cean (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Ceboleira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Cedro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Cedros, De Los,paseo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Ceirons",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Celso Emilio Ferreiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Cemieiras (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Cemiterio (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Centieira-castrelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Cerdeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cerdeiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cerdeira-sardoma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Cernades (cabral),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Cerqueiro (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Cerqueiro-navia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Cerquide",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Cervantes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Cesareo A, Vazquez (canido),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Cesareo Gonzalez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Cesteiros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Chabarras (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Chane,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Chano Piñeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Chans (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Chans (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Chantada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Chao",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Chile",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Chinito,callejon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Chousas (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Chouzo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Chouzo,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Chumba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Churrera, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Churruca",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Cidans (zamans)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Citroen",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Coba (sardoma)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Cocharis (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Cocheiros (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Cocheno (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Cocho (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Cocho De Laxe (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Codo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Codoside (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Coleixo Universitario (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Colexio (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Colexio Alcabre,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Colexio Do Sello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Colexio Paraixal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Colombia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Colon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Combro (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Combro, O (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Comesaña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Compostela,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Concello (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Concepcion Arenal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Conde De Gondomar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Conde De Torrecedeira (impares Del 1 Al 103)  (pares Del 2 Al 82)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Conde De Torrecedeira (impares Del 105 Al Final)  (pares Del 84 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Conde De Torrecedeira,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Conde-freixeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Condesa Casa Barcena",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Condiña (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Consolacion,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Constitucion,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Consul,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cordeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Cordoeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Cordoeira, 1a Y 2a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Corredoura",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Corta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cortellas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cortiñas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Cortiñas,camino",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Cortuñas-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Coruña, De A",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Coruña, De A,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Coruxo (couto De Abaixo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Coruxo (couto De Arriba),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Coruxo, Estacion,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Corvo Mariño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Costa Da Rua (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Costa De Peteta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Costa Do Can (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Costa Gandara (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Costa, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Costa-castrelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Costa-subida (vigo Vello)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Costa-subida-a Castrelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Costeira, A (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Costiñas (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Cotarela,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Cotarelo (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Coto Grande (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Coto, O (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Cotobade (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Coutada (beade)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Coutada Nova",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Coutadas-castrelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Coutadas-salgueira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Coutadas-teis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Couto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Couto De Abaixo (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Couto De Arriba (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Couto De San Honorato",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Couto De San Honorato, 1/a Y 2/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Couto Piñeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Couto Piñeiro,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Cova Da Barxa (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Cova Da Becha",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Covadonga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Covelo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Covelo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Covelo (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Covelos (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Crisantemo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Cristo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Cristo De La Victoria, Sindical,grupo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Cronista Jose Espinosa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Cronista Rodriguez Elias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Cronista Xose Mña Alvarez Blazquez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Cruceiro (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Cruceiro-castrelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Cruceiros (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Crucero-alcabre",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Crucero-bouzas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Crucero-sardoma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Cruz Blanca",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Cruz Verde",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Cruz, A (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Cu Da Viña (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Cuba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Cubeipa (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Cubreira (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Cumieira, Da",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Cuntis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Curras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Curras (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Curras (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Curras (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Curras (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Curros,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Curros Enriquez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Curros, De,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Curuxeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Da Barxa,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Da Seña,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Dalia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Dario Alvarez Blazquez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Dario Duran Gomez (impares Del 1 Al Final) (pares Del 2 Al 14)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Dario Duran Gomez (pares Del 16 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Das Chozas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Deus,callejon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Devesa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Devesa (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Devesa (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Devesa (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Devesa De Arriba, A (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Devesa Santa Tegra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Devesa, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Devesa-bembrive",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Devesa-matama,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Devesas, Das",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Devesa-sardoma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Doctor Cadaval",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Doctor Canoa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Doctor Carlos Colmeiro Laforet",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Doctor Carracido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Doctor Corbal,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Doctor Gonzalez Sierra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Doctor Juan Fernandez Casal-comesaña,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Doctor Marañon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Doctor Martin Lago",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Doctor Toscano",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Domeira (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Don Bosco, De,ronda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Don Jose Campos Perez,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Don Martin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Don Quijote",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Doña Fermina,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Dornelas (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Doutor Anton Beiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Doutor Jose Mato",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Dunas De Samil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "E. Heraclio Botana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "E. Martinez Garrido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Ecuador (impares Del 1 Al 63)  (pares Del 2 Al 72)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Ecuador (impares Del 65 Al Final)  (pares Del 74 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Eduardo Blanco Amor",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Eduardo Cabello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Eduardo Iglesias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Eidos (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Eidos-sardoma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Eifonso (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Eira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Eira Vella, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Eiras (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Eixon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Elduayen",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Elio Antonio De Nebrija",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Embalse (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Enciño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Enric Miralles,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Enrique Alonso Xalueiro -gaiteiro-",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Enrique Blein Budiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Enrique Lorenzo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Enrique Xavier Macias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Enxidos, Dos,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Erasmo,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Ernesto Lecuona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Erville (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Escalinata",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Escola Andersen (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Escola Da Sobreira (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Escolas Publicas,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Escorregada-sampaio,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Escritor Alvaro Cunqueiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Escultor Gregorio Fernandez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Escultor Nogueira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Espadeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "España,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Espedras (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Espedrigada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Esperanto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Esperanza,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Espiñeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Espiñeiro, 1/a Y 2/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Espiñeiro, Sindical,grupo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Esqueiriña (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Estacio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Estacion,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Estacion,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Estacion (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Estea (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Estea (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Esteriz (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Estomada (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Estorniño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Estrada Cortada (canido),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Estrada, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Estreitino",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Estreito,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Estrela,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Esturans",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Eugenio Arbones",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Eugenio Fadrique,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Eugenio Krapf",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Europa,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Excultor Xoan Piñeiro,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Extremadura",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Extremadura,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Fabal (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Fabas (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Facho, O (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Faisan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Falcoa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Falperra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Fatima,callejon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Faustino Alvarez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Feira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Feira, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Feira-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Felisa (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Felix Santamaria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fermin,camino",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Fermin Penzol",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Fernando Conde",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Fernando Conde Montero-rios,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Fernando El Catolico,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Fernando Lago Olano (medico)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Ferradura",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Ferreira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Ferreiras (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Ferreiros, Dos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Ferreria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Ferro Vello,estrada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Figueiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Figueiras,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Figueiras (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Figueiras (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Figueirido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Figueirido Interior,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Figueiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Figueiros (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Figueiro-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Filipinas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Finca Doña Concha",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Finca Dos Aires,camiño (impares Del 1 Al 13)  (pares Del 2 Al 4)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Finca Dos Aires,camiño (impares Del 15 Al Final)  (pares Del 6 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Finca Pateira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fionde Bembrive",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Fisterra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Fixon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Florida,avenida (impares Del 1 Al 163)  (pares Del 2 Al 68)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Florida,avenida (impares Del 165 Al Final)  (pares Del 70 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Follon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Folon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Fondo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fontaiña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Fontaiña, A (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Fontan (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fontans",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fonte",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Fonte,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Fonte (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Fonte Das Abelleiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Fonte Das Mozas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Fonte Dos Barros,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Fonte Escura (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Fonte Santa (impares Del 1 Al 37)  (pares Del 2 Al 52)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fonte Santa (impares Del 39 Al Final)  (pares Del 54 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Fonte Vella",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Fonte-alcabre",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Fonte-cabral-sello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Fontefria,estrada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Fontela (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Fontes,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Fonte-san Xoan Do Monte",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Fontiñas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Fontiñas (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Fontiñas De Abaixo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Fontiñas De Arriba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Forno,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Foro-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Forras (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Forte,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Forte,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Forte-vigo Vello,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Fortiñon (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Fotografo Felipe Properi",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Fotografo Luis Casado",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Fotografo Xaime Pacheco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Fotografo Xose Gil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Fotografos Irmans Sarabia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Fox (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Foxo,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Foxo, O (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Foxos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Foxos, 1/a Y 2/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Fraga, A (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Fragoselo (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Fragosiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Fragoso,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Francisco De Sales -paisaxista-",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Francisco Fernandez Del Riego,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Francisco Rey Rivero -musico-",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Franco,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Freires (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Freiria (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Freital (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Freixeiro,camiño (impares Del 1 Al 53)  (pares Del 2 Al 56)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Freixeiro,camiño (impares Del 55 Al Final)  (pares Del 58 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Freixeiro (alcabre)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Freixo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Freixo (do)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Freixo (valladares),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Frian",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Fuente De La Barca (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Funchidos (canido),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Funil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Futbol (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Gabian",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Gaiteiros Airiños Do Parque De Castrelos,alameda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Gaivota",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Galeote (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Galicia,avenida (impares Del 1 Al 57)  (pares Del 2 Al 58)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Galicia,avenida (impares Del 59 Al Final)  (pares Del 60 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Galileo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Galindra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Galleiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Galo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Gamboa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Ganadara (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Gandara",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Gandara (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Gandara (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Gandara (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Gandara (valladares),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Gandariña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Gandaron",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Garabulla (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Garcia Barbon,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Garcia Lorca",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Garcia Olloqui",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Garcias (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Garda, A",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Garita, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Garrida (valladares),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Gatiñeira (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Gato (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Gavilan (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Gerardo Campos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Gerona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Gil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Goaldino (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Goberna (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Goleta (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Gomersindo (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Gondarisco (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Gonderan-san Xoan Do Monte",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Gondomar (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Gondosende",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Gondufe (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Gontade (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Gonzalo Torrente Ballester",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Gorxal (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Grades (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Grades, As",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Gran Via,avenida (pares Del 2 Al 136)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Gran Via,avenida (pares Del 138 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Gran Via,avenida (impares Del 1 Al 149)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Gran Via,avenida (impares Del 151 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Granada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Gravina",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Grileira (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Groño (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Grove, O",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Guatemala",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Guixar,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Guixar, 1/a 2/a 3/a E 4/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Herba-vigo Vello,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Hermida (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Hermide (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Hernan Cortes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Hernan Cortes,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Hevellido (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Hipolito De Sa Bravo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Hispanidad, De,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Honduras (impares Del 1 Al 3)  (pares Del 2 Al 2)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Honduras (impares Del 5 Al Final)  (pares Del 4 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Horta,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Horta (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Hortas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Hortelana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Hortensia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Iglesia (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Iglesias Esponda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Ignacio Grobas (aparellador)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Igrexa (cabral),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Igrexa (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Igrexa (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Igrexa (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Igrexa (oia),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Igrexa (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Igrexa (zamans),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Igrexa, A (cabral),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Igrexa, A (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Igrexa-alcabre,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Igrexa-freixeiro,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Igrexa-freixeiro,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Igrexa-matama,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Igrexa-sampaio,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Igrexa-teis,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Igrexa-vigo Vello,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Illa De Toralla (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Illas Baleares",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Illas Canarias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Ilustracion, Da",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Independencia,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Ines Perez De Ceta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Instituto Oceanografico",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Interior",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Iravella, De,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Irmandiños",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Irmans Perez Quintela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Isaac Diaz Pardo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Isaac Peral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Isabel Ii",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Isabel La Catolica,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Isidoro Reguenda (medico),praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Isidoro Romero Caballero",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Jacinto Benavente (impares Del 1 Al 37)  (pares Del 2 Al 30)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Jacinto Benavente (impares Del 39 Al Final)  (pares Del 32 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Jacinto Benavente,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Jaime Balmes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Jenaro De La Fuente (impares Del 1 Al 37)  (pares Del 2 Al 40)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Jenaro De La Fuente (impares Del 39 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Jesus Fernandez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Joaquin Fernandez Santome (quinocho),praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Joaquin Garcia Picher,paseo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Joaquin Loriga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Joaquin Yañez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Jose Antela Conde",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Jose Antela Conde,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Jose De La Peña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Jose Franco Montes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Jose Gomez Posada-curros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Jose Rivas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Juan Ramon Jimenez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Juan Xxiii,glorieta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Julia Minguillon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Lagarella",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Lago, O (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Lagoa,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Lagoa, A (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Lagoa, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Lagoas, As (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Lagos, Os (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Lalin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Lamballa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Lameiro (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Lameiro (san Pedro De Sardoma)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Lameiro, O (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Lamelas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Langarangana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Lantexa (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Laranxo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Laranxo, O (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Laranxo, O (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Lascas (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Lavadeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Lavadouro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Lavandeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Lavandeira (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Lavandeira, A (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Lavandeiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Laxe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Laxe,bajada (impares Del 1 Al 35)  (pares Del 2 Al 48)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Laxe,bajada (impares Del 37 Al Final)  (pares Del 50 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Laxe, Da,camiño (impares Del 1 Al 53)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Laxe, Da,camiño (impares Del 55 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Laxe-redomeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Laxes (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Laxes, As (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Leiriña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Leon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Leonardo Da Vinci",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Leons, Dos,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Lepanto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Levante",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Limpiño, Do",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Liñares (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Lirio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Llorente",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Logroño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Lomba, A (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Longarela Baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Longra (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Lopez De Neira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Lopez Mora",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Lorient",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Lotas, De,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Loureiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Loureiro (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Loureiro, O (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Loureiro-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Lourido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Lourido,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Lourido (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Louxada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Lugar-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Lugar-candean",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Lugo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Luis Braille",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Luis Seoane",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Luis Taboada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Luqueiro-san Xoan Do Monte",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Luz (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "M. Diego Santos-bouzas,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Macal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Maceira (cabral-igrexa),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Maceira (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Maceiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Maceiriña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Madrid,avenida (impares Del 1 Al 55)  (pares Del 2 Al 70)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Madrid,avenida (impares Del 57 Al Final)  (pares Del 72 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Madrid,carretera (impares Del 1 Al 83)  (pares Del 2 Al 84)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Madrid,carretera (impares Del 85 Al Final)  (pares Del 86 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Madrid, Vella,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Madroa, A (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Madroa, Subida A (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Madroa-teis,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Magallanes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Mallas, As",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Mancales (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Manco, A (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Mandala (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Mangela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Manguela (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Manoin (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Manolo Martinez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Mantelas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Mantelas,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Manuel Alvarez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Manuel Cominges",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Manuel Costas Bastos (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Manuel De Castro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Manuel Nuñez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Manuel Olivie",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Mañucas,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Maquias, As (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Marcelina Panete (mestra)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Marcelino Curras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Marco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Marcosende (zamans),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Margarita Bilbatua Zubeldia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Maria Auxiliadora",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Maria Berdiales",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Marie Curie,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Marin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Marina Española,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Marinaeia (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Mario Fernandez Granell",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Marques De Alcedo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Marques De Alcedo,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Marques De Valladares",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Marques De Valterra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Marquesa (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Martin Alonso Pinzon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Martin Codax",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Martin Echegaray,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Maruja Mallo,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Marzos (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Matama",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Matoca (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Maxwell",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Medio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Medoña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Meixueiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Melcas (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Menda, A (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Mendez Nuñez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Menendez Pelayo (impares Del 1 Al 13)  (pares Del 2 Al 6)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Menendez Pelayo (impares Del 15 Al Final)  (pares Del 8 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Mercedes Nuñez Targa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Mercedes Ruibal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Merlo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Mestre Chane",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Mestre Chane,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Mestre Don Prudencio Rodriguez Dios,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Mestre Goldar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Mestre Mateo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Mestre Montes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Mestre Soutullo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Mexico",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Mide (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Mideiros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Miguel Hernandez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Millada (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Milladas-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Millareira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Mimosa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Mina,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Mina (bembribe)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Mina-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Minas (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Miño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Miraflores (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Miraflores (sardoma)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Miraflors Sardoma,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Miragaia,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Mirasol-teis,urbanizacion",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Misericordia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Mixerelas (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Moaña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Moiana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Molais",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Molanes (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Molans (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Moledo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Mondariz",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Monforte De Lemos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Montana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Monte (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Monte (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Monte (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Monte (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Monte Calvario (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Monte Calvario (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Monte Carrasqueira (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Monte Da Serra (sardoma)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Monte Da Serra-castrelos,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Monte Pequeño (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Montecastelo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Montecelo Alto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Montecelo Bajo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Monteira (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Montero Rios",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Monte-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Monti, O",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Montiño-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Moo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Morcego",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Moreiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Morrohome (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Mos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Mosteiro (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Mosteiro (bembrive),plaza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Mourelle (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Mouta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Mouteira (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Mueisas (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Mui Os",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Muiñeiras (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Muiño Do Vento",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Muiños (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Muiños (lavadores)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Muiños-lavadores,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Mundos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Naia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Nancales (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Nardo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Narxo (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Navarra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Nazario Gonzalez (muxenas)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Neira, De,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Nicaragua (impares Del 1 Al 33)  (pares Del 2 Al 40)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Nicaragua (impares Del 35 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Nigran",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Nogueira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Nogueira (cabral),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Nogueira (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Nogueira De Arriba (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Nogueiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Noiana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Norberto (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Norte, Del,via (pares Del 2 Al 40)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Norte, Del,via (impares Del 1 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Nova-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Novelos (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Novo-panasco-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Numancia, 1 A La 8,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Nuñez,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Nuñez De Balboa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Obdulia Simon (mestra)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Oia,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Olimpicos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Oliva",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Oliveira De Abajo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Oliveira De Arriba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Oliveira, 1/a Y 2/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Oporto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Ordas (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Oriños,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Orxa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Orxas (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Otero Pedrayo, Escritor",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Ourense",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Outeiro (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Outeiro (bembrive),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Outeiro (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Outeiro (comensana)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Outeiro (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Outeiro (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Outeiro (oia),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Outeiro (sardoma)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Outeiro, O (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Outeiro, O (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Outide (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pablo Iglesias",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Pablo Morillo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Padin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Padre Celso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Padre Celso, 1/a, 2/a Y 3/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Padre Don Rua",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Padre Encinas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Padre Feijoo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Padre Lorenzo,paseo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Padre Ramon Maria Aller",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Padre Sarmiento",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Padre Seixas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Palencia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Palma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Palmira (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Panama",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Panasco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Paparrubio-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Papuxa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Parachan (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Parada (cabral Sello)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Parada (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Paradela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Paraguay",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Paraguda, Da",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Paraixal De Abajo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Paraixal De Arriba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Pardaiña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pardaiña, 1 2 Y 3,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pardal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pardarilla",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pardavila",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pardavila,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pardillo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Pardiñeiros De Abaixo,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Paredes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Paredes (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Parque De Castrelos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Parque Poeta Vesteiro Torres",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Parrocha (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Parroco Don Jose Otero",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Parroco Don Serafin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pasales",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pascual Veiga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pastora",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pastora, 1/a, 2/a Y 3/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pastora, Residencial,zona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Patas, As (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pateira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Paulino Freire",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Paz Pardo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Paz Pardo-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Paz, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pazo (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pazo (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pazo (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pazo De Poulo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pazo Solita, Do",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Pazo, Do",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pazos,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Pe Do Monte (impares Del 1 Al 9)  (pares Del 2 Al 8)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Pe Do Monte (impares Del 11 Al Final)  (pares Del 10 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Pedra (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pedra Branca-comesaña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pedra Seixa, Da",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pedra, De,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Pedras Miudas,estrada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pedreira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Pedreira,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Pedreira (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Pedreiras (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Pedreiras, Das",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Pedro De Alvarado",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Pedro Do Pazo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Pedrosa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Pedrosa (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pega",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Peinador (cabral),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Peixeira, Da,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Pelaios,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Pena (beade),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Pena, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Penedo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Penedos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Peniche,escalinata",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Penis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Penis De Abaixo-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Peñasco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pepe Castro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Perdiz",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pereiras (san Andres)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pereiras (san Pelayo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Pereiriña (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pereiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pereiro (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Perigos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Periodista Segundo Mariño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pertigueiras",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Peru",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pescadeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pescaderia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Pescadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pescadores,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Petou (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Pi Eiro (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pi Y Margall",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pi Y Margall - Interior",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Pibidal (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Picos-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Pilar, El",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Pinal (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pinal De Adentro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Pinal, O (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pinal-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Pinelas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Pingue,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Pinguela, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Pingñe-teis,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Pino",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pino,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Pino Manso (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Pintor Colmeiro (impares Del 1 Al 11)  (pares Del 2 Al 12)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Pintor Colmeiro (impares Del 13 Al Final)  (pares Del 14 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Pintor Jose Frau Ruiz",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Pintor Laxeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Pintor Lugris",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Pintor Ramon Buch",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Piñeiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Pio (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Pipin-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Pirucha (oia),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pitasia,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Pizarro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Placer",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Placer Alto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Plantas (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Poboadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Poeta Añon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Poeta Feliciano Rolan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Poeta Pondal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Policarpo Sanz",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Pomba",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Pombal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Pombal (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ponte (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Ponte Da Veiga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Ponte Romano",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Ponte Segade-sardoma,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Ponte, Da (cabral Sello),avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Ponte, Da (cabral-igrexa),avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Ponteareas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Pontecaldelas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Pontecesures",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Pontenova-freixeiro,baixada (impares Del 1 Al 85)  (pares Del 2 Al 88)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pontenova-freixeiro,baixada (impares Del 87 Al Final)  (pares Del 90 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pontes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pontes-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Ponte-teis,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Pontevedra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Pontillon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Porbelo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Porriño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Porta Do Sol",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Portal (valadares)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Portela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Portela, Interior,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Portillon-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Portiño (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Porto (beade),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Porto Loureiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Porto Pesqueiro, Lonxa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Portugal,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Pouleira, A (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Pouleria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Poulo-teis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Pousa,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Pousa (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Pousa (bembribe)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pousa (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Pousa (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Pousa De Abaixo (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Poza (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Poza Cabalo,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Pozos,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Prado Vello, Do",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Praia Cocho",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Praia De Canido (oia),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Presa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Presa (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Presas, As (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Primera Travesia  De La Travesia De Vigo,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Primera Travesia De Romil,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Princesa,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Principe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Principe,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Principe,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Privada Da Veiga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Privada Moderna",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Progreso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Provincial,carretera (impares Del 1 Al 117)  (pares Del 2 Al 114)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Provincial,carretera (impares Del 119 Al Final)  (pares Del 116 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Provincial 1, 2, Y 3, Carretera,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Puerto Rico",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Pugariño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Purificacion Saavedra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Purificacion Saavedra, 1/a, 2/a, Y 3/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Puxeiros (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Quinta (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Quintans (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Quintas (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Quintela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Quintela,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Quintela (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Quintian (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Quiros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Rabadeira (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Rabadeira (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Radio Costera (saians)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Raman Dos Pinos (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Ramiro Pascual (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Ramon Alvarez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Ramon Del Valle Inclan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Ramon Leandro Alonso  Martinez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Ramon Nieto,avenida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Ramon Soler",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Ramon Y Cajal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Ramona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Rans, As (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Rañeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Rapadouros De Arriba (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Raposa,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Raposa (bembribe)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Raposeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Raviso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Real",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Real (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Real (teis)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Recare",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Recare (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Reconquista",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Recordo-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Redomeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Redondela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Redondo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Redondo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Redondos-comesaña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Regada (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Regadas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Regadas (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Rego Da Pulida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Regoufe (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Regueira (cabral Sello)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Regueira (comensana)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Regueira-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Regueiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Regueiro,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Regueiro, O (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Regueiro, O (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Rei,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Reis, Dos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Reiseñor",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Relfas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Relfas (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Remanso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Remesil (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Republica Argentina",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Requeixo (cabral),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Retorta (cabral),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Revolta (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Revolta, Interior-matama",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Revolta-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Revolta-matama",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Rial",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Ria-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Ria-lavadores,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Rialexo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Rias Baixas (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ribadavia (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ribas Matama,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ribas Matama,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ribas, Interior-matama",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Ribeira Do Berbes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Ribeira, A (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ribelas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Ricardo Mella (impares Del 1 Al 109)  (pares Del 2 Al 100)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Ricardo Mella (impares Del 111 Al 163)  (pares Del 102 Al 264)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Ricardo Mella (impares Del 165 Al 221)  (pares Del 266 Al 384)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Ricardo Mella (impares Del 223 Al 259)  (pares Del 386 Al 464)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Ricardo Mella (impares Del 261 Al Final)  (pares Del 466 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Ricardo Portela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Ricardo Torres Quiroga",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Rinxela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Rio (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Rio (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Rio (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Rio (sardoma)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Rio Bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36339",
+    "nombre": "Rio De Barxa (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Rio, O (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Rio, O (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Riobo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Riomao (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Riomao, O (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Riomao-cabral Sello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Rios",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Rios, A,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Riveiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Rivera,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Rivera Atienza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Roade",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Robaleira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Robleda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Rochas (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Rocio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Rodeira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Rogelio Abalde",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Rola, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Rola, La,subida",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Rola-lavadores",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Romaya",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Romeo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Romeu (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Romeu (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Roris",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Rosa, La",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Rosais,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Rosais (castrelos)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Rosal Florido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Rosal, El",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Rosalia (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Rosalia Castro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Rosario",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Rosario,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Rosario Hernandez Dieguez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Rosendo (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Rotea (sampaio)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Rotea (teis)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Roteas (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Roupeiro (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Roupeiro (g. Barbon)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Roupeiro (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Rozo (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Rozo (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Rua Alta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Rua, A (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Sabaris",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Sabaxans-lavadores,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Sabugueiro, O (saians),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Sagueira, Sindical,grupo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Sagunto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Saians,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Saiñas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Saladino-cortizo (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Salamanca",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Salceda De Caselas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Salcides, Dos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Salesianos,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Salgado-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Salgueira,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Salgueira,entrada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Salgueira 1/a, 2/a Y 3/a,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Salgueiral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Salgueiro (candean)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Salvador Allende",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Salvaterra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Samil (playa),avenida (impares Del 1 Al 15)  (pares Del 2 Al 12)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Samil (playa),avenida (impares Del 17 Al Final)  (pares Del 14 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Sampedro (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Sampio De Abaixo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "San Amaro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "San Antonio Da Florida,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "San Bernardo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "San Caetano",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "San Caetano,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "San Caetano-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "San Cibrian (bembrive),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "San Correa (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "San Cosme Alto (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "San Cristovo (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "San Francisco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "San Francisco, Ronda (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "San Gregorio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "San Ignacio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "San Lourenzo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "San Lourenzo,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "San Lourenzo (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "San Mauro,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "San Miguel",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "San Pablo,grupo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "San Paio (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "San Pedro (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "San Pedro De Sardoma",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "San Roque (impares Del 1 Al 97)  (pares Del 2 Al 94)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "San Roque (impares Del 99 Al Final)  (pares Del 96 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "San Roque,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "San Salvador",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "San Sebastian",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "San Telmo (bouzas)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "San Vicente",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "San Xoan De Deus-bouzas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "San Xoan De Freixo (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "San Xoan-san Xoan Do Monte",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "San Xose",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "San Xulian-vigo Vello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "San Xurxo (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Sanatorio (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Sanguiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Sanin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Sanin (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Sanjurjo Badia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Santa Ana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Santa Clara",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Santa Cristina",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Santa Cristina,baixada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Santa Cristina-lavadores,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Santa Cruz",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Santa Lucia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Santa Maia De Oya",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Santa Mariña (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Santa Marta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Santa Rita,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Santa Tegra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Santander",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Santeira (impares Del 1 Al 43)  (pares Del 2 Al 52)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Santeira (impares Del 45 Al Final)  (pares Del 54 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Santiago De Vigo,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Santiago, De",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Santo Cristo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Santo Domingo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Sanxenxo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Sarabio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Sardomela (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Seara",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Seara, Interior",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Sebastian Elcano",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Segade-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Segovia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Segunda Republica",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Segunda Travesia De La Travesia De Vigo,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Segunda Travesia De Romil,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Seixiñas (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Seixo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Seixo (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Seixos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Sello",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Sello,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Senra",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Senra De Abaixo (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Senra De Arriba (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Senra, A (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Senra, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Señeiras,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Seoane (valadares)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Serafin Avendaño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Sergio Saborido Cid",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Serra,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Serra Alcabre,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Severino Cobas (impares Del 1 Al 213)  (pares Del 2 Al 294)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Severino Cobas (impares Del 215 Al Final)  (pares Del 296 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Severo Ochoa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Sevilla",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Sil",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Sil (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Silleda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Silval (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Silvana",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Silveira (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Simancas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Simon Bolivar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Simona, A (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Sistro (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Sival, O (canido),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Sixtos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Sobreira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Sobreira (valadares)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Sobreiral,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Sobreiro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Sobreiro (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Soler,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Solombo (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Sombrereiros",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Soria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Soutelan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Souto (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Souto (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Souto (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Souto De Fonte Oscura,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Soutomaior",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Sua Fonte (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Suarez Llanos,alameda",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Suas Viñas, Das",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Suaxeira (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Sub.o Cemiteiro Puxeiros (cabral-igrexa),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Subride (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Subride Alto",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Subride Bajo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Suido",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Sumata (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Surraneiro (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Taberna (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Taboada Leal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Taboada Leal,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Talude",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tambre",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tamuxe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Tanque",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Tarragona",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Tarrio (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tea",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Teixugueiras, As",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Telleira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Temperan (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Teofilo Llorente",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Tercio De Afora",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Tintureira (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Tixolo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Toledo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Tomada",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Tomada (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tomas A. Alonso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tomas A. Alonso,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Tomas Delmiro Martinez Silva",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Tomas Elvira",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tomas Paredes",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Tomas Paredes,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Tombo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Tomiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Toorre De Abaixo (coruxo)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Topete (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Toralla (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Torre (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Torre (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Torre (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Torre De Arriba,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Torreira (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Torreiro De Abaixo (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Torreon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Torroso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Toucedo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Toucido (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Toural De Abaixo-teis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Toural De Adentro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Toural, Interior",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Toutizo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Toxal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Toxal (oia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Toxeira (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Traida De Aguas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Tranvia, Do,avenida (impares Del 1 Al 197)  (pares Del 2 Al 210)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Tranvia, Do,avenida (impares Del 199 Al Final)  (pares Del 212 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Tranviarios",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Trapa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Trapa De Arriba-teis",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Travesan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Travesia De Vigo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Travesia Victoria, 1/a",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Triestas (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Trisas (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Triunfo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Trobos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Troncal",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Troncoso",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Trovador Menduiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Tui",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Turido-alcabre",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Ufas, Das",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Ulla",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Umia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Urania Mella Serrano",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Uruguay",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Urzaiz (impares Del 1 Al 65)  (pares Del 2 Al 60)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Urzaiz (impares Del 67 Al 119)  (pares Del 62 Al 116)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Urzaiz (impares Del 121 Al Final)  (pares Del 118 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Urzaiz,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Useira (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Vaca Morta (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Val Miñor",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Valada (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Valadares (portal, O),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36314",
+    "nombre": "Valadares (prado),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Valadares (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Valencia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36315",
+    "nombre": "Vales (valadares),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Valladolid",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Valoutas",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Vao, Estrada Do (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Vao, O (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Vazquez Varela",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Veigas Longas (zamans),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Veiguiña",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Veiguiña (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36331",
+    "nombre": "Veisas (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Velazquez Moreno (impares Del 1 Al 11)  (pares Del 2 Al 16)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Velazquez Moreno (impares Del 13 Al Final)  (pares Del 18 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Vella-madrid,carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Velllo (lavadores),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Vello,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Vello (sardoma),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Vello A Mo (matama),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Vello Da Madroa,camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Vello-cabral",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Velouro (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Venda, A (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Venezuela (impares Del 1 Al 49)  (pares Del 2 Al 48)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Venezuela (impares Del 51 Al Final)  (pares Del 50 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Verdeal (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36390",
+    "nombre": "Verdella (oia),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Via",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Via (teis)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Vicaria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36204",
+    "nombre": "Vicente Risco",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Victoria",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Vigo, De,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36209",
+    "nombre": "Vilagarcia De Arousa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Vilar,praza",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Vilar (lavadores),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Vilar (matama)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Vilaverde (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Vilaverde (zamans),carretera",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Viloura",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Viña Da Veiga (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Viña Grande (mosteiro),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Viñagrande",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Viño (coruxo),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Viso, El",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Vista Alegre",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Vista Do Mar (impares Del 1 Al 53)  (pares Del 2 Al 86)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Vista Do Mar (impares Del 55 Al Final)  (pares Del 88 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Vivas-sampaio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Viveiro, O",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36206",
+    "nombre": "Vizcaya",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Volta",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36392",
+    "nombre": "Volta (saians),camiño",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Voltiña (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Xalon (cabral-igrexa, A),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Xanteira, Do (impares Del 1 Al 43)  (pares Del 2 Al 52)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36215",
+    "nombre": "Xanteira, Do (impares Del 45 Al Final)  (pares Del 54 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Xavier Sensat",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Xaxan",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Xazmin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Xeiso (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Xeme",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Xeneracion Nos",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Xeranio",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Xestal (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Xesteira-bembribe",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36313",
+    "nombre": "Xestoso (bembrive)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36208",
+    "nombre": "Xiabre",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36205",
+    "nombre": "Xilgaro",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Xina",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36214",
+    "nombre": "Xirin",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36312",
+    "nombre": "Xoanela (beade),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36202",
+    "nombre": "Xoanelo",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Xorxa",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36330",
+    "nombre": "Xose Rivas (coruxo),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Xoxin (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Xulian Estevez",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36207",
+    "nombre": "Xulian Estevez,travesia",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36212",
+    "nombre": "Xuncal (navia)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36216",
+    "nombre": "Xuncal (teis)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Xunco Mariño (candean),lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36201",
+    "nombre": "Yañez,calexon",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36310",
+    "nombre": "Zamans,lugar",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Zamora,avenida (impares Del 1 Al 73)  (pares Del 2 Al 86)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Zamora,avenida (impares Del 75 Al Final)  (pares Del 88 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36318",
+    "nombre": "Zamuda (cabral)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36203",
+    "nombre": "Zaragoza (impares Del 1 Al 47)  (pares Del 2 Al 48)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36211",
+    "nombre": "Zaragoza (impares Del 49 Al Final)  (pares Del 50 Al Final)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36210",
+    "nombre": "Zona Franca",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36213",
+    "nombre": "Zondal (comesaña)",
+    "provinciaid": "36"
+  },
+  {
+    "cp": "36317",
+    "nombre": "Zoo (candean),lugar",
+    "provinciaid": "36"
+  }
 ]
 
 class CiudadSeeder {
