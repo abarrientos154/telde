@@ -29,6 +29,14 @@ const ProvinciasData = [
   {
     id: 36,
     nombe: 'Vigo'
+  },
+  {
+    id: 15,
+    nombre: 'A Coruña'
+  },
+  {
+    id: 16,
+    nombre: 'Ferrol'
   }
 ]
 
