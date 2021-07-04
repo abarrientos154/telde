@@ -4,18 +4,53 @@
     @click="!principal.nuevo ? irRuta(principal.ruta) : ''" />
 
     <div class="text-h5 q-my-md text-center text-grey-8 text-bold">¡Busca lo que necesites!</div>
-    <div class="text-h6 q-mx-md text-grey-8">Categorias</div>
-    <q-scroll-area
-      horizontal
-      style="height: 80px;"
-    >
-      <div class="row no-wrap q-py-md q-px-md q-gutter-md">
-        <div v-for="(btn, index) in categorias" :key="index" >
-          <q-btn no-caps class="q-px-md" :label="btn" :color="selecCategoria === btn ? 'primary' : 'blue-grey-11'" text-color="blue-grey-9"
-          @click="filterCategoria(btn, 'cat')" />
+    <div class="column items-center justify-center">
+      <div class="text-h6 q-mx-md text-grey-8">Ubicacion</div>
+      <div class="" style="width:300px">
+        <div class="text-subtitle2 text-grey-8">Provincia</div>
+        <q-select @input="ciudadesOpt(direccion.provincia.id)" filled v-model="direccion.provincia" :options="optionsProvincias" map-options option-label="nombre">
+            <template v-slot:option="scope">
+              <q-item
+                v-bind="scope.itemProps"
+                v-on="scope.itemEvents"
+              >
+                <q-item-section>
+                  <q-item-label v-html="scope.opt.nombre" />
+                </q-item-section>
+              </q-item>
+            </template>
+        </q-select>
+      </div>
+        <div class="" style="width:300px">
+          <div class="text-subtitle2 text-grey-8">Ciudad</div>
+          <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="direccion.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn">
+              <template v-slot:option="scope">
+                <q-item
+                  v-bind="scope.itemProps"
+                  v-on="scope.itemEvents"
+                >
+                  <q-item-section>
+                    <q-item-label v-html="scope.opt.nombre" />
+                    <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </template>
+          </q-select>
+        </div>
+    </div>
+
+    <div class="column items-center justify-center">
+      <div class="q-mt-sm text-h6 q-mx-md text-grey-8">Categorias</div>
+    </div>
+
+      <div class="column items-center justify-center">
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+          <div v-for="(btn, index) in categorias" :key="index" >
+            <q-btn no-caps class="q-px-md" :label="btn" :color="selecCategoria === btn ? 'primary' : 'blue-grey-11'" text-color="blue-grey-9"
+            @click="filterCategoria(btn, 'cat')" />
+          </div>
         </div>
       </div>
-    </q-scroll-area>
     <div v-if="subCategorias.length" class="text-h6 q-mx-md text-grey-8">Sub categorias</div>
     <q-scroll-area
       v-if="subCategorias.length"
@@ -30,7 +65,7 @@
       </div>
     </q-scroll-area>
     <div class="q-my-md row justify-center">
-      <q-btn :disable="selecCategoria === '' ? true : false" style="width:50%" rounded no-caps color="primary" label="Buscar"
+      <q-btn :disable="mostrarBtn" style="width:50%" rounded no-caps color="primary" label="Buscar"
       @click="filterTiendas()"/>
     </div>
 
@@ -200,6 +235,10 @@ export default {
       principal: {},
       publicidad1: [],
       publicidad2: [],
+      ciudadesFilter: [],
+      optionsCiudad: [],
+      optionsProvincias: [],
+      direccion: {},
       productos: [],
       allTiendas: [],
       tiendas: [],
@@ -218,12 +257,23 @@ export default {
     this.baseuTiendas = env.apiUrl + '/perfil_img/'
     this.getTiendas()
     this.getPublicidad()
+    this.getProvincia()
     this.getProductos()
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
     } else {
       this.login = false
+    }
+  },
+  computed: {
+    mostrarBtn () {
+      console.log(this.selecCategoria, this.direccion.provincia, this.direccion.ciudad, 'ciudad')
+      if (!this.direccion.provincia || !this.direccion.ciudad || this.selecCategoria === '') {
+        return true
+      } else {
+        return false
+      }
     }
   },
   methods: {
@@ -236,6 +286,41 @@ export default {
             this.getFavoritos()
           }
         }
+      })
+    },
+    getProvincia () {
+      this.$api.get('provincias').then(res => {
+        if (res) {
+          this.optionsProvincias = res
+        }
+      })
+    },
+    ciudadesOpt (id) {
+      this.$q.loading.show({
+        message: 'Buscando ciudades'
+      })
+      if (this.direccion.ciudad) {
+        this.direccion.ciudad = null
+      }
+      this.$api.get('ciudades/' + id).then(res => {
+        if (res) {
+          this.ciudadesFilter = res
+          this.optionsCiudad = res
+          this.$q.loading.hide()
+        }
+      })
+    },
+    filterFn (val, update) {
+      if (val === '') {
+        update(() => {
+          this.optionsCiudad = this.ciudadesFilter
+        })
+        return
+      }
+
+      update(() => {
+        const needle = val.toLowerCase()
+        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
       })
     },
     getTiendas () {
@@ -311,12 +396,12 @@ export default {
     filterTiendas () {
       if (this.selecCategoria === 'Comida') {
         if (this.selecSubCategoria !== '') {
-          this.$router.push('/tiendas/' + this.selecCategoria + '/' + this.selecSubCategoria)
+          this.$router.push('/tiendas/' + this.selecCategoria + '/' + this.selecSubCategoria + '?ciudad_id=' + this.direccion.ciudad._id)
         } else {
-          this.$router.push('/tiendas/' + this.selecCategoria)
+          this.$router.push('/tiendas/' + this.selecCategoria + '?ciudad_id=' + this.direccion.ciudad._id)
         }
       } else {
-        this.$router.push('/tiendas/' + this.selecCategoria)
+        this.$router.push('/tiendas/' + this.selecCategoria + '?ciudad_id=' + this.direccion.ciudad._id)
       }
     },
     irRuta (ruta) {
