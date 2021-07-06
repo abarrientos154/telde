@@ -72,6 +72,18 @@ export default {
       dd: {}
     }
   },
+  created () {
+    const session = JSON.parse(localStorage.getItem('TELDE_SESSION_INFO'))
+    if (session) {
+      if (session.roles[0] === 2) {
+        this.$router.push('/inicio')
+      } else if (session.roles[0] === 3) {
+        this.$router.push('/tienda/' + session._id)
+      } else if (session.roles[0] === 1) {
+        this.$router.push('/administrador')
+      }
+    }
+  },
   mounted () {
     const vm = this
     if (this.$q.platform.is.mobile) { // Si es teléfono{
