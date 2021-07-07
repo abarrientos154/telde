@@ -376,7 +376,8 @@ class UserController {
       let todos = (await User.query().where({roles: [3]}).with('membresia').fetch()).toJSON()
       response.send(todos)
     } else {
-      let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
+      let direccion = (await Direccion.query().where({user_id: user._id, principal: true }).first()).toJSON()
+      let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true, ciudad_id: direccion.ciudad_id}).fetch()).toJSON()
       response.send(emprendedores)
     }
   }
@@ -445,22 +446,31 @@ class UserController {
   async nuevaDireccion ({ request, response, auth }) {
     const user = (await auth.getUser()).toJSON()
     let data = request.only(Direccion.fillable)
+    if (data.principal) {
+      let modificar = await Direccion.query().where({user_id: user._id}).update({principal: false})
+    }
     let nuevo = {
       user_id: user._id,
       provincia_id: data.provincia.id,
       ciudad_id: data.ciudad._id,
-      direccion:  data.direccion
+      direccion:  data.direccion,
+      principal: data.principal
     }
     const crear = await Direccion.create(nuevo)
     response.send(crear)
   }
 
-  async editarDireccion ({ request, response, params }) {
+  async editarDireccion ({ request, response, params, auth }) {
+    const user = (await auth.getUser()).toJSON()
     let data = request.only(Direccion.fillable)
+    if (data.principal) {
+      let modificar = await Direccion.query().where({user_id: user._id}).update({principal: false})
+    }
     let nuevo = {
       provincia_id: data.provincia.id,
       ciudad_id: data.ciudad._id,
-      direccion:  data.direccion
+      direccion:  data.direccion,
+      principal: data.principal
     }
     let editar = await Direccion.query().where({_id: params.id}).update(nuevo)
     response.send(editar)

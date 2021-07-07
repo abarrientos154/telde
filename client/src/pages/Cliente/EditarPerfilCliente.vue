@@ -22,7 +22,7 @@
           </div>
           <div class="row justify-center q-mt-md">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
-              <div class="text-subtitle2 text-grey-8">Nombres</div>
+              <div class="text-subtitle2 text-grey-8">Nombre</div>
               <q-input v-model="form.name" filled
                 error-message="Requerido" :error="$v.form.name.$error" @blur="$v.form.name.$touch()"
               />
@@ -64,13 +64,16 @@
               <q-separator />
             </div>
             <div class="column items-center q-gutter-md">
-              <q-card v-for="(card, index) in form.direccionC" :key="index" class="shadow-10" style="width: 90%;height:120px;border-radius:25px;">
-                <q-card-section class="row items-start justify-between">
+              <q-card v-for="(card, index) in form.direccionC" :key="index" class="shadow-10" style="width: 90%;height:150px;border-radius:25px;">
+                <q-card-section class="row items-center justify-between">
                   <div class="col-8 no-wrap">
                     <div class="text-h6 text-bold ellipsis">Dirección Registrada</div>
                     <div class="text-h8">{{card.provincia.nombre}}</div>
                     <div class="text-h8 ellipsis">{{card.ciudad.nombre + ' - ' + card.ciudad.cp}}</div>
                     <div class="text-h8 ellipsis">{{card.direccion}}</div>
+                    <q-chip v-if="card.principal" color="primary" text-color="black" icon-right="star">
+                      Dirección principal
+                    </q-chip>
                   </div>
                   <q-card-actions vertical class="col-4 justify-around">
                     <q-btn no-caps color="primary" label="Eliminar" style="width:80px" @click="eliminarD(card._id)"/>
@@ -98,7 +101,7 @@
             <div class="text-h6">{{!editD ? 'Nueva dirección' : 'Mi dirección'}}</div>
             <q-separator inset />
             <div class="q-pa-sm">
-              <div class="text-subtitle2 text-grey-8">Provincia</div>
+              <div class="text-subtitle2 text-grey-8">Ciudad</div>
               <q-select @input="ciudadesOpt(direccion.provincia.id)" filled v-model="direccion.provincia" :options="optionsProvincias" map-options option-label="nombre"
                 :error="$v.direccion.provincia.$error" @blur="$v.direccion.provincia.$touch()" >
                   <template v-slot:option="scope">
@@ -112,7 +115,7 @@
                     </q-item>
                   </template>
               </q-select>
-              <div class="text-subtitle2 text-grey-8">Ciudad</div>
+              <div class="text-subtitle2 text-grey-8">Localidad</div>
               <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="direccion.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
                 :error="$v.direccion.ciudad.$error" @blur="$v.direccion.ciudad.$touch()" >
                   <template v-slot:option="scope">
@@ -132,6 +135,13 @@
               <div class="text-subtitle2 text-grey-8 q-mt-sm">Dirección</div>
               <q-input v-model="direccion.direccion" filled
                 error-message="Requerido" :error="$v.direccion.direccion.$error" @blur="$v.direccion.direccion.$touch()"
+              />
+              <q-toggle
+                v-model="direccion.principal"
+                @input="verificar(direccion.principal)"
+                color="primary"
+                label="Establecer como dirección principal"
+                left-label
               />
             </div>
           </q-card-section>
@@ -248,6 +258,22 @@ export default {
         }
       })
     },
+    verificar (bool) {
+      if (!bool) {
+        var activos = this.form.direccionC.filter(v => v.principal)
+        if (activos.length <= 1) {
+          this.$q.dialog({
+            title: '¡Atención!',
+            message: 'Debes mantener una dirección como principal',
+            cancel: false,
+            persistent: false
+          }).onOk(() => {
+            // ok
+          })
+          this.direccion.principal = true
+        }
+      }
+    },
     actionDir (val, data) {
       if (val === 1) {
         this.direccion = JSON.parse(JSON.stringify(data))
@@ -255,7 +281,9 @@ export default {
         this.editD = true
         this.miDireccion = true
       } else {
-        this.direccion = {}
+        this.direccion = {
+          principal: false
+        }
         this.$v.direccion.$reset()
         this.editD = false
         this.miDireccion = true
@@ -263,7 +291,7 @@ export default {
     },
     ciudadesOpt (id, bool) {
       this.$q.loading.show({
-        message: 'Buscando ciudades'
+        message: 'Buscando localidades'
       })
       if (this.direccion.ciudad && !bool) {
         this.direccion.ciudad = null
