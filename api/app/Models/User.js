@@ -8,7 +8,7 @@ const Hash = use('Hash')
 
 class User extends Model {
   static get fillableProveedor() {
-    return ['nombre', 'descripcion', 'cif', 'ciudad', 'direccion', 'provincia', 'email', 'telefono', 'password', 'cantidadFiles', 'dias', 'hapertura', 'hcierre', 'status', 'banco', 'titular', 'codigo_iban', 'categoria', 'subCategoria']
+    return ['nombre', 'descripcion', 'cif', 'ciudad', 'direccion', 'ciudades_atendera', 'provincia', 'email', 'telefono', 'password', 'cantidadFiles', 'dias', 'hapertura', 'hcierre', 'status', 'banco', 'titular', 'codigo_iban', 'categoria', 'subCategoria']
   }
   static get fillableCliente() {
     return ['name', 'lastName',  'telefono']

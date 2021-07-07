@@ -152,7 +152,7 @@
           <div class="text-center text-h6 q-mb-md">Información tienda</div>
           <div class="row justify-center">
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
-                  <div class="text-subtitle2 text-grey-8">Provincia</div>
+                  <div class="text-subtitle2 text-grey-8">Ciudad</div>
                   <q-select @input="ciudadesOpt(form.provincia.id)" filled v-model="form.provincia" :options="optionsProvincias" map-options option-label="nombre"
                     :error="$v.form.provincia.$error" @blur="$v.form.provincia.$touch()" >
                       <template v-slot:option="scope">
@@ -168,7 +168,7 @@
                   </q-select>
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mb-sm">
-                  <div class="text-subtitle2 text-grey-8">Ciudad</div>
+                  <div class="text-subtitle2 text-grey-8">Localidad</div>
                   <q-select :disable="ciudadesFilter.length ? false : true" filled v-model="form.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
                     :error="$v.form.ciudad.$error" @blur="$v.form.ciudad.$touch()" >
                       <template v-slot:option="scope">
@@ -228,6 +228,39 @@
                         </template>
                     </q-input>
                 </div>
+                <div v-if="form.categoria === 'Comida'" class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-my-md">
+                  <div class="text-subtitle2 text-grey-8">Localidades en las que atenderá</div>
+                    <q-select multiple use-chips hide-selected filled v-model="form.ciudades_atendera" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn"
+                    :error="$v.form.ciudades_atendera.$error" @blur="$v.form.ciudades_atendera.$touch()" >
+                      <template v-slot:option="scope">
+                        <q-item
+                          v-bind="scope.itemProps"
+                          v-on="scope.itemEvents"
+                        >
+                          <q-item-section>
+                            <q-item-label v-html="scope.opt.nombre" />
+                            <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
+                          </q-item-section>
+                        </q-item>
+                      </template>
+                  </q-select>
+                </div>
+                <q-scroll-area
+                  v-if="form.categoria === 'Comida' && form.ciudades_atendera"
+                  class="col-12"
+                  horizontal
+                  style="height: 80px"
+                >
+                  <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+                    <div v-for="(btn, index) in form.ciudades_atendera" :key="index" >
+                      <q-btn no-caps class="q-px-md" :label="btn.nombre" color="primary" text-color="blue-grey-9">
+                      <div class="absolute-right row items-center q-px-sm">
+                        <q-icon name="clear" v-ripple clickable @click="deleteCiudad(btn)"></q-icon>
+                      </div>
+                      </q-btn>
+                    </div>
+                  </div>
+                </q-scroll-area>
                 <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 text-subtitle1 q-mb-md">Agrega fotos de tu local comercial (hasta 5 imagenes)</div>
                 <q-scroll-area horizontal style="height:120px; width: 100%;"
                 :thumb-style="thumbStyle" :bar-style="barStyle"
@@ -254,7 +287,7 @@
           <div class="q-pa-md">
             <q-btn icon="keyboard_backspace" round color="grey-4" text-color="grey" @click="slide = 2" />
           </div>
-          <div class="text-center text-h6 text-bold q-mb-md">Información de transferencia</div>
+          <div class="text-center text-h6 text-bold q-mb-md">Donde quieres recibir tus pagos</div>
           <div class="text-center text-subtitle1">Esta información es utilizada para realizar los pagos una vez aprobada la solicitud de retiro</div>
           <div class="row justify-center q-gutter-xs q-mt-lg">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -320,7 +353,8 @@ export default {
       confirma_datos: false,
       form: {
         dias: [],
-        subCategoria: []
+        subCategoria: [],
+        ciudades_atendera: []
       },
       thumbStyle: {
         right: '4px',
@@ -371,6 +405,11 @@ export default {
       direccion: { required },
       provincia: { required },
       ciudad: { required },
+      ciudades_atendera: {
+        required: requiredIf(function (nestedModel) {
+          return this.form.categoria === 'Comida'
+        })
+      },
       cif: { required },
       email: { email, required },
       telefono: { required },
@@ -411,12 +450,13 @@ export default {
       this.$v.form.provincia.$touch()
       this.$v.form.ciudad.$touch()
       this.$v.form.direccion.$touch()
+      this.$v.form.ciudades_atendera.$touch()
       this.$v.form.cif.$touch()
       this.$v.form.email.$touch()
       this.$v.form.telefono.$touch()
       this.$v.password.$touch()
       this.$v.repeatPassword.$touch()
-      if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
+      if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.ciudades_atendera.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
         this.form.password = this.password
         this.slide = 3
       } else {
@@ -433,6 +473,9 @@ export default {
         this.form.subCategoria = this.form.subCategoria.filter(v => v !== btn)
       }
     },
+    deleteCiudad (btn) {
+      this.form.ciudades_atendera = this.form.ciudades_atendera.filter(v => v._id !== btn._id)
+    },
     async registrar () {
       this.$v.$touch()
       this.form.enable = true
@@ -443,6 +486,10 @@ export default {
         this.$q.loading.show({
           message: 'Registrando datos'
         })
+        if (this.form.categoria !== 'Comida') {
+          this.form.subCategoria = []
+          this.form.ciudades_atendera = []
+        }
         var formData = new FormData()
         formData.append('perfil', this.perfil)
         formData.append('portada', this.portada)

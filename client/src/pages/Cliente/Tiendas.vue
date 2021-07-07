@@ -9,7 +9,7 @@
     <div class="column items-center justify-center">
       <div class="text-h6 q-mx-md text-grey-8">Ubicacion</div>
       <div class="" style="width:300px">
-        <div class="text-subtitle2 text-grey-8">Provincia</div>
+        <div class="text-subtitle2 text-grey-8">Ciudad</div>
         <q-select @input="ciudadesOpt(direccion.provincia.id)" filled v-model="direccion.provincia" :options="optionsProvincias" map-options option-label="nombre">
             <template v-slot:option="scope">
               <q-item
@@ -24,7 +24,7 @@
         </q-select>
       </div>
         <div class="" style="width:300px">
-          <div class="text-subtitle2 text-grey-8">Ciudad</div>
+          <div class="text-subtitle2 text-grey-8">Localidad</div>
           <q-select @input="reinicio()" :disable="ciudadesFilter.length ? false : true" filled v-model="direccion.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn">
               <template v-slot:option="scope">
                 <q-item
