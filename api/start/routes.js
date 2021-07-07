@@ -66,7 +66,7 @@ addPrefixToGroup(
     Route.get("ciudades/:id", "UserController.ciudades")
     Route.delete("direccion/:id", "UserController.eliminarDireccion")
     ///////////////////////Direccion/////////////////////////////////////////
-
+    Route.post("prueba", "UserController.prueba")
     Route.post("pago_ok", "ProductoController.pago_ok")
     /* Route.post("pago_ok/:tienda_id/:user_id/", "ProductoController.pago_ok"); */
     Route.post("pago_no_ok", "ProductoController.pago_no_ok")

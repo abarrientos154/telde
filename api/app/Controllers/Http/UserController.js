@@ -1,6 +1,7 @@
 "use strict";
 
 const Helpers = use('Helpers')
+const path = require('path')
 const mkdirp = use('mkdirp')
 const fs = require('fs')
 var randomize = require('randomatic');
@@ -12,6 +13,7 @@ const Ciudad = use('App/Models/Ciudad')
 const Role = use("App/Models/Role")
 const Comentario = use('App/Models/Comentario')
 const Payment = use('App/Models/Payment')
+const Email = use("App/Functions/Email")
 const { validate } = use("Validator")
 const Env = use('Env')
 const Stripe = require('stripe')
@@ -173,11 +175,41 @@ class UserController {
       if (!profilePic.moved()) {
         return profilePic.error()
       }
-
+      console.log(user)
+      let mail = await Email.sendMail(user.email, 'Nuevo Contrato', `
+          <center>
+            <img src="https://app.slimedeal.com/logo.png" alt="logo" />
+          </center>
+          <h2 style="text-align:center">
+            El usuario  te ha agregado a formar parte de un contrato.
+          </h2>
+          <div style="text-align:center">
+            Ingrese al link https://app.slimedeal.com/
+          </div>
+          `)
+          // ${user.name} ${user.lastName}
+      console.log(mail)
       response.send(user)
     }
   }
-
+  async prueba ({ request, response }) {
+    
+      let mail = await Email.sendMail('maeep154@gmail.com', 'Registro exitoso', `
+          <center>
+            <img src="https://app.novatelde.com/nopublicidad.jpg" alt="logo" />
+          </center>
+         
+          `)
+          // ${user.name} ${user.lastName}
+    //  console.log(mail)
+   /*   <h2 style="text-align:center">
+            El usuario  te ha agregado a formar parte de un contrato.
+          </h2>
+          <div style="text-align:center">
+            Ingrese al link https://app.slimedeal.com/
+          </div> */
+          return true
+  }
   async edit ({ request, response }) {
     let dat = request.only(['dat'])
     dat = JSON.parse(dat.dat)
