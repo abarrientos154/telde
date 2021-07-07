@@ -10,6 +10,7 @@ const Compras = use('App/Models/ComprasProducto')
 const Pedido = use('App/Models/Compra')
 const Comentario = use('App/Models/Comentario')
 const Monedero = use('App/Models/Monedero')
+const Direccion = use('App/Models/Direccione')
 const fs = require('fs')
 const { validate } = use("Validator")
 var randomize = require('randomatic')
@@ -69,8 +70,10 @@ class ProductoController {
   }
 
   async allProductos ({ response, auth }) {
+    const user = (await auth.getUser()).toJSON()
+    let direccion = (await Direccion.query().where({user_id: user._id, principal: true }).first()).toJSON()
     let filter = (await Producto.query().where({}).with('datos_proveedor').fetch()).toJSON()
-    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 2 && v.datos_proveedor.enable)
+    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 2 && v.datos_proveedor.enable && v.datos_proveedor.ciudad_id === direccion.ciudad_id)
     let enviar = productos.map(v => {
       let entro = false
       if (v.oferta) {

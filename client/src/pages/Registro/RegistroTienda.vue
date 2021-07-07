@@ -458,6 +458,7 @@ export default {
       this.$v.repeatPassword.$touch()
       if (!this.$v.form.provincia.$error && !this.$v.form.ciudad.$error && !this.$v.form.direccion.$error && !this.$v.form.ciudades_atendera.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error && !this.$v.form.email.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error) {
         this.form.password = this.password
+        this.form.ciudad_id = this.form.ciudad._id
         this.slide = 3
       } else {
         this.$q.notify({

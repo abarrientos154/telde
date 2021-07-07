@@ -440,6 +440,7 @@ export default {
       this.$v.form.cif.$touch()
       this.$v.form.telefono.$touch()
       if (!this.$v.form.ciudad.$error && !this.$v.form.provincia.$error && !this.$v.form.direccion.$error && !this.$v.form.ciudades_atendera.$error && !this.$v.form.cif.$error && !this.$v.form.telefono.$error) {
+        this.form.ciudad_id = this.form.ciudad._id
         this.slide = 3
       }
     },

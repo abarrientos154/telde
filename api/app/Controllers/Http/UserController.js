@@ -344,7 +344,8 @@ class UserController {
       let todos = (await User.query().where({roles: [3]}).with('membresia').fetch()).toJSON()
       response.send(todos)
     } else {
-      let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
+      let direccion = (await Direccion.query().where({user_id: user._id, principal: true }).first()).toJSON()
+      let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true, ciudad_id: direccion.ciudad_id}).fetch()).toJSON()
       response.send(emprendedores)
     }
   }
