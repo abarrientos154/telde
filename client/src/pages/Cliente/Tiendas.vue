@@ -207,7 +207,7 @@ export default {
     },
     ciudadesOpt (id) {
       this.$q.loading.show({
-        message: 'Buscando ciudades'
+        message: 'Buscando localidades'
       })
       if (this.direccion.ciudad) {
         this.direccion.ciudad = null

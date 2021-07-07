@@ -529,7 +529,7 @@ export default {
     },
     ciudadesOpt (id) {
       this.$q.loading.show({
-        message: 'Buscando ciudades'
+        message: 'Buscando localidades'
       })
       if (this.form.ciudad) {
         this.form.ciudad = null

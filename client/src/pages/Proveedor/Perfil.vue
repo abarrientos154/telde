@@ -477,7 +477,7 @@ export default {
     },
     async ciudadesOpt (id, bool) {
       this.$q.loading.show({
-        message: 'Buscando ciudades'
+        message: 'Buscando localidades'
       })
       if (this.form.ciudad && !bool) {
         this.form.ciudad = null
