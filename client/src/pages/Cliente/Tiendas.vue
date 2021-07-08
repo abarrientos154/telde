@@ -7,41 +7,6 @@
     </q-img>
 
     <div class="column items-center justify-center">
-      <div class="text-h6 q-mx-md text-grey-8">Ubicacion</div>
-      <div class="" style="width:300px">
-        <div class="text-subtitle2 text-grey-8">Ciudad</div>
-        <q-select @input="ciudadesOpt(direccion.provincia.id)" filled v-model="direccion.provincia" :options="optionsProvincias" map-options option-label="nombre">
-            <template v-slot:option="scope">
-              <q-item
-                v-bind="scope.itemProps"
-                v-on="scope.itemEvents"
-              >
-                <q-item-section>
-                  <q-item-label v-html="scope.opt.nombre" />
-                </q-item-section>
-              </q-item>
-            </template>
-        </q-select>
-      </div>
-        <div class="" style="width:300px">
-          <div class="text-subtitle2 text-grey-8">Localidad</div>
-          <q-select @input="reinicio()" :disable="ciudadesFilter.length ? false : true" filled v-model="direccion.ciudad" :options="optionsCiudad" map-options option-label="nombre" use-input @filter="filterFn">
-              <template v-slot:option="scope">
-                <q-item
-                  v-bind="scope.itemProps"
-                  v-on="scope.itemEvents"
-                >
-                  <q-item-section>
-                    <q-item-label v-html="scope.opt.nombre" />
-                    <q-item-label caption>{{ scope.opt.cp }}</q-item-label>
-                  </q-item-section>
-                </q-item>
-              </template>
-          </q-select>
-        </div>
-    </div>
-
-    <div class="column items-center justify-center">
      <div class="text-h6 q-mx-md text-grey-8 q-mt-md">Categoria</div>
     </div>
       <div class="column items-center justify-center">
@@ -116,10 +81,6 @@ export default {
       selecSubCategoria: '',
       allTiendas: [],
       tiendas: [],
-      direccion: {},
-      optionsProvincias: [],
-      ciudadesFilter: [],
-      optionsCiudad: [],
       favoritoData: [],
       categorias: ['Comida', 'Tienda'],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
@@ -129,13 +90,11 @@ export default {
   mounted () {
     this.baseuTiendas = env.apiUrl + '/perfil_img/'
     this.getTiendas()
-    this.getProvincia()
     this.getFavoritos()
   },
   computed: {
     mostrarBtn () {
-      console.log(this.selecCategoria, this.direccion.provincia, this.direccion.ciudad, 'ciudad')
-      if (!this.direccion.provincia || !this.direccion.ciudad || this.selecCategoria === '') {
+      if (this.selecCategoria === '') {
         return true
       } else {
         return false
@@ -153,7 +112,6 @@ export default {
             }
           })
           this.tiendas = this.allTiendas.slice(0, 6)
-          console.log(this.tiendas, 'tiendas')
           if (this.$route.params.cat) {
             this.filterCategoria(this.$route.params.cat, 'cat')
             if (this.$route.params.subcat) {
@@ -169,29 +127,6 @@ export default {
         this.favoritoData = res
       })
     },
-    getProvincia () {
-      this.$api.get('provincias').then(res => {
-        if (res) {
-          this.optionsProvincias = res
-        }
-      })
-    },
-    filterFn (val, update) {
-      if (val === '') {
-        update(() => {
-          this.optionsCiudad = this.ciudadesFilter
-        })
-        return
-      }
-
-      update(() => {
-        const needle = val.toLowerCase()
-        this.optionsCiudad = this.ciudadesFilter.filter(v => v.nombre.toLowerCase().indexOf(needle) > -1)
-      })
-    },
-    reinicio () {
-      this.$route.query.ciudad_id = this.direccion.ciudad._id
-    },
     filterCategoria (btn, text) {
       if (text === 'cat') {
         this.selecCategoria = btn
@@ -205,56 +140,24 @@ export default {
         this.selecSubCategoria = btn
       }
     },
-    ciudadesOpt (id) {
-      this.$q.loading.show({
-        message: 'Buscando localidades'
-      })
-      if (this.direccion.ciudad) {
-        this.direccion.ciudad = null
-      }
-      this.$api.get('ciudades/' + id).then(res => {
-        if (res) {
-          this.ciudadesFilter = res
-          this.optionsCiudad = res
-          this.$q.loading.hide()
-        }
-      })
-    },
     filterTiendas () {
       this.verTiendas = false
-      if (this.$route.query.ciudad_id) {
-        this.tiendas = this.allTiendas.filter(v => {
-          if (v.categoria === this.selecCategoria && v.ciudad_id === this.$route.query.ciudad_id) {
-            if (v.categoria === 'Comida') {
-              if (this.selecSubCategoria !== '') {
-                if (v.subCategoria.find(x => x === this.selecSubCategoria)) {
-                  return v
-                }
-              } else {
+      this.tiendas = []
+      this.tiendas = this.allTiendas.filter(v => {
+        if (v.categoria === this.selecCategoria) {
+          if (v.categoria === 'Comida') {
+            if (this.selecSubCategoria !== '') {
+              if (v.subCategoria.find(x => x === this.selecSubCategoria)) {
                 return v
               }
-            } else if (v.categoria === 'Tienda') {
+            } else {
               return v
             }
+          } else if (v.categoria === 'Tienda') {
+            return v
           }
-        })
-      } else {
-        this.tiendas = this.allTiendas.filter(v => {
-          if (v.categoria === this.selecCategoria && v.ciudad_id === this.direccion.ciudad._id) {
-            if (v.categoria === 'Comida') {
-              if (this.selecSubCategoria !== '') {
-                if (v.subCategoria.find(x => x === this.selecSubCategoria)) {
-                  return v
-                }
-              } else {
-                return v
-              }
-            } else if (v.categoria === 'Tienda') {
-              return v
-            }
-          }
-        })
-      }
+        }
+      })
     },
     findFavorite (id) {
       if (this.favoritoData.find(v => v.proveedor_id === id)) {
