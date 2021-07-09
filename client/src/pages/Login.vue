@@ -22,7 +22,7 @@
                   </template>
                 </q-input>
               </div>
-              <div class="text-center text-body2 text-grey-7">¿Olvidaste tu contraseña?</div>
+              <div class="text-center text-body2 text-grey-7" @click="cambio = true">¿Olvidaste tu contraseña?</div>
 
               <div class="row justify-center q-mt-lg">
                 <q-btn rounded no-caps color="primary" style="width:200px" size="18px" label="Iniciar sesión" :loading="loading" @click="onSubmit()">
@@ -55,6 +55,37 @@
 
               <div class="text-center text-primary text-bold cursor-pointer" @click="$router.push('registro')"> ¿Eres Nuevo? Registrate </div> -->
             </q-form>
+            <q-dialog v-model="cambio">
+            <q-card class="column items-center justify-center" style="width: 350px; height:350px;">
+              <q-card-section>
+                <div class="text-h6">¿Olvidaste tu contraseña?</div>
+              </q-card-section>
+              <q-card-section>
+                 <q-input rounded outlined v-model="email" label="Introduce tu correo aqui" autofocus>
+                  <template v-slot:prepend>
+                    <q-icon color="primary" name="mail" />
+                  </template>
+                </q-input>
+              </q-card-section>
+              <q-card-actions align="right">
+                 <q-btn
+                    :loading="loading2"
+                    rounded
+                    icon-right="arrow_right"
+                    color="primary"
+                    @click="recuperar()"
+                  >Recuperar contraseña
+                  <template v-slot:loading>
+                    <q-spinner-hourglass class="on-center" />
+                    Loading...
+                  </template>
+                  </q-btn>
+              </q-card-actions>
+              <q-card-actions class="absolute-top-right">
+              <q-btn icon="close" flat round dense v-close-popup />
+            </q-card-actions>
+            </q-card>
+          </q-dialog>
       </q-page>
     </q-page-container>
   </q-layout>
@@ -68,6 +99,9 @@ export default {
       form: {},
       isPwd: true,
       loading: false,
+      cambio: false,
+      email: '',
+      loading2: false,
       noLogin: false,
       dd: {}
     }
@@ -110,6 +144,12 @@ export default {
         }
         // do some work
         // alert('Did launch application from the link: ' + eventData.url)
+      })
+
+      universalLinks.subscribe('ul_recuperar', function (eventData) {
+        if (eventData.params.codigo) {
+          vm.$router.push('/recuperacion/' + eventData.params.codigo)
+        }
       })
     }
   },
@@ -232,6 +272,37 @@ export default {
           console.log('hubo un error')
         }
       })
+    },
+    async recuperar () {
+      if (this.email) {
+        this.simulateProgress()
+        // this.loading2 = true
+        this.$q.loading.show()
+        await this.$api.get('email_send/' + this.email).then(res => {
+          this.$q.loading.hide()
+          if (res) {
+            this.$q.notify({
+              message: 'Se envio un correo para recuperar tu contraseña',
+              color: 'positive'
+            })
+          }
+        })
+      } else {
+        this.$q.notify({
+          message: 'Campo Vacio',
+          color: 'negative'
+        })
+        // this.loading2 = false
+      }
+      // this.loading2 = false
+    },
+    simulateProgress () {
+      this.loading2 = true
+      // simulate a delay
+      setTimeout(() => {
+        // we're done, we reset loading state
+        this.loading2 = false
+      }, 5000)
     }
   }
 }

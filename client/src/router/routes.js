@@ -45,6 +45,7 @@ const routes = [
   { path: '/registro-tienda', component: () => import('pages/Registro/RegistroTienda.vue') },
   { path: '/pago-membresia/:id/:slide', component: () => import('pages/Registro/PagoMembresia.vue') },
   { path: '/pagar_telde/:user_id', component: () => import('pages/PagarTelde.vue') },
+  { path: '/recuperacion/:code', component: () => import('pages/Reestablecer.vue') },
   /* { path: '/splash', component: () => import('pages/Splash.vue') }, */
   {
     path: '/',

@@ -80,6 +80,9 @@
             <path url="/pay_stripe" />
             <path url="/pay_stripe_cancel" />
         </host>
+        <host event="ul_recuperar" name="app.telde.com" scheme="https">
+            <path url="/recuperacion" />
+        </host>
     </universal-links>
     <allow-navigation href="about:*" />
     <preference name="SplashMaintainAspectRatio" value="true" />
