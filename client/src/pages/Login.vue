@@ -278,7 +278,7 @@ export default {
         this.simulateProgress()
         // this.loading2 = true
         this.$q.loading.show()
-        await this.$api.get('email_send/' + this.email).then(res => {
+        await this.$api.get('email_send_app/' + this.email).then(res => {
           this.$q.loading.hide()
           if (res) {
             this.$q.notify({
