@@ -80,7 +80,7 @@
             <path url="/pay_stripe" />
             <path url="/pay_stripe_cancel" />
         </host>
-        <host event="ul_recuperar" name="app.telde.com" scheme="https">
+        <host event="ul_recuperar" name="app.telderecuperacion.com" scheme="https">
             <path url="/recuperacion" />
         </host>
     </universal-links>

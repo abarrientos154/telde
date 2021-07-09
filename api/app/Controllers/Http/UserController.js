@@ -529,7 +529,7 @@ class UserController {
             Haz solicitado restablecer tu contraseña
           </h2>
           <div style="text-align:center">
-            Ingrese al link https://app.telde.com/recuperacion?codigo=${codigo} para restablecer su contraseña
+            Ingrese al link https://app.telderecuperacion.com/recuperacion?codigo=${codigo} para restablecer su contraseña
           </div>
           `)
         console.log(mail)
