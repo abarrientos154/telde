@@ -59,9 +59,8 @@ export default async ({ store, Vue }) => {
           color: 'black'
         })
       } else if (error.response.status === 422) {
-        console.log(error.response, 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
         Notify.create({
-          message: error.response.data,
+          message: error.response.data[0].message,
           color: 'red',
           position: 'bottom'
         })
