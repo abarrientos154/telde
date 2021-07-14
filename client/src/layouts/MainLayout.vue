@@ -39,7 +39,10 @@ export default {
     ...mapGetters('generals', ['can'])
   },
   mounted () {
-    this.getInfo()
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
+    if (value) {
+      this.getInfo()
+    }
   },
   methods: {
     ...mapMutations('generals', ['logout']),

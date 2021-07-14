@@ -459,6 +459,7 @@ export default {
       compraExitosa: false,
       compraFallo: false,
       noLogin: false,
+      login: true,
       rol: 0,
       id_tienda: '',
       baseuProducto: '',
@@ -519,7 +520,7 @@ export default {
       this.baseuPortada = env.apiUrl + '/perfil_img/portada' + this.id_tienda
       this.getProductosByProveedor(this.id_tienda)
       this.getInfoById(this.id_tienda)
-      this.getComentarios()
+      this.getComentarios(this.id_tienda)
     }
     if (this.$route.params.result) {
       if (this.$route.params.result === '1') {
@@ -531,6 +532,8 @@ export default {
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
+    } else {
+      this.login = false
     }
   },
   methods: {
@@ -580,7 +583,6 @@ export default {
       this.$api.post('user_by_id/' + id).then(res => {
         if (res) {
           this.user = res
-          console.log(this.user)
           if (res.status === 1) {
             this.logout()
             this.$router.push('/login')
@@ -605,8 +607,8 @@ export default {
         }
       })
     },
-    getComentarios () {
-      this.$api.get('comentarios').then(res => {
+    getComentarios (id) {
+      this.$api.get('comentarios/' + id).then(res => {
         if (res) {
           this.comentarios = res
         }
