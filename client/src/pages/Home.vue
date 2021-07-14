@@ -2,6 +2,9 @@
   <div>
     <img :src="!principal.nuevo ? baseuPublicidad + principal.fileName : principal.fileName" style="height: 400px; width: 100%;"
     @click="!principal.nuevo ? irRuta(principal.ruta) : ''" />
+    <div v-if="!login" class="absolute-top-right q-pa-md">
+      <q-btn no-caps rounded color="primary" label="Iniciar sesión" to="/login" />
+    </div>
 
     <div class="text-h5 q-my-md text-center text-grey-8 text-bold">¡Busca lo que necesites!</div>
 
@@ -217,14 +220,16 @@ export default {
     this.baseuPublicidad = env.apiUrl + '/publicidad_img/'
     this.baseuProducto = env.apiUrl + '/producto_files/'
     this.baseuTiendas = env.apiUrl + '/perfil_img/'
-    this.getTiendas()
     this.getPublicidad()
-    this.getProductos()
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
+      this.getTiendas()
+      this.getProductos()
     } else {
       this.login = false
+      this.getTiendas()
+      this.getProductos()
     }
   },
   computed: {
@@ -249,7 +254,7 @@ export default {
       })
     },
     getTiendas () {
-      this.$api.get('proveedores').then(res => {
+      this.$api.get(this.login ? 'proveedores' : 'proveedores_no_logueo').then(res => {
         if (res) {
           this.allTiendas = res
           this.tiendas = this.allTiendas
@@ -259,7 +264,7 @@ export default {
       })
     },
     getProductos () {
-      this.$api.get('all_productos').then(res => {
+      this.$api.get(this.login ? 'all_productos' : 'all_productos_no_logueo').then(res => {
         if (res) {
           this.productos = res.reverse().slice(0, 20)
         }

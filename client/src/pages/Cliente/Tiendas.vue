@@ -76,6 +76,7 @@ export default {
   data () {
     return {
       verTiendas: true,
+      login: true,
       baseuTiendas: '',
       selecCategoria: '',
       selecSubCategoria: '',
@@ -89,8 +90,14 @@ export default {
   },
   mounted () {
     this.baseuTiendas = env.apiUrl + '/perfil_img/'
-    this.getTiendas()
-    this.getFavoritos()
+    const value = localStorage.getItem('TELDE_SESSION_INFO')
+    if (value) {
+      this.getTiendas()
+      this.getFavoritos()
+    } else {
+      this.login = false
+      this.getTiendas()
+    }
   },
   computed: {
     mostrarBtn () {
@@ -103,7 +110,7 @@ export default {
   },
   methods: {
     getTiendas () {
-      this.$api.get('proveedores').then(res => {
+      this.$api.get(this.login ? 'proveedores' : 'proveedores_no_logueo').then(res => {
         if (res) {
           this.allTiendas = res.map(v => {
             return {
