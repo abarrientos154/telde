@@ -88,6 +88,23 @@ class ProductoController {
     response.send(enviar)
   }
 
+  async allProductosNoLogueo ({ response, auth }) {
+    let filter = (await Producto.query().where({}).with('datos_proveedor').fetch()).toJSON()
+    let productos = filter.filter(v => !v.disable && v.datos_proveedor.status === 2 && v.datos_proveedor.enable)
+    let enviar = productos.map(v => {
+      let entro = false
+      if (v.oferta) {
+        var diferencia =  moment().diff(v.ofertaDate, 'days')
+        entro = true
+      }
+      return {
+        ...v,
+        oferta: entro ? (diferencia < 0 ? false : true) : null
+      }
+    })
+    response.send(enviar)
+  }
+
   async todo ({ response, auth }) {
     let filter = (await Producto.query().where({}).with('datos_proveedor').fetch()).toJSON()
     response.send(filter)
@@ -255,9 +272,9 @@ class ProductoController {
     response.send(comentario)
   }
 
-  async comentariosTienda ({ response, auth }) {
-    const user = (await auth.getUser()).toJSON()
-    var data = (await Comentario.query().where({tienda_id: user._id}).with(['cliente', 'pedido']).fetch()).toJSON()
+  async comentariosTienda ({ response, params }) {
+    let id = params.id
+    var data = (await Comentario.query().where({tienda_id: id}).with(['cliente', 'pedido']).fetch()).toJSON()
     response.send(data.map(v => {
       return {
         ...v,

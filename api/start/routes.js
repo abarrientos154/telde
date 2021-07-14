@@ -47,6 +47,7 @@ addPrefixToGroup(
     Route.post("registrar_tienda", "UserController.registerTienda")
     Route.get("validate_email/:email", "UserController.validateEmail")
     Route.get("perfil_img/:file", "UploadController.perfilImg")
+    Route.get('perfil_img/:file', 'UploadController.getFileByDirectoryPerfil')
     Route.get("tienda_files/:file", "UploadController.tiendaFiles")
     Route.get("producto_files/:file", "UploadController.productoFiles")
     Route.get("email_send/:email", "UserController.recuperacion")
@@ -59,8 +60,10 @@ addPrefixToGroup(
     Route.get('publicidad_img/:file', 'UploadController.getFilePublicidad')
     Route.get("publicidad", "PublicidadController.index")
     Route.get("proveedores", "UserController.proveedores")
+    Route.get("proveedores_no_logueo", "UserController.proveedoresNoLogueo")
     Route.get("proveedores/:id", "UserController.proveeUbi")
     Route.get("all_productos", "ProductoController.allProductos")
+    Route.get("all_productos_no_logueo", "ProductoController.allProductosNoLogueo")
 
     ///////////////////////Direccion/////////////////////////////////////////
     Route.put("direccion/:id", "UserController.editarDireccion")
@@ -68,6 +71,7 @@ addPrefixToGroup(
     Route.get("provincias", "UserController.provincias")
     Route.get("ciudades/:id", "UserController.ciudades")
     Route.delete("direccion/:id", "UserController.eliminarDireccion")
+    Route.get("comentarios/:id", "ProductoController.comentariosTienda")
     ///////////////////////Direccion/////////////////////////////////////////
     Route.post("prueba", "UserController.prueba")
     Route.post("pago_ok", "ProductoController.pago_ok")
@@ -110,7 +114,6 @@ addPrefixToGroup(
     Route.post("subir_archivo_producto/:producto_id", "UploadController.subirImgProducto")
     Route.post("subir_perfil_producto/:producto_id", "UploadController.subirPerfilProducto")
     Route.delete("eliminar_archivo_producto/:file/:producto_id", "UploadController.eliminarImgProducto")
-    Route.get('perfil_img/:file', 'UploadController.getFileByDirectoryPerfil')
 
     Route.post("comprar_productos", "ProductoController.pre_pago")
     Route.post("comprar_productos_comprobante", "ProductoController.comprarTransferencia")
@@ -128,7 +131,6 @@ addPrefixToGroup(
     Route.get("reportes/:type", "ProductoController.reportes")
     Route.put("compra_status/:id_pedido", "ProductoController.updateCompra")
     Route.post("calificar_tienda", "ProductoController.calificarTienda")
-    Route.get("comentarios", "ProductoController.comentariosTienda")
     ///////////////////////Reportes/////////////////////////////////////////
 
     ///////////////////////Monedero/////////////////////////////////////////

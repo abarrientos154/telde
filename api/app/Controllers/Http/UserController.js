@@ -382,6 +382,11 @@ class UserController {
     }
   }
 
+  async proveedoresNoLogueo ({ request, response, auth }) {
+    let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
+    response.send(emprendedores)
+  }
+
   async proveeUbi ({ request, response, params }) {
     let emprendedores = (await User.query().where({roles: [3], status: 2, enable: true}).fetch()).toJSON()
     let formatEmprendedores = emprendedores.map(v => {
