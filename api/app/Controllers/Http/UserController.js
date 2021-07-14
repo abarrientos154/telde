@@ -175,20 +175,14 @@ class UserController {
       if (!profilePic.moved()) {
         return profilePic.error()
       }
-      console.log(user)
-      let mail = await Email.sendMail(user.email, 'Nuevo Contrato', `
+      //console.log(user)
+      let mail = await Email.sendMail(user.email, 'Registro Exitoso', `
           <center>
-            <img src="https://app.slimedeal.com/logo.png" alt="logo" />
+            <img src="https://app.novatelde.com/registro.png" alt="logo" />
           </center>
-          <h2 style="text-align:center">
-            El usuario  te ha agregado a formar parte de un contrato.
-          </h2>
-          <div style="text-align:center">
-            Ingrese al link https://app.slimedeal.com/
-          </div>
           `)
           // ${user.name} ${user.lastName}
-      console.log(mail)
+     // console.log(mail)
       response.send(user)
     }
   }
