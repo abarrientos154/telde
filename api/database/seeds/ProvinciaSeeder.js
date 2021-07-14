@@ -49,6 +49,30 @@ const ProvinciasData = [
   {
     id: 32,
     nombre: 'Ourense'
+  },
+  {
+    id: 2,
+    nombre: 'Sevilla'
+  },
+  {
+    id: 3,
+    nombre: 'Almería'
+  },
+  {
+    id: 4,
+    nombre: 'Córdoba'
+  },
+  {
+    id: 5,
+    nombre: 'Cadiz'
+  },
+  {
+    id: 6,
+    nombre: 'Huelva'
+  },
+  {
+    id: 7,
+    nombre: 'Malaga'
   }
 
 ]
