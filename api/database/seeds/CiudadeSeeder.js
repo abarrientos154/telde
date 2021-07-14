@@ -210555,7 +210555,15346 @@ const data = [
     "nombre": "Zurbaran",
     "provinciaid": 2
   },
-  
+  {
+    "cp": "4691",
+    "nombre": "Abejuela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4510",
+    "nombre": "Abla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4260",
+    "nombre": "Abriojal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4520",
+    "nombre": "Abrucena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Aceituno, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4510",
+    "nombre": "Adelfas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Adra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Adrianes, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4638",
+    "nombre": "Agua Del Medio, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4720",
+    "nombre": "Aguadulce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Aguamarga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4879",
+    "nombre": "Aguamarga (urracal)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Alameda, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Alamicos, Los - Dehesa, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Alamillos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Alamos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Alara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4857",
+    "nombre": "Albanchez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Albarico, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4116",
+    "nombre": "Albaricoques",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Albarracin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4531",
+    "nombre": "Alboloduy",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4800",
+    "nombre": "Albox",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4638",
+    "nombre": "Alcantarilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Alcaudique",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4778",
+    "nombre": "Alcazaba, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4480",
+    "nombre": "Alcolea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Alcoluches",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Alcontar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4558",
+    "nombre": "Alcubillas Altas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4558",
+    "nombre": "Alcubillas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4276",
+    "nombre": "Alcudia De Monteagud",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Aldeire",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Alfahuara, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Alfaix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4661",
+    "nombre": "Alfoquia, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Algarrobina, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Algarrobos, Los (palomares)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4567",
+    "nombre": "Alhabia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4400",
+    "nombre": "Alhama De Almeria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Alhanchete, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4278",
+    "nombre": "Alias, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4409",
+    "nombre": "Alicun",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4814",
+    "nombre": "Aljambra, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Aljarilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4629",
+    "nombre": "Aljariz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Almajalejo (los Pardos)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4650",
+    "nombre": "Almajalejo (zurgena)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4815",
+    "nombre": "Almanzora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4559",
+    "nombre": "Almendral, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4000",
+    "nombre": "Almeria (ver Callejero)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4711",
+    "nombre": "Almerimar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4289",
+    "nombre": "Almocaizar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4458",
+    "nombre": "Almocita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4638",
+    "nombre": "Alparatas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Alqueria, La (velez Rubio)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4779",
+    "nombre": "Alqueria, La (venta Nueva)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4130",
+    "nombre": "Alquian, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4568",
+    "nombre": "Alsodux",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Amarguilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4278",
+    "nombre": "Andreses, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4559",
+    "nombre": "Aneas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Angosto De Abajo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Angosto De Arriba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4628",
+    "nombre": "Antas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4826",
+    "nombre": "Aranegas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Arboleas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Argamason, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4888",
+    "nombre": "Armu�a De Almanzora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Arnilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Arroyo Aceituno, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Arroyo Albanchez, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4550",
+    "nombre": "Arroyo De Verdelecho",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Arroyo Del Saliente, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4867",
+    "nombre": "Arroyo Franco Y Estella, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Arroyo Medina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4275",
+    "nombre": "Arroyos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Arteal, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4820",
+    "nombre": "Asensio, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Aspilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4113",
+    "nombre": "Atochares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4549",
+    "nombre": "Aulago",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4600",
+    "nombre": "Aznares, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4889",
+    "nombre": "Bacares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4713",
+    "nombre": "Balanegra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4712",
+    "nombre": "Balerma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Bancalejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4715",
+    "nombre": "Ba�os De Guardias Viejas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Barranco De Los Lobos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Barranco De Quiles, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Barranco Del Infierno, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Barranquete, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4450",
+    "nombre": "Barriada De Alcora, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Barrio De Archilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "Barrio Mortero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4479",
+    "nombre": "Bayarcal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4888",
+    "nombre": "Bayarque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Bedar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4458",
+    "nombre": "Beires",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4410",
+    "nombre": "Benahadux",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4479",
+    "nombre": "Benecid",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Beneji",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Beninar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4276",
+    "nombre": "Benitagla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4275",
+    "nombre": "Benitorafe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4276",
+    "nombre": "Benizalon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4569",
+    "nombre": "Bentarique",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Benzal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4760",
+    "nombre": "Berja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Blanquez De Alcontar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Blesas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4120",
+    "nombre": "Bobar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Boca De Los Frailes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Borregos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Bre�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Brevas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Burjulu",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Caba�uelas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4150",
+    "nombre": "Cabo De Gata, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4827",
+    "nombre": "Cabreras, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "Cala Panizo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Calabuche",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4550",
+    "nombre": "Calar Alto, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4420",
+    "nombre": "Calderona, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Calesas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Calguerin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "Calon, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4510",
+    "nombre": "Camino Real, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4240",
+    "nombre": "Campamento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Campico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Campico De Las Moletas, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Campico, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4720",
+    "nombre": "Campillo Del Moro, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Campillo, El (oria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4779",
+    "nombre": "Campillo, El (venta Nueva)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4110",
+    "nombre": "Campohermoso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Campoys, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Canal, El (adra)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4274",
+    "nombre": "Canal, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Canalejas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Canales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Canalica",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4450",
+    "nombre": "Canjayar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Cantal, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4746",
+    "nombre": "Cantinas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Cantoria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4839",
+    "nombre": "Ca�ada De Ca�epla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4140",
+    "nombre": "Ca�ada De Don Rodrigo, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4869",
+    "nombre": "Ca�ada De Las Cruces, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Ca�ada De Lorca, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4120",
+    "nombre": "Ca�ada De San Urbano, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4839",
+    "nombre": "Ca�ada Grande, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Ca�ada Sebastiana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Ca�ada, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Ca�arico, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Capairola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4640",
+    "nombre": "Caparroses, Los (pulpi)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4661",
+    "nombre": "Carasoles, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4140",
+    "nombre": "Carboneras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4278",
+    "nombre": "Cariatiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4230",
+    "nombre": "Carmen, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4600",
+    "nombre": "Carmonas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Carrasca, La (albanchez)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Carrasca, La (campillo)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Carrasco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Carrascos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Cartero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Casablanca (arboleas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Casas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Casicas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4760",
+    "nombre": "Castala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4278",
+    "nombre": "Casta�os, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Castos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4212",
+    "nombre": "Castro De Filabres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4887",
+    "nombre": "Cela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4887",
+    "nombre": "Cela (estacion)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4750",
+    "nombre": "Celin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Cerricos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Cerrogordo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Chacones, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Charche, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Chercos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Chercos Nuevos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Chercos Viejos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Chiran",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Chirivel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Chive, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Chopo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4410",
+    "nombre": "Chuche, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Chulos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4760",
+    "nombre": "Cid, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Cinta Blanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Cinta, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Cirera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4890",
+    "nombre": "Claveros, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4230",
+    "nombre": "Club De Tenis, Urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4839",
+    "nombre": "Cobatillas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Cobdar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4275",
+    "nombre": "Cocon Del Peral",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "Cocon, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Cojos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Collados, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Colorados, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4662",
+    "nombre": "Concepcion, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Congo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Contador, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Convoy, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Corral, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4114",
+    "nombre": "Cortijillos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4550",
+    "nombre": "Cortijo Alto, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4639",
+    "nombre": "Cortijo Grande, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4532",
+    "nombre": "Cortijo Real",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4741",
+    "nombre": "Cortijos De Marin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Cortijos De Marin (vicar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4120",
+    "nombre": "Costacabana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4638",
+    "nombre": "Cuartillas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Cuatro Higueras (cuevas Del Almanzora)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4779",
+    "nombre": "Cuatro Higueras, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4661",
+    "nombre": "Cucador, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4869",
+    "nombre": "Cuesta Del Pino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Cueva Del Pajaro, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4160",
+    "nombre": "Cuevas De Los Medinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4160",
+    "nombre": "Cuevas De Los Ubedas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Cuevas Del Almanzora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Cuevas Del Lino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Cumbre, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Cumbrero, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4230",
+    "nombre": "Cumbres, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Cunas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Cupillas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Curva, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Daimuz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4889",
+    "nombre": "Dali",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4750",
+    "nombre": "Dalias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4768",
+    "nombre": "Darrical",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Dehesa, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Derde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Dioses, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Domenes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Donatos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Do�a Juana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4530",
+    "nombre": "Do�a Maria De Oca�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4700",
+    "nombre": "Ejido, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Encalmados, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4729",
+    "nombre": "Enix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4869",
+    "nombre": "Entrenas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4727",
+    "nombre": "Envia, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Era Alta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Ermita, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4532",
+    "nombre": "Escullar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4118",
+    "nombre": "Escullos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Espadin, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Espeliz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4649",
+    "nombre": "Estacion, La (san Miguel De Pulpi)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4151",
+    "nombre": "Fabriquilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4728",
+    "nombre": "Felix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4116",
+    "nombre": "Fernanperez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4869",
+    "nombre": "Fines",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4800",
+    "nombre": "Finos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4500",
+    "nombre": "Fi�ana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4460",
+    "nombre": "Fondon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Fonte, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Frax",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Frax De Arriba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Fuenblanquilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Fuencaliente Y Calera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4230",
+    "nombre": "Fuensanta, La (huercal)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4691",
+    "nombre": "Fuensanta, La (urcal)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4628",
+    "nombre": "Fuente Abad, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Fuente Amarga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4276",
+    "nombre": "Fuente De La Higuera, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4778",
+    "nombre": "Fuente Del Ahijado, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4812",
+    "nombre": "Fuente Del Mojon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Fuente Del Negro, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4650",
+    "nombre": "Fuente Del Pino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4639",
+    "nombre": "Fuente Del Royo, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Fuente Del Tio Molina, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Fuente Jaula",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4550",
+    "nombre": "Fuente Santa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4779",
+    "nombre": "Fuente Santilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4479",
+    "nombre": "Fuente Victoria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Fuente, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4274",
+    "nombre": "Fuentecilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4694",
+    "nombre": "Gacia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Gacia Alto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Gacia Bajo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4560",
+    "nombre": "Gador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Gafares (carboneras)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Gafares (sorbas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Gafarillos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4280",
+    "nombre": "Gallardos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Gangosa, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Garcias, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Garrido",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4630",
+    "nombre": "Garrucha",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Gasparillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Gateros, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4826",
+    "nombre": "Gatos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Gazquez, Los (los Alamos)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4820",
+    "nombre": "Gazquez, Los (velez Rubio)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4550",
+    "nombre": "Gergal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "German",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4691",
+    "nombre": "Gibaos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4691",
+    "nombre": "Gibiley",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4289",
+    "nombre": "Giles, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4549",
+    "nombre": "Gilma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4820",
+    "nombre": "Ginte",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Gochar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Gonzalez, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4690",
+    "nombre": "Go�ar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Gor, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4838",
+    "nombre": "Graj",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Grillos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Grima",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4778",
+    "nombre": "Guainos Altos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4778",
+    "nombre": "Guainos Bajos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4479",
+    "nombre": "Guarros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Guazamara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Guiraos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Gurrias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4532",
+    "nombre": "Haza Del Riego, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4500",
+    "nombre": "Heredad, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4899",
+    "nombre": "Hernandez, Los (los Zoilos)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Herradura",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4649",
+    "nombre": "Herradura, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Herrera, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4289",
+    "nombre": "Herreria, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Herrerias, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4887",
+    "nombre": "Higueral",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4898",
+    "nombre": "Hijate, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4899",
+    "nombre": "Hilarias, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Hirmes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Hojilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4116",
+    "nombre": "Hornillos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4116",
+    "nombre": "Hortichuelas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Hoya De La Zarza, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Hoya, La (arboleas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Hoya, La (cantoria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Hoya, La (huercal Overa)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4119",
+    "nombre": "Huebro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4400",
+    "nombre": "Huechar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4409",
+    "nombre": "Huecija",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4289",
+    "nombre": "Huelga, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Hueli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4230",
+    "nombre": "Huercal De Almeria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4600",
+    "nombre": "Huercal-overa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4629",
+    "nombre": "Huerta, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Huevanillas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4860",
+    "nombre": "Huitar Mayor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4860",
+    "nombre": "Huitar Menor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4431",
+    "nombre": "Illar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4430",
+    "nombre": "Instincion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4118",
+    "nombre": "Isleta, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Islica, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Jacinto, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Jarales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4899",
+    "nombre": "Jauca Alta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4899",
+    "nombre": "Jauca Baja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4629",
+    "nombre": "Jauro (antas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Jauro (lubrin)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Joluque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Jordana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4240",
+    "nombre": "Juaida, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Jucaini",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4814",
+    "nombre": "Labores, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4778",
+    "nombre": "Lance De La Virgen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Largo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4868",
+    "nombre": "Laroya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4470",
+    "nombre": "Laujar De Andarax",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Lijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4661",
+    "nombre": "Limaria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Llano De Don Antonio, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4812",
+    "nombre": "Llano De Las Animas, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4812",
+    "nombre": "Llanos De Los Olleres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Llanos De Vicar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4812",
+    "nombre": "Llanos Del Espino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4628",
+    "nombre": "Llanos Del Mayor, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Llanos, Los (arboleas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Llanos, Los (taberno)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4650",
+    "nombre": "Llanos, Los (zurgena)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Loberos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Lobos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4814",
+    "nombre": "Locaiba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4120",
+    "nombre": "Loma Cabrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Loma De Los Vargas, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Loma, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Lomilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Losilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Lubrin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4768",
+    "nombre": "Lucainena De Darrical",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4210",
+    "nombre": "Lucainena De Las Torres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4887",
+    "nombre": "Lucar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4867",
+    "nombre": "Macael",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4839",
+    "nombre": "Macian",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Madrid",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Maguas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Malinos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4120",
+    "nombre": "Mami, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4839",
+    "nombre": "Manche�o",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4887",
+    "nombre": "Manolones, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Ma�as, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4729",
+    "nombre": "Marchal De Enix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Marchal, El (cantoria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Marchal, El (lubrin)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4867",
+    "nombre": "Marchal, El (macael)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Marchal, El (oria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4274",
+    "nombre": "Marchal, El (uleila Del Campo)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Marchalico Vi�icas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Margen, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4838",
+    "nombre": "Maria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4621",
+    "nombre": "Marinas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4740",
+    "nombre": "Marinas, Las (roquetas De Mar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4260",
+    "nombre": "Marraque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4890",
+    "nombre": "Marteses, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Martinete, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Martinez, Los (oria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Martinez, Los (sorbas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Mata De Bolaimi, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4715",
+    "nombre": "Matagorda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Matreros, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Mayordomo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4151",
+    "nombre": "Mazarrulleque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Mela, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4890",
+    "nombre": "Menas, Las (seron)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Menas, Los (puertecico)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4650",
+    "nombre": "Menchones, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Mesa Roldan, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4510",
+    "nombre": "Milanes, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4560",
+    "nombre": "Minas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Minas, Las (huercal Overa)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Mizala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4638",
+    "nombre": "Mojacar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Mojonar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4745",
+    "nombre": "Mojonera, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Moletas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Molinas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Molino Del Tarahal, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4640",
+    "nombre": "Molino, El (pulpi)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4828",
+    "nombre": "Molinos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Molinos, Los (sorbas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4420",
+    "nombre": "Mondujar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4533",
+    "nombre": "Monjos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4510",
+    "nombre": "Montagon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Montalviche",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4274",
+    "nombre": "Morales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Moras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Moras, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4213",
+    "nombre": "Moraton",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4815",
+    "nombre": "Morillas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Morro, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4560",
+    "nombre": "Moscolux",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4820",
+    "nombre": "Motailon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Muleria, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4540",
+    "nombre": "Nacimiento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4549",
+    "nombre": "Navarros, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4662",
+    "nombre": "Navarros, Los (huercal Overa)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4116",
+    "nombre": "Negras, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Nietos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4100",
+    "nombre": "Nijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4860",
+    "nombre": "Noria, La (olula Del Rio)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4716",
+    "nombre": "Norias De Daza, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4500",
+    "nombre": "Norias, Las (fi�ana)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4690",
+    "nombre": "Norias, Las (huercal Overa)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4213",
+    "nombre": "Nudos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Nudos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4530",
+    "nombre": "Oca�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4459",
+    "nombre": "Ohanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4869",
+    "nombre": "Olivar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Olivillos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4212",
+    "nombre": "Olula De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4860",
+    "nombre": "Olula Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4826",
+    "nombre": "Oquendos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Oria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Orillas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Oro Verde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4458",
+    "nombre": "Padules",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4212",
+    "nombre": "Pago Aguilar Bajo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4533",
+    "nombre": "Pago De Escuchagrano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4662",
+    "nombre": "Palaces, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Palmera, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4869",
+    "nombre": "Palomar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4617",
+    "nombre": "Palomares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4715",
+    "nombre": "Pampanico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4720",
+    "nombre": "Parador De Las Hortichuelas, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4721",
+    "nombre": "Parador, El (vicar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4638",
+    "nombre": "Parata, La (mojacar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4827",
+    "nombre": "Pardos, Los (velez Rubio)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Parra, La (adra)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4827",
+    "nombre": "Parra, La (torrentes)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Partaloa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4479",
+    "nombre": "Paterna Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Patio, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4560",
+    "nombre": "Paulenca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4250",
+    "nombre": "Pechina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4691",
+    "nombre": "Pedregales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Pedro Garcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Pe�arrodada, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Pe�as Negras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Pe�on Alto, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "Pe�on Bajo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Perales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Peraltas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Perdigones, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4770",
+    "nombre": "Perez, Los (adra)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Perez, Los (alcontar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Perla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Perulaca, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Perulera, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Piar De Abajo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Pichiriches, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4810",
+    "nombre": "Piedra Amarilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Piedra De Zahor, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Piedras, Las (huercal Overa)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Pilancon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "Pilar De Jaravia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Pilar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4662",
+    "nombre": "Pilar, El (huercal Overa)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Pilar, El (sorbas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Pilarico, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4549",
+    "nombre": "Piletas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Pinar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Pinares, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Pinos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Pocicas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Pocico, El (lubrin)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Pocos Bollos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4114",
+    "nombre": "Polopos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4880",
+    "nombre": "Porteros, Los (tijola)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4619",
+    "nombre": "Portilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4550",
+    "nombre": "Portocarrero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Pozo De La Higuera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Pozo De Los Frailes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "Pozo Del Esparto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4640",
+    "nombre": "Pozo Del Esparto (pulpi)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4887",
+    "nombre": "Pozo Del Lobo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Prado, El (la Cinta)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Presillas Bajas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Puebla De Vicar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "Pueblo Blanco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Puente De Guayar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4779",
+    "nombre": "Puente Del Rio, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Puertecico, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4621",
+    "nombre": "Puerto Rey",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4151",
+    "nombre": "Pujaire (almeria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4151",
+    "nombre": "Pujaire (nijar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4640",
+    "nombre": "Pulpi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Puntal, El (lubrin)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4870",
+    "nombre": "Purchena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Quijiliana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4440",
+    "nombre": "Ragol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4826",
+    "nombre": "Ramales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Rambla Aljibe, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Rambla De Abajo, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Rambla De Arriba, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Rambla De Taberno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4276",
+    "nombre": "Rambla Del Marques",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4691",
+    "nombre": "Rambla Grande",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Rambla Honda, La (lubrin)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Rambla Honda, La (lucainena De Las Torres)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4150",
+    "nombre": "Rambla Morales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4898",
+    "nombre": "Ramil Alto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4898",
+    "nombre": "Ramil Bajo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Ramos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Raspajos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4628",
+    "nombre": "Real, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Realengo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4899",
+    "nombre": "Reconco, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4710",
+    "nombre": "Redonda, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Retacos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4131",
+    "nombre": "Retamar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4867",
+    "nombre": "Reul Alto, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Rincon Del Marques, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Rincon, El (la Cinta)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4274",
+    "nombre": "Rincon, El (uleila Del Campo)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Rio Chico, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Rio Claro, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4820",
+    "nombre": "Rio De Mula, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "Rio Grande, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4260",
+    "nombre": "Rioja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Rioja (palomares)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Risas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4115",
+    "nombre": "Rodalquilar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4549",
+    "nombre": "Rojas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Ronde�a, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4740",
+    "nombre": "Roquetas De Mar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4740",
+    "nombre": "Roquetas De Mar, Urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4825",
+    "nombre": "Roquez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Rozas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4151",
+    "nombre": "Ruescas (almeria)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4151",
+    "nombre": "Ruescas (nijar)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4560",
+    "nombre": "Ruini, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4610",
+    "nombre": "Rulador, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Sacristan, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4271",
+    "nombre": "Saeti, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4114",
+    "nombre": "Saladar Y Leche",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Saliente Alto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Saliente Bajo (albox)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Saltador Alto, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4149",
+    "nombre": "Saltador Bajo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Saltador, El (lucainena De Las Torres)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4694",
+    "nombre": "Saltador, El (pulpi)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Salto Del Lobo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4717",
+    "nombre": "San Agustin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4600",
+    "nombre": "San Francisco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4117",
+    "nombre": "San Isidro De Nijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4118",
+    "nombre": "San Jose",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4648",
+    "nombre": "San Juan De Los Terreros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4811",
+    "nombre": "San Miguel (alamos)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4769",
+    "nombre": "San Roque (berja)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4710",
+    "nombre": "San Silvestre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4540",
+    "nombre": "Sanchos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4662",
+    "nombre": "Santa Barbara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4568",
+    "nombre": "Santa Cruz De Marchena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4420",
+    "nombre": "Santa Fe De Mondujar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4693",
+    "nombre": "Santa Maria De Nieva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4710",
+    "nombre": "Santa Maria Del Aguila",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4532",
+    "nombre": "Santillana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4700",
+    "nombre": "Santo Domingo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Santopetar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4213",
+    "nombre": "Senes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4288",
+    "nombre": "Serena, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4890",
+    "nombre": "Seron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4259",
+    "nombre": "Sierra Alhamilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4878",
+    "nombre": "Sierro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Silos, Los (cuevas Del Almanzora)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4829",
+    "nombre": "Solana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4743",
+    "nombre": "Solanillo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4530",
+    "nombre": "Soleres, Les",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4877",
+    "nombre": "Somontin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4270",
+    "nombre": "Sorbas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4878",
+    "nombre": "Sufli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4200",
+    "nombre": "Tabernas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4692",
+    "nombre": "Taberno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4859",
+    "nombre": "Tablar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4559",
+    "nombre": "Tablas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4275",
+    "nombre": "Tahal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4660",
+    "nombre": "Tahullas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Taibena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4212",
+    "nombre": "Tallon Bajo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Tejica, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4569",
+    "nombre": "Terque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4850",
+    "nombre": "Terreros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Tesoro, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4858",
+    "nombre": "Tia Lucia, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4459",
+    "nombre": "Tices",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4880",
+    "nombre": "Tijola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4618",
+    "nombre": "Tomillar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4827",
+    "nombre": "Tonosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4839",
+    "nombre": "Topares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4778",
+    "nombre": "Toril, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4114",
+    "nombre": "Torre Del Campo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4827",
+    "nombre": "Torrentes, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4114",
+    "nombre": "Tristanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4639",
+    "nombre": "Turre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Turrillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4279",
+    "nombre": "Uleila Del Campo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4691",
+    "nombre": "Urcal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Urra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4879",
+    "nombre": "Urracal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Valle, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4277",
+    "nombre": "Varguicas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Vega, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4897",
+    "nombre": "Vegas, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4212",
+    "nombre": "Velefique",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4830",
+    "nombre": "Velez-blanco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4820",
+    "nombre": "Velez-rubio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4114",
+    "nombre": "Venta Del Pobre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4746",
+    "nombre": "Venta Del Viso, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4120",
+    "nombre": "Venta Gaspar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4779",
+    "nombre": "Venta Nueva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4620",
+    "nombre": "Vera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4621",
+    "nombre": "Vera-playa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4240",
+    "nombre": "Viator",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4738",
+    "nombre": "Vicar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Villar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4616",
+    "nombre": "Villaricos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4113",
+    "nombre": "Viso, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4647",
+    "nombre": "Vizcaino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4813",
+    "nombre": "Yegua Baja, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4211",
+    "nombre": "Yesos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4274",
+    "nombre": "Zofre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4899",
+    "nombre": "Zoilos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4650",
+    "nombre": "Zurgena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Acebuchal, El (alcala De Guadaira)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41440",
+    "nombre": "Acebuchal, El (lora Del Rio)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41728",
+    "nombre": "Adriano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41550",
+    "nombre": "Aguadulce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41560",
+    "nombre": "Alamedilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Alamo, El (el Madro�o)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41380",
+    "nombre": "Alanis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41809",
+    "nombre": "Albaida Del Aljarafe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Alcala De Guadaira",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41200",
+    "nombre": "Alcala Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41449",
+    "nombre": "Alcolea Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41899",
+    "nombre": "Alcornocosa, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41980",
+    "nombre": "Algaba, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41661",
+    "nombre": "Algamitas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41889",
+    "nombre": "Alisar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41240",
+    "nombre": "Almaden De La Plata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41111",
+    "nombre": "Almensilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41600",
+    "nombre": "Arahal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41989",
+    "nombre": "Aral, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41899",
+    "nombre": "Archidona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41889",
+    "nombre": "Arroyo De La Plata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Aulaga, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41849",
+    "nombre": "Aznalcazar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41870",
+    "nombre": "Aznalcollar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41570",
+    "nombre": "Badolatosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41805",
+    "nombre": "Benacazon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41510",
+    "nombre": "Bencarron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41710",
+    "nombre": "Bencarron (utrera)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41110",
+    "nombre": "Bollullos De La Mitacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41930",
+    "nombre": "Bormujos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41310",
+    "nombre": "Brenes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41220",
+    "nombre": "Burguillos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41730",
+    "nombre": "Cabezas De San Juan, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41610",
+    "nombre": "Calvario, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41900",
+    "nombre": "Camas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41429",
+    "nombre": "Campana, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41430",
+    "nombre": "Campillo, El (la Luisiana)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41320",
+    "nombre": "Cantillana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41439",
+    "nombre": "Ca�ada Rosal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41360",
+    "nombre": "Ca�adas Del Romero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41889",
+    "nombre": "Ca�uelo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41910",
+    "nombre": "Carambolo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41359",
+    "nombre": "Carbonal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41100",
+    "nombre": "Carchena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41410",
+    "nombre": "Carmona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41820",
+    "nombre": "Carrion De Los Cespedes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41580",
+    "nombre": "Casariche",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41230",
+    "nombre": "Castilblanco De Los Arroyos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41908",
+    "nombre": "Castilleja De Guzman",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41950",
+    "nombre": "Castilleja De La Cuesta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41810",
+    "nombre": "Castilleja Del Campo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41890",
+    "nombre": "Castillo De Las Guardas, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41370",
+    "nombre": "Cazalla De La Sierra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41389",
+    "nombre": "Cerro Del Hierro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41409",
+    "nombre": "Cerro Perea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41728",
+    "nombre": "Chapatales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41510",
+    "nombre": "Clavinque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41910",
+    "nombre": "Coca De La Pi�era",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41450",
+    "nombre": "Constantina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41599",
+    "nombre": "Corcoya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41100",
+    "nombre": "Coria Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41780",
+    "nombre": "Coripe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41760",
+    "nombre": "Coronil, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41657",
+    "nombre": "Corrales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41550",
+    "nombre": "Cortijo Del Marques",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41749",
+    "nombre": "Cuervo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41710",
+    "nombre": "Don Rodrigo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41000",
+    "nombre": "Dos Hermanas (ver Callejero)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41400",
+    "nombre": "Ecija",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41807",
+    "nombre": "Espartinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41209",
+    "nombre": "Esquivel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41560",
+    "nombre": "Estepa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41703",
+    "nombre": "Fuente Del Rey",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41450",
+    "nombre": "Fuente El Negro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41420",
+    "nombre": "Fuentes De Andalucia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41370",
+    "nombre": "Galeon, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41560",
+    "nombre": "Gallo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41370",
+    "nombre": "Ganchosa, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Gandul-marchenilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41888",
+    "nombre": "Garrobo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41120",
+    "nombre": "Gelves",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41860",
+    "nombre": "Gerena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41565",
+    "nombre": "Gilena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41960",
+    "nombre": "Gines",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41600",
+    "nombre": "Gironda, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41339",
+    "nombre": "Guadajoz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41390",
+    "nombre": "Guadalcanal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41719",
+    "nombre": "Guadalema De Los Quintero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41210",
+    "nombre": "Guillena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41567",
+    "nombre": "Herrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41880",
+    "nombre": "Hoyuelo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41550",
+    "nombre": "Huerta Del Colegio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41570",
+    "nombre": "Huertas De La Manga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41830",
+    "nombre": "Huevar De Aljarafe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41409",
+    "nombre": "Isla Del Vicario",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41140",
+    "nombre": "Isla Mayor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41563",
+    "nombre": "Isla Redonda La Ace�uela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41309",
+    "nombre": "Jarilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41360",
+    "nombre": "Jarillas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Juan Anton",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Juan Gallego",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41210",
+    "nombre": "Lagos Del Serrano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41630",
+    "nombre": "Lantejuela, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41740",
+    "nombre": "Lebrija",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41564",
+    "nombre": "Lora De Estepa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41440",
+    "nombre": "Lora Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41430",
+    "nombre": "Luisiana, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41897",
+    "nombre": "Madro�o, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41510",
+    "nombre": "Mairena Del Alcor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41927",
+    "nombre": "Mairena Del Aljarafe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41309",
+    "nombre": "Majaloba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41620",
+    "nombre": "Marchena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41727",
+    "nombre": "Mariba�ez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41569",
+    "nombre": "Marinaleda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41731",
+    "nombre": "Marismillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41658",
+    "nombre": "Martin De La Jara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41569",
+    "nombre": "Matarredonda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41659",
+    "nombre": "Mezquitilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Minas Del Castillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41750",
+    "nombre": "Molares, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41439",
+    "nombre": "Monclova, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41600",
+    "nombre": "Monjas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41770",
+    "nombre": "Montellano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41610",
+    "nombre": "Monte-palacio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41089",
+    "nombre": "Montequinto (ver Callejero De Dos Hermanas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41530",
+    "nombre": "Moron De La Frontera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41360",
+    "nombre": "Navahonda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41409",
+    "nombre": "Navalagrulla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41659",
+    "nombre": "Navarredonda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41460",
+    "nombre": "Navas De Las Concepcion, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41804",
+    "nombre": "Olivares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41640",
+    "nombre": "Osuna",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41219",
+    "nombre": "Pajanosas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41320",
+    "nombre": "Pajares, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41720",
+    "nombre": "Palacios Y Villafranca, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41719",
+    "nombre": "Palmar De Troya, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41610",
+    "nombre": "Palomar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41928",
+    "nombre": "Palomares Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41610",
+    "nombre": "Paradas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41566",
+    "nombre": "Pedrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41360",
+    "nombre": "Pedroso, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41470",
+    "nombre": "Pe�aflor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Peralejo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41599",
+    "nombre": "Perenos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41599",
+    "nombre": "Perez, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41890",
+    "nombre": "Peroamigo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41840",
+    "nombre": "Pilas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41370",
+    "nombre": "Pintado, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41728",
+    "nombre": "Pinzon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41150",
+    "nombre": "Poblado De Alfonso Xiii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41130",
+    "nombre": "Poblado De Colinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41300",
+    "nombre": "Poligono Industrial El Gordillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41300",
+    "nombre": "Poligono Industrial Majaravique",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41300",
+    "nombre": "Poligono Industrial Nacoisa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41560",
+    "nombre": "Pozo Del Villar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41440",
+    "nombre": "Priorato, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41670",
+    "nombre": "Pruna",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41540",
+    "nombre": "Puebla De Cazalla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41479",
+    "nombre": "Puebla De Los Infantes, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41130",
+    "nombre": "Puebla Del Rio, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41640",
+    "nombre": "Puerto De La Encina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41440",
+    "nombre": "Rambla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41530",
+    "nombre": "Ramira, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41880",
+    "nombre": "Ratilla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41250",
+    "nombre": "Real De La Jara, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41658",
+    "nombre": "Rejano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41580",
+    "nombre": "Riguelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41440",
+    "nombre": "Rincon, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41309",
+    "nombre": "Rinconada, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41590",
+    "nombre": "Roda De Andalucia, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41880",
+    "nombre": "Ronquillo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41330",
+    "nombre": "Rosales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41568",
+    "nombre": "Rubio, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41730",
+    "nombre": "Sacramento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41560",
+    "nombre": "Salada, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41909",
+    "nombre": "Salteras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41209",
+    "nombre": "San Ignacio Del Viar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41300",
+    "nombre": "San Jose De La Rinconada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41920",
+    "nombre": "San Juan De Aznalfarache",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41388",
+    "nombre": "San Nicolas Del Puerto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "San Rafael, Urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41800",
+    "nombre": "Sanlucar La Mayor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Santa Genoveva, Urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41970",
+    "nombre": "Santiponce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41650",
+    "nombre": "Saucejo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41440",
+    "nombre": "Setefilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41000",
+    "nombre": "Sevilla (ver Callejero)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41370",
+    "nombre": "Solana Del Valle",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Soledad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41340",
+    "nombre": "Tocina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41940",
+    "nombre": "Tomares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41218",
+    "nombre": "Torre De La Reina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Torrequinto, Urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41727",
+    "nombre": "Trajano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41727",
+    "nombre": "Trobal, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41500",
+    "nombre": "Trujillo Cabeza Sordo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41806",
+    "nombre": "Umbrete",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41710",
+    "nombre": "Utrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41899",
+    "nombre": "Valdeflores",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41907",
+    "nombre": "Valencina De La Concepcion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41470",
+    "nombre": "Vega De Almenara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41100",
+    "nombre": "Vega, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41470",
+    "nombre": "Vereda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41730",
+    "nombre": "Vetaherrado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41319",
+    "nombre": "Viar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41850",
+    "nombre": "Villamanrique De La Condesa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41660",
+    "nombre": "Villanueva De San Juan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41808",
+    "nombre": "Villanueva Del Ariscal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41409",
+    "nombre": "Villanueva Del Rey",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41359",
+    "nombre": "Villanueva Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41350",
+    "nombre": "Villanueva Del Rio Y Minas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41409",
+    "nombre": "Villar Del Marco, El, Poblado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41898",
+    "nombre": "Villargordo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41318",
+    "nombre": "Villaverde Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "41520",
+    "nombre": "Viso Del Alcor, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4070",
+    "nombre": "Codigo Correspondencia Oficial Correos-telegrafos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4071",
+    "nombre": "Codigo Correspondencia Para Organismos Oficiales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4080",
+    "nombre": "Codigo Postal Para Apartados Particulares Y Lista",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "1 De Mayo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Abderraman Iii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Aben Humeya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Abeto, Del",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Abla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Abrucena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Abubilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Acacia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Acanto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Acebo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Acequieros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Acequieros,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Acosta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Actor Jose Rubio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Acuario",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Adela Perez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Adelfa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Administracion Vieja,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Adolfo Marsillac",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Adolfo Suarez,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Adra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Aeropuerto, Del,autovia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Africa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Afrodita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Agata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Agua Amarga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aguadulce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aguamarina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Aguila",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Aguilar De Campoo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ainhoa Arteta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alamo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Al-andalus",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Alava",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Alazan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alba,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alba, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Albacete",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Albahaca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Albaida,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Albanchez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Albania",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Albardin,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Albarracin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alboloduy",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Albondoque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alboran",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Albox",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alcala,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Alcalde Mu�oz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alcalde Santiago Martinez Cabrejas,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alca�iz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alcazaba,residencial",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Alcazar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Alcolea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alcontar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Alcor, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alcotan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alcoy",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alcudia De Monteagud",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alegria, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alentejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Alfareria (impares Del 1 Al 37)  (pares Del 2 Al 40)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Alfareria (impares Del 39 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Alfareros,rambla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alfonso Sanchez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alfonso Vii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alfonso Xiii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alfredo Kraus,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Algarra,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Algarrobo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Algas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Algazul",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alhabia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alhadra,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alhama",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alhambra,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Alheli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alhondiga Vieja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Alhucemas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Aliaga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alicante",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alicun",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alisios",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alisios,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Almadravillas, De Las,playa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Almajalejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Almanzor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Almanzor,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Almarique",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Almedina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Almendro, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Almendros, De Los,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Almeria, De,paseo (pares Del 2 Al 2)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Almeria, De,paseo (impares Del 1 Al Final)  (pares Del 4 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Almijares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Almirante Cervera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Almirez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Almocita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Almotahacin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Alondra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Alonso De Ojeda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alpujarras, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alsodux",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Alta De La Iglesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Altamira",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Altamira,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Alto De Los Leones",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Aluminio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Alvarez De Castro (impares Del 1 Al 15)  (pares Del 2 Al 18)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Alvarez De Castro (impares Del 17 Al Final)  (pares Del 20 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Amadeo Vives",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Amalia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Amancio Cortijada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Amanecer",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Amantes De Teruel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Amapola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Amarilis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Amatista",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Amatisteros,rambla (pares Del 2 Al 2)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Amatisteros,rambla (impares Del 1 Al Final)  (pares Del 4 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "America",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Amistad,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Amor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Amor De Dios,glorieta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Amparo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Ana Franco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ana Frank",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ana Maria Matute",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Ancla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Andalucia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Andaluza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Anden De Costa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Andorra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Andres Beltrani",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Andres Cassinello",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Andromeda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Angel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Angel Gomez Fuentes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Angel Jover",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Angel Ochotorena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Angeles, De Los,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Angeles, De Los,mercado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Anibal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonia Merce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Antonio Atienza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonio Buero Vallejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonio Cano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Antonio Ferrandiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Antonio Gala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonio Gaudi,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Antonio Gaudi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Antonio Gonzalez Egea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Antonio Gonzalez Egea,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Antonio Gonzalez Vizcaino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Antonio Ledesma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonio Lopez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonio Mairena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Antonio Mendez Salvador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Antonio Mu�oz Zamora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Antonio Vico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Anzuelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Anzuelo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Apolo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aragon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Aralia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aranda De Duero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Arandanos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aranjuez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Araoz,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Arapiles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Araucaria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Arbol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Arbol De La Seda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Arbol Del Amor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Arbol Del Caucho",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Arbol Del Paraiso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Arboleas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Arboleda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Arcipreste De Hita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Arco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Arcos, Los,paraje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Arenys De Munt",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Argar, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Argelia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Argentinita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Argollones",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Aries",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Aristoteles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Armonia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Armu�a De Almanzora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Arqueros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Arquimedes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Arquitecto Guillermo Langle",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Arraez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Arrastre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Arrayanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Arrecife De Las Sirenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Arriaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Arroyo Frio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Artesano, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ascension, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Asia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Asteroide",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Astilleros Muelle Pesquero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Asturias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Atarazanas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Atlantida (los Angeles)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Atril",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aulaga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Aurora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Austria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Automotor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ave Del Paraiso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ave Maria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Avena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Averroes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Avion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Ayala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ayamonte",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Azahar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Azaleas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Azara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Aznacho",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Azogue",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Azor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Azorin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Azucena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Azucena,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Azufaifo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Baeza, Cortijo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bahia El Palmer,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Baile",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bailen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Baja De La Iglesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bajamar,playa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Bajo Aragon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Balanegra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Baleares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Balneario De San Miguel,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Balsa Del Diezmo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ba�os, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Barbieri,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Barca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Barcelona,plaza (impares Del 1 Al 1)  (pares Del 2 Al 2)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Barcelona,plaza (impares Del 3 Al 3)  (pares Del 4 Al 4)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Barcelona,plaza (impares Del 5 Al Final)  (pares Del 6 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Barco De Vapor,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Barco Velero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Barquillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Barranco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Barranco,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Barranco Bolas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Barranco Greppi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Barranquillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Barrio De Las Luces",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Batalla De Brunete",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bayana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Bayarcal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Bayarque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Baza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Beata Soledad Torres Acosta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Beatles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Beato Diego Ventaja, De,rotonda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Beatriz De Silva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Becquer",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Bedar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Begonia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Bejar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Bejar,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Belchite",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Belen,rambla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Belgica",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Belladona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Belluga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Belluga,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Beltraneja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Bendicho,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Beninar,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Benitagla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Benizalon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Bentarique",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Berenguel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bergantin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Berja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Bernardino Delgado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Bidasoa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Bilbao",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bitacora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Bizet",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Blanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Blas De Lezo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Blas Infante,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Blasco Iba�ez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Boabdil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Bobar,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bocana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Bodeguilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Bola,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Bolas,barranco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Bolivia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Bordiu",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Borja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Borja,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Borja,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Bosnia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Botalon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Bote",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Boya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Brasil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Braulio Moreno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Bretones,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Brisas, De Las,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Briviesca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Bronce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Bruch, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Brujula",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Buen Amigo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Buenavista",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Buganvilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Buho",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Burgos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Buscon Don Pablos, Del",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Buzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Caballar,barranco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cable Ingles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cabo De Gata,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cabo Verde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cadenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cadenas Huerta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cadiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Cairo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cal, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cala Cerrada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cala Higuera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Calabaza,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Calablanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Calamocha",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Calanda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Calandria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Calar Alto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Caldereria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Calderon,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Calera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "California",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Calvario",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Calzada De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Camaras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Camaron De La Isla,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Camelia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Camilo Jose Cela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Camino De La Goleta,prolongacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Campana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Campanillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Camping",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campo De Dalias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campo De Nijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Campoamor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campoblanco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campofrio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campogenil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campogris",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campohermoso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Campomanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Campomanes,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Camponegro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Camporrubio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Campoverde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Canarias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Canario",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Candelaria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Candil, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Canjayar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Canonigo Molina Alonso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Canovas Del Castillo,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Cantaor Pepe Gomez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cantareros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Cantares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Cantares,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cantavieja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Canteras,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Canteras Viejas,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Canteras Viejas,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Canteras Viejas,rincon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Canton Checa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cantoria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Ca�adas,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ca�averal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Capitan Cassinello",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Capitan Fuster Ruise�or",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Capitan Garcia Andujar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Capitana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Capitana,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Capri",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Carabineros,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Caravaca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Carbon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Carboneras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cardenal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Cardenal Herrera Oria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Careaga,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Caridad,paseo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Carlos Cano,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Carlos Iii De Espa�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Carmelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Carmen Amaya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Carmen Conde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Carmen, Del,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Carnaval",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Carreros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Carreros,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Carreterias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Carretero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cartagena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Caruso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Casa Arriba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Casablanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Caserio,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Casimiro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Casta�os, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Castelar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Castell Del Rey,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Castello Branco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Castellote",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Castilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Castillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Castillo,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Castillos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Castro Filabres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Castro, De",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Catalu�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Catalu�a,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Catedral, De La,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Catedratico Ignacio Cubillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cauce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cauce Cantareros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Celia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Celia Vi�as",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cementerio,loma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Central,mercado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cepa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cepero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cepero,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cerezos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cerrillo Del Hambre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cerro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cerro El Almirez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cerro Gordo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cerro Las Cruces",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cerro San Cristobal,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cervantes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cervantes,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cesar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cespedes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ceuta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Chafarinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Chafarinas,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Chamberi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Chantre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Chercos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Chile",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Chinchorro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Chipre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Chirivel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Chispa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Chopo, Del",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Chuspe Santa Maria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Ciceron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cidro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ciervo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cipres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Circo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Circunvalacion,mercado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Circunvalacion Plaza De Toros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ciruelo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cirugeda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cisne",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Cisneros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Cita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Clara De Campoamor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Clarin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Clavel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Clavellina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cobalto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cobdar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cobre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cohete",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Colegios, De Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Colibri",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Colombia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Colombine, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Colomer,cuesta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Colon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Colon,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Colonia Morato",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Colorin,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Comercio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cometa Halley",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Comico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Concepcion Arenal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Conchas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Concordia, De La,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Conde Ofalia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Conde Villamonte",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Conde Xiquena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Condor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Conil De La Frontera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Constitucion,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Contador,paraje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Convento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Copla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Copo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Corbeta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cordoba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cordoneros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Corindon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Corridas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cortijo Grande",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Coscoja,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cosmos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Azahar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Azul",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Balear",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Blanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Brava",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Calida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Canaria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa De Almeria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa De Azahar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa De La Luz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa De La Plata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa De Marfil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Costa Del Sol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Dorada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Monta�esa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Plata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Rica",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Costa Verde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Coto De Do�ana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Covadonga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Criado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Crisantemo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cristo De La Buena Muerte,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cristo De La Oracion,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Cristobal Lopez Lupia�ez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Croacia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Crucero Canarias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cruces Bajas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cruces, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cruz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cruz De Caravaca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cruz De Caravaca,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cruz De Robles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cruz Del Sur",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cruz, De La,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cruz, De La,prolongacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cruzada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cuarzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cuba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Cubo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Cucarro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Cuenca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuesta Colomer",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuevas,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Cuevas De Almanzora,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuevas De Gordote",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuevas De Las Palomas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Cuevas De Pozo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuevas Del Callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuevas Deogracia,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Cuevas Gordote,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Curva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Curva,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "D. Francisco Jose Garcia Garcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Dali",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Dalia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Dalias,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Dama",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Damaso Alonso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Daoiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Darrical",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Darro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Darsena Comercial,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Datil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "David",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "David Bisbal,parque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Delfin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Delicias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Demostenes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Denia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Deogracias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Derechos Humanos,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Descanso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Diamante",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Diana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Dicha",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Diego De Siloe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Diezmo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Diezmo,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Diezmo,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Diezmo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Diezmo,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Dinamarca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Doctor Antonio Villaespesa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Doctor Araez Pacheco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Doctor Barraquer",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Doctor Campello",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Doctor Carracido",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Doctor Domingo Artes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Doctor Ferran",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Doctor Fleming",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Doctor Francisco Saiz Sanz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Doctor Gimenez Cangarg�elles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Doctor Gomez Campana,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Doctor Gomez Ulla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Doctor Gregorio Mara�on",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Doctor Guirado Egea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Doctor Leal De Ibarra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Doctor Martinez O�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Doctor Nu�ez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Doctor Paco Perez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Doctora Elena Lazaro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Doctora Milagros Rivera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Doctoral Carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Dolores Ibarruri",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Dolores Rodriguez Sope�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Dominguez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Don Antonio Franco Navarro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Don Fernando Roba Segura",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Don Francisco Saiz Sanz,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Don Jose Cordoba Caparros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Don Juan De Austria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Don Juan De Austria,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Don Marino Alvarez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Dos Soles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Dragon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Duda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Duende,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Duendecillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Duendes, De Los,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Duendes, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Duimovich",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Duimovich,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Dulcinea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Dulcinea,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Duquesa De Alba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Durcal,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ebano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Echegaray,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Eco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Eduardo Chillida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Eduardo Perez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Eduardo Santos Elola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Eduardo Vii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Egipto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Eguilior",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ejido, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Elena Pezzi,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Elio Antonio De Nebrija",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Embarcadero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Emilio Berruezo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Emilio Campra Bonillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Emilio Ferrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Emilio Perez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Emilio Viciana Gongora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Encantada Alta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Encinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Encuentro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Engendro,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Enix,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Enrique Cabezas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Enrique De Sierra Valenzuela,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Enrique Granados",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Enrique Iv De Francia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Entena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "E�e",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Eras, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Ermita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Escalinata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Escorpio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Escritor Jose Montero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Escritor Juan Lopez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Escuela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Escuela De Los Molinos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Escullos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Escultor Juan Cristobal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Escultor Juan Llaro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Eslora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Eslovaquia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Eslovenia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Esmeralda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Esmeralda,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Espa�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Espa�a,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Esparteros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Espejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Espejo Del Mar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Esperanza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Espiga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Espinar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Espinar,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Espino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Espliego",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Espronceda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Estacha",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Estacion,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Estacion Maritima,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Estacion, De La,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Estadio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Esta�o",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Estonia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Estrella",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Estrella Del Norte",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Estrella Errante",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Estrella Fugaz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Estrella Polar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Estribor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Etna",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Europa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Excusada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Extremadura",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Factoria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Faisan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fandango De Almeria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Faro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Faro, Del,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Fatima,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Fausto Garcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Fausto Garcia,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Fe, De La,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fe, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Federica Montseny",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Federico De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Federico Garcia Lorca (pares Del 48 Al 154)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Federico Garcia Lorca (impares Del 1 Al 123)  (pares Del 2 Al 46)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Federico Garcia Lorca (impares Del 125 Al Final)  (pares Del 156 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Federico Ii Rey De Prusia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Felipe Ii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Felipe Rinaldi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Felipe Viciana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Felipe Viciana,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Felix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fenix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Fernan Caballero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Fernandez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Fernandez,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Fernandez Bueso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Fernandez Caballero,malecon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fernandez De Aranda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Fernando De Herrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Fernando De Rojas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Fernando Fernan Gomez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ferrobus",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ferrocarril",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ficus",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Fines",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Finlandia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Fi�ana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Firmamento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Flauta Magica, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Flor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Flora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Florentino Casta�eda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Florentino De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Flores,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Florida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Floridablanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Foque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fosforito,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Fragata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Frambuesa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Francia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Francisca Jimenez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Francisco Aguilera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Francisco Campra Bonillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Francisco Cuenca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Francisco De Herrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Francisco Garcia Gongora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Francisco Jose",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Francisco Medina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Francisco Rabal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Francisco Sainz Sainz,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Francisco Tarrega",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Frank Zappa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Frascuelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Fray Bernardo Martinez Noval",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fray Juan De Portocarretero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fray Luis De Portocarrero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Freddi Mercury",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Freniche",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fresa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fresador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Fructuoso Perez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fuego",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Fuente De Los Molinos, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Fuente Victoria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Fuente, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Fuentecica",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Fuentecica (cuevas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Fuentecica Nueva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Fuentecica, Alta De La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Fuentenueva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Furia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Gabriel,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Gabriel Callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gabriel Pradal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Galan De Noche",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Galeno,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Galeon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Galera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Galicia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Galileo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Garcel, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Garcia,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Garcia Alix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Garcia Berlanga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Garcia Ca�as",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Garcia De Villarroel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Garcilaso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Garrofa, La,camping",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Garrofa, La,urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Garrucha",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gato",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Gaudi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Gaudi,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Gavilan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Gaviota",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Gayuba,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "General",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "General Casta�os",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "General Luque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "General Moscardo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "General Segura (impares Del 1 Al 5)  (pares Del 2 Al 6)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "General Segura (impares Del 7 Al Final)  (pares Del 8 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "General Tamayo (impares Del 1 Al 15)  (pares Del 2 Al 14)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "General Tamayo (impares Del 17 Al Final)  (pares Del 16 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Genova",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Genoveses",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Gerard Brenan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Gerona (impares Del 1 Al 15)  (pares Del 2 Al 18)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Gerona (impares Del 17 Al Final)  (pares Del 20 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Gezabel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Gibraltar Espa�ol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Gijon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gil Albert",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Gil Vicente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Gladiolo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gloria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Gloria Fuertes,parque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Goleta, De La,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Golondrina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gonzalez Gaitan,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Gonzalez Garbin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gordito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Gordote",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Gordote,cuevas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Gorrion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Goya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gracia, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Graciosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Grafito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Gran Capitan (impares Del 1 Al 49)  (pares Del 2 Al 96)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Gran Capitan (impares Del 51 Al Final)  (pares Del 98 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Gran Sol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Granada (impares Del 1 Al 87)  (pares Del 2 Al 84)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Granada (impares Del 89 Al Final)  (pares Del 86 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Granada Segundo Tramo,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Granate",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Granero,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Granito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Gravina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Grecia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Greco, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Greppi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Grifo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Grosella",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Guadalquivir",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Guadarrama",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Guadiana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Guadix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Guarda, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Guatemala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Gudar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Guinea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Guitarra, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Guitarrista Juan Arcas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Guitarrista Julian Arcas,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Gustavo Villapalos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Gutierrez De Cardenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Guzman",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Halcon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Haza De Acosta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Helice",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Hercules",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hermandad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hermandad De Donantes De Sangre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Hermano Rufino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Hermanos Machado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Hermanos Oliveros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Hermanos Pinzon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hermanos Quintero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hermanos Siret",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Hernan Cortes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Hernandez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Hiedra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Hierba Luisa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hierbabuena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hierro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Higuera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Hilarion Eslava,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Hileras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Hileros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Hinojo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Hipocrates",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Holanda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Horacio Ferrer,jardines",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Hornero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Horno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Hortensia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Hospicio Viejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Hospital",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Hoya,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Hoyo Coheteros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Hoyo Tres Marias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Huelva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Huercal Overa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Huerfanas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Huerta Cadenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Huerta La Salud",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Huerta Larga,parque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Huesca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Humilladero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Hungria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Ibiza,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ignacio Robles,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Imperio Argentina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Impresor Jose Bretones",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Impresores",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Indalianos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Independencia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Infancia,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Infanta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Infanta Cristina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Infanta Elena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Infante",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Ingeniero Lopez Rodriguez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ingenio,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ingles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ingles,prolongacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Iniesta,rambla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Inmaculada Concepion,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Instincion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Isaac Albeniz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Isaac Peral",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Isabel Duran",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isadora Duncan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla Cristina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4071",
+    "nombre": "Isla De Alboran,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Isla De Cabrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Isla De Dragonera,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Isla De Formentera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla De Hierro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla De Ibiza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla De La Gomera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla De Lanzarote",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Isla De Mallorca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Isla De Menorca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla Fuerteventura",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla La Graciosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla La Palma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Isla Perejil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Isla Tenerife",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Islas Columbretes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Isleta Del Moro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ismael",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Italia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jabali",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Jabega",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jacaranda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jacinto Benavente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jacinto De La Trinidad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jade",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jaen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jairan,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Jarcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jardin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jardin De La Hiedra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Jardin De Las Delicias,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jardin De Manolo Escobar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Jardin De Medina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jardin Del Mirador De La Torre,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jardinera,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jaul",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jaul Alto,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jaul Bajo,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Javier Sanz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Javier Verdejo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jerez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Jeronima Belver",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Jesus Cautivo De Medinaceli,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jesus De Perceval",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Jesus Durban Remon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jesus Luis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jilguero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jimenez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jimenez,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Joaquin Gazquez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Joaquin Peralta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Joaquin Santisteban",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Joaquin Vazquez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Jorge Guillen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jorge Juan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jorge Manrique,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Jose Angel Valente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Jose Artes  De Arcos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jose Asenjo Sedano,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jose Barrilado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jose Carreras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Jose Diaz Galvez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Jose Garat",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jose Hervas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jose Jimenez Lozano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jose Luis Sampedro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Jose Maria Acosta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jose Maria Artero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jose Maria De Pereda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jose Maria Martinez Ca�izares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jose Miguel Naveros,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jose Morales Abad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jose Pascual",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Jose Pozo Quesada,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Jose Saiz Carrillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Jovellanos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Joya De Los Molinos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Juan Antonio Bardem",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Juan Antonio Martinez  De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Juan Cassinello,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juan Cuadrado Ruiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juan Cuadrado Ruiz,prolongacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Juan De Garay",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Juan De La Cosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Juan De La Encina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juan De Mena,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juan De Salcedo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Juan Del Olmo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Juan Garcia Iranzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Juan Goytisolo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juan Ines De La Cruz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Juan Leal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Juan Lirola (impares Del 1 Al 15)  (pares Del 2 Al 12)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Juan Lirola (impares Del 17 Al Final)  (pares Del 14 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Juan Llaro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Juan Llopis Galvez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Juan Ortega Uribe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Juan Perez Perez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Juan Ramon Jimenez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Juan Ruiz De Apodaca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Juan Sebastian Bach",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Juan Sebastian Elcano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Juan Segura Murcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Juan Valverde Dominguez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juan Vizcaino Hernandez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Juan Xxiii",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Juana Ines De La Cruz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Judia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Juez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Juez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Juglar De Medinacelli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Julian Besteiro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Julio Alfredo Egea,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Julio Cortazar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Julio Gomez Relampaguito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Julio Vargas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Julio Verne",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Junco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Jupiter",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Labradores",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Lachamre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lago Sanabria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Laguna De Antela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Laguna De Ruidera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Lance",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lanjaron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lanjaron,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Largo Caballero (impares Del 1 Al 31)  (pares Del 2 Al 40)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Largo Caballero (impares Del 33 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Largo Oriol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Laroles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Lastre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Laudelino Gil Andres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Laujar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Laura Vicu�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Laurel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Lavadero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lavanda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lavanda, De,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lazaro Carreter",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Leandro Fernandez De Moratin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Lectoral Sirvent",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Leganitos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lentisco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Le�ador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Leo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Leon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Leon De Daudi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Leon Felipe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Leonor De Aquitania",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Lepanto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lepe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lerida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lerma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Letonia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Levante, De,muelle",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Libano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Libertad,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Libia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Liceo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lienzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Lijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lima",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Limneo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Limoneros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Limoneros,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Limoneros, De Los,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Limones,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lince",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Liron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Lituania",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Llanas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Llano Amarillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Llave",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Locomotora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lola Flores",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Loma Cardenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Loma, De La,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lomas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Lopan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Lope De Rueda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Lope De Vega",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lopez Cuadra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Lopez Falcon,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Loro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lubrin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Lucainena De Las Torres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Lucano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Lucero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Luces, De Las,paseo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Luchana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Luchana,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Lugano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Luis Braille",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Luis Bu�uel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Luis Ca�adas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Luis De Baeza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Luis De Pablo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Luis Siret,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Luis Vives",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Luisa Sala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Luna",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Luthiers",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Luxemburgo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Luz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Luzan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Lyon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Macael",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Macenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Macondo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Madre De Dios",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Madre Maria Aznar,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Madre Mazarelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Madre Sacramento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Madre Teresa De Calcuta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Madreperla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Madres De Plaza De Mayo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Madreselva, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Madrid,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Madro�o",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Maestria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maestro Algarra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maestro Amate",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maestro Barco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maestro Gaspar Vivas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maestro Juliani",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maestro Ortiz Villajos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Maestro Padilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maestro Rafael Florido,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maestro Richoly",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Maestro Rodriguez Espinosa,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Maestro Serrano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maframal,residencial",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Magallanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Magallanes,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Maga�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Magdalena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Magistral Dominguez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Magnesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Magnolia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Maimonides",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Majorero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Malaga,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Malaga,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Malague�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Maldonado Entrena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Malta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Malva, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Malvar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Malvarrosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mami, Del,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mami, El,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mamparra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mango",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Manolo Caracol,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Manolo El Churrero,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Manuel Angeles Ortiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Manuel Aza�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Manuel De Falla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Manuel Fraga Iribarne,glorieta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Manuel Gongora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Manuel Luque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Manuel Mendizabal Villalba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Manuel Perez Garcia,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Manuel Sanchez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Manuel Vazquez Montalban",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Manuel Vicente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Manueles, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Manzana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Manzanera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Manzanos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mar De Alboran",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mar Y Playa,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mar, Del,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Maravedi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Maravillas,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Marchales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Marchales,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Marcos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mare Nostrum,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Marea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Margarita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Maria Angeles Ortiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Maria Auxiliadora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria Callas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maria Casares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria De Padilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Maria Del Carmen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria Estuardo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Maria Guerrero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria Mallo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria Moliner",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria Montessori",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maria Tudor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Maria Zambrano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Mariana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mariana Pineda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mariano Alvarez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Marie Curie",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Marin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Marin,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Marin Cuevas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Marina Espa�ola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Marina, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Mario Benedetti",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mariposa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Maritimo,paseo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Marmoles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Marmolite",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Maromeros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Marques De Comillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Marques De Heredia,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Marques De Santillana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Marques Dos Fuentes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Marquez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Marruecos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Marte",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Martin Laborda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Martinete",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Martinez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Martinez Almagro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Martinez Campos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Martinez De Arostegui",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Martinez De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Maruja Mallo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mary Robinson",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Masnou,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Matadero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Matias Perez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Matronas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Medalla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Medico Francisco Perez Company,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mediterraneo, Del,avenida (impares Del 1 Al 169)  (pares Del 2 Al 180)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Mediterraneo, Del,avenida (impares Del 171 Al 251)  (pares Del 182 Al 300)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mediterraneo, Del,avenida (impares Del 253 Al Final)  (pares Del 302 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mejorana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Melancolia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Melilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Melilla,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Melino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Membrillo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Memorias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Memorias,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Menas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Mendez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Mendez Nu�ez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Menendez Pelayo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Menendez Pidal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Menta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Menta,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Merced, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Mercurio (impares Del 1 Al 55)  (pares Del 2 Al 42)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mercurio (impares Del 57 Al Final)  (pares Del 44 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Merida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Merino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Mesa Roldan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mesana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Meson Gitano,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Meteorito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mexico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mezquita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mezquita,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mica",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Miguel Angel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Miguel Angel Blanco,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Miguel De Molina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Miguel De Unamuno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Miguel Delibes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Miguel Hernandez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Miguel Rua (impares Del 1 Al 45)  (pares Del 2 Al 58)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Miguel Rua (impares Del 47 Al Final)  (pares Del 60 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Miguel Vizcaino Marquez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Miguel Vizcaino Marquez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Milagro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Millares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mimbre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mimosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mina,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Minas De Gador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Minero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Minor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Minor,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mirambel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Miras Romera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mirasol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mirlo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Miro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Misericordia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mistela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Moguer",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Moises Ruiz Tocon,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mojacar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Mojonera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Molinero,  El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Molineta,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Molino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Molino,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Molino Cepero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Molino De Los Diaz,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Molino Pepon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Molinos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Monaco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Moncada Calvache",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Monse�or Justo Mullor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Monse�or Justo Mullor,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Monsul",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Montalban",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Monte,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Montellano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Montenegro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Montserrat Caballe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mora De Rubielos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Moraito, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Morales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Morato",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Morato,colonia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Moreda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Moreda,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Moreros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Moro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mosco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Mosto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Motril",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Muelle",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Muelle,cuesta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Muelle De La Rivera,lugar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Mula",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Mula,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Muley",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mulhacen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Mu�oz,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Murcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Murcia,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Murcia,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Murillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Musica",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Nacimiento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Nador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Naranjos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Narciso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Nardos, De Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Narvaez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Naturaleza, De La,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Navarra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Navarro Darax",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Navarro Rodrigo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Navegante",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Navel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Nazaret",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Negras, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Neptuno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nereidas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nicaragua",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Nicolas Salmeron, De,parque (impares Del 1 Al 9)  (pares Del 2 Al 8)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Nicolas Salmeron, De,parque (impares Del 11 Al Final)  (pares Del 10 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nieves, De Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nijar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Nijar-los Molinos,carretera (pares Del 2 Al 394)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nijar-los Molinos,carretera (pares Del 396 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nijar-los Molinos,carretera (impares Del 1 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ni�a De La Puebla, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Ni�a, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ni�o Hermoso,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ni�o Jesus,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ni�os,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ni�os Cantores",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ni�os, De Los,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nisperos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Noel Claraso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Noria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Norte,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Noruega",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Nuestra Se�ora De Araceli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nuestra Se�ora De Gador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nuestra Se�ora De La Cabeza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nuestra Se�ora De La Luz,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Nuestra Se�ora De Las Mercedes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Nuestra Se�ora De Montserrat",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Nuestra Se�ora Del Amor Y La Esperanza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Nuestra Se�ora Del Carmen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Nuestra Se�ora Del Mar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nuestra Se�ora Del Pilar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nuestra Se�ora Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nuestra Se�ora Del Rio,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Nuestra Se�ora Del Saliente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Nueva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Alcazaba",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Almeria,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Nueva Andalucia,parque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Bayana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Carretas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Nueva De Santa Ana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Imagen",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Musa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Nueva Sortina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Nu�ez,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Nu�ez De Balboa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Obispado",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Obispo Alfonso Rodenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Obispo Orbera,rambla (pares Del 38 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Obispo Orbera,rambla (impares Del 1 Al Final)  (pares Del 2 Al 36)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Obrador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Oceania",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ocho De Marzo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ocho De Mayo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ocre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Octavio Aguilar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ohanes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Olifante Blanco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Oliveros, De,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Olivo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Olmo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Olmos, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Olula De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Olula Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Olula Del Rio,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Olvido",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Omeya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Once Septiembre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Onice",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Onu",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Opalo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Opera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Orbaneja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Orbaneja,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Oria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Oro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Orozcos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Orquidea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ortega Y Gasset",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Osa Mayor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Osa Menor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Otelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Oviedo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Pablo Cazard,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Pablo Iglesias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pablo Neruda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pablo Ruiz Picasso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Padre Alfonso Torres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Padre Burlo, Del,glorieta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Padre Juan Aguilar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Padre Luque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Padre Mendez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Padre Payan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Padre Picazzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Padre Santaella",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Padre Serafin,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Padre Tapia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Palangre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Palas Atenea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Palma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Palmer, El,urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Palmera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Palmera,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Palmera (fuentecica)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Palmera Del Barrio Alto,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Palomares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Palomas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Palomas,barranco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Palomas,cuevas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Palomas,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Palos De La Frontera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Palos De Moguer",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pamplona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pancho",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pancrudo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Papa Juan Pablo Ii,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Parada Matiana,paraje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Paraiso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Parque Del Generalife,parque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Parque Gloria Fuertes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Parque Nicolas Salmeron (impares Del 1 Al 9)  (pares Del 2 Al 8)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Parque Nicolas Salmeron (impares Del 11 Al Final)  (pares Del 10 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Parque Ramon Castilla Perez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Parra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Parra,urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Parroco Don Alfredo Gallego Fabregas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pastor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Paterna Del Rio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Patio Barquillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Patio Calandria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Patio Cantareros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Patio Cartegenera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Patio Dulcinea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Patio Felipe Viciana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Patio Francisco De Herrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Patio Gordito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Patio Miguel Naveros",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Patio Pozo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Patio Rosa Felices",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Patio San Andres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Patio San Lorenzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Patio Sicardo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Patio Verbena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Patio Zurgena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Pato",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Pato,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Patron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pavarotti",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pavia,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Paz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Pechina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pecho (cuevas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pedro De Mendoza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pedro I De Prusia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pedro Jover",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Pedro Ledesma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Pedro Machuca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pedro Salinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Pedro Sarmiento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Peineta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Pelayo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pendiente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pe�icas De Clemente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pe�on De La Reina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pepe Isbert",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Perales, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Perdiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Perea",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Pereda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Perez Villalta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Perez-galdos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Periodista Manuel Falces Aznar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Periodistas, De Los,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Perpetas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Perro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Peru,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pescador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pescadores,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pesquero Barbara Y Jaime",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Petalo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Petenera,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Petrel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Petunia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Pi Y Margall",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pico Canteras Viejas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Picon Molina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Picos, De Los,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Piedras,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Piedras,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pilar,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pilar Miro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Pilares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pilarica, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Pilones",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Pilones,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Pilones,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Pinatar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pinito Del Oro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pino,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Pinta, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pintor Diaz Molina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Fortuny",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Pintor Gines Parra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Juan Gris",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Martinez Abades",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pintor Martinez De La Vega",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Rivera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Romero De Torres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Rosales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Sorolla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Verdugo Landi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Vicente Lopez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pintor Zabaleta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Pintor Zuloaga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Pio Baroja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pipa, De La,paseo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Piscis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pitagoras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Pitas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pizarro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Placido Domingo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Placido Fernandez Viaga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Planetas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Plata, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Platano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Platon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Playa Ciudad Luminosa,paseo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pleamar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Pleguezuelo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Pleyade",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Plomo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Plus Ultra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Alvarez De Cienfuegos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Alvarez De Sotomayor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Blas De Otero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Poeta Durban",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Poeta Fermin Gil",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Fernando Herrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Gonzalo De Berceo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Infante Don Juan Manuel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Poeta Jimenez Aquino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Poeta Jose Hierro,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Juan Boscan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Luis Cernuda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Luis De Gongora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Poeta Paco Aquino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Poeta Vicente Aleixandre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Poeta Villaespesa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Poleo,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Policia Francisco Garcia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Policia Juan Rueda Alcaraz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Poligono La Mezquita",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Polka",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Polonia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Polvorines",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Polvorines,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ponce Cabrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Poniente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Poniente, De,muelle",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Portugal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Posada Del Mar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Posito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Potera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Potera,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Pozo, El,cuevas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Presbitero Emilio Antequera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Presbitero Ortega Barrios",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Prim",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Primavera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Primero De Mayo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Principe Felipe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Profesor Emilio Langle",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Profesor Escobar Manzano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Profesor Lopez Neyra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Profesor Morales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Profesor Mulian",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Pueblo, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Puerta De Purchena,plaza (impares Del 1 Al 11)  (pares Del 2 Al 8)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Puerta De Purchena,plaza (impares Del 13 Al Final)  (pares Del 10 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Puerta Del Mar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Puerta Del Socorro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Pulpitillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Punta Entina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Punta Negra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Puntal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Purchena (piedras Redondas)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Quemadero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Quemadero,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Quesada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Quevedo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Quinta Avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Quintana (impares Del 1 Al 9)  (pares Del 2 Al 4)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Quintana (impares Del 11 Al Final)  (pares Del 6 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Quinto Pino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Rafael Alberti",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Rafael Calatrava",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Rafael Farina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Rafael Martinez Sanson",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Rafaela Jimenez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ramiro De Maeztu",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ramon Y Cajal,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Ramos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ravel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rayo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Real (impares Del 1 Al 27)  (pares Del 2 Al 24)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Real (impares Del 29 Al 67)  (pares Del 26 Al 58)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Real (impares Del 69 Al Final)  (pares Del 60 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Real Del Barrio Alto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Reconquista, De La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Redonda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Redondo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Reducto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Regaliz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Regenta, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Regimiento De La Corona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Regocijos (impares Del 1 Al 139)  (pares Del 2 Al 118)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Regocijos (impares Del 141 Al Final)  (pares Del 120 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Reina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Reina Astrid",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Reina Regente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Reinaldos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Reino Unido",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Reja, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Relampago",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Remo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Republica Argentina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Republica Checa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Republica Dominicana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Resaca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Residencial Villa Maria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Restoy",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Retama,prolongacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Retama (cortijo Grande)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Retama (cruz De Caravaca)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Reverenda Madre Maria Micaela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rey Chico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rey Moro, Del,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rey Sol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Reyes Catolicos (impares Del 1 Al 21)  (pares Del 2 Al 22)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Reyes Catolicos (impares Del 23 Al Final)  (pares Del 24 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Rezandero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Ribera De Las Almadrabillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Ricardos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Rincon Antonio Serrano Carmona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Rincon De Espronceda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rio Almazora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rio Andarax",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rio Chico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rio Grande",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rioja",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Rivera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Roble",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rocio, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Roda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Rodrigo De Triana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Rodrigo Vivas Miras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Roma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Romances",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Romanos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Romeria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Romero",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Romero,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Romero,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Ronda,carretera (pares Del 2 Al 214)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Ronda,carretera (impares Del 1 Al 57)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Ronda,carretera (impares Del 59 Al 289)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ronda,carretera (impares Del 291 Al Final)  (pares Del 216 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Roquetas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Roquetas De Mar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rosa Chacel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Rosa Felices",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rosa Luxemburgo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rosalia De Castro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Rosario",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Rossini",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Rostrico",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ruanda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Ruano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Rubi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ruda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Rueda Lopez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Ruise�or",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Rumor,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ruperto Chapi",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sabina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sabinal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sacromonte",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Safo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Sagrada Familia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Sagunto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sahara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Salamanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Sales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Salinas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Salitre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Salud",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Salvador Rueda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Salvador Torres Cartas,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Salvador, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Salvia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Andres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Anton",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Anton,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Anton,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Antonio De Los Molinos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "San Antonio De Los Molinos,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Benito",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Blas, Malecon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Cristobal,loma",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Cristobal, De,cerro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Cristobal, De,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Diego De Alcala",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Eduardo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Eugenio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Felipe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "San Francisco De Asis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "San Francisco De Sales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "San Francisco Javier",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Francisco Solano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Guillermo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Ildefonso",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Indalecio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "San Isidro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "San Isidro, De,parque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Joaquin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Joaquin,cuevas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "San Jose,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "San Jose Obrero (impares Del 1 Al 75)  (pares Del 2 Al 72)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Jose Obrero (impares Del 77 Al Final)  (pares Del 74 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Juan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "San Juan Bosco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "San Juan De Avila",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Juan De La Cruz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "San Leonardo (impares Del 1 Al 13)  (pares Del 2 Al 12)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "San Leonardo (impares Del 15 Al Final)  (pares Del 14 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Lorenzo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Luis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Luis,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Luis,paseo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Luis,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Luis, Primera,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Luis, Segunda,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Marino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Martin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "San Miguel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "San Miguel,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "San Miguel Arcangel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "San Pedro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "San Pedro,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Rafael",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Roman",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Roque,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Roque, Cuevas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Roque, De,rincon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "San Sebastian,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "San Telmo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "San Valentin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Sanchez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Sanchez,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sanchez Albornoz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Sanchez Toca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Sancho",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Santa Ana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Santa Barbara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Santa Cruz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Santa Elena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Santa Elena Alta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Santa Fe,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Santa Filomena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Santa Isabel,avenida (impares Del 1 Al 23)  (pares Del 2 Al 32)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Santa Isabel,avenida (impares Del 25 Al Final)  (pares Del 34 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Santa Isabel,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Santa Laura",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Santa Maria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Santa Maria,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Santa Maria (paseo De La Caridad)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Santa Marta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Santa Matilde",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Santa Rita,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Santa Rosa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Santander",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Santiago",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Santiago Vergara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Santisima Trinidad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Santo Domingo El Sabio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Santo Jose Maria Rubio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Santos Zarate",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Saponaria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Sargento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Saturno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sauce",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Segovia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Seguirillas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Seguirillas,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Segura",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Seneca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Senes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Serafin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Sereno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sergio Leone",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Seron,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Serrano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Severo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Severo Ochoa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sevilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sevillanas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sicardo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Siempreviva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Alhamilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sierra Alhamilla,carretera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Almagrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Bacares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sierra Cabrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Campillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Casta�o",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Benahadux",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Enix",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Filabres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Fondon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Fuente Victoria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Gador",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Gata",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Gredos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Laujar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Lucar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Maria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Monteagut",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Monterrey",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Santa Cruz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Seron",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra De Tabernas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Del Pino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sierra Morena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sierra Nevada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Siete Aguas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Silencio (impares Del 1 Al 51)  (pares Del 2 Al 58)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Silencio (impares Del 53 Al Final)  (pares Del 60 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Siloy",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Simon Bolivar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Siria",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sismologica,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sismologica,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Socali�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Socorro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Socrates",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Sol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sol De Almeria,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sol Y Playa,urbanizacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Solana",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Solano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Soldado Espa�ol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Soleares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Soledad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Solis",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Somotin",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "So�ada",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sor Petra",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Sor Policarpa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sorbas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Sorpresa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sorrento",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Soto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Sufli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Suiza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Sur",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Sur,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Suspiro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tabernas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Taberno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Talgo,pasaje",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tangos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tarajal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Taranto",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tarragona",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tarrasa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tartesos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tauro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Teatro, Del",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Teatro, Del,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Teddy Boys",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tejar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tejares,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tejares,carrera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tejas, Las",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Telemann",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Telescopio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Tenor Iribarne",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Teresa Berganza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Teresa De Avila",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Terque",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Terreros, Los",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Terriza (impares Del 1 Al 33)  (pares Del 2 Al 40)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Terriza (impares Del 35 Al Final)  (pares Del 42 Al Final)",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Teruel",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Tesoro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tic",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Tiendas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tientos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tierra Sapida, De La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tierra, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tijola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Timon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Tirso De Molina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Toledo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tolerancia, De La,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tomas Breton",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tomillo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tonas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Topacio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Torno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Toros (circunvalacion),plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Torrecardenas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Torrecardenas,camping",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Torrecardenas,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Torrente Ballester",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Torreones",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Torres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Torres Naharro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Torrijos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tortola",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Trafalgar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Trai�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Trajano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Traviata, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Traya",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Trebol",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tres",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Tres Rosas,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Tres Rosas, De Las,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Trigales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Trigueras",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Trilla",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Trincheras, De Las,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Trinidad Cuartara",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Trinidad Cuartara, De,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Trinquete",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Triunfo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Trueno",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Trueno,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tucan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Tuna",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Tunez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Turolense",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Turquesa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Turquia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Tutores",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ubeda",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Ulloa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Ulpiano Diaz,circunvalacion",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Ultimo Tren, El",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Unesco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Union, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Universidad De Texas",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Universo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Urano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Urrutia,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Usandizaga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Uva",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vagon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Valdelinares",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Valderrobles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Valdivia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Valdivia,callejon",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Valdivia,patio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Valdivia,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Valencia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Valero Rivera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Valle De Aran",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Valle Inclan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Varones",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Vecina Concha Ruiz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vega,travesia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vega De Aca,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vega, La",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Veinticuatro De Julio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Veintiocho De Febrero,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Vela Blanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Velasco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Velazquez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Veleta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Velez Blanco",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Velez Rubio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Vendimia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Ventura Rodriguez",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Venus",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vera",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Verbena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Verbena,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Verdiales",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Verdolaga",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vicar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4004",
+    "nombre": "Vicario Andres Perez Molina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Vicario Ortega",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4005",
+    "nombre": "Vicente",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Victor Hugo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Victoria Camps",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Victoria De Los Angeles",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Victoria Kent",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Viejo,camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vigo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Vilchez,avenida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Villa Artes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Villa Bataan",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Villa Marina",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Villablanca,residencial",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Villamaria,residencial",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Villaricos",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Vinaroz",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Vinuesa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Vi�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Violeta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen Blanca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Virgen De Areceli",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen De Bego�a",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen De Guadalupe",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen De La Cinta",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Virgen De La Esperanza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Virgen De La Estrella",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Virgen De La Soledad",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Virgen De Las Angustias",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Virgen De Lourdes",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen De Monteagud",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Virgen De Montemayor",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen De Siracusa",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Virgen Del Camino",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Virgen Del Mar,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen Del Pilar",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen Del Rocio",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen Macarena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Virgen Morena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Visiedo",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Vista Alegre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Vistalegre",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4003",
+    "nombre": "Vivas Perez,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4006",
+    "nombre": "Vizdomine",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Vulcano",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Yade",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Yerbabuena",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Yuca",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Yugoslavia",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Zafiro",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Zagal",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Zaira",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Zaire",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Zamora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4007",
+    "nombre": "Zapillo,plaza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4001",
+    "nombre": "Zaragoza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4008",
+    "nombre": "Zarza",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Zarzamora",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Zarzuela",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Zeus",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4002",
+    "nombre": "Zoraida",
+    "provinciaid": 3
+  },
+  {
+    "cp": "4009",
+    "nombre": "Zurgena",
+    "provinciaid": 3
+  }
 ]
 
 class CiudadSeeder {
