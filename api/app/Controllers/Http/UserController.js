@@ -46,6 +46,11 @@ class UserController {
     }
     await User.query().where('_id', params.tienda_id).update({ status: 2 })
     let user = (await User.find(params.tienda_id)).toJSON()
+    let mail = await Email.sendMail('team@novatelde.com', 'Registro Exitoso', `
+          <center>
+            <img src="https://app.novatelde.com/membresiaad.jpg" alt="logo" />
+          </center>
+          `)
     response.send(user)
   }
 
@@ -178,7 +183,7 @@ class UserController {
       //console.log(user)
       let mail = await Email.sendMail(user.email, 'Registro Exitoso', `
           <center>
-            <img src="https://app.novatelde.com/registro.png" alt="logo" />
+            <img src="https://app.novatelde.com/registrocliente.jpg" alt="logo" />
           </center>
           `)
           // ${user.name} ${user.lastName}
@@ -298,7 +303,11 @@ class UserController {
       if (!profilePic2.moved()) {
         return profilePic2.error()
       }
-
+      let mail = await Email.sendMail(user.email, 'Registro Exitoso', `
+          <center>
+            <img src="https://app.novatelde.com/registrocliente.jpg" alt="logo" />
+          </center>
+          `)
       response.send(user)
     }
   }

@@ -11,6 +11,7 @@ const Pedido = use('App/Models/Compra')
 const Comentario = use('App/Models/Comentario')
 const Monedero = use('App/Models/Monedero')
 const Direccion = use('App/Models/Direccione')
+const User = use('App/Models/User')
 const fs = require('fs')
 const { validate } = use("Validator")
 var randomize = require('randomatic')
@@ -210,6 +211,18 @@ class ProductoController {
       type: 1,
       monto: pedido.totalValor
     }
+    const tenda = (await User.find(data.tienda_id))
+    const cli = (await User.find(pedido.cliente_id))
+    let mail = await Email.sendMail(tenda.email, 'Te Realizaron una Compra', `
+          <center>
+            <img src="https://app.novatelde.com/tecompraron.jpg" alt="logo" />
+          </center>
+          `)
+          let mail = await Email.sendMail(cli.email, 'Compra Realizada Con Exito', `
+          <center>
+            <img src="https://app.novatelde.com/compraexitosacliente.jpg" alt="logo" />
+          </center>
+          `)
     var crearMoneda = await Monedero.create(moneda)
     var productos = (await Compras.query().where({pedido_id: pedido._id}).fetch()).toJSON()
     for (let i = 0; i < productos.length; i++) {
@@ -258,11 +271,23 @@ class ProductoController {
     }
   }
 
-  async updateCompra ({ params, request, response }) {
+  async updateCompra ({ params, request, response, auth }) {
     var stu = request.all().status
     const pedido =  await Pedido.query().where('_id', params.id_pedido).first()
+    const cliente = await User.query().where('_id', pedido.cliente_id).first()
     pedido.status = stu
     pedido.save()
+    const tenda = (await auth.getUser()).toJSON()
+     let mail = await Email.sendMail(tenda.email, 'Enviaste el Producto', `
+          <center>
+            <img src="https://app.novatelde.com/envioproducto.jpg" alt="logo" />
+          </center>
+          `)
+          let mail = await Email.sendMail(cliente.email, 'Envio de Producto', `
+          <center>
+            <img src="https://app.novatelde.com/enviocliente.jpg" alt="logo" />
+          </center>
+          `)
     response.send(pedido)
   }
 

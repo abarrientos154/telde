@@ -60,6 +60,16 @@ class MonederoController {
       status: 'Pendiente',
       monto: monto
     }
+    let mail = await Email.sendMail(user.email, 'Retiro Solicitado', `
+          <center>
+            <img src="https://app.novatelde.com/retirosolicitado.jpg" alt="logo" />
+          </center>
+          `)
+     let mail = await Email.sendMail('team@novatelde.com', 'Retiro Solicitado', `
+          <center>
+            <img src="https://app.novatelde.com/retiroadmin.jpg" alt="logo" />
+          </center>
+          `)
     var crearMoneda = await Monedero.create(moneda)
     response.send(true)
   }
@@ -312,6 +322,13 @@ class MonederoController {
    * @param {Response} ctx.response
    */
   async update ({ params, request, response }) {
+    const sol =  await Monedero.query().where('_id', params.id).first()
+    const tenda =  await Monedero.query().where('_id', sol.tienda_id).first()
+    let mail = await Email.sendMail(tenda.email, 'Confirmación de Retiro', `
+          <center>
+            <img src="https://app.novatelde.com/confirmacionretiro.jpg" alt="logo" />
+          </center>
+          `)
     let aprobar = await Monedero.query().where({_id: params.id}).update({status: 'Aprobado'})
     response.send(aprobar)
   }
