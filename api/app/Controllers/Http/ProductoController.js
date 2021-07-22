@@ -218,7 +218,7 @@ class ProductoController {
             <img src="https://app.novatelde.com/tecompraron.jpg" alt="logo" />
           </center>
           `)
-          let mail = await Email.sendMail(cli.email, 'Compra Realizada Con Exito', `
+          let mail2 = await Email.sendMail(cli.email, 'Compra Realizada Con Exito', `
           <center>
             <img src="https://app.novatelde.com/compraexitosacliente.jpg" alt="logo" />
           </center>
@@ -283,7 +283,7 @@ class ProductoController {
             <img src="https://app.novatelde.com/envioproducto.jpg" alt="logo" />
           </center>
           `)
-          let mail = await Email.sendMail(cliente.email, 'Envio de Producto', `
+          let mail2 = await Email.sendMail(cliente.email, 'Envio de Producto', `
           <center>
             <img src="https://app.novatelde.com/enviocliente.jpg" alt="logo" />
           </center>

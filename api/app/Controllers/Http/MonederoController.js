@@ -65,7 +65,7 @@ class MonederoController {
             <img src="https://app.novatelde.com/retirosolicitado.jpg" alt="logo" />
           </center>
           `)
-     let mail = await Email.sendMail('team@novatelde.com', 'Retiro Solicitado', `
+     let mail2 = await Email.sendMail('team@novatelde.com', 'Retiro Solicitado', `
           <center>
             <img src="https://app.novatelde.com/retiroadmin.jpg" alt="logo" />
           </center>
