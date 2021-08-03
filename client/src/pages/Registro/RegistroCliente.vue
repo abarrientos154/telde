@@ -72,8 +72,9 @@
                 </template>
               </q-input>
             </div>
-            <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
-              <q-checkbox v-model="terminos_condiciones" :class="textColor" @input="terminos_condiciones ? textColor = 'text-black' : ''" label="Acepto término y condiciones de uso*" />
+            <div class="row items-center no-wrap col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <q-checkbox v-model="terminos_condiciones" @input="terminos_condiciones ? textColor = 'text-black' : ''" />
+              <div :class="textColor" @click="getFile()">Acepto término y condiciones de uso*</div>
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"
@@ -166,6 +167,7 @@
 </template>
 
 <script>
+import { openURL } from 'quasar'
 import { required, email, sameAs, maxLength, minLength } from 'vuelidate/lib/validators'
 import { mapMutations } from 'vuex'
 export default {
@@ -208,6 +210,9 @@ export default {
   },
   methods: {
     ...mapMutations('generals', ['login']),
+    getFile () {
+      openURL('https://app.novatelde.com/pdf_condiciones.pdf')
+    },
     onSubmit () {
       this.$q.loading.show()
       this.$api.post('login', this.form).then(res => {

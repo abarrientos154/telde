@@ -137,6 +137,10 @@
                 </div>
               </div>
             </q-scroll-area>
+            <div class="row items-center no-wrap col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
+              <q-checkbox v-model="terminos_condiciones" @input="terminos_condiciones ? textColor = 'text-black' : ''" />
+              <div :class="textColor" @click="getFile()">Acepto término y condiciones de uso*</div>
+            </div>
             <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"
               @click="siguiente()" />
@@ -335,6 +339,7 @@
 </template>
 
 <script>
+import { openURL } from 'quasar'
 import { required, requiredIf, email, sameAs, maxLength, minLength } from 'vuelidate/lib/validators'
 export default {
   data () {
@@ -344,6 +349,7 @@ export default {
       password: '',
       repeatPassword: '',
       textColorBanco: 'text-black',
+      textColor: 'text-black',
       img: null,
       perfil: null,
       perfilImg: null,
@@ -351,6 +357,7 @@ export default {
       portadaImg: null,
       isPwd: true,
       confirma_datos: false,
+      terminos_condiciones: false,
       form: {
         dias: [],
         subCategoria: [],
@@ -417,6 +424,7 @@ export default {
       codigo_iban: { required },
       banco: { required }
     },
+    terminos_condiciones: { required },
     confirma_datos: { required },
     repeatPassword: { sameAsPassword: sameAs('password') },
     password: { required, maxLength: maxLength(256), minLength: minLength(6) },
@@ -427,6 +435,9 @@ export default {
     this.getProvincia()
   },
   methods: {
+    getFile () {
+      openURL('https://app.novatelde.com/pdf_condiciones.pdf')
+    },
     siguiente () {
       this.$v.portada.$touch()
       this.$v.perfil.$touch()
@@ -437,7 +448,11 @@ export default {
       this.$v.form.descripcion.$touch()
       this.$v.form.categoria.$touch()
       this.$v.form.subCategoria.$touch()
-      if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
+      this.$v.terminos_condiciones.$touch()
+      if (!this.terminos_condiciones) {
+        this.textColor = 'text-red'
+      }
+      if (!this.$v.portada.$error && !this.$v.perfil.$error && !this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error && this.terminos_condiciones) {
         this.slide = 2
       } else {
         this.$q.notify({
