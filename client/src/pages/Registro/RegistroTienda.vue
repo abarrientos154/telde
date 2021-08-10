@@ -139,7 +139,7 @@
             </q-scroll-area>
             <div class="row items-center no-wrap col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <q-checkbox v-model="terminos_condiciones" @input="terminos_condiciones ? textColor = 'text-black' : ''" />
-              <div :class="textColor" @click="getFile()">Acepto término y condiciones de uso*</div>
+              <div :class="textColor + ' cursor-pointer'" @click="getFile()">Acepto término y condiciones de uso*</div>
             </div>
             <div class="col-xs-11 col-sm-6 col-md-6 col-lg-6 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"

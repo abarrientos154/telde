@@ -17,7 +17,6 @@
                 <div class="absolute-center bg-transparent text-center" style="width: 100%">
                   <div class="absolute-center" style="z-index:1">
                     <q-file borderless v-model="perfil" class="button-subir" @input="changePerfil()" accept=".jpg, image/*"
-                      @blur="$v.perfil.$touch()"
                     >
                       <q-avatar class="absolute-center cursor-pointer">
                         <q-icon name="file_upload" color="white" class="absolute-center" />
@@ -27,7 +26,7 @@
                 </div>
               </q-img>
             </div>
-            <div :class="!$v.perfil.$error ? 'text-grey-7' : 'text-negative'" class="text-bold text-caption"> SUBE UNA FOTO </div>
+            <div class="text-grey-7 text-bold text-caption"> SUBE UNA FOTO </div>
           </div>
           <div class="row justify-center q-mt-md">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -74,7 +73,7 @@
             </div>
             <div class="row items-center no-wrap col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
               <q-checkbox v-model="terminos_condiciones" @input="terminos_condiciones ? textColor = 'text-black' : ''" />
-              <div :class="textColor" @click="getFile()">Acepto término y condiciones de uso*</div>
+              <div :class="textColor + ' cursor-pointer'" @click="getFile()">Acepto término y condiciones de uso*</div>
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 row items-center justify-center q-my-lg">
               <q-btn no-caps label="Siguiente" color="primary" size="lg" style="border-radius: 25px; width: 80%"
@@ -202,8 +201,7 @@ export default {
     },
     terminos_condiciones: { required },
     repeatPassword: { sameAsPassword: sameAs('password') },
-    password: { required, maxLength: maxLength(256), minLength: minLength(6) },
-    perfil: { required }
+    password: { required, maxLength: maxLength(256), minLength: minLength(6) }
   },
   mounted () {
     this.getProvincia()
@@ -230,11 +228,10 @@ export default {
       this.$v.terminos_condiciones.$touch()
       this.$v.repeatPassword.$touch()
       this.$v.password.$touch()
-      this.$v.perfil.$touch()
       if (!this.terminos_condiciones) {
         this.textColor = 'text-red'
       }
-      if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && !this.$v.perfil.$error && this.terminos_condiciones) {
+      if (!this.$v.form.$error && !this.$v.password.$error && !this.$v.repeatPassword.$error && this.terminos_condiciones) {
         this.form.password = this.password
         this.slide = 2
       } else {
@@ -253,7 +250,12 @@ export default {
         })
         this.direccion.principal = true
         var formData = new FormData()
-        formData.append('perfil', this.perfil)
+        if (this.perfil) {
+          this.form.perfil = true
+          formData.append('perfil', this.perfil)
+        } else {
+          this.form.perfil = false
+        }
         formData.append('dat', JSON.stringify(this.form))
         formData.append('dir', JSON.stringify(this.direccion))
         await this.$api.post('registrar_cliente', formData, {

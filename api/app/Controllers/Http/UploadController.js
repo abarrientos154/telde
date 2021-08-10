@@ -106,6 +106,8 @@ class UploadController {
 
   async subirPerfil ({ request, response, params, auth }) {
     let user = await auth.getUser()
+    user.perfil = true
+    user.save()
     let id = params.id
     var status
     var profilePic = request.file('perfil', {

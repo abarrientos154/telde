@@ -199,7 +199,11 @@ export default {
       await this.$api.get('user_info').then(res => {
         if (res) {
           this.form = res
-          this.baseu = env.apiUrl + '/perfil_img/' + res._id
+          if (res.perfil === false) {
+            this.baseu = 'noimg.png'
+          } else {
+            this.baseu = env.apiUrl + '/perfil_img/' + res._id
+          }
           this.$q.loading.hide()
         } else {
           this.$q.loading.hide()

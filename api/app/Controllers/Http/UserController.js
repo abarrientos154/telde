@@ -169,16 +169,18 @@ class UserController {
 
       const profilePic = request.file('perfil', {
       })
-      if (Helpers.appRoot('storage/uploads/perfil')) {
-        await profilePic.move(Helpers.appRoot('storage/uploads/perfil'), {
-          name: user._id.toString(),
-          overwrite: true
-        })
-      } else {
-        mkdirp.sync(`${__dirname}/storage/Excel`)
-      }
-      if (!profilePic.moved()) {
-        return profilePic.error()
+      if (profilePic) {
+        if (Helpers.appRoot('storage/uploads/perfil')) {
+          await profilePic.move(Helpers.appRoot('storage/uploads/perfil'), {
+            name: user._id.toString(),
+            overwrite: true
+          })
+        } else {
+          mkdirp.sync(`${__dirname}/storage/Excel`)
+        }
+        if (!profilePic.moved()) {
+          return profilePic.error()
+        }
       }
       //console.log(user)
       let mail = await Email.sendMail(user.email, 'Registro Exitoso', `
