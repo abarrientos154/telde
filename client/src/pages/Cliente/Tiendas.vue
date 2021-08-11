@@ -83,7 +83,7 @@ export default {
       allTiendas: [],
       tiendas: [],
       favoritoData: [],
-      categorias: ['Comida', 'Tienda'],
+      categorias: ['Comida', 'Desayunos', 'Meriendas', 'Tienda'],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
       subCategorias: []
     }
@@ -160,7 +160,7 @@ export default {
             } else {
               return v
             }
-          } else if (v.categoria === 'Tienda') {
+          } else {
             return v
           }
         }

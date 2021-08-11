@@ -351,7 +351,7 @@ export default {
         opacity: 0
       },
       images: [],
-      optionsCategoria: ['Comida', 'Tienda'],
+      optionsCategoria: ['Comida', 'Desayunos', 'Meriendas', 'Tienda'],
       optionsSubCategorias: [],
       subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
       optionsProvincias: [],
