@@ -42,65 +42,134 @@
                         </q-img>
                     </div>
                 </div>
-                <div class="col-xs-7 col-sm-12 col-md-7 col-lg-7 col-xl-7">
-                    <div style="width:100%">
-                        <div class="text-subtitle2">Horario de atención</div>
-                        <div class="row justify-between">
-                            <q-input borderless readonly dense v-model="form.hapertura" style="width:45%" label="Apertura"
-                            error-message="Requerido" :error="$v.form.hapertura.$error" @blur="$v.form.hapertura.$touch()">
-                            <template v-slot:prepend>
-                              <q-icon name="access_time" class="cursor-pointer">
-                                <q-popup-proxy transition-show="scale" transition-hide="scale">
-                                    <q-time v-model="form.hapertura">
-                                    <div class="row items-center justify-between">
-                                      <div class="text-black text-bold">Hora de apertura</div>
-                                      <q-btn v-close-popup label="Guardar" color="primary" flat />
-                                    </div>
-                                    </q-time>
-                                </q-popup-proxy>
-                              </q-icon>
-                            </template>
-                            </q-input>
-                            <q-input borderless readonly dense v-model="form.hcierre" style="width:45%" class="q-ml-sm" label="Cierre"
-                            error-message="Requerido" :error="$v.form.hcierre.$error" @blur="$v.form.hcierre.$touch()">
-                            <template v-slot:prepend>
-                              <q-icon name="access_time" class="cursor-pointer">
-                                <q-popup-proxy transition-show="scale" transition-hide="scale">
-                                    <q-time v-model="form.hcierre">
-                                    <div class="row items-center justify-between">
-                                      <div class="text-black text-bold">Hora de cierre</div>
-                                      <q-btn v-close-popup label="Guardar" color="primary" flat />
-                                    </div>
-                                    </q-time>
-                                </q-popup-proxy>
-                              </q-icon>
-                            </template>
-                            </q-input>
-                        </div>
-                    </div>
-                    <div style="width:100%">
-                        <q-select borderless dense v-model="form.dias" :options="optionsDias" label="Días de atencion" multiple emit-value map-options
-                        error-message="Requerido" :error="$v.form.dias.$error" @blur="$v.form.dias.$touch()" >
-                          <template v-slot:option="{ itemProps, itemEvents, opt, selected, toggleOption }">
-                            <q-item
-                                v-bind="itemProps"
-                                v-on="itemEvents"
-                            >
-                                <q-item-section>
-                                <q-item-label v-html="opt.label" ></q-item-label>
-                                </q-item-section>
-                                <q-item-section side>
-                                <q-checkbox :value="selected" @input="toggleOption(opt)" />
-                                </q-item-section>
-                            </q-item>
-                          </template>
-                          <template v-slot:prepend>
-                            <q-icon name="event" />
-                          </template>
-                        </q-select>
-                    </div>
-                </div>
             </div>
+
+                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-py-md">
+                  <q-btn no-caps :color="!$v.horarios.$error ? 'primary' : 'negative'" label="Agregar horario de atención"
+                  @click="horario = {dias: []}, $v.horario.$reset(), addHorario = true" />
+                </div>
+                <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-pb-md">
+                  <q-scroll-area
+                    v-if="horarios.length"
+                    horizontal
+                    style="height: 240px"
+                  >
+                    <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+                      <div v-for="(hora, index) in horarios" :key="index" >
+                        <q-card class="q-pa-md" style="width:400px; height:100%; border-radius: 15px">
+                          <div class="row justify-between items-center">
+                            <div class="text-bold text-subtitle1 col-10 ellipsis">{{hora.title}}</div>
+                            <q-btn round dense flat color="negative" icon="clear" @click="deleteHora(index)" />
+                          </div>
+                          <div class="row justify-around q-py-md">
+                            <div style="width:45%">
+                              <div>Apertura</div>
+                              <q-field filled dense stack-label>
+                                <template v-slot:prepend>
+                                  <q-icon name="schedule" />
+                                </template>
+                                <template v-slot:control>
+                                  <div class="self-center full-width no-outline" tabindex="0">{{hora.hapertura}}</div>
+                                </template>
+                              </q-field>
+                            </div>
+                            <div style="width:45%">
+                              <div>Cierre</div>
+                              <q-field filled dense stack-label>
+                                <template v-slot:prepend>
+                                  <q-icon name="schedule" />
+                                </template>
+                                <template v-slot:control>
+                                  <div class="self-center full-width no-outline" tabindex="0">{{hora.hcierre}}</div>
+                                </template>
+                              </q-field>
+                            </div>
+                          </div>
+                          <q-field filled dense stack-label>
+                            <template v-slot:prepend>
+                              <q-icon name="date_range" />
+                            </template>
+                            <template v-slot:control>
+                              <div class="self-center full-width no-outline row" tabindex="0">
+                                <div v-for="(item, index2) in hora.dias" :key="index2">{{item === 0 ? 'Lunes' : item === 1 ? 'Martes' : item === 2 ? 'Miércoles' : item === 3 ? 'Jueves' : item === 4 ? 'Viernes' : item === 5 ? 'Sábado' : 'Domingo'}}{{index2 === (hora.dias.length - 1) ? '' : ', '}}</div>
+                              </div>
+                            </template>
+                          </q-field>
+                        </q-card>
+                      </div>
+                    </div>
+                  </q-scroll-area>
+                </div>
+
+                <q-dialog v-model="addHorario">
+                  <q-card class="q-pa-md" style="width:100%">
+                      <div style="width:100%">
+                          <div class="text-subtitle1 text-bold">Horario de atención</div>
+                          <div class="q-pt-sm">
+                            <div class="text-subtitle2 text-grey-8">Título del horario</div>
+                            <q-input dense v-model="horario.title" filled
+                              :error="$v.horario.title.$error" @blur="$v.horario.title.$touch()"
+                            />
+                          </div>
+                          <div class="row justify-between">
+                              <q-input borderless readonly dense v-model="horario.hapertura" mask="time" :rules="['time']" style="width:45%" label="Apertura"
+                              error-message="Requerido" :error="$v.horario.hapertura.$error" @blur="$v.horario.hapertura.$touch()">
+                              <template v-slot:prepend>
+                                <q-icon name="access_time" class="cursor-pointer">
+                                  <q-popup-proxy transition-show="scale" transition-hide="scale">
+                                      <q-time v-model="horario.hapertura">
+                                      <div class="row items-center justify-between">
+                                        <div class="text-black text-bold">Hora de apertura</div>
+                                        <q-btn v-close-popup label="Guardar" color="primary" flat />
+                                      </div>
+                                      </q-time>
+                                  </q-popup-proxy>
+                                </q-icon>
+                              </template>
+                              </q-input>
+                              <q-input borderless readonly dense v-model="horario.hcierre" mask="time" :rules="['time']" style="width:45%" class="q-ml-sm" label="Cierre"
+                              error-message="Requerido" :error="$v.horario.hcierre.$error" @blur="$v.horario.hcierre.$touch()">
+                              <template v-slot:prepend>
+                                <q-icon name="access_time" class="cursor-pointer">
+                                  <q-popup-proxy transition-show="scale" transition-hide="scale">
+                                      <q-time v-model="horario.hcierre">
+                                      <div class="row items-center justify-between">
+                                        <div class="text-black text-bold">Hora de cierre</div>
+                                        <q-btn v-close-popup label="Guardar" color="primary" flat />
+                                      </div>
+                                      </q-time>
+                                  </q-popup-proxy>
+                                </q-icon>
+                              </template>
+                              </q-input>
+                          </div>
+                      </div>
+                      <div style="width:100%">
+                          <q-select borderless dense v-model="horario.dias" :options="optionsDias" label="Días de atencion" multiple emit-value map-options
+                          error-message="Requerido" :error="$v.horario.dias.$error" @blur="$v.horario.dias.$touch()" >
+                            <template v-slot:option="{ itemProps, itemEvents, opt, selected, toggleOption }">
+                              <q-item
+                                  v-bind="itemProps"
+                                  v-on="itemEvents"
+                              >
+                                  <q-item-section>
+                                  <q-item-label v-html="opt.label" ></q-item-label>
+                                  </q-item-section>
+                                  <q-item-section side>
+                                  <q-checkbox :value="selected" @input="toggleOption(opt)" />
+                                  </q-item-section>
+                              </q-item>
+                            </template>
+                            <template v-slot:prepend>
+                              <q-icon name="event" />
+                            </template>
+                          </q-select>
+                      </div>
+                      <div class="row justify-center">
+                        <q-btn no-caps color="primary" label="Agregar" @click="arrHorario()" style="width:70%" />
+                      </div>
+                  </q-card>
+                </q-dialog>
           </div>
           <div class="row justify-center" style="width: 100%">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
@@ -331,8 +400,11 @@ export default {
       portada: null,
       portadaImg: null,
       confirma_datos: true,
+      addHorario: false,
+      horario: {
+        dias: []
+      },
       form: {
-        dias: [],
         subCategoria: [],
         ciudades_atendera: []
       },
@@ -350,6 +422,7 @@ export default {
         width: '9px',
         opacity: 0
       },
+      horarios: [],
       images: [],
       optionsCategoria: ['Comida', 'Desayunos', 'Meriendas', 'Tienda'],
       optionsSubCategorias: [],
@@ -369,12 +442,16 @@ export default {
     }
   },
   validations: {
+    horario: {
+      title: { required },
+      dias: { required },
+      hapertura: { required },
+      hcierre: { required }
+    },
+    horarios: { required },
     form: {
       nombre: { required },
       descripcion: { required },
-      dias: { required },
-      hapertura: { required },
-      hcierre: { required },
       categoria: { required },
       subCategoria: {
         required: requiredIf(function (nestedModel) {
@@ -410,6 +487,9 @@ export default {
       await this.$api.get('user_info').then(res => {
         if (res) {
           this.form = res
+          if (res.horarios) {
+            this.horarios = res.horarios
+          }
           if (this.form.categoria === 'Comida') {
             this.optionsSubCategorias = this.subCategoria1
           }
@@ -420,15 +500,27 @@ export default {
         }
       })
     },
+    arrHorario () {
+      this.$v.horario.title.$touch()
+      this.$v.horario.dias.$touch()
+      this.$v.horario.hapertura.$touch()
+      this.$v.horario.hcierre.$touch()
+      if (!this.$v.horario.title.$error && !this.$v.horario.dias.$error && !this.$v.horario.hapertura.$error && !this.$v.horario.hcierre.$error) {
+        this.horarios.push(this.horario)
+        this.addHorario = false
+      }
+    },
+    deleteHora (index) {
+      this.horarios.splice(index, 1)
+    },
     siguiente () {
-      this.$v.form.dias.$touch()
-      this.$v.form.hapertura.$touch()
-      this.$v.form.hcierre.$touch()
+      this.$v.horarios.$touch()
       this.$v.form.nombre.$touch()
       this.$v.form.descripcion.$touch()
       this.$v.form.categoria.$touch()
       this.$v.form.subCategoria.$touch()
-      if (!this.$v.form.dias.$error && !this.$v.form.hapertura.$error && !this.$v.form.hcierre.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
+      if (!this.$v.horarios.$error && !this.$v.form.nombre.$error && !this.$v.form.descripcion.$error && !this.$v.form.categoria.$error && !this.$v.form.subCategoria.$error) {
+        this.form.horarios = this.horarios
         this.slide = 2
       }
     },

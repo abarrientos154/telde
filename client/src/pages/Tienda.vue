@@ -44,24 +44,6 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-5 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <div class="row items-start" style="width: 100%">
-          <q-icon class="col-1" name="schedule" size="sm" />
-          <div class="col q-ml-sm">
-            <div class="ellipsis text-subtitle2">Horario de atención</div>
-            <div class="ellipsis text-subtitle2 text-grey"> {{user.hapertura && user.hcierre ? user.hapertura + ' - ' + user.hcierre : 'Libre'}} </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-7 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-        <div class="row items-start" style="width: 100%">
-          <q-icon class="col-1" name="date_range" size="sm" />
-          <div class="col q-ml-sm">
-            <div class="ellipsis text-subtitle2">Días de atención</div>
-            <div class="text-subtitle2 text-grey"> {{dias()}} </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <q-scroll-area
@@ -83,6 +65,57 @@
         <img :src="baseuImgsTienda + imgSelec" style="width: 500px;" />
       </q-card>
     </q-dialog>
+
+    <div>
+      <div class="text-h6 q-ma-md text-grey-8">Horarios de atención</div>
+      <q-scroll-area
+        v-if="horarios.length"
+        horizontal
+        style="height: 240px"
+      >
+        <div class="row no-wrap q-py-md q-px-md q-gutter-md">
+          <div v-for="(hora, index) in horarios" :key="index" >
+            <q-card class="q-pa-md" style="width:400px; height:100%; border-radius: 15px">
+              <div class="text-bold text-subtitle1 ellipsis">{{hora.title}}</div>
+              <div class="row justify-around q-py-md">
+                  <div style="width:45%">
+                    <div>Apertura</div>
+                    <q-field filled dense stack-label>
+                      <template v-slot:prepend>
+                        <q-icon name="schedule" />
+                      </template>
+                      <template v-slot:control>
+                        <div class="self-center full-width no-outline" tabindex="0">{{hora.hapertura}}</div>
+                      </template>
+                    </q-field>
+                  </div>
+                  <div style="width:45%">
+                    <div>Cierre</div>
+                    <q-field filled dense stack-label>
+                      <template v-slot:prepend>
+                        <q-icon name="schedule" />
+                      </template>
+                      <template v-slot:control>
+                        <div class="self-center full-width no-outline" tabindex="0">{{hora.hcierre}}</div>
+                      </template>
+                    </q-field>
+                  </div>
+              </div>
+              <q-field filled dense stack-label>
+                <template v-slot:prepend>
+                  <q-icon name="date_range" />
+                </template>
+                <template v-slot:control>
+                  <div class="self-center full-width no-outline row">
+                    <div v-for="(item, index2) in hora.dias" :key="index2">{{index2 === 0 ? '' : ','}} {{item === 0 ? 'Lunes' : item === 1 ? 'Martes' : item === 2 ? 'Miércoles' : item === 3 ? 'Jueves' : item === 4 ? 'Viernes' : item === 5 ? 'Sábado' : 'Domingo'}}</div>
+                   </div>
+                </template>
+              </q-field>
+            </q-card>
+          </div>
+        </div>
+      </q-scroll-area>
+    </div>
 
     <div class="text-h6 q-ma-md text-grey-8">Comentarios</div>
     <q-scroll-area
@@ -474,6 +507,7 @@ export default {
         images: [],
         calificacion: 0
       },
+      horarios: [],
       carrito: [],
       comentarios: [],
       allProductos: [],
@@ -583,6 +617,9 @@ export default {
       this.$api.post('user_by_id/' + id).then(res => {
         if (res) {
           this.user = res
+          if (res.horarios) {
+            this.horarios = res.horarios
+          }
           if (res.status === 1) {
             this.logout()
             this.$router.push('/login')

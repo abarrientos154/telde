@@ -9,7 +9,7 @@ const Hash = use('Hash')
 class User extends Model {
   static get objectIDs () { return [ '_id', 'ciudad_id' ] }
   static get fillableProveedor() {
-    return ['nombre', 'descripcion', 'cif', 'ciudad', 'ciudad_id', 'direccion', 'ciudades_atendera', 'provincia', 'email', 'telefono', 'password', 'cantidadFiles', 'dias', 'hapertura', 'hcierre', 'status', 'banco', 'titular', 'codigo_iban', 'categoria', 'subCategoria']
+    return ['nombre', 'descripcion', 'cif', 'ciudad', 'ciudad_id', 'direccion', 'ciudades_atendera', 'provincia', 'email', 'telefono', 'password', 'cantidadFiles', 'horarios', 'status', 'banco', 'titular', 'codigo_iban', 'categoria', 'subCategoria']
   }
   static get fillableCliente() {
     return ['name', 'lastName',  'telefono']
