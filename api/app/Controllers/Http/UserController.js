@@ -16,10 +16,16 @@ const Payment = use('App/Models/Payment')
 const Email = use("App/Functions/Email")
 const { validate } = use("Validator")
 const Env = use('Env')
-const Stripe = require('stripe')
-const stripe = Stripe('sk_test_51IjMPfDgF1IR0ee1pWdYfdLbYxeKd1PfdFVbmNiMV5XaW3znB4xzHm2KTCXloNNwwOvMqmByVLAetqnNlnNvYI7q009uyimwQy')
 const View = use('View')
-const apiUrl = Env.get('API_URL')
+const StripeKey = Env.get('STRIPE_KEY')
+const StripeKeyPrivate = Env.get('STRIPE_KEY_PRIVATE')
+console.log(StripeKey, 'stripekey')
+const Stripe = require('stripe')
+const stripe = Stripe(StripeKeyPrivate)
+
+View.global('stripekey', function () {
+  return StripeKey
+})
 /** @typedef {import('@adonisjs/framework/src/Request')} Request */
 /** @typedef {import('@adonisjs/framework/src/Response')} Response */
 /** @typedef {import('@adonisjs/framework/src/View')} View */

@@ -24,7 +24,7 @@
   </body>
   <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
-    var stripe = Stripe("pk_test_51IjMPfDgF1IR0ee1i7siSZ8nZUoed7Wyb8dM1tt4ZavGeuhT1EoyDiZetR6PwqX0gUXGdLakxLnnyOK0XQKMrc4o00jTpKriKy");
+    var stripe = Stripe("{{stripekey()}}");
     var checkoutButton = document.getElementById("checkout-button");
     checkoutButton.addEventListener("click", function () {
       fetch("{{ruta()}}", {
