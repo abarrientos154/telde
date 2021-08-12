@@ -224,8 +224,6 @@ export default {
     const value = localStorage.getItem('TELDE_SESSION_INFO')
     if (value) {
       this.getInfo()
-      this.getTiendas()
-      this.getProductos()
     } else {
       this.login = false
       this.getTiendas()
@@ -248,7 +246,11 @@ export default {
           this.rol = res.roles[0]
           this.idClient = res._id
           if (this.rol === 2) {
+            this.getTiendas()
+            this.getProductos()
             this.getFavoritos()
+          } else if (this.rol === 3) {
+            this.$router.push('/tienda/' + res._id)
           }
         }
       })
