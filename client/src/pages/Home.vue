@@ -209,8 +209,8 @@ export default {
       tiendas: [],
       masTiendas: [],
       favoritoData: [],
-      categorias: ['Comida', 'Desayunos', 'Meriendas', 'Tienda'],
-      subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina'],
+      categorias: ['Comida', 'Tienda'],
+      subCategoria1: ['Americana', 'Italiana', 'Mediterránea', 'Asiática', 'Latina', 'Desayunos', 'Meriendas'],
       subCategorias: [],
       idClient: ''
     }
