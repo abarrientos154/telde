@@ -90,7 +90,7 @@
         <div class="column items-center justify-center q-mx-md">
           <div class="row justify-center" style="width:100%">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 row justify-center">
-              <q-img src="fondo1.jpg" style="width:100%;height:210px;border-radius:25px" >
+              <q-img :src="perfil ? perfilImg : 'fondo1.jpg'" style="width:100%;height:210px;border-radius:25px" >
               </q-img>
             </div>
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7 q-mt-xl">
