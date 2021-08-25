@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="!principal.nuevo ? baseuPublicidad + principal.fileName : principal.fileName" style="height: 400px; width: 100%;"
+    <img :src="!principal.nuevo ? baseuPublicidad + principal.fileName : principal.fileName" style="height: 200px; width: 100%;"
     @click="!principal.nuevo ? irRuta(principal.ruta) : ''" />
     <div v-if="!login" class="absolute-top-right q-pa-md">
       <q-btn no-caps rounded color="primary" label="Iniciar sesión" to="/login" />
