@@ -11,6 +11,7 @@
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'monetization_on' : 'store'" :label="rol === 3 ? 'Monedero' : 'Tiendas'" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/monedero/') : $router.push('/tiendas')" /></div>
           <div class="row items-center"><q-btn :icon="rol === 3 ? 'description' : 'favorite'" :label="rol === 3 ? 'Estadísticas' : 'Favoritos'" color="white" flat stack dense no-caps size="md" @click="rol === 2 ? $router.push('/tiendas_favoritas') : $router.push('/estadisticas')" /></div>
           <div class="row items-center"><q-btn icon="shopping_basket" label="Pedidos" color="white" flat stack dense no-caps size="md" @click="rol === 3 ? $router.push('/mis_pedidos_tienda') : $router.push('/mis_pedidos')" /></div>
+          <div class="row items-center"><q-btn icon="person" label="Perfil" color="white" flat stack dense no-caps size="md" @click="rol === 2 ? $router.push('/editar-mi-perfil') : $router.push('/editar-perfil')" /></div>
           <div class="row items-center"><q-btn icon="logout" label="Salir" color="white" flat stack dense no-caps size="md" @click="cerrarSesion()" /></div>
         </div>
         <div v-else class="bg-blue-14 shadow-2 full-width row justify-around" >
