@@ -134,7 +134,7 @@ export default {
   data () {
     return {
       tienda: false,
-      costoMembresia: 15,
+      costoMembresia: 60,
       slide: 1,
       id: this.$route.params.id,
       cantidad: 1,
