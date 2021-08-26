@@ -110,7 +110,7 @@ class UserController {
   async procesarPago ({ request, params, view, response }) {
     let body = params
     let totalPagar = parseFloat(body.cantM) * parseFloat(body.costoM)
-    totalPagar = totalPagar + '00'
+    totalPagar = totalPagar * 100
     var url1, url2
     url1 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe' : 'https://teldeweb.eichechile.com/#/login'
     url2 = body.type === 'mobile' ? 'https://app.telde.com/pay_stripe_cancel' : 'https://teldeweb.eichechile.com/#/login'
