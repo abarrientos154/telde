@@ -34,7 +34,7 @@ class PaymentController {
   async procesarPago ({ request, params, view, response }) {
     let body = params
     console.log(body, 'soy un body')
-    let totalPagar = body.montoTotal + '00'
+    let totalPagar = body.montoTotal * 100
     console.log(totalPagar, 'total')
     var url1, url2
     url1 = body.type === 'mobile' ? 'https://app.teldepayshop.com/pay_stripe' : 'https://teldeweb.eichechile.com/#/login'
