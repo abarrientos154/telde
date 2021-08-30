@@ -6,6 +6,7 @@
 const Helpers = use('Helpers')
 const mkdirp = use('mkdirp')
 const Producto = use('App/Models/Producto')
+const Email = use("App/Functions/Email")
 const Compras = use('App/Models/ComprasProducto')
 const Pedido = use('App/Models/Compra')
 const Comentario = use('App/Models/Comentario')

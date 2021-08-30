@@ -7,6 +7,7 @@ const Monedero = use('App/Models/Monedero')
 const Compras = use('App/Models/Compra')
 const Payment = use('App/Models/Payment')
 const moment = require("moment")
+const Email = use("App/Functions/Email")
 
 /**
  * Resourceful controller for interacting with monederos
