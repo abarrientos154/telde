@@ -14,6 +14,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^10.1.0",
+    "cordova-ios": "^6.2.0",
     "cordova-universal-links-plugin": "git+https://github.com/walteram/cordova-universal-links-plugin.git"
   },
   "cordova": {
@@ -21,7 +22,8 @@
       "cordova-universal-links-plugin": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }
