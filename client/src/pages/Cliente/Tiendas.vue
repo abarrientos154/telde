@@ -174,14 +174,16 @@ export default {
       }
     },
     addFavorito (id) {
-      if (this.favoritoData.find(v => v.proveedor_id === id)) {
-        this.$api.delete('favorito/' + id).then(res => {
-          this.getFavoritos()
-        })
-      } else {
-        this.$api.post('favorito/' + id).then(res => {
-          this.getFavoritos()
-        })
+      if (this.login) {
+        if (this.favoritoData.find(v => v.proveedor_id === id)) {
+          this.$api.delete('favorito/' + id).then(res => {
+            this.getFavoritos()
+          })
+        } else {
+          this.$api.post('favorito/' + id).then(res => {
+            this.getFavoritos()
+          })
+        }
       }
     },
     irTienda (id) {
