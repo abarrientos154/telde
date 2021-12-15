@@ -14,7 +14,7 @@
           <div class="column items-center justify-center">
             <div class="row justify-center">
               <q-img :src="perfil ? perfilImg : 'nopublicidad.jpg'" style="width:130px;height:130px;border-radius:25px" >
-                <div class="absolute-center bg-transparent text-center" style="width: 100%">
+                <!-- <div class="absolute-center bg-transparent text-center" style="width: 100%">
                   <div class="absolute-center" style="z-index:1">
                     <q-file borderless v-model="perfil" class="button-subir" @input="changePerfil()" accept=".jpg, image/*"
                     >
@@ -23,10 +23,17 @@
                       </q-avatar>
                     </q-file>
                   </div>
-                </div>
+                </div> -->
               </q-img>
             </div>
-            <div class="text-grey-7 text-bold text-caption"> SUBE UNA FOTO </div>
+            <div class="row justify-center q-pt-xs">
+              <q-avatar rounded style="height: 30px; width: 130px;" class="bg-grey-8">
+                <q-file borderless v-model="perfil" class="button-camera"
+                @input="changePerfil()" accept=".jpg, image/*" style="z-index:1; width: 100%; height: 100%; font-size: 0px;">
+                  <div class="absolute-center text-center text-white full-width text-subtitle1 cursor-pointer">Subir foto</div>
+                </q-file>
+              </q-avatar>
+            </div>
           </div>
           <div class="row justify-center q-mt-md">
             <div class="col-xs-11 col-sm-11 col-md-7 col-lg-7 col-xl-7">
