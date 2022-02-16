@@ -249,8 +249,6 @@ export default {
             this.getTiendas()
             this.getProductos()
             this.getFavoritos()
-          } else if (this.rol === 3) {
-            this.$router.push('/tienda/' + res._id)
           }
         }
       })

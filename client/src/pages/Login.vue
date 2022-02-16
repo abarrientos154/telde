@@ -107,7 +107,7 @@ export default {
     }
   },
   created () {
-    const session = JSON.parse(localStorage.getItem('TELDE_SESSION_INFO'))
+    /* const session = JSON.parse(localStorage.getItem('TELDE_SESSION_INFO'))
     if (session) {
       if (session.roles[0] === 2) {
         this.$router.push('/inicio')
@@ -116,14 +116,18 @@ export default {
       } else if (session.roles[0] === 1) {
         this.$router.push('/administrador')
       }
-    }
+    } */
   },
   mounted () {
-    const vm = this
+    /* const vm = this
     if (this.$q.platform.is.mobile) { // Si es teléfono{
       universalLinks.subscribe('ul_payStripe', function (eventData) {
         // do some work
         // alert('Did launch application from the link: ' + eventData.url)
+        vm.$q.notify({
+          message: 'Su no fue procesado',
+          color: 'negative'
+        })
         if (eventData.params.user_id) {
           vm.aprobarPago({ user_id: eventData.params.user_id, cantM: eventData.params.cantM, costoM: eventData.params.costoM })
         } else {
@@ -151,7 +155,7 @@ export default {
           vm.$router.push('/recuperacion/' + eventData.params.codigo)
         }
       })
-    }
+    } */
   },
   methods: {
     ...mapMutations('generals', ['login']),
